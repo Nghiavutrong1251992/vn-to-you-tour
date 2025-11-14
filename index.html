@@ -17,6 +17,9 @@
         fetch('includes/header.html')
         .then(response => response.text())
         .then(data => {
+            // For index.html (homepage), adjust paths for root level
+            data = data.replace('href="/"', 'href="index.html"');
+            data = data.replace('src="/assets/', 'src="assets/');
             document.getElementById('header-placeholder').innerHTML = data;
             // Dispatch event to signal header is loaded
             window.dispatchEvent(new Event('headerLoaded'));

@@ -6,6 +6,13 @@ function loadPrivateToursList() {
         let html = '';
 
         privateToursData.forEach(tour => {
+            // Adjust image URL to relative path based on current location
+            let imageUrl = tour.image ? tour.image.url : '';
+            let isInSubdir = window.location.pathname.includes('/pages/');
+            if (imageUrl.startsWith('/')) {
+                imageUrl = isInSubdir ? '..' + imageUrl : imageUrl.substring(1);
+            }
+            
             // Use detail page with query parameter for dynamic rendering
             const tourUrl = `private-tour-detail.html?id=${tour.id}`;
             
@@ -13,7 +20,7 @@ function loadPrivateToursList() {
                 <div class="private-tour-item">
                     ${tour.image ? `
                     <div class="tour-thumbnail">
-                        <img src="${encodeURI(tour.image.url)}" 
+                        <img src="${encodeURI(imageUrl)}" 
                              alt="${tour.image.alt}"
                              class="tour-thumb-image">
                     </div>` : ''}

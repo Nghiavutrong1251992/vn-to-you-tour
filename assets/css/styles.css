@@ -37,7 +37,7 @@
     --spacing-3xl: 2.5rem;          /* 40px */
     
     /* ====== LAYOUT SYSTEM ====== */
-    --container-max-width: 75rem;   /* 1200px */
+    --container-max-width: 87.5rem; /* 1400px */
     --content-gap: var(--spacing-lg); /* 20px */
     --sidebar-min-width: 12.5rem;   /* 200px */
     
@@ -387,7 +387,8 @@ nav a.active,
 .content-container {
     max-width: var(--container-max-width);
     margin: var(--spacing-lg) auto;
-    padding: var(--spacing-2xl);
+    padding: var(--spacing-3xl);
+    width: 100%;
 }
 
 h1, h2, h3, h4 {
@@ -1083,7 +1084,7 @@ nav a.nav-active {
 
 .tour-image-large {
     flex-shrink: 0;
-    width: 400px;
+    width: 500px;
     aspect-ratio: 4/3;
 }
 
@@ -1320,12 +1321,12 @@ nav a.nav-active {
 
 @media (min-width: 1400px) {
     .tour-image-large {
-        width: 450px;
+        width: 600px;
     }
     
     .tour-item-full {
-        gap: 2.5rem;
-        padding: 2.5rem 0;
+        gap: 3rem;
+        padding: 3rem 0;
     }
     
     .tour-title-large {

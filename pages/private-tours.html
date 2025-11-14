@@ -179,26 +179,48 @@
                         imageUrl = '..' + imageUrl;
                     }
                     
-                    const thumbnailHtml = tour.image ? 
-                        `<div class="tour-thumbnail-container">
-                            <img src="${encodeURI(imageUrl)}" 
-                                 alt="${tour.image.alt}"
-                                 class="tour-list-thumbnail">
-                         </div>` : '';
-                    
                     toursHTML += `
-                        <div class="tour-item-card">
-                            ${thumbnailHtml}
-                            <div class="tour-content-wrapper">
-                                <h3>${tour.title}</h3>
-                                <p>${tour.excerpt}</p>
-                                <div class="tour-meta">
-                                    Duration: ${tour.duration.display} | Group: ${tour.groupSize} | Price: ${tour.price.display}
+                        <article class="tour-item-full">
+                            ${tour.image ? `
+                            <div class="tour-image-large">
+                                <img src="${encodeURI(imageUrl)}" 
+                                     alt="${tour.image.alt}"
+                                     class="tour-main-thumbnail">
+                            </div>` : ''}
+                            
+                            <div class="tour-info-section">
+                                <h3 class="tour-title-large">${tour.title}</h3>
+                                <p class="tour-excerpt-large">${tour.excerpt}</p>
+                                
+                                <div class="tour-meta-grid">
+                                    <div class="meta-item">
+                                        <strong>Duration:</strong> ${tour.duration.display}
+                                    </div>
+                                    <div class="meta-item">
+                                        <strong>Price:</strong> ${tour.price.display}
+                                    </div>
+                                    <div class="meta-item">
+                                        <strong>Region:</strong> ${tour.region === 'multi' ? 'Multi-region' : tour.region.charAt(0).toUpperCase() + tour.region.slice(1)}
+                                    </div>
+                                    <div class="meta-item">
+                                        <strong>Group Size:</strong> ${tour.groupSize}
+                                    </div>
                                 </div>
-                                <a href="private-tour-detail.html?id=${tour.id}" class="btn">View Details</a>
+                                
+                                <div class="tour-highlights-section">
+                                    <h4>Key Highlights:</h4>
+                                    <ul class="highlights-list">
+                                        ${tour.highlights.slice(0, 4).map(highlight => `<li>${highlight}</li>`).join('')}
+                                        ${tour.highlights.length > 4 ? `<li class="more-highlights"><em>+ ${tour.highlights.length - 4} more amazing experiences</em></li>` : ''}
+                                    </ul>
+                                </div>
+                                
+                                <div class="tour-actions">
+                                    <a href="private-tour-detail.html?id=${tour.id}" class="btn btn-primary-large">View Details & Book Tour →</a>
+                                </div>
                             </div>
-                        </div>
-                        ${index < tours.length - 1 ? '<hr class="tour-divider">' : ''}
+                        </article>
+                        ${index < tours.length - 1 ? '<hr class="tour-divider-large">' : ''}
                     `;
                 });
             }

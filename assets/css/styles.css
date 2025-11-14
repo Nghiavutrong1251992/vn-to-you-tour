@@ -391,6 +391,11 @@ nav a.active,
     width: 100%;
 }
 
+/* Homepage specific styling to match tour image margins */
+.content-container.glass-card {
+    padding: 1rem;
+}
+
 h1, h2, h3, h4 {
     color: var(--text-primary);
     margin-bottom: 0.5rem;

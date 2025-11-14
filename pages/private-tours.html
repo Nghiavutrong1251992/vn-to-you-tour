@@ -339,8 +339,9 @@
             const sidebarContainer = document.getElementById('tour-sidebar-content');
             if (!sidebarContainer || !privateToursData) return;
             
-            // Get all tours for sidebar display
-            const allTours = privateToursData.slice(0, 6); // Show 6 tours max
+            // Shuffle and get random tours for sidebar display
+            const shuffledTours = [...privateToursData].sort(() => Math.random() - 0.5);
+            const randomTours = shuffledTours.slice(0, 6); // Show 6 random tours max
             
             let sidebarHTML = `
                 <div class="sidebar-widget">
@@ -348,7 +349,7 @@
                     <ul class="sidebar-tours-list">
             `;
             
-            allTours.forEach(tour => {
+            randomTours.forEach(tour => {
                 // Adjust image URL for GitHub Pages
                 let sidebarImageUrl = tour.image ? tour.image.url : '';
                 if (sidebarImageUrl.startsWith('/')) {

@@ -1210,6 +1210,31 @@ nav a.nav-active {
     opacity: 0.3;
 }
 
+/* Region Section Headers */
+.region-section {
+    margin: 2rem 0 1rem 0;
+}
+
+.region-header {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--brand-primary);
+    margin: 0;
+    padding: 0.75rem 0;
+    border-bottom: 2px solid var(--brand-primary);
+    background: linear-gradient(135deg, var(--glass-bg-light), var(--glass-bg-subtle));
+    border-radius: var(--border-radius-sm);
+    padding-left: 1rem;
+}
+
+.region-divider {
+    border: none;
+    height: 1px;
+    background: var(--brand-primary);
+    margin: 0.5rem 0 1.5rem 0;
+    opacity: 0.2;
+}
+
 .tour-content {
     flex: 1;
 }

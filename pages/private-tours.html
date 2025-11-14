@@ -142,9 +142,20 @@
             document.getElementById('tours-list').classList.add('hidden');
         }
 
-        // Function to show tours for specific region
-        function showRegionTours(region) {
-            const tours = getToursByRegion(region);
+        // Function to show all tours in order based on starting region
+        function showRegionTours(startingRegion) {
+            // Define tour order based on starting region
+            let regionOrder = [];
+            if (startingRegion === 'north') {
+                regionOrder = ['north', 'central', 'south', 'multi'];
+            } else if (startingRegion === 'central') {
+                regionOrder = ['central', 'north', 'south', 'multi'];
+            } else if (startingRegion === 'south') {
+                regionOrder = ['south', 'central', 'north', 'multi'];
+            } else if (startingRegion === 'multi') {
+                regionOrder = ['multi', 'north', 'central', 'south'];
+            }
+
             const regionNames = {
                 'north': 'Northern Vietnam',
                 'central': 'Central Vietnam', 
@@ -166,43 +177,53 @@
                     ← Back to Regions
                 </a>
                 <hr class="section-divider">
-                <h2>Private Tours in ${regionNames[region]}</h2>
+                <h2>All Private Tours (Starting with ${regionNames[startingRegion]})</h2>
             `;
             
-            if (tours.length === 0) {
-                toursHTML += '<p>No tours available in this region yet. Please check back later!</p>';
-            } else {
-                tours.forEach((tour, index) => {
-                    // Adjust image URL for GitHub Pages
-                    let imageUrl = tour.image ? tour.image.url : '';
-                    if (imageUrl.startsWith('/')) {
-                        imageUrl = '..' + imageUrl;
-                    }
-                    
+            // Loop through regions in order and add all tours
+            regionOrder.forEach((region, regionIndex) => {
+                const tours = getToursByRegion(region);
+                
+                if (tours.length > 0) {
+                    // Add region header
                     toursHTML += `
-                        <article class="tour-item-full">
-                            ${tour.image ? `
-                            <div class="tour-image-large">
-                                <img src="${encodeURI(imageUrl)}" 
-                                     alt="${tour.image.alt}"
-                                     class="tour-main-thumbnail">
-                            </div>` : ''}
-                            
-                            <div class="tour-info-section">
-                                <h3 class="tour-title-large">${tour.title}</h3>
-                                <p class="tour-excerpt-large">${tour.excerpt}</p>
-                                
-
-
-                                <div class="tour-actions">
-                                    <a href="private-tour-detail.html?id=${tour.id}" class="btn btn-primary-large">View Details & Book Tour →</a>
-                                </div>
-                            </div>
-                        </article>
-                        ${index < tours.length - 1 ? '<hr class="tour-divider-large">' : ''}
+                        <div class="region-section">
+                            <h3 class="region-header">${regionNames[region]} (${tours.length} tours)</h3>
+                            <hr class="region-divider">
+                        </div>
                     `;
-                });
-            }
+                    
+                    // Add tours for this region
+                    tours.forEach((tour, tourIndex) => {
+                        // Adjust image URL for GitHub Pages
+                        let imageUrl = tour.image ? tour.image.url : '';
+                        if (imageUrl.startsWith('/')) {
+                            imageUrl = '..' + imageUrl;
+                        }
+                        
+                        toursHTML += `
+                            <article class="tour-item-full">
+                                ${tour.image ? `
+                                <div class="tour-image-large">
+                                    <img src="${encodeURI(imageUrl)}" 
+                                         alt="${tour.image.alt}"
+                                         class="tour-main-thumbnail">
+                                </div>` : ''}
+                                
+                                <div class="tour-info-section">
+                                    <h3 class="tour-title-large">${tour.title}</h3>
+                                    <p class="tour-excerpt-large">${tour.excerpt}</p>
+                                    
+                                    <div class="tour-actions">
+                                        <a href="private-tour-detail.html?id=${tour.id}" class="btn btn-primary-large">View Details & Book Tour →</a>
+                                    </div>
+                                </div>
+                            </article>
+                            <hr class="tour-divider-large">
+                        `;
+                    });
+                }
+            });
 
             document.getElementById('tours-list').innerHTML = toursHTML;
         }

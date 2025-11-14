@@ -28,10 +28,7 @@ function loadPrivateToursList() {
                     <div class="tour-info-section">
                         <h3 class="tour-title-large">${tour.title}</h3>
                         <p class="tour-excerpt-large">${tour.excerpt}</p>
-                        
-
-
-
+                        <p><a href="${tourUrl}" class="btn">View Details →</a></p>
                     </div>
                 </article>
                 <hr class="tour-divider-large">

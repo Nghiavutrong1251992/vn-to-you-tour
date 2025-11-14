@@ -228,15 +228,90 @@
             document.getElementById('tours-list').innerHTML = toursHTML;
         }
 
+        // Function to show all tours in default order (North -> Central -> South -> Multi)
+        function showAllTours() {
+            const regionOrder = ['north', 'central', 'south', 'multi'];
+            const regionNames = {
+                'north': 'Northern Vietnam',
+                'central': 'Central Vietnam', 
+                'south': 'Southern Vietnam',
+                'multi': 'Multi-Region Tours'
+            };
+
+            // Hide region selector
+            document.getElementById('region-selector').classList.remove('visible');
+            document.getElementById('region-selector').classList.add('hidden');
+            
+            // Show tours list
+            document.getElementById('tours-list').classList.remove('hidden');
+            document.getElementById('tours-list').classList.add('visible');
+
+            // Generate tours HTML with back button and divider
+            let toursHTML = `
+                <a href="#" class="btn" onclick="showRegionSelector(); return false;">
+                    ← Back to Regions
+                </a>
+                <hr class="section-divider">
+                <h2>All Private Tours in Vietnam</h2>
+            `;
+            
+            // Loop through regions in order and add all tours
+            regionOrder.forEach((region, regionIndex) => {
+                const tours = getToursByRegion(region);
+                
+                if (tours.length > 0) {
+                    // Add region header
+                    toursHTML += `
+                        <div class="region-section">
+                            <h3 class="region-header">${regionNames[region]} (${tours.length} tours)</h3>
+                            <hr class="region-divider">
+                        </div>
+                    `;
+                    
+                    // Add tours for this region
+                    tours.forEach((tour, tourIndex) => {
+                        // Adjust image URL for GitHub Pages
+                        let imageUrl = tour.image ? tour.image.url : '';
+                        if (imageUrl.startsWith('/')) {
+                            imageUrl = '..' + imageUrl;
+                        }
+                        
+                        toursHTML += `
+                            <article class="tour-item-full">
+                                ${tour.image ? `
+                                <div class="tour-image-large">
+                                    <img src="${encodeURI(imageUrl)}" 
+                                         alt="${tour.image.alt}"
+                                         class="tour-main-thumbnail">
+                                </div>` : ''}
+                                
+                                <div class="tour-info-section">
+                                    <h3 class="tour-title-large">${tour.title}</h3>
+                                    <p class="tour-excerpt-large">${tour.excerpt}</p>
+                                    
+                                    <div class="tour-actions">
+                                        <a href="private-tour-detail.html?id=${tour.id}" class="btn btn-primary-large">View Details & Book Tour →</a>
+                                    </div>
+                                </div>
+                            </article>
+                            <hr class="tour-divider-large">
+                        `;
+                    });
+                }
+            });
+
+            document.getElementById('tours-list').innerHTML = toursHTML;
+        }
+
         // Function to handle URL anchor navigation
         function handleAnchorNavigation() {
             const anchor = window.location.hash.substring(1); // Remove the # symbol
             if (anchor && ['north', 'central', 'south', 'multi'].includes(anchor)) {
-                // Auto-open the specific region
+                // Auto-open the specific region order
                 showRegionTours(anchor);
             } else {
-                // Default: show region selector
-                showRegionSelector();
+                // Default: show all tours instead of region selector
+                showAllTours();
             }
         }
 

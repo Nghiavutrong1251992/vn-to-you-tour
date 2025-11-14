@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Tours - VN to You Tour</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <div id="header-placeholder"></div>
+    </header>
+
+    <div class="content-wrapper">
+        <div class="main-content">
+            <div class="content-container">
+                <a href="tours-to-vietnam.html" class="btn">← Back to Tours to Vietnam</a>
+                
+                <h1>Private Tours in Vietnam</h1>
+                <p>Experience Vietnam with personalized private tours designed for your comfort and interests. Choose your preferred region to explore amazing multi-day tours.</p>
+
+                <hr class="section-divider">
+
+                <!-- Region Selector -->
+                <div id="region-selector">
+                    <h3>Northern Vietnam</h3>
+                    <p>Hanoi, Halong Bay, Sapa mountain adventures</p>
+                    <span class="tour-count" id="north-count">Loading...</span>
+                    <a href="#" class="btn" onclick="showRegionTours('north'); return false;">View Tours →</a>
+                    
+                    <hr class="region-divider">
+
+                    <h3>Central Vietnam</h3>
+                    <p>Hoi An, Hue, Da Nang coastal experiences</p>
+                    <span class="tour-count" id="central-count">Loading...</span>
+                    <a href="#" class="btn" onclick="showRegionTours('central'); return false;">View Tours →</a>
+                    
+                    <hr class="region-divider">
+
+                    <h3>Southern Vietnam</h3>
+                    <p>Ho Chi Minh City, Mekong Delta, Phu Quoc Island</p>
+                    <span class="tour-count" id="south-count">Loading...</span>
+                    <a href="#" class="btn" onclick="showRegionTours('south'); return false;">View Tours →</a>
+                    
+                    <hr class="region-divider">
+
+                    <h3>Multi-Region Tours</h3>
+                    <p>Comprehensive tours covering multiple regions</p>
+                    <span class="tour-count" id="multi-count">Loading...</span>
+                    <a href="#" class="btn" onclick="showRegionTours('multi'); return false;">View Tours →</a>
+                </div>
+
+                <!-- Tours List for each region -->
+                <div id="tours-list" class="hidden">
+                    <a href="#" class="btn" onclick="showRegionSelector(); return false;">
+                        ← Back to Regions
+                    </a>
+                    <hr class="section-divider">
+                </div>
+            </div>
+        </div>
+
+        <aside class="sidebar">
+            <div id="tour-sidebar-content">
+                <!-- Tour sidebar will be populated by JavaScript -->
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+
+    <!-- Load header and footer -->
+    <script>
+        fetch('../includes/header.html')
+        .then(response => response.text())
+        .then(data => {
+            data = data.replace('href="/', 'href="../');
+            data = data.replace('href="/pages/', 'href="');
+            data = data.replace('src="/assets/', 'src="../assets/');
+            document.getElementById('header-placeholder').innerHTML = data;
+            
+            // Set active menu item immediately after header is loaded
+            setTimeout(() => {
+                const currentPath = window.location.pathname;
+                const navLinks = document.querySelectorAll('nav a');
+                console.log('Private Tours - Current path:', currentPath);
+                console.log('Private Tours - Found nav links:', navLinks.length);
+                
+                // Remove active class from all links
+                navLinks.forEach(link => {
+                    link.classList.remove('active', 'nav-active');
+                });
+                
+                // Add active to Tours to Vietnam (parent page)
+                navLinks.forEach(link => {
+                    const linkHref = link.getAttribute('href');
+                    if (linkHref && linkHref.includes('tours-to-vietnam')) {
+                        console.log('Private Tours - Setting Tours to Vietnam active');
+                        link.classList.add('active', 'nav-active');
+                    }
+                });
+            }, 100);
+        });
+
+        fetch('../includes/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+
+    <!-- Load data and functionality -->
+    <script src="../assets/js/data/private-tours-data.js"></script>
+    <script src="../assets/js/data/daily-tours-data.js"></script>
+    <script>
+        // Function to get tours count by region
+        function getToursByRegion(region) {
+            return privateToursData.filter(tour => tour.region === region);
+        }
+
+        // Function to update tour counts
+        function updateTourCounts() {
+            const northTours = getToursByRegion('north');
+            const centralTours = getToursByRegion('central');
+            const southTours = getToursByRegion('south');
+            const multiTours = getToursByRegion('multi');
+
+            document.getElementById('north-count').textContent = `${northTours.length} tours available`;
+            document.getElementById('central-count').textContent = `${centralTours.length} tours available`;
+            document.getElementById('south-count').textContent = `${southTours.length} tours available`;
+            document.getElementById('multi-count').textContent = `${multiTours.length} tours available`;
+        }
+
+        // Function to show region selector
+        function showRegionSelector() {
+            document.getElementById('region-selector').classList.remove('hidden');
+            document.getElementById('region-selector').classList.add('visible');
+            document.getElementById('tours-list').classList.remove('visible');
+            document.getElementById('tours-list').classList.add('hidden');
+        }
+
+        // Function to show tours for specific region
+        function showRegionTours(region) {
+            const tours = getToursByRegion(region);
+            const regionNames = {
+                'north': 'Northern Vietnam',
+                'central': 'Central Vietnam', 
+                'south': 'Southern Vietnam',
+                'multi': 'Multi-Region Tours'
+            };
+
+            // Hide region selector
+            document.getElementById('region-selector').classList.remove('visible');
+            document.getElementById('region-selector').classList.add('hidden');
+            
+            // Show tours list
+            document.getElementById('tours-list').classList.remove('hidden');
+            document.getElementById('tours-list').classList.add('visible');
+
+            // Generate tours HTML with back button and divider
+            let toursHTML = `
+                <a href="#" class="btn" onclick="showRegionSelector(); return false;">
+                    ← Back to Regions
+                </a>
+                <hr class="section-divider">
+                <h2>Private Tours in ${regionNames[region]}</h2>
+            `;
+            
+            if (tours.length === 0) {
+                toursHTML += '<p>No tours available in this region yet. Please check back later!</p>';
+            } else {
+                tours.forEach((tour, index) => {
+                    const thumbnailHtml = tour.image ? 
+                        `<div class="tour-thumbnail-container">
+                            <img src="${encodeURI(tour.image.url)}" 
+                                 alt="${tour.image.alt}"
+                                 class="tour-list-thumbnail">
+                         </div>` : '';
+                    
+                    toursHTML += `
+                        <div class="tour-item-card">
+                            ${thumbnailHtml}
+                            <div class="tour-content-wrapper">
+                                <h3>${tour.title}</h3>
+                                <p>${tour.excerpt}</p>
+                                <div class="tour-meta">
+                                    Duration: ${tour.duration.display} | Group: ${tour.groupSize} | Price: ${tour.price.display}
+                                </div>
+                                <a href="private-tour-detail.html?id=${tour.id}" class="btn">View Details</a>
+                            </div>
+                        </div>
+                        ${index < tours.length - 1 ? '<hr class="tour-divider">' : ''}
+                    `;
+                });
+            }
+
+            document.getElementById('tours-list').innerHTML = toursHTML;
+        }
+
+        // Function to handle URL anchor navigation
+        function handleAnchorNavigation() {
+            const anchor = window.location.hash.substring(1); // Remove the # symbol
+            if (anchor && ['north', 'central', 'south', 'multi'].includes(anchor)) {
+                // Auto-open the specific region
+                showRegionTours(anchor);
+            } else {
+                // Default: show region selector
+                showRegionSelector();
+            }
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            updateTourCounts();
+            
+            // Handle initial anchor navigation
+            handleAnchorNavigation();
+            
+            // Auto-style all action buttons for unified management
+            document.querySelectorAll('a').forEach(link => {
+                const text = link.textContent.toLowerCase().trim();
+                const href = link.getAttribute('href') || '';
+                
+                // Skip navigation, header, and dropdown menu links
+                if (link.closest('nav') || link.closest('header') || link.closest('.dropdown-menu')) return;
+            });
+            
+            // Initialize tour sidebar
+            setTimeout(() => {
+                createTourSidebarForPrivateToursPage();
+            }, 500);
+        });
+        
+        // Create tour sidebar specifically for private tours page
+        function createTourSidebarForPrivateToursPage() {
+            const sidebarContainer = document.getElementById('tour-sidebar-content');
+            if (!sidebarContainer || !privateToursData) return;
+            
+            // Get all tours for sidebar display
+            const allTours = privateToursData.slice(0, 6); // Show 6 tours max
+            
+            let sidebarHTML = `
+                <div class="sidebar-widget">
+                    <h3><i class="fas fa-map-marked-alt"></i> Featured Private Tours</h3>
+                    <ul class="sidebar-tours-list">
+            `;
+            
+            allTours.forEach(tour => {
+                sidebarHTML += `
+                    <li class="sidebar-tour-item" style="display: block; margin-bottom: 20px; padding: 15px; background: #f9f9f9; border: 1px solid #e0e0e0; border-radius: 8px;">
+                        <a href="private-tour-detail.html?id=${tour.id}" class="sidebar-tour-link" style="display: block; text-decoration: none; color: inherit;">
+                            ${tour.image ? `
+                            <div style="margin-bottom: 10px;">
+                                <img src="${encodeURI(tour.image.url)}" alt="${tour.image.alt}" loading="lazy" style="width: 100%; height: auto; aspect-ratio: 4/3; object-fit: cover; border-radius: 4px;">
+                            </div>
+                            ` : ''}
+                            <div class="sidebar-tour-info">
+                                <h4 class="sidebar-tour-title" style="margin: 0 0 5px 0; font-size: 14px; line-height: 1.3; color: #333;">${tour.title}</h4>
+                                <p class="sidebar-tour-meta" style="margin: 0 0 5px 0; font-size: 12px; color: #666;">${tour.duration.display} | ${tour.price.display}</p>
+                                <p style="margin: 0; font-size: 11px; color: #888; text-transform: capitalize;">${tour.region} Vietnam</p>
+                            </div>
+                        </a>
+                    </li>
+                `;
+            });
+            
+            sidebarHTML += `
+                    </ul>
+                </div>
+                
+                <div class="sidebar-widget">
+                    <h3><i class="fas fa-phone"></i> Contact Us</h3>
+                    <p>Ready to explore Vietnam?</p>
+                    <div class="contact-buttons">
+                        <a href="https://wa.me/84977632673" target="_blank" class="btn btn-small">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="mailto:sales@vntoyoutour.com" class="btn btn-small">
+                            <i class="fas fa-envelope"></i> Email
+                        </a>
+                    </div>
+                    <hr style="margin: 15px 0;">
+                    <p><strong>VN to You Tour</strong></p>
+                    <p style="font-size: 0.9em; color: #666;">Professional tour operator in Vietnam</p>
+                </div>
+            `;
+            
+            sidebarContainer.innerHTML = sidebarHTML;
+        }
+
+        // Handle hash changes (when user clicks back/forward or changes anchor)
+        window.addEventListener('hashchange', handleAnchorNavigation);
+    </script>
+</body>
+</html>
+</body>
+</html>

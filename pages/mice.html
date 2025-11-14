@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MICE Services - VN to You Tour</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div id="header-placeholder"></div>
+    </header>
+
+    <script>
+        fetch('../includes/header.html')
+        .then(response => response.text())
+        .then(data => {
+            data = data.replace('href="/', 'href="../');
+            data = data.replace('href="/pages/', 'href="');
+            data = data.replace('src="/assets/', 'src="../assets/');
+            document.getElementById('header-placeholder').innerHTML = data;
+            // Set active menu item after header is loaded
+            if (window.setActiveMenuItem) {
+                window.setActiveMenuItem();
+            }
+        });
+    </script>
+
+    <div class="content-container">
+        <h1>MICE Services in Vietnam</h1>
+        <p>Meetings, Incentives, Conferences, and Events - specialized business travel and event planning services.</p>
+        
+        <hr class="section-divider">
+        
+        <h3>What is MICE?</h3>
+        <p>MICE stands for Meetings, Incentives, Conferences, and Events. It focuses on planning and organizing business-related travel and corporate events.</p>
+        
+        <hr class="section-divider">
+        
+        <h3>Why Choose Vietnam for MICE?</h3>
+        <ul>
+            <li>Strategic location accessible from major Asian business hubs</li>
+            <li>Modern infrastructure with world-class hotels and convention centers</li>
+            <li>Unique blend of tradition and modernity</li>
+            <li>Cost-effective compared to other regional destinations</li>
+            <li>Diverse venues from luxury hotels to natural settings</li>
+        </ul>
+        
+        <hr class="section-divider">
+        
+        <h3>Our MICE Services</h3>
+        <ul>
+            <li>Meetings: Corporate meetings, board meetings, strategic planning</li>
+            <li>Incentives: Reward trips and programs for high-performing employees</li>
+            <li>Conferences: Large-scale conferences, seminars, professional gatherings</li>
+            <li>Events: Product launches, team-building, corporate celebrations</li>
+        </ul>
+        
+        <hr class="section-divider">
+        
+        <h3>What We Offer</h3>
+        <ul>
+            <li>Venue selection and booking</li>
+            <li>Accommodation arrangements</li>
+            <li>Transportation and logistics</li>
+            <li>On-site coordination and support</li>
+            <li>Customized team-building activities</li>
+            <li>Technical support and AV equipment</li>
+            <li>Catering and special dietary requirements</li>
+            <li>Local excursions and cultural experiences</li>
+        </ul>
+        
+        <hr class="section-divider">
+        
+        <h3>Popular MICE Destinations</h3>
+        <ul>
+            <li>Ho Chi Minh City: Modern metropolis with excellent conference facilities</li>
+            <li>Hanoi: Cultural capital with historic venues and modern hotels</li>
+            <li>Da Nang: Beach destination perfect for incentives and team-building</li>
+            <li>Nha Trang: Resort city ideal for corporate retreats</li>
+            <li>Phu Quoc: Island paradise for exclusive incentive programs</li>
+        </ul>
+
+        <div class="bg-light p-1 mb-2">
+            <h3 class="section-title mb-1">Contact Us for MICE Services</h3>
+            <p class="text-primary mb-05">Ready to plan your corporate event in Vietnam? Our MICE specialists will help create unforgettable experiences.</p>
+            <p class="mice-contact-text">Contact us today to discuss your requirements and receive a customized proposal.</p>
+        </div>
+
+        <p><a href="tours-to-vietnam.html" class="btn">← Back to Tours to Vietnam</a></p>
+    </div>
+
+    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+
+    <script>
+        fetch('../includes/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
+
+        // Auto-classify and style buttons based on their text content and href
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a');
+            links.forEach(link => {
+                // Skip nav/header/dropdown menu links
+                if (link.closest('nav') || link.closest('header') || link.closest('.dropdown-menu')) return;
+            });
+        });
+    </script>
+</body>
+</html>

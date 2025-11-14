@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - VN to You Tour</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <div id="header-placeholder"></div>
+    </header>
+
+    <script src="../assets/js/header.js"></script>
+    <script>
+        fetch('../includes/header.html')
+        .then(response => response.text())
+        .then(data => {
+            data = data.replace('href="/', 'href="../');
+            data = data.replace('href="/pages/', 'href="');
+            data = data.replace('src="/assets/', 'src="../assets/');
+            document.getElementById('header-placeholder').innerHTML = data;
+            // Dispatch event to signal header is loaded
+            window.dispatchEvent(new Event('headerLoaded'));
+        });
+    </script>
+
+    <div class="content-wrapper">
+        <div class="main-content">
+            <h2>Latest News</h2>
+            <div id="news-articles"></div>
+            <script src="../assets/js/data/articles-data.js"></script>
+            <script src="../assets/js/data/daily-tours-data.js"></script>
+            <script src="../assets/js/components/sidebar.js"></script>
+            <script>
+                function renderNewsArticles() {
+                    const container = document.getElementById('news-articles');
+                    let html = '';
+                    articlesData.forEach((article, index) => {
+                        const articleUrl = `../templates/article-template.html?id=${article.id}`;
+                        html += `
+                            <article>
+                                <h3>${article.title}</h3>
+                                <p>Published: ${article.date} | ${article.readTime} | Category: ${article.category}</p>
+                                <p>${article.excerpt}</p>
+                                <a href="${articleUrl}" class="btn">Read Article</a>
+                                ${article.featured ? '<span> (Featured)</span>' : ''}
+                            </article>
+                            ${index < articlesData.length - 1 ? '<hr class="article-divider">' : ''}
+                        `;
+                    });
+                    container.innerHTML = html;
+                }
+
+                function filterByCategory(category) {
+                    const container = document.getElementById('news-articles');
+                    let html = '';
+
+                    const filteredArticles = category === 'all' ?
+                        articlesData :
+                        articlesData.filter(article => article.category === category);
+
+                    filteredArticles.forEach((article, index) => {
+                        const articleUrl = `../templates/article-template.html?id=${article.id}`;
+                        html += `
+                            <article>
+                                <h3>${article.title}</h3>
+                                <p>Published: ${article.date} | ${article.readTime} | Category: ${article.category}</p>
+                                <p>${article.excerpt}</p>
+                                <a href="${articleUrl}" class="btn">Read Article</a>
+                                ${article.featured ? '<span> (Featured)</span>' : ''}
+                            </article>
+                            ${index < filteredArticles.length - 1 ? '<hr class="article-divider">' : ''}
+                        `;
+                    });
+                    container.innerHTML = html;
+                }
+
+                document.addEventListener('DOMContentLoaded', function() {
+                    // Check for category parameter in URL
+                    const urlParams = new URLSearchParams(window.location.search);
+                    const categoryParam = urlParams.get('category');
+                    
+                    if (categoryParam) {
+                        // Update page title to show filtered category
+                        document.querySelector('h2').textContent = `Latest News - ${categoryParam}`;
+                        filterByCategory(categoryParam);
+                    } else {
+                        renderNewsArticles();
+                    }
+                    
+                    // Auto-style all action buttons for unified management
+                    setTimeout(() => {
+                        document.querySelectorAll('a').forEach(link => {
+                            const text = link.textContent.toLowerCase().trim();
+                            const href = link.getAttribute('href') || '';
+                            
+                            // Skip navigation, header, and dropdown menu links
+                            if (link.closest('nav') || link.closest('header') || link.closest('.dropdown-menu')) return;
+                        });
+                    }, 100);
+                    
+                    initSidebar('../');
+                });
+            </script>
+        </div>
+
+        <aside class="sidebar">
+            <!-- Sidebar will be populated by JavaScript -->
+        </aside>
+    </div>
+    </div>
+
+    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+
+    <script>
+        fetch('../includes/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+</body>
+</html>

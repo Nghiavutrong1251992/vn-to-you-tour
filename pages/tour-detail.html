@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Detail - VN to You Tour</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+
+</head>
+<body>
+    <header>
+        <div id="header-placeholder"></div>
+    </header>
+
+    <div class="tour-detail-container">
+        <a href="daily-tours.html" class="btn">← Back to Daily Tours</a>
+        
+        <div id="tour-content">
+            <!-- Tour content will be loaded here -->
+        </div>
+    </div>
+
+    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+
+    <!-- Load header and footer -->
+    <script>
+        fetch('../includes/header.html')
+        .then(response => response.text())
+        .then(data => {
+            data = data.replace('href="/', 'href="../');
+            data = data.replace('href="/pages/', 'href="');
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
+
+        fetch('../includes/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+
+    <!-- Load data and render tour -->
+    <script src="../assets/js/data/daily-tours-data.js"></script>
+    <script>
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+        function renderTourDetail() {
+            const tourId = getUrlParameter('id');
+            const tour = dailyToursData.find(t => t.id === tourId);
+
+            if (!tour) {
+                document.getElementById('tour-content').innerHTML = `
+                    <div class="content-section">
+                        <h3>Tour Not Found</h3>
+                        <p>Sorry, the requested tour could not be found.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            const regionNames = {
+                'north': 'Northern Vietnam',
+                'central': 'Central Vietnam',
+                'south': 'Southern Vietnam'
+            };
+
+            document.title = `${tour.title} - VN to You Tour`;
+
+            const tourHTML = `
+                <div class="tour-header">
+                    <h1>${tour.title}</h1>
+                    <p>${tour.description}</p>
+                    <p><strong>Region:</strong> ${regionNames[tour.region]} | <strong>Category:</strong> ${tour.category}</p>
+                </div>
+
+                <div class="tour-info">
+                    <p><strong>Duration:</strong> ${tour.duration.display}</p>
+                    <p><strong>Group Size:</strong> ${tour.groupSize}</p>
+                    <p><strong>Price:</strong> ${tour.price.display}</p>
+                </div>
+
+                <div class="content-section">
+                    <h3>Tour Highlights</h3>
+                    <ul class="simple-list">
+                        ${tour.highlights.map(highlight => `<li>${highlight}</li>`).join('')}
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3>Detailed Itinerary</h3>
+                    ${tour.itinerary.map(item => `
+                        <div class="itinerary-item">
+                            <h4>${item.time}</h4>
+                            <p>${item.activity}</p>
+                        </div>
+                    `).join('')}
+                </div>
+
+                <div class="content-section">
+                    <h3>What's Included & Excluded</h3>
+                    <div class="included-excluded">
+                        <h4>Included:</h4>
+                        <ul>
+                            ${tour.included.map(item => `<li>${item}</li>`).join('')}
+                        </ul>
+                        
+                        <h4>Not Included:</h4>
+                        <ul>
+                            ${tour.notIncluded.map(item => `<li>${item}</li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="booking-section">
+                    <h3>Book This Tour</h3>
+                    <p>Contact us to make a reservation:</p>
+                    <div class="contact-buttons">
+                        <a href="https://wa.me/84977632673?text=Hi! I'm interested in the ${encodeURIComponent(tour.title)} tour." class="btn" target="_blank">
+                            WhatsApp
+                        </a>
+                        <a href="mailto:sales@vntoyoutour.com?subject=Tour Inquiry: ${encodeURIComponent(tour.title)}" class="btn">
+                            Email
+                        </a>
+                        <a href="https://line.me/ti/p/FNf-ArKG1M" class="btn" target="_blank">
+                            Line
+                        </a>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('tour-content').innerHTML = tourHTML;
+            
+            // Auto-style buttons after rendering
+            setTimeout(() => {
+                const links = document.querySelectorAll('a');
+                links.forEach(link => {
+                    // Skip nav/header/dropdown menu links
+                    if (link.closest('nav') || link.closest('header') || link.closest('.dropdown-menu')) return;
+                });
+            }, 100);
+        }
+
+        document.addEventListener('DOMContentLoaded', renderTourDetail);
+    </script>
+</body>
+</html>

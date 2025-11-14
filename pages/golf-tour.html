@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golf Tours in Vietnam - VN to You Tour</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div id="header-placeholder"></div>
+    </header>
+
+    <script>
+        fetch('../includes/header.html')
+        .then(response => response.text())
+        .then(data => {
+            data = data.replace('href="/', 'href="../');
+            data = data.replace('href="/pages/', 'href="');
+            data = data.replace('src="/assets/', 'src="../assets/');
+            document.getElementById('header-placeholder').innerHTML = data;
+            // Set active menu item after header is loaded
+            if (window.setActiveMenuItem) {
+                window.setActiveMenuItem();
+            }
+        });
+    </script>
+
+    <div class="content-container">
+        <h1>Golf Tours in Vietnam</h1>
+        <p>World-class golf courses set against stunning natural backdrops, combining championship-level golf with Vietnam's rich cultural heritage.</p>
+        
+        <hr class="section-divider">
+        
+        <h3>Why Golf in Vietnam?</h3>
+        <ul>
+            <li>World-class courses by renowned architects</li>
+            <li>Year-round favorable climate for golf</li>
+            <li>Scenic courses in mountains, beaches, and rice terraces</li>
+            <li>Premium golf experiences at competitive prices</li>
+            <li>Combine golf with Vietnam's unique heritage</li>
+        </ul>
+        
+        <hr class="section-divider">
+        
+        <h3>Featured Golf Destinations</h3>
+        
+        <h4>Da Nang Golf Courses</h4>
+        <ul>
+            <li>Son Tra Peninsula: Links-style course with ocean views</li>
+            <li>Da Nang Golf Club: Championship course designed by Peter Thomson</li>
+            <li>Montgomerie Links: Scottish-style links course by Colin Montgomerie</li>
+        </ul>
+
+        <h4>Ho Chi Minh City Area</h4>
+        <ul>
+            <li>Vietnam Golf & Country Club: Award-winning course in Long An</li>
+            <li>Song Giao Golf Resort: Lakeside course with resort amenities</li>
+        </ul>
+
+        <h4>Other Destinations</h4>
+        <ul>
+            <li>Nha Trang Beach Golf Club: Beachfront course with sea views</li>
+            <li>BRG Kings Island Golf Club: Mountain course in Phu Tho province</li>
+            <li>Emeralda Resort Dalat Golf Club: Highland course in Da Lat</li>
+        </ul>
+        
+        <hr class="section-divider">
+        
+        <h3>Golf Tour Packages Include</h3>
+        <ul>
+            <li>Green fees and golf cart rentals</li>
+            <li>Accommodation at luxury resorts and hotels</li>
+            <li>Private transportation between courses</li>
+            <li>Professional caddie services</li>
+            <li>Golf equipment rental (if needed)</li>
+            <li>Cultural excursions and sightseeing</li>
+            <li>Traditional Vietnamese cuisine experiences</li>
+            <li>24/7 support from our experienced team</li>
+        </ul>
+        
+        <hr class="section-divider">
+        
+        <h3>Custom Golf Experiences</h3>
+        <p>Customized itineraries for corporate outings, golf vacations, and special celebrations matching your skill level and preferences.</p>
+        <ul>
+            <li>Beginner-Friendly Packages: Lessons with PGA professionals</li>
+            <li>Championship Tours: Multiple courses over several days</li>
+            <li>Corporate Golf Events: Team-building and incentive programs</li>
+            <li>Golf & Spa Retreats: Combine golf with wellness experiences</li>
+        </ul>
+
+        <div class="highlight-box">
+            <h3>Plan Your Golf Tour</h3>
+            <p>Experience the perfect blend of world-class golf and Vietnamese culture. Our golf specialists will help design your ultimate golf vacation.</p>
+            <p>Contact us to learn more about our golf tour packages and current availability.</p>
+        </div>
+
+        <p><a href="tours-to-vietnam.html" class="btn">← Back to Tours to Vietnam</a></p>
+    </div>
+
+    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+
+    <script>
+        fetch('../includes/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
+
+        // Auto-classify and style buttons based on their text content and href
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a');
+            links.forEach(link => {
+                // Skip nav/header/dropdown menu links
+                if (link.closest('nav') || link.closest('header') || link.closest('.dropdown-menu')) return;
+            });
+        });
+    </script>
+</body>
+</html>

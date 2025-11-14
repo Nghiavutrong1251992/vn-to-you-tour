@@ -1,0 +1,96 @@
+<!-- Reusable Sidebar Component -->
+<aside class="sidebar">
+    <h3><i class="fas fa-clock"></i> Recent Posts</h3>
+    <ul id="sidebar-recent-posts">
+        <!-- Recent posts will be populated by JavaScript -->
+    </ul>
+    
+    <hr class="sidebar-divider">
+    
+    <h3><i class="fas fa-tags"></i> Categories</h3>
+    <ul id="sidebar-categories">
+        <!-- Categories will be populated by JavaScript -->
+    </ul>
+    
+    <hr class="sidebar-divider">
+    
+    <h3><i class="fas fa-star"></i> Popular Tours</h3>
+    <ul id="sidebar-popular-tours">
+        <!-- Popular tours will be populated by JavaScript -->
+    </ul>
+    
+    <hr class="sidebar-divider">
+    
+    <h3><i class="fas fa-phone"></i> Quick Contact</h3>
+    <p><strong>WhatsApp:</strong> +84 977 632 673</p>
+    <p><strong>Email:</strong> sales@vntoyoutour.com</p>
+    <p><strong>Company:</strong> VN to You Tour</p>
+    <div>
+        <a href="https://web.facebook.com/profile.php?id=100091579728365" target="_blank"><i class="fab fa-facebook"></i> Facebook</a><br>
+        <a href="https://wa.me/84977632673" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a><br>
+        <a href="https://line.me/ti/p/FNf-ArKG1M" target="_blank"><i class="fab fa-line"></i> Line</a><br>
+        <a href="mailto:sales@vntoyoutour.com"><i class="fas fa-envelope"></i> Email</a>
+    </div>
+</aside>
+
+<script>
+function populateSidebar(basePath = '../') {
+    // Recent posts
+    const recentPosts = articlesData.slice(0, 4);
+    const recentPostsContainer = document.getElementById('sidebar-recent-posts');
+    if (recentPostsContainer) {
+        let html = '';
+        recentPosts.forEach(article => {
+            const articlePath = basePath === '../' ?
+                `../templates/article-template.html?id=${article.id}` :
+                `templates/article-template.html?id=${article.id}`;
+            html += `<li><a href="${articlePath}">${article.title}</a></li>`;
+        });
+        recentPostsContainer.innerHTML = html;
+    }
+
+    // Categories
+    const categories = [...new Set(articlesData.map(article => article.category))];
+    const categoriesContainer = document.getElementById('sidebar-categories');
+    if (categoriesContainer) {
+        let html = '';
+        categories.forEach(category => {
+            const count = articlesData.filter(article => article.category === category).length;
+            const newsPath = basePath === '../' ? '../pages/news.html' : 'pages/news.html';
+            html += `<li><a href="${newsPath}?category=${encodeURIComponent(category)}">${category} (${count})</a></li>`;
+        });
+        categoriesContainer.innerHTML = html;
+    }
+
+    // Popular tours
+    const popularTours = [
+        ...toursData.slice(0, 2),
+        ...dailyToursData.filter(tour => ['north', 'central', 'south'].includes(tour.region)).slice(0, 2)
+    ].slice(0, 4);
+
+    const popularToursContainer = document.getElementById('sidebar-popular-tours');
+    if (popularToursContainer) {
+        let html = '';
+        popularTours.forEach(tour => {
+            let relativeUrl;
+            if (tour.url.startsWith('/pages')) {
+                // Private tours have full path starting with /pages
+                relativeUrl = tour.url.replace('/pages', basePath + 'pages');
+            } else {
+                // Daily tours have just filename, assume they're in daily-tours directory
+                relativeUrl = basePath + 'pages/tours/daily-tours/' + tour.url;
+            }
+            html += `<li><a href="${relativeUrl}">${tour.title}</a></li>`;
+        });
+        popularToursContainer.innerHTML = html;
+    }
+}
+
+// Auto-populate sidebar when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    // Determine base path based on current location
+    const currentPath = window.location.pathname;
+    const basePath = currentPath.includes('/templates/') ? '../' : '../';
+    populateSidebar(basePath);
+});
+</script>

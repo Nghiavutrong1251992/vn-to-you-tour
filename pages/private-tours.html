@@ -173,9 +173,15 @@
                 toursHTML += '<p>No tours available in this region yet. Please check back later!</p>';
             } else {
                 tours.forEach((tour, index) => {
+                    // Adjust image URL for GitHub Pages
+                    let imageUrl = tour.image ? tour.image.url : '';
+                    if (imageUrl.startsWith('/')) {
+                        imageUrl = '..' + imageUrl;
+                    }
+                    
                     const thumbnailHtml = tour.image ? 
                         `<div class="tour-thumbnail-container">
-                            <img src="${encodeURI(tour.image.url)}" 
+                            <img src="${encodeURI(imageUrl)}" 
                                  alt="${tour.image.alt}"
                                  class="tour-list-thumbnail">
                          </div>` : '';
@@ -249,12 +255,18 @@
             `;
             
             allTours.forEach(tour => {
+                // Adjust image URL for GitHub Pages
+                let sidebarImageUrl = tour.image ? tour.image.url : '';
+                if (sidebarImageUrl.startsWith('/')) {
+                    sidebarImageUrl = '..' + sidebarImageUrl;
+                }
+                
                 sidebarHTML += `
                     <li class="sidebar-tour-item" style="display: block; margin-bottom: 20px; padding: 15px; background: #f9f9f9; border: 1px solid #e0e0e0; border-radius: 8px;">
                         <a href="private-tour-detail.html?id=${tour.id}" class="sidebar-tour-link" style="display: block; text-decoration: none; color: inherit;">
                             ${tour.image ? `
                             <div style="margin-bottom: 10px;">
-                                <img src="${encodeURI(tour.image.url)}" alt="${tour.image.alt}" loading="lazy" style="width: 100%; height: auto; aspect-ratio: 4/3; object-fit: cover; border-radius: 4px;">
+                                <img src="${encodeURI(sidebarImageUrl)}" alt="${tour.image.alt}" loading="lazy" style="width: 100%; height: auto; aspect-ratio: 4/3; object-fit: cover; border-radius: 4px;">
                             </div>
                             ` : ''}
                             <div class="sidebar-tour-info">

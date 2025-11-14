@@ -15,10 +15,11 @@ function findPrivateTourById(tourId) {
 function generatePrivateTourHTML(tour) {
     if (!tour) return '<p>Private tour not found.</p>';
     
-    // Adjust image URL to relative path if it starts with /
+    // Adjust image URL to relative path based on current location
     let imageUrl = tour.image ? tour.image.url : '';
+    let isInSubdir = window.location.pathname.includes('/pages/');
     if (imageUrl.startsWith('/')) {
-        imageUrl = '..' + imageUrl;
+        imageUrl = isInSubdir ? '..' + imageUrl : imageUrl.substring(1);
     }
     
     let html = `
@@ -250,8 +251,9 @@ function renderPrivateTourById(tourId) {
         // If the tour provides an external markdown content file, fetch and inject it
         if (tour && tour.contentUrl) {
             let mdUrl = tour.contentUrl;
+            let isInSubdir = window.location.pathname.includes('/pages/');
             if (mdUrl.startsWith('/')) {
-                mdUrl = '..' + mdUrl;
+                mdUrl = isInSubdir ? '..' + mdUrl : mdUrl.substring(1);
             }
             fetch(mdUrl)
                 .then(resp => resp.text())

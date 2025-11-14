@@ -31,9 +31,7 @@ function loadPrivateToursList() {
                         
 
 
-                        <div class="tour-actions">
-                            <a href="${tourUrl}" class="btn btn-primary-large">View Details & Book Tour →</a>
-                        </div>
+
                     </div>
                 </article>
                 <hr class="tour-divider-large">

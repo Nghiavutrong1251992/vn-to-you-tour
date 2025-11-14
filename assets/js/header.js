@@ -68,10 +68,20 @@ function setupDropdownBehavior() {
         }, 300); // Increased delay to 300ms
     }
     
-    // Show menu when hovering over toggle
+    // Handle mobile touch/click events
+    dropdownToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (isMenuVisible) {
+            hideMenu();
+        } else {
+            showMenu();
+        }
+    });
+    
+    // Show menu when hovering over toggle (desktop)
     dropdownToggle.addEventListener('mouseenter', showMenu);
     
-    // Show menu when hovering over dropdown container
+    // Show menu when hovering over dropdown container (desktop)
     dropdown.addEventListener('mouseenter', function(e) {
         // Only show if hovering over the dropdown itself, not child elements
         if (e.target === dropdown || dropdown.contains(e.target)) {

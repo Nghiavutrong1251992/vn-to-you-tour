@@ -427,6 +427,22 @@ h4 { font-size: var(--font-size-h4); font-weight: 500; }
     .text-base-mobile { font-size: var(--font-size-base); }
     .text-lg-mobile { font-size: var(--font-size-lg); }
     .text-xl-mobile { font-size: var(--font-size-xl); }
+    
+    /* Mobile dropdown improvements */
+    .dropdown-menu {
+        left: 0;
+        right: 0;
+        min-width: auto;
+        width: auto;
+        margin-top: var(--spacing-xs);
+        transform: translateY(-5px);
+    }
+    
+    .dropdown .dropdown-menu a {
+        padding: var(--spacing-md);
+        font-size: var(--font-size-base);
+        touch-action: manipulation;
+    }
 }
 
 p, ul {

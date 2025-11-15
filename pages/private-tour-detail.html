@@ -27,10 +27,7 @@
         
         <div class="sidebar">
             <div id="sidebar-content">
-                <div class="sidebar-widget" style="background: #f9f9f9; padding: 20px; border: 1px solid #ddd;">
-                    <h3>🔧 Testing Sidebar</h3>
-                    <p id="sidebar-status">Loading...</p>
-                </div>
+                <!-- Sidebar content will be populated by JavaScript -->
             </div>
         </div>
     </div>
@@ -67,9 +64,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             console.log('=== SIMPLE Tour Detail Loaded ===');
             
-            // Update status
-            const statusEl = document.getElementById('sidebar-status');
-            if (statusEl) statusEl.textContent = 'JavaScript running...';
+            // Update status - removed testing sidebar references
             
             // Render tour content
             renderPrivateTourPage();
@@ -157,17 +152,8 @@
                     
                     sidebarContainer.innerHTML = html;
                     
-                    if (statusEl) {
-                        statusEl.textContent = `SUCCESS! Found ${relatedTours.length} related tours`;
-                        statusEl.style.color = 'green';
-                    }
-                    
                     console.log('SUCCESS: Sidebar created with', relatedTours.length, 'related tours');
                 } else {
-                    if (statusEl) {
-                        statusEl.textContent = 'ERROR: Missing data or container';
-                        statusEl.style.color = 'red';
-                    }
                     console.log('ERROR: Missing requirements');
                 }
             }, 1000);

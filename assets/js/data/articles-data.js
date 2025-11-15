@@ -103,6 +103,91 @@ const articlesData = [
         tags: ['Hoi An', 'Ancient Town', 'UNESCO', 'Culture', 'Lanterns', 'Food'],
         readTime: '6 min read',
         featured: true
+    },
+    {
+        id: 'ttaa-event-participation',
+        slug: 'ttaa-event-participation',
+        title: 'Vn To You Tour Proudly Participates in Thai Travel Agents Association (TTAA) Event – Elevating Credibility, Expanding International Connections',
+        date: 'January 15, 2025',
+        author: 'VN to You Tour Team',
+        category: 'Company News',
+        excerpt: 'We are thrilled to announce that Vn To You Tour had the distinct honor of participating in a significant event organized by the Thai Travel Agents Association (TTAA) on January 15, 2025.',
+        image: 'assets/images/articles/ttaa-event-4.jpg',
+        content: [
+            {
+                type: 'image',
+                src: 'assets/images/articles/ttaa-event-4.jpg',
+                alt: 'Vn To You Tour at TTAA Event'
+            },
+            {
+                type: 'paragraph',
+                text: 'We are thrilled to announce that Vn To You Tour had the distinct honor of participating in a significant event organized by the Thai Travel Agents Association (TTAA) on January 15, 2025. This event was not just a memorable milestone but also a testament to our commitment to expanding our reach and strengthening our connections within the international tourism industry.'
+            },
+            {
+                type: 'heading',
+                text: 'About TTAA – A Strategic Partner in the Thai Travel Industry'
+            },
+            {
+                type: 'paragraph',
+                text: 'The Thai Travel Agents Association (TTAA), initially established in 1984 as the "Travel Agents Association (TAA)" and later renamed TTAA in 1990, is a leading organization that brings together outbound tour operators and airline ticket agents in Thailand.'
+            },
+            {
+                type: 'paragraph',
+                text: 'TTAA plays a crucial role in:'
+            },
+            {
+                type: 'list',
+                items: [
+                    'Promoting and enhancing business standards for its members, ensuring professionalism and quality service.',
+                    'Protecting interests and resolving issues to create stability for members\' business operations.',
+                    'Creating new business opportunities by expanding sales channels and seeking innovative tourism products.',
+                    'Increasing the competitive capabilities of its members through organizing training courses, updating knowledge, and new skills.',
+                    'Encouraging members to operate their businesses according to high standards, responsibility, and professional ethics.'
+                ]
+            },
+            {
+                type: 'paragraph',
+                text: 'With a vision to become the leading travel association in the ASEAN bloc, TTAA continuously builds networks and partnerships with tourism promotion organizations worldwide, while also raising the service standards and competitive potential of its members to an international level.'
+            },
+            {
+                type: 'image',
+                src: 'assets/images/articles/ttaa-event-2.jpg',
+                alt: 'TTAA Event Activities'
+            },
+            {
+                type: 'heading',
+                text: 'Vn To You Tour at the TTAA Event'
+            },
+            {
+                type: 'paragraph',
+                text: 'Our participation in the TTAA event provided Vn To You Tour with invaluable opportunities to:'
+            },
+            {
+                type: 'list',
+                items: [
+                    'Directly interact and learn from leading experts in the Thai and regional tourism industry.',
+                    'Explore the latest trends and potential tourism products.',
+                    'Forge strategic relationships with reputable partners, agencies, and travel service providers.',
+                    'Showcase Vn To You Tour\'s unique products and services, especially our tours exploring the beauty of Vietnam and neighboring countries.'
+                ]
+            },
+            {
+                type: 'image',
+                src: 'assets/images/articles/ttaa-event-3.jpg',
+                alt: 'Networking at TTAA Event'
+            },
+            {
+                type: 'paragraph',
+                text: 'We believe that through prestigious events like those hosted by TTAA, Vn To You Tour will continue to solidify its position, expand its network of cooperation, and provide customers with even higher quality, memorable, and safer travel experiences. This event clearly demonstrates our commitment to continuous development and establishing our reputation on the international tourism map.'
+            },
+            {
+                type: 'paragraph',
+                text: 'Stay tuned for more exciting developments from Vn To You Tour in the future!'
+            }
+        ],
+        tags: ['TTAA', 'Partnership', 'International', 'Thailand', 'Business Development'],
+        readTime: '4 min read',
+        featured: true
     }
     // When adding new articles, add them anywhere in this array - they will be automatically sorted by date
 ];

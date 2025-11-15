@@ -29,52 +29,103 @@
     <div class="content-wrapper">
         <div class="main-content">
             <h2>Latest News</h2>
-            <div id="news-articles"></div>
+            
+            <!-- Company News Section -->
+            <div class="news-section">
+                <h3>Company News</h3>
+                <div id="company-news-articles"></div>
+            </div>
+            
+            <hr class="section-divider">
+            
+            <!-- Regular News Section -->
+            <div class="news-section">
+                <h3>General News & Updates</h3>
+                <div id="regular-news-articles"></div>
+            </div>
             <script src="../assets/js/data/articles-data.js"></script>
             <script src="../assets/js/data/daily-tours-data.js"></script>
             <script src="../assets/js/components/sidebar.js"></script>
             <script>
-                function renderNewsArticles() {
-                    const container = document.getElementById('news-articles');
+                function renderArticleSection(articles, containerId) {
+                    const container = document.getElementById(containerId);
                     let html = '';
-                    articlesData.forEach((article, index) => {
-                        const articleUrl = `../templates/article-template.html?id=${article.id}`;
-                        html += `
-                            <article>
-                                <h3>${article.title}</h3>
-                                <p>Published: ${article.date} | ${article.readTime} | Category: ${article.category}</p>
-                                <p>${article.excerpt}</p>
-                                <a href="${articleUrl}" class="btn">Read Article</a>
-                                ${article.featured ? '<span> (Featured)</span>' : ''}
-                            </article>
-                            ${index < articlesData.length - 1 ? '<hr class="article-divider">' : ''}
-                        `;
-                    });
+                    
+                    if (articles.length === 0) {
+                        html = '<p>No articles available in this section.</p>';
+                    } else {
+                        articles.forEach((article, index) => {
+                            const articleUrl = `../templates/article-template.html?id=${article.id}`;
+                            
+                            // Create two-column layout if image is available
+                            if (article.image) {
+                                const imageSrc = article.image.startsWith('assets/') ? '../' + article.image : article.image;
+                                html += `
+                                    <article style="display: flex; gap: 20px; align-items: flex-start;">
+                                        <div style="flex: 0 0 200px;">
+                                            <img src="${imageSrc}" alt="${article.title}" style="width: 100%; height: auto; border-radius: 8px;">
+                                        </div>
+                                        <div style="flex: 1;">
+                                            <h4>${article.title}</h4>
+                                            <p>Published: ${article.date} | ${article.readTime} | Category: ${article.category}</p>
+                                            <p>${article.excerpt}</p>
+                                            <a href="${articleUrl}" class="btn">Read Article</a>
+                                            ${article.featured ? '<span class="featured-badge"> (Featured)</span>' : ''}
+                                        </div>
+                                    </article>
+                                `;
+                            } else {
+                                html += `
+                                    <article>
+                                        <h4>${article.title}</h4>
+                                        <p>Published: ${article.date} | ${article.readTime} | Category: ${article.category}</p>
+                                        <p>${article.excerpt}</p>
+                                        <a href="${articleUrl}" class="btn">Read Article</a>
+                                        ${article.featured ? '<span class="featured-badge"> (Featured)</span>' : ''}
+                                    </article>
+                                `;
+                            }
+                            
+                            if (index < articles.length - 1) {
+                                html += '<hr class="article-divider">';
+                            }
+                        });
+                    }
+                    
                     container.innerHTML = html;
                 }
 
+                function renderNewsArticles() {
+                    // Separate articles into company news and regular news
+                    const companyNews = articlesData.filter(article => article.category === 'Company News');
+                    const regularNews = articlesData.filter(article => article.category !== 'Company News');
+                    
+                    // Sort by date (most recent first)
+                    companyNews.sort((a, b) => new Date(b.date) - new Date(a.date));
+                    regularNews.sort((a, b) => new Date(b.date) - new Date(a.date));
+                    
+                    // Render each section
+                    renderArticleSection(companyNews, 'company-news-articles');
+                    renderArticleSection(regularNews, 'regular-news-articles');
+                }
+
                 function filterByCategory(category) {
-                    const container = document.getElementById('news-articles');
-                    let html = '';
-
-                    const filteredArticles = category === 'all' ?
-                        articlesData :
-                        articlesData.filter(article => article.category === category);
-
-                    filteredArticles.forEach((article, index) => {
-                        const articleUrl = `../templates/article-template.html?id=${article.id}`;
-                        html += `
-                            <article>
-                                <h3>${article.title}</h3>
-                                <p>Published: ${article.date} | ${article.readTime} | Category: ${article.category}</p>
-                                <p>${article.excerpt}</p>
-                                <a href="${articleUrl}" class="btn">Read Article</a>
-                                ${article.featured ? '<span> (Featured)</span>' : ''}
-                            </article>
-                            ${index < filteredArticles.length - 1 ? '<hr class="article-divider">' : ''}
-                        `;
-                    });
-                    container.innerHTML = html;
+                    if (category === 'all') {
+                        renderNewsArticles();
+                        return;
+                    }
+                    
+                    // Filter articles by category
+                    const filteredArticles = articlesData.filter(article => article.category === category);
+                    
+                    // Determine which section to show
+                    if (category === 'Company News') {
+                        renderArticleSection(filteredArticles, 'company-news-articles');
+                        renderArticleSection([], 'regular-news-articles');
+                    } else {
+                        renderArticleSection([], 'company-news-articles');
+                        renderArticleSection(filteredArticles, 'regular-news-articles');
+                    }
                 }
 
                 document.addEventListener('DOMContentLoaded', function() {

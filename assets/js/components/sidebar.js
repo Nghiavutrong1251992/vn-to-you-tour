@@ -9,9 +9,9 @@ function createSidebarHTML(basePath = '../') {
         </div>
 
         <div class="section-border">
-            <h3>Categories</h3>
-            <ul id="sidebar-categories">
-                <!-- Categories will be populated by JavaScript -->
+            <h3>Company News</h3>
+            <ul id="sidebar-company-news">
+                <!-- Company news will be populated by JavaScript -->
             </ul>
         </div>
 
@@ -59,57 +59,40 @@ function populateSidebar(basePath = '../') {
             let html = '';
             recentPosts.forEach(article => {
                 const articlePath = actualBasePath + 'templates/article-template.html?id=' + article.id;
-                html += `<li><a href="${articlePath}">${article.title}</a></li>`;
+                html += `<li><a href="${articlePath}" title="${article.excerpt}">${article.title}</a><br><small>${article.date}</small></li>`;
             });
             recentPostsContainer.innerHTML = html;
         }
     }
 
-    // Categories - display in a logical order with counts
+    // Company News - display recent company news articles
     if (typeof articlesData !== 'undefined') {
-        const categories = [...new Set(articlesData.map(article => article.category))];
+        const companyNews = articlesData.filter(article => article.category === 'Company News');
         
-        // Define preferred category order for better UX
-        const categoryOrder = [
-            'Destination Guides',
-            'Travel Tips', 
-            'Cultural Insights',
-            'Food & Cuisine',
-            'Adventure Travel',
-            'Luxury Travel'
-        ];
+        // Sort by date (newest first)
+        const sortedCompanyNews = companyNews.sort((a, b) => new Date(b.date) - new Date(a.date));
         
-        // Sort categories by preferred order, then alphabetically for any new ones
-        const sortedCategories = categories.sort((a, b) => {
-            const indexA = categoryOrder.indexOf(a);
-            const indexB = categoryOrder.indexOf(b);
-            
-            if (indexA !== -1 && indexB !== -1) {
-                return indexA - indexB; // Both in preferred order
-            } else if (indexA !== -1) {
-                return -1; // A is in preferred order, B is not
-            } else if (indexB !== -1) {
-                return 1; // B is in preferred order, A is not
-            } else {
-                return a.localeCompare(b); // Both not in preferred order, sort alphabetically
-            }
-        });
-        
-        const categoriesContainer = document.getElementById('sidebar-categories');
-        if (categoriesContainer) {
+        const companyNewsContainer = document.getElementById('sidebar-company-news');
+        if (companyNewsContainer) {
             let html = '';
             
-            // Add "All Articles" option first
-            const newsPath = actualBasePath + 'pages/news.html';
-            html += `<li><a href="${newsPath}">All Articles (${articlesData.length})</a></li>`;
+            if (sortedCompanyNews.length === 0) {
+                html = '<li><em>No company news available</em></li>';
+            } else {
+                // Show recent company news articles (limit to 5)
+                sortedCompanyNews.slice(0, 5).forEach(article => {
+                    const articleUrl = actualBasePath + `templates/article-template.html?id=${article.id}`;
+                    html += `<li><a href="${articleUrl}" title="${article.excerpt}">${article.title}</a><br><small>${article.date}</small></li>`;
+                });
+                
+                // Add link to view all company news
+                if (sortedCompanyNews.length > 0) {
+                    const newsPath = actualBasePath + 'pages/news.html?category=Company%20News';
+                    html += `<li><a href="${newsPath}" class="view-all-link"><strong>View All Company News (${sortedCompanyNews.length})</strong></a></li>`;
+                }
+            }
             
-            // Add each category with count
-            sortedCategories.forEach(category => {
-                const count = articlesData.filter(article => article.category === category).length;
-                html += `<li><a href="${newsPath}?category=${encodeURIComponent(category)}" title="View all ${category} articles">${category} (${count})</a></li>`;
-            });
-            
-            categoriesContainer.innerHTML = html;
+            companyNewsContainer.innerHTML = html;
         }
     }
 

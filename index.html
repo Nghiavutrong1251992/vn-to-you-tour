@@ -55,38 +55,78 @@
 
     <div class="content-container glass-card">
         <h1>VN to You Tour - Vietnam Travel</h1>
-        <p>We are passionate about showcasing the beauty and culture of Vietnam to travelers from around the world. Our company provides authentic and memorable experiences with personalized travel itineraries.</p>
+        <h2>Xin Chao !</h2>
+        <p>Welcome to Vntoyou Tour! We are the leading online local travel agency in Vietnam, offering all-inclusive tour packages to beautiful places across the country. Based in Ha Noi, our team of travel experts and tour guides is here to give the best service to every traveler.</p>
+        
+        <p>In <span id="current-year">2025</span>, we've made our team even stronger with over 150 travel experts and local resources like tour guides, drivers, hotels, and attractions. We are proud of our skills and confident in planning the best tours for you. Our hard work shows in our 98% positive reviews from more than 1,000 travelers.</p>
+        
+        <p>If you prefer private travel—whether you're a family, couple, adventurer, or just looking for a relaxing trip—we have tours to suit your needs. We offer private tour plans and can create a trip just for you. Let us help you plan your perfect vacation in Vietnam today</p>
+        
+        <div style="text-align: center; margin: 2rem 0;">
+            <a href="pages/about-us.html" class="btn">Learn More About Us</a>
+        </div>
         
         <hr class="section-divider">
         
-        <h3>Our Mission</h3>
-        <p>To bridge the gap between travelers and the rich heritage of Vietnam. Every journey should be unique, immersive, and respectful to local communities through expert guides and carefully curated experiences.</p>
+        <div class="vacation-planning-section">
+            <h2>How to Plan Your Dream Vacation with VN TO YOU TOUR</h2>
+            <div class="planning-steps">
+                <div class="planning-step">
+                    <div class="step-number">1</div>
+                    <h3>Tell Us About Your Dream Trip</h3>
+                    <p>Share what your perfect vacation looks like. Let us know your favorite places, activities, and anything you want to see or do.</p>
+                </div>
+                
+                <div class="planning-step">
+                    <div class="step-number">2</div>
+                    <h3>Get Your Itinerary</h3>
+                    <p>We will create a plan for your trip based on what you shared, making sure it fits what you want.</p>
+                </div>
+                
+                <div class="planning-step">
+                    <div class="step-number">3</div>
+                    <h3>Book Your Vacation</h3>
+                    <p>You can book your trip only if you are happy with the plan and it meets your needs.</p>
+                </div>
+            </div>
+        </div>
         
         <hr class="section-divider">
         
-        <h3>Why Choose Us?</h3>
-        <ul>
-            <li>Expert local knowledge and insights into Vietnam's hidden gems</li>
-            <li>Customized experiences tailored to your interests and preferences</li>
-            <li>Sustainable tourism practices that benefit local communities</li>
-            <li>24/7 support from planning to execution for seamless journeys</li>
-        </ul>
-        
-        <hr class="section-divider">
-        
-        <h3>Our Services</h3>
-        <ul>
-            <li>Customized itineraries based on your interests, budget, and schedule</li>
-            <li>Expert local guides with insights into Vietnam's history and culture</li>
-            <li>Accommodation booking from luxury resorts to boutique hotels</li>
-            <li>Reliable transportation including private cars, trains, and flights</li>
-            <li>24/7 support available around the clock during your trip</li>
-        </ul>
-        
-        <hr class="section-divider">
-        
-        <h3>Our Story</h3>
-        <p>Established in 2020, VN to You Tour started as a small initiative to share Vietnam's wonders with international visitors. We have grown into a trusted name serving thousands of satisfied travelers, driven by our love for Vietnam and commitment to excellence.</p>
+        <div class="contact-info-section">
+            <h2>Contact Information</h2>
+            <div class="company-details">
+                <h3>VIET NAM TO YOU TOURISM COMPANY LIMITED</h3>
+                
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <strong>Address:</strong>
+                        <p>No. 5TT1 Alley 537 Bat Khoi Str, Long Bien Dist, Hanoi, Vietnam</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <strong>Phone Numbers:</strong>
+                        <p>(+84) 24 38729346 – (+84) 24 38729347</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <strong>Hotlines:</strong>
+                        <p>+84 904 596 505 MS. NGAN</p>
+                        <p>+84 977 632 673 MR. THONG</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <strong>License Number:</strong>
+                        <p>01-410/2017/TCDL – GP LHQT</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <strong>Email:</strong>
+                        <p><a href="mailto:sales@vntoyoutour.com">SALES@VNTOYOUTOUR.COM</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
         
         <hr class="section-divider">
         
@@ -150,6 +190,13 @@
             const slides = document.querySelectorAll('.slide');
             slides[0].classList.add('active'); // Show first slide
             setInterval(nextSlide, 5000); // Change slide every 5 seconds
+            
+            // Auto-update current year
+            const currentYear = new Date().getFullYear();
+            const yearElement = document.getElementById('current-year');
+            if (yearElement) {
+                yearElement.textContent = currentYear;
+            }
         });
     </script>
 </body>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - VN to You Tour</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <div id="header-placeholder"></div>
+    </header>
+
+    <script src="../assets/js/header.js"></script>
+    <script>
+        fetch('../includes/header.html')
+        .then(response => response.text())
+        .then(data => {
+            data = data.replace('href="/', 'href="../');
+            data = data.replace('href="/pages/', 'href="');
+            data = data.replace('src="/assets/', 'src="../assets/');
+            document.getElementById('header-placeholder').innerHTML = data;
+            // Dispatch event to signal header is loaded
+            window.dispatchEvent(new Event('headerLoaded'));
+        });
+    </script>
+
+    <div class="content-wrapper">
+        <div class="main-content full-width">
+            <h1>About VN TO YOU TOUR</h1>
+            
+            <div class="about-intro">
+                <img src="../assets/images/general/about.png" alt="VN TO YOU TOUR" class="about-image">
+                <h2>Xin Chao !</h2>
+                <p>Welcome to Vntoyou Tour! We are the leading online local travel agency in Vietnam, offering all-inclusive tour packages to beautiful places across the country. Based in Ha Noi, our team of travel experts and tour guides is here to give the best service to every traveler.</p>
+                
+                <p>In <span id="current-year">2025</span>, we've made our team even stronger with over 150 travel experts and local resources like tour guides, drivers, hotels, and attractions. We are proud of our skills and confident in planning the best tours for you. Our hard work shows in our 98% positive reviews from more than 1,000 travelers.</p>
+                
+                <p>If you prefer private travel—whether you're a family, couple, adventurer, or just looking for a relaxing trip—we have tours to suit your needs. We offer private tour plans and can create a trip just for you. Let us help you plan your perfect vacation in Vietnam today</p>
+            </div>
+
+            <div class="contact-info-section">
+                <h2>Contact Information</h2>
+                <div class="company-details">
+                    <h3>VIET NAM TO YOU TOURISM COMPANY LIMITED</h3>
+                    
+                    <div class="contact-grid">
+                        <div class="contact-item">
+                            <strong>Address:</strong>
+                            <p>No. 5TT1 Alley 537 Bat Khoi Str, Long Bien Dist, Hanoi, Vietnam</p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <strong>Phone Numbers:</strong>
+                            <p>(+84) 24 38729346 – (+84) 24 38729347</p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <strong>Hotlines:</strong>
+                            <p>+84 904 596 505 MS. NGAN</p>
+                            <p>+84 977 632 673 MR. THONG</p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <strong>License Number:</strong>
+                            <p>01-410/2017/TCDL – GP LHQT</p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <strong>Email:</strong>
+                            <p><a href="mailto:sales@vntoyoutour.com">SALES@VNTOYOUTOUR.COM</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-section">
+                <h2>Our Key Services:</h2>
+                
+                <div class="service-item">
+                    <h3>Vietnam Land Tours</h3>
+                    <p>Professionally organized tours across all three regions of Vietnam—North, Central, and South—highlighting the country's unique culture, landscapes, and landmarks.</p>
+                </div>
+
+                <div class="service-item">
+                    <h3>Private Group Tours</h3>
+                    <p>Customized tours for groups of various sizes, from intimate groups of 6-8 up to larger groups of 200. Ideal for corporate outings, dealer incentive trips, company team-building activities, gala dinners, parties, and trips with family or friends.</p>
+                </div>
+
+                <div class="service-item">
+                    <h3>Specialized Travel Services</h3>
+                    <p>Expertise in arranging educational and business visits, such as factory tours, school excursions, agricultural research visits, and trade trips focused on the apparel industry and other fields.</p>
+                </div>
+
+                <div class="service-item">
+                    <h3>Vehicle Rental Services</h3>
+                    <p>A broad selection of rental vehicles with experienced drivers, available in 7, 16, 29, 35, and 45-seat options, ensuring comfortable and convenient travel for groups of all sizes.</p>
+                </div>
+
+                <div class="service-item">
+                    <h3>Tour Guides and Interpreters</h3>
+                    <p>Skilled and professional guides and interpreters are available to provide in-depth knowledge and assistance throughout the trip.</p>
+                </div>
+
+                <div class="service-item">
+                    <h3>Luxury Leisure Activities</h3>
+                    <p>Premium travel experiences, including golfing, playing at casinos, and exclusive shopping tours.</p>
+                </div>
+            </div>
+
+            <div class="mission-section">
+                <h2>Our Mission:</h2>
+                <p>Our mission is to create unforgettable journeys for our clients, showcasing Vietnam's breathtaking beauty to international friends and delivering experiences that leave lasting memories.</p>
+            </div>
+
+            <div class="team-section">
+                <h2>Our Team:</h2>
+                <div class="team-members">
+                    <div class="team-member">
+                        <img src="../assets/images/team/thanh-ngan.png" alt="MS. THANH NGAN" class="team-photo">
+                        <h3>MS. THANH NGAN</h3>
+                        <p class="position">DIRECTOR</p>
+                    </div>
+                    
+                    <div class="team-member">
+                        <img src="../assets/images/team/thong.png" alt="MR. THONG" class="team-photo">
+                        <h3>MR. THONG</h3>
+                        <p class="position">Sales Manager (ไทย + BAHASA Market)</p>
+                    </div>
+                    
+                    <div class="team-member">
+                        <img src="../assets/images/team/ruby.png" alt="MS. RUBY" class="team-photo">
+                        <h3>MS. RUBY</h3>
+                        <p class="position">Sales Manager (Philippines + Myanmar + Malaysia Market)</p>
+                    </div>
+                    
+                    <div class="team-member">
+                        <img src="../assets/images/team/lulu.png" alt="MRS. LULU" class="team-photo">
+                        <h3>MRS. LULU</h3>
+                        <p class="position">Sales Executive</p>
+                    </div>
+                    
+                    <div class="team-member">
+                        <img src="../assets/images/team/thu-nguyen.png" alt="MRS. THU NGUYEN" class="team-photo">
+                        <h3>MRS. THU NGUYEN</h3>
+                        <p class="position">Sales Executive</p>
+                    </div>
+                    
+                    <div class="team-member">
+                        <img src="../assets/images/team/intan.png" alt="MS. INTAN" class="team-photo">
+                        <h3>MS. INTAN</h3>
+                        <p class="position">Sales Executive</p>
+                    </div>
+                    
+                    <div class="team-member">
+                        <img src="../assets/images/team/mai.png" alt="MS. MAI" class="team-photo">
+                        <h3>MS. MAI</h3>
+                        <p class="position">Sales Executive</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="guides-section">
+                <h2>Our Tour Guides:</h2>
+                <div class="guides-gallery">
+                    <img src="../assets/images/team/Guide-images/z6337857140789_c84a83c18782e580a53d276eae9737e3.jpg" alt="Tour Guide" class="guide-photo">
+                    <img src="../assets/images/team/Guide-images/z6325430711638_e363f521e6edcbb44e4cb8f1c067fa8b.jpg" alt="Tour Guide" class="guide-photo">
+                    <img src="../assets/images/team/Guide-images/z6289543531801_03084483d71cf347a84d0a41242e7a1c.jpg" alt="Tour Guide" class="guide-photo">
+                    <img src="../assets/images/team/Guide-images/z6289253175222_ae6e8ca6a28e8c951b35dd8ae2efbf69.jpg" alt="Tour Guide" class="guide-photo">
+                    <img src="../assets/images/team/Guide-images/z6142777971651_64357a5d76456dfe232f45a27507cd07.jpg" alt="Tour Guide" class="guide-photo">
+                    <img src="../assets/images/team/Guide-images/z6090017153886_ffbca35d9be7354bb16c685229dd04a9.jpg" alt="Tour Guide" class="guide-photo">
+                    <img src="../assets/images/team/Guide-images/z6088646368116_cc2f36c992301e8c77c254847abe75e3.jpg" alt="Tour Guide" class="guide-photo">
+                    <img src="../assets/images/team/Guide-images/z4207322890787_4cf7f5b3086571337952bae4b9597371.jpg" alt="Tour Guide" class="guide-photo">
+                    <img src="../assets/images/team/Guide-images/IFE_247.jpg" alt="Tour Guide" class="guide-photo">
+                    <img src="../assets/images/team/Guide-images/464214554_8467786780006136_8259042688746668062_n.jpg" alt="Tour Guide" class="guide-photo">
+                    <img src="../assets/images/team/Guide-images/429534079_817879750356107_6233696867088727201_n.jpg" alt="Tour Guide" class="guide-photo">
+                    <img src="../assets/images/team/Guide-images/425299733_7145082195573544_1611432117401593896_n.jpg" alt="Tour Guide" class="guide-photo">
+                    <img src="../assets/images/team/Guide-images/311498873_5615984628462247_3175638981266568579_n.jpg" alt="Tour Guide" class="guide-photo">
+                </div>
+                <p class="guides-description">Our experienced and professional tour guides are passionate about sharing Vietnam's rich culture, history, and natural beauty with visitors from around the world.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+
+
+
+    <script>
+        fetch('../includes/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
+        
+        // Auto-update current year
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentYear = new Date().getFullYear();
+            const yearElement = document.getElementById('current-year');
+            if (yearElement) {
+                yearElement.textContent = currentYear;
+            }
+        });
+    </script>
+</body>
+</html>

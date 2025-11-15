@@ -577,16 +577,15 @@ a:hover {
     box-shadow: var(--glass-shadow);
 }
 
-/* Make contact widget sticky on desktop */
-.sidebar-widget.contact-sticky {
+/* Make the last sidebar widget (contact) sticky */
+.sidebar .sidebar-widget:last-child {
     position: sticky;
-    top: 2rem;
-    z-index: 10;
+    top: 20px;
 }
 
-/* Responsive: disable sticky on mobile/tablet */
+/* Responsive: disable sticky on mobile */
 @media (max-width: 768px) {
-    .sidebar-widget.contact-sticky {
+    .sidebar .sidebar-widget:last-child {
         position: static;
     }
 }

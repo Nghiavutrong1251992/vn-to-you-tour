@@ -189,7 +189,7 @@ function populateRelatedToursSidebar(currentTour, basePath = '../') {
             </ul>
         </div>
 
-        <div class="sidebar-widget contact-sticky">
+        <div class="sidebar-widget">
             <h3><i class="fas fa-phone"></i> Book This Tour</h3>
             <p>Contact us for customized booking:</p>
             <div class="contact-buttons">

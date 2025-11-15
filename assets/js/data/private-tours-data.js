@@ -1,14 +1,14 @@
 // assets/js/private-tours-data.js
 const privateToursData = [
     {
-        id: 'vnc404-danang-hue-hoian',
+        id: 'vnc404',
         title: 'VNC404 Da Nang - Hue - Hoi An (Da Nang 3 nights)',
         region: 'central',
         category: 'comprehensive',
         excerpt: 'Comprehensive 4-day Central Vietnam tour staying 3 nights in Da Nang, visiting Hue Imperial City, Hoi An Ancient Town, and Ba Na Hills with Golden Hand Bridge.',
         description: 'Experience the best of Central Vietnam with this 4-day comprehensive tour featuring 3 nights accommodation in Da Nang, visits to UNESCO World Heritage sites in Hue and Hoi An, plus the spectacular Ba Na Hills with Golden Hand Bridge.',
         image: {
-            url: '/assets/images/tours/vnc404-danang-hue-hoian.jpg',
+            url: '/assets/images/tours/vnc404.jpg',
             alt: 'VNC404 Da Nang Hue Hoi An Tour'
         },
         duration: {
@@ -166,14 +166,14 @@ const privateToursData = [
         seoKeywords: 'Da Nang tour, Hue Imperial City, Hoi An ancient town, Ba Na Hills, Central Vietnam tour, private tour Vietnam, Golden Hand Bridge'
     },
     {
-        id: 'vnc302-danang-hoian-banahills',
+        id: 'vnc302',
         title: 'VNC302 Da Nang - Hoi An - Full day visit Ba Na Hills',
         region: 'central',
         category: 'standard',
         excerpt: 'Experience Central Vietnam with 3 days exploring Hoi An Ancient Town, full day at Ba Na Hills with Golden Hand Bridge, and Da Nang city highlights.',
         description: 'Discover the perfect blend of culture and adventure with this 3-day tour featuring Hoi An Ancient Town, a full day exploring Ba Na Hills including Golden Hand Bridge and French Village, plus Da Nang city attractions.',
         image: {
-            url: '/assets/images/tours/vnc302-danang-hoian-banahills.jpg',
+            url: '/assets/images/tours/vnc302.jpg',
             alt: 'VNC302 Da Nang Hoi An Ba Na Hills Tour'
         },
         duration: {
@@ -1079,14 +1079,14 @@ const privateToursData = [
         seoKeywords: 'Sapa Ha Long Bay tour, Fansipan Ha Long cruise, Northern Vietnam premium tour, mountain sea combination, Vietnam China border, Salmon hotpot Sapa'
     },
     {
-        id: 'vnc401-danang-hoian-hue',
+        id: 'vnc401',
         title: 'VNC401 Da Nang - Ba Na Hills (Over night Ba Na Hills)',
         region: 'central',
         category: 'luxury',
         excerpt: 'Experience 4 days exploring Da Nang, Ba Na Hills, Hoi An, and Hue with overnight stay at Ba Na Hills featuring fresh seafood hotpot and luxury accommodations.',
         description: 'Discover the heart of Central Vietnam with this comprehensive 4-day tour featuring overnight accommodation at Ba Na Hills, Golden Hand Bridge, historic Hoi An ancient town, and the imperial city of Hue.',
         image: {
-            url: '/assets/images/tours/vnc401-danang-hoian-hue.jpg',
+            url: '/assets/images/tours/vnc401.jpg',
             alt: 'VNC401 Da Nang Ba Na Hills Hoi An Hue Tour'
         },
         duration: {
@@ -1245,14 +1245,14 @@ const privateToursData = [
         seoKeywords: 'Da Nang tour, Ba Na Hills overnight, Hoi An ancient town, Hue imperial city, Central Vietnam tour, Golden Hand Bridge, private tour Vietnam'
     },
     {
-        id: 'vnc301-danang-hoian-banahills',
+        id: 'vnc301',
         title: 'VNC301 Danang - Hoian - O/N Ba Na Hills',
         region: 'central',
         category: 'luxury',
         excerpt: 'Experience the best of Central Vietnam with overnight stay at Ba Na Hills, featuring Golden Hand Bridge, Hoi An Ancient Town, and luxury accommodations.',
         description: 'Discover the magical blend of French colonial architecture and Vietnamese culture with this exclusive 3-day tour featuring overnight accommodation at the stunning Ba Na Hills, exploration of historic Hoi An, and the best of Da Nang.',
         image: {
-            url: '/assets/images/tours/vnc301-danang-hoian-banahills.jpg',
+            url: '/assets/images/tours/vnc301.jpg',
             alt: 'VNC301 Danang Hoian Ba Na Hills Tour'
         },
         duration: {
@@ -1385,14 +1385,14 @@ const privateToursData = [
         difficulty: 'Easy to Moderate - Suitable for all ages with some walking involved'
     },
     {
-        id: 'vnc402-danang-hoian-hue',
+        id: 'vnc402',
         title: 'VNC402 Da Nang - Hoi An - Hue',
         region: 'central',
         category: 'comprehensive',
         excerpt: 'Explore the cultural triangle of Central Vietnam with Da Nang, Hoi An Ancient Town, Ba Na Hills, and the Imperial City of Hue in this 4-day adventure.',
         description: 'Discover the best of Central Vietnam with visits to three UNESCO World Heritage sites, the famous Golden Hand Bridge at Ba Na Hills, and authentic cultural experiences across Da Nang, Hoi An, and Hue.',
         image: {
-            url: '/assets/images/tours/vnc402-danang-hoian-hue.jpg',
+            url: '/assets/images/tours/vnc402.jpg',
             alt: 'VNC402 Da Nang Hoi An Hue Tour - Golden Hand Bridge and Ancient Architecture'
         },
         duration: {

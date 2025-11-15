@@ -112,11 +112,11 @@ const articlesData = [
         author: 'VN to You Tour Team',
         category: 'Company News',
         excerpt: 'We are thrilled to announce that Vn To You Tour had the distinct honor of participating in a significant event organized by the Thai Travel Agents Association (TTAA) on January 15, 2025.',
-        image: 'assets/images/articles/ttaa-event-4.jpg',
+        image: 'assets/images/optimized/articles/ttaa-event-4.jpg',
         content: [
             {
                 type: 'image',
-                src: 'assets/images/articles/ttaa-event-4.jpg',
+                src: 'assets/images/optimized/articles/ttaa-event-4.jpg',
                 alt: 'Vn To You Tour at TTAA Event'
             },
             {
@@ -151,7 +151,7 @@ const articlesData = [
             },
             {
                 type: 'image',
-                src: 'assets/images/articles/ttaa-event-2.jpg',
+                src: 'assets/images/optimized/articles/ttaa-event-2.jpg',
                 alt: 'TTAA Event Activities'
             },
             {
@@ -173,7 +173,7 @@ const articlesData = [
             },
             {
                 type: 'image',
-                src: 'assets/images/articles/ttaa-event-3.jpg',
+                src: 'assets/images/optimized/articles/ttaa-event-3.jpg',
                 alt: 'Networking at TTAA Event'
             },
             {

@@ -926,6 +926,9 @@ button.active:hover {
     object-fit: cover;
     margin-bottom: 1rem;
     border: 3px solid var(--brand-primary);
+    /* Image optimization for better performance */
+    loading: lazy;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 /* Tour Guides section styling */

@@ -578,14 +578,17 @@ a:hover {
 }
 
 /* Make the last sidebar widget (contact) sticky */
-.sidebar .sidebar-widget:last-child {
+#tour-sidebar-content .sidebar-widget:last-child,
+#sidebar-content .sidebar-widget:last-child {
     position: sticky;
     top: 20px;
+    z-index: 10;
 }
 
 /* Responsive: disable sticky on mobile */
 @media (max-width: 768px) {
-    .sidebar .sidebar-widget:last-child {
+    #tour-sidebar-content .sidebar-widget:last-child,
+    #sidebar-content .sidebar-widget:last-child {
         position: static;
     }
 }

@@ -1,77 +1,69 @@
-# VN to You Tour Website
+﻿# VN to You Tour Website
 
-Trang web công ty du lịch VN to You Tour với hosting trên Cloudflare Pages và quản lý ảnh thông qua CDN.
+Trang web công ty du lịch VN to You Tour với hosting trên Vercel và quản lý ảnh tối ưu.
 
-## 🚀 Quy trình làm việc
+## Cấu trúc dự án
 
-### 1. Viết bài/Chỉnh sửa nội dung
-```bash
-# Chỉnh sửa file HTML, CSS, JS
-# Ảnh để trong thư mục assets/images/
+```
+/
+ index.html              # Trang chủ
+ pages/                  # Các trang HTML
+ assets/                 # Static files
+    css/               # CSS files
+    js/                # JavaScript files
+    images/            # Hình ảnh
+ includes/              # HTML components
+ templates/             # HTML templates
 ```
 
-### 2. Commit và Push lên Git
+## Workflow
+
+### 1. Phát triển local
+- Chỉnh sửa code trong VS Code
+- Test local với Live Server
+
+### 2. Deployment
+- Push code lên GitHub
+- Vercel tự động build và deploy từ Git
+- Website live tại: https://vn-to-you-tour.vercel.app
+
+## Tính năng chính
+
+###  **Responsive Design**
+- Mobile-first approach
+- Tối ưu cho mọi thiết bị
+
+###  **Image Management**
+- **Storage**: Vercel hosting
+- **CDN**: Tự động optimize qua Vercel
+- **Loading**: Lazy loading cho performance
+
+## Quick Deploy
+
 ```bash
+# Deploy tự động qua Git
 git add .
-git commit -m "Mô tả thay đổi"
-git push
+git commit -m "Update content"
+git push origin main
 ```
 
-### 3. Deploy tự động
-- Cloudflare Pages tự động build và deploy từ Git
-- Website live tại: https://main.vn-to-you-tour.pages.dev
-- Ảnh được serve từ CDN: /assets/images/
+## Links quan trọng
 
-## 📁 Cấu trúc dự án
+**Website**: https://vn-to-you-tour.vercel.app  
+**GitHub**: https://github.com/Nghiavutrong1251992/vn-to-you-tour  
+**Vercel Dashboard**: https://vercel.com/dashboard
 
-```
-📂 vn-to-you-tour/
-├── 📄 index.html           # Trang chủ
-├── 📂 pages/              # Các trang con
-├── 📂 assets/             # CSS, JS, Images
-├── 📂 includes/           # Header, Footer components
-└── 📂 templates/          # Template files
-```
+## Content Management
 
-## 🖼️ Quản lý ảnh
+### Thêm bài viết mới
+1. Edit `assets/js/data/articles-data.js`
+2. Thêm ảnh vào `assets/images/articles/`
+3. Commit và push lên Git
+4. Vercel tự động deploy
 
-- **Thêm ảnh**: Đặt vào `assets/images/`
-- **Sử dụng**: `src="/assets/images/filename.jpg"`
-- **CDN**: Tự động optimize qua Cloudflare
-- **Format**: Ưu tiên JPG/WebP, tránh space trong tên file
+### Cập nhật tours
+1. Edit `assets/js/data/daily-tours-data.js` hoặc `private-tours-data.js`
+2. Thêm ảnh tour vào `assets/images/tours/`
+3. Commit và push
 
-## ⚡ Lệnh nhanh
-
-```bash
-# Deploy manual (nếu cần)
-wrangler pages deploy . --project-name=vn-to-you-tour
-
-# Check status
-git status
-```
-
----
-**Website**: https://main.vn-to-you-tour.pages.dev  
-**GitHub**: https://github.com/Nghiavutrong1251992/vn-to-you-tour
-
-### Windows PowerShell: add or rename image
-
-If your image file has spaces, use PowerShell to rename and copy the file to the right folder:
-
-```powershell
-# From the folder containing the image
-Rename-Item -Path "vnn 301.jpg" -NewName "vnn301.jpg"
-# Copy to the project's tours images folder (adjust path as needed)
-Copy-Item -Path "vnn301.jpg" -Destination "f:\CÁC DỰ ÁN  LẬP TRÌNH\basic 1.2\assets\images\tours\"
-```
-
-After copying, commit changes and refresh your local server. Then open the tour detail:
-
-http://localhost:8000/pages/private-tour-detail.html?id=vnn301
-
-## Technologies Used
-
-- HTML5
-- CSS3 (Inter font, Font Awesome icons)
-- Vanilla JavaScript (ES6+)
-- Responsive design principles
+**Workflow tối ưu:** Content Creation  Git Commit  Auto Deploy  Live Updates 

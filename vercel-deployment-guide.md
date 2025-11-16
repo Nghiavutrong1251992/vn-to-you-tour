@@ -40,4 +40,4 @@ None required for static site
 - No build process required (static HTML/CSS/JS)
 
 ## URLs After Deploy
-All image paths will be updated to use Vercel domain instead of Cloudflare Pages.
+All image paths use Vercel domain for optimal performance and unlimited bandwidth.

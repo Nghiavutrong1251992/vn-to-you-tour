@@ -75,7 +75,7 @@ function populateTourSidebar(basePath = '../') {
             
             // Add tour thumbnail if available
                 const thumbnailHtml = tour.image ? 
-                `<img src="${encodeURI(actualBasePath + tour.image.url.substring(1))}" alt="${tour.image.alt}" class="sidebar-tour-thumb">` : 
+                `<img src="${encodeURI(tour.image.url)}" alt="${tour.image.alt}" class="sidebar-tour-thumb">` : 
                 '';
             
             html += `

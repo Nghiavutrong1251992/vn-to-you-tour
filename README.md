@@ -1,53 +1,58 @@
 # VN to You Tour Website
 
-## Project Structure
+Trang web công ty du lịch VN to You Tour với hosting trên Cloudflare Pages và quản lý ảnh thông qua CDN.
 
-```
-project-root/
-├── index.html                    # Homepage
-├── pages/
-│   ├── about.html               # About Us page
-│   ├── news.html                # News page
-│   ├── tours-to-vietnam.html    # Main tours overview
-│   └── tours/                   # Organized tours folder
-│       └── private-tours/       # Private tours (parent folder)
-│           ├── vietnam-north/   # Vietnam North tours
-│           │   ├── index.html   # Vietnam North overview
-│           │   ├── ha-long-bay-cruise.html
-│           │   ├── hanoi-cultural-tour.html
-│           │   ├── sapa-trekking-adventure.html
-│           │   └── ninh-binh-day-trip.html
-│           ├── vietnam-central/ # Vietnam Central tours (future)
-│           └── vietnam-south/   # Vietnam South tours (future)
-├── assets/                      # Static assets
-│   ├── css/
-│   ├── js/
-│   └── images/
-├── includes/                    # Reusable components
-│   ├── header.html
-│   └── footer.html
-├── articles/                    # Content articles
-└── README.md
+## 🚀 Quy trình làm việc
+
+### 1. Viết bài/Chỉnh sửa nội dung
+```bash
+# Chỉnh sửa file HTML, CSS, JS
+# Ảnh để trong thư mục assets/images/
 ```
 
-## Features
+### 2. Commit và Push lên Git
+```bash
+git add .
+git commit -m "Mô tả thay đổi"
+git push
+```
 
-- **Dynamic Tours**: JavaScript-powered tour listings and related tours
-- **Modular Design**: Reusable header/footer components
-- **Organized Structure**: Logical folder hierarchy for easy maintenance
-- **Responsive**: Mobile-friendly design with modern CSS
+### 3. Deploy tự động
+- Cloudflare Pages tự động build và deploy từ Git
+- Website live tại: https://main.vn-to-you-tour.pages.dev
+- Ảnh được serve từ CDN: /assets/images/
 
-## Adding New Tours
+## 📁 Cấu trúc dự án
 
-1. Add tour data to `assets/js/tours-data.js`
-2. Create HTML file in appropriate region folder
-3. Update navigation links as needed
+```
+📂 vn-to-you-tour/
+├── 📄 index.html           # Trang chủ
+├── 📂 pages/              # Các trang con
+├── 📂 assets/             # CSS, JS, Images
+├── 📂 includes/           # Header, Footer components
+└── 📂 templates/          # Template files
+```
 
-## Notes on Adding Tour Media and Rich Content
+## 🖼️ Quản lý ảnh
 
-- Put tour images in `assets/images/tours/` and reference them in the data file as `/assets/images/tours/<filename>`.
-- For long-form tour descriptions, you can add a Markdown file in `assets/md/` and set `contentUrl` in the tour entry (e.g., `/assets/md/vnn301.md`). The renderer will fetch and convert simple markdown to HTML.
-- If you add images, avoid spaces in filenames; use hyphens or underscores to improve compatibility.
+- **Thêm ảnh**: Đặt vào `assets/images/`
+- **Sử dụng**: `src="/assets/images/filename.jpg"`
+- **CDN**: Tự động optimize qua Cloudflare
+- **Format**: Ưu tiên JPG/WebP, tránh space trong tên file
+
+## ⚡ Lệnh nhanh
+
+```bash
+# Deploy manual (nếu cần)
+wrangler pages deploy . --project-name=vn-to-you-tour
+
+# Check status
+git status
+```
+
+---
+**Website**: https://main.vn-to-you-tour.pages.dev  
+**GitHub**: https://github.com/Nghiavutrong1251992/vn-to-you-tour
 
 ### Windows PowerShell: add or rename image
 

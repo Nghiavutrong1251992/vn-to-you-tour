@@ -1,0 +1,150 @@
+/* ================================
+   BASE RESET & TYPOGRAPHY
+   ================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(180deg, 
+        #f8f9fa 0%, 
+        #ffffff 30%, 
+        #f1f3f4 100%);
+    background-attachment: fixed;
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* ================================
+   TYPOGRAPHY SYSTEM
+   ================================ */
+
+h1, h2, h3, h4 {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+h1 { font-size: var(--font-size-h1); margin-bottom: 1rem; font-weight: 700; }
+h2 { font-size: var(--font-size-h2); margin-bottom: 1rem; font-weight: 600; }
+h3 { font-size: var(--font-size-h3); font-weight: 600; }
+h4 { font-size: var(--font-size-h4); font-weight: 500; }
+
+p, ul {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+ul {
+    margin: 0.5rem 0;
+    padding-left: var(--spacing-lg);
+}
+
+a {
+    color: var(--brand-primary);
+    text-decoration: none;
+    font-weight: var(--btn-font-weight);
+    padding: var(--spacing-xs) var(--spacing-md);
+    background: rgba(0, 149, 217, 0.08);
+    border-radius: var(--radius-sm);
+    border: var(--btn-border-width) solid var(--border-brand);
+    display: inline-block;
+    margin: var(--spacing-xs) 0;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Typography utility classes - Simplified */
+.text-caption { font-size: var(--font-size-caption); }
+
+/* ====== SEMANTIC COLOR CLASSES ====== */
+.text-brand { color: var(--brand-primary); }
+.text-success { color: var(--success); }
+.text-error { color: var(--error); }
+
+/* ================================
+   ACCESSIBILITY & FOCUS STATES
+   ================================ */
+
+/* Focus states for accessibility - WCAG 2.1 AA compliant */
+a:focus, 
+button:focus,
+.btn:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid var(--brand-primary);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(0, 149, 217, 0.25);
+}
+
+/* Focus visible for modern browsers */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible {
+    outline: 2px solid var(--brand-primary);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(0, 149, 217, 0.25);
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    :root {
+        --text-primary: #000000;
+        --text-secondary: #333333;
+        --text-tertiary: #666666;
+        --border-strong: rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms;
+        animation-iteration-count: 1;
+        transition-duration: 0.01ms;
+        scroll-behavior: auto;
+    }
+}
+
+/* ================================
+   SCROLLBAR & SELECTION STYLING
+   ================================ */
+
+/* Scrollbar styling for webkit browsers */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(174, 174, 178, 0.6);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(174, 174, 178, 0.8);
+}
+
+/* Selection styling */
+::selection {
+    background: rgba(0, 149, 217, 0.3);
+    color: var(--text-primary);
+}
+
+::-moz-selection {
+    background: rgba(0, 149, 217, 0.3);
+    color: var(--text-primary);
+}

@@ -1,0 +1,136 @@
+/* ================================
+   CSS CUSTOM PROPERTIES - DESIGN SYSTEM
+   ================================ */
+
+/* iOS Style Glass Morphism Design */
+:root {
+    /* ====== COLOR SYSTEM ====== */
+    /* 
+    Color Naming Convention:
+    - text-primary: Main headings, navigation (#1d1d1f)
+    - text-secondary: Body text, descriptions (#6e6e73) 
+    - text-tertiary: Captions, meta info (#8e8e93)
+    - text-quaternary: Light text, meta (#5a5a5a)
+    - text-light: Article content (#424242)
+    - text-dark: Strong headings (#2c2c2c)
+    
+    All colors are WCAG 2.1 AA compliant for accessibility
+    */
+    --text-primary: #1d1d1f;        /* Main headings, nav - AAA compliance */
+    --text-secondary: #6e6e73;      /* Body text, descriptions - AA compliance */
+    --text-tertiary: #8e8e93;       /* Captions, meta info - AA compliance */
+    --text-quaternary: #5a5a5a;     /* Light text, meta - improved from #666 */
+    --text-light: #424242;          /* Article content - improved from #555 */
+    --text-dark: #2c2c2c;           /* Strong headings - improved from #333 */
+    --brand-primary: #0095d9;       /* Links, buttons - AA compliant */
+    --brand-secondary: #007bb3;     /* Hover states */
+    --success: #2e7d32;             /* Success indicators - improved contrast */
+    --error: #d32f2f;               /* Error indicators - improved contrast */
+    --whatsapp: #25D366;            /* WhatsApp brand */
+    --white: #ffffff;               /* White text */
+    
+    /* ====== SPACING SYSTEM ====== */
+    --spacing-xs: 0.5rem;           /* 8px */
+    --spacing-sm: 0.75rem;          /* 12px */
+    --spacing-md: 1rem;             /* 16px */
+    --spacing-lg: 1.25rem;          /* 20px */
+    --spacing-xl: 1.5rem;           /* 24px */
+    --spacing-2xl: 1.875rem;        /* 30px */
+    --spacing-3xl: 2.5rem;          /* 40px */
+    
+    /* ====== LAYOUT SYSTEM ====== */
+    --container-max-width: 87.5rem; /* 1400px */
+    --content-gap: var(--spacing-lg); /* 20px */
+    --sidebar-min-width: 12.5rem;   /* 200px */
+    
+    /* ====== BORDER RADIUS SYSTEM ====== */
+    --radius-xs: 0.25rem;           /* 4px */
+    --radius-sm: 0.5rem;            /* 8px */
+    --radius-md: 0.75rem;           /* 12px */
+    --radius-lg: 1rem;              /* 16px */
+    --radius-xl: 1.25rem;           /* 20px */
+    
+    /* ====== COMPONENT DIMENSIONS ====== */
+    --hero-height: 31.25rem;        /* 500px */
+    --hero-height-mobile: 18.75rem; /* 300px */
+    --slide-caption-max-width: 28.125rem; /* 450px */
+    --slide-caption-max-width-mobile: 15.625rem; /* 250px */
+    
+    /* ====== BUTTON SYSTEM ====== */
+    --btn-padding-y: var(--spacing-sm);
+    --btn-padding-x: var(--spacing-md);
+    --btn-padding-y-sm: var(--spacing-xs);
+    --btn-padding-x-sm: var(--spacing-sm);
+    --btn-padding-y-lg: var(--spacing-md);
+    --btn-padding-x-lg: var(--spacing-lg);
+    --btn-font-weight: 500;
+    --btn-border-width: 1px;
+    --btn-transition: all 0.2s ease;
+    
+    /* ====== GLASS MORPHISM EFFECTS ====== */
+    --glass-bg-subtle: rgba(255, 255, 255, 0.4);
+    --glass-bg-light: rgba(255, 255, 255, 0.6);
+    --glass-bg-medium: rgba(255, 255, 255, 0.7);
+    --glass-bg-strong: rgba(255, 255, 255, 0.8);
+    --glass-bg-header: rgba(255, 255, 255, 0.85);
+    --glass-bg-header-solid: rgba(248, 249, 250, 0.98);
+    --glass-bg-footer: rgba(248, 249, 250, 0.9);
+    --glass-bg-sidebar: rgba(248, 249, 250, 0.8);
+    --glass-bg-card: rgba(255, 255, 255, 0.5);
+    --glass-blur: blur(20px);
+    --glass-blur-light: blur(10px);
+    
+    /* ====== BORDER COLORS ====== */
+    --border-light: rgba(0, 0, 0, 0.05);
+    --border-medium: rgba(0, 0, 0, 0.08);
+    --border-strong: rgba(0, 0, 0, 0.1);
+    --border-subtle: rgba(0, 0, 0, 0.03);
+    --border-divider: #eeeeee;            /* Light dividers */
+    --border-section: #dddddd;            /* Section borders */
+    --border-brand: rgba(0, 149, 217, 0.15);
+    --border-brand-hover: rgba(0, 149, 217, 0.2);
+    
+    /* ====== SHADOW SYSTEM ====== */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 4px 20px rgba(0, 0, 0, 0.15);
+    --shadow-brand: 0 2px 8px rgba(0, 149, 217, 0.3);
+    
+    /* ====== RESPONSIVE BREAKPOINTS ====== */
+    --breakpoint-xs: 480px;         /* Extra small devices */
+    --breakpoint-sm: 768px;         /* Small devices / tablets */
+    --breakpoint-md: 992px;         /* Medium devices / laptops */
+    --breakpoint-lg: 1200px;        /* Large devices / desktops */
+    --breakpoint-xl: 1400px;        /* Extra large devices */
+    
+    /* ====== TYPOGRAPHY SYSTEM - SIMPLIFIED ====== */
+    --font-size-xs: 0.875rem;       /* 14px - small text, captions */
+    --font-size-base: 1rem;         /* 16px - body text */
+    --font-size-lg: 1.125rem;       /* 18px - emphasized text */
+    --font-size-xl: 1.25rem;        /* 20px - small headings */
+    --font-size-2xl: 1.5rem;        /* 24px - medium headings */
+    --font-size-3xl: 2rem;          /* 32px - large headings */
+    --font-size-hero: 1.8rem;       /* 28.8px - hero sections */
+    
+    /* ====== SEMANTIC ALIASES ====== */
+    --font-size-caption: var(--font-size-xs);    /* captions, meta text */
+    --font-size-h4: var(--font-size-lg);         /* h4 headings */
+    --font-size-h3: var(--font-size-xl);         /* h3 headings */
+    --font-size-h2: var(--font-size-2xl);        /* h2 headings */
+    --font-size-h1: var(--font-size-3xl);        /* h1 headings */
+    
+    --line-height-tight: 1.25;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.75;
+    
+    /* ====== Z-INDEX SYSTEM ====== */
+    --z-dropdown: 1000;
+    --z-sticky: 1020;
+    --z-modal: 1050;
+    --z-tooltip: 1070;
+    
+    /* ====== ANIMATION SYSTEM ====== */
+    --transition-fast: 150ms ease;
+    --transition-base: 200ms ease;
+    --scale-md: scale(0.98);
+}

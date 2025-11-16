@@ -1,20 +1,38 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-<a href="/" class="logo-link">
+<div class="header-container">
+    <a href="/" class="logo-link">
         <img src="/assets/images/VN TO YOU BRANDBOOK.png" alt="VN to You Tour Logo" class="header-logo">
-</a>
-<nav>
-    <a href="/">Home</a>
-    <div class="dropdown">
-        <a href="/pages/tours-to-vietnam.html" class="dropdown-toggle">
-            Tours to Vietnam <i class="fas fa-chevron-down"></i>
-        </a>
-        <div class="dropdown-menu">
-            <a href="/pages/daily-tours.html">Daily Tours</a>
-            <a href="/pages/private-tours.html">Private Tours</a>
-            <a href="/pages/mice.html">MICE</a>
-            <a href="/pages/golf-tour.html">Golf Tours</a>
-        </div>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav>
+        <a href="/">Home</a>
+        <a href="/pages/tours-to-vietnam.html">Tours to Vietnam</a>
+        <a href="/pages/news.html">News</a>
+        <a href="/pages/about-us.html">About Us</a>
+    </nav>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+        <i class="fas fa-bars"></i>
+    </button>
+</div>
+
+<!-- Mobile Overlay -->
+<div class="mobile-overlay" onclick="closeMobileMenu()"></div>
+
+<!-- Mobile Navigation Menu -->
+<div class="mobile-nav-menu">
+    <div class="mobile-nav-header">
+        <button class="mobile-nav-close" onclick="closeMobileMenu()">
+            <i class="fas fa-times"></i>
+        </button>
     </div>
-    <a href="/pages/news.html">News</a>
-    <a href="/pages/about-us.html">About Us</a>
-</nav>
+    <div class="mobile-nav-links">
+        <a href="/" onclick="closeMobileMenu()">Home</a>
+        <a href="/pages/tours-to-vietnam.html" onclick="closeMobileMenu()">Tours to Vietnam</a>
+        <a href="/pages/news.html" onclick="closeMobileMenu()">News</a>
+        <a href="/pages/about-us.html" onclick="closeMobileMenu()">About Us</a>
+    </div>
+</div>
+

@@ -1,0 +1,114 @@
+/* ================================
+   UTILITIES & DIVIDERS
+   ================================ */
+
+/* ================================
+   DIVIDERS - UNIFIED iOS STYLE
+   ================================ */
+
+.section-divider,
+.service-divider,
+.sidebar-divider,
+.article-divider,
+.region-divider,
+.tour-divider {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.08), transparent);
+    margin: 1.5rem 0;
+    width: 100%;
+}
+
+/* Section divider with larger spacing for main content sections */
+.section-divider {
+    margin: 2rem 0;
+}
+
+/* Tour List Separator */
+.tour-separator {
+    margin: 30px 0;
+    border: none;
+    border-top: 1px solid var(--border-divider);
+}
+
+.tour-divider-large {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, var(--brand-primary), transparent);
+    margin: 0.5rem 0;
+    opacity: 0.3;
+}
+
+/* ================================
+   REGION SECTIONS
+   ================================ */
+
+.region-filters {
+    margin-bottom: 2rem;
+}
+
+.region-filters button {
+    margin-right: var(--spacing-sm);
+}
+
+/* Region Section Headers */
+.region-section {
+    margin: 2rem 0 1rem 0;
+}
+
+.region-header {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--brand-primary);
+    margin: 0;
+    padding: 0.75rem 0;
+    border-bottom: 2px solid var(--brand-primary);
+    background: linear-gradient(135deg, var(--glass-bg-light), var(--glass-bg-subtle));
+    border-radius: var(--radius-sm);
+    padding-left: 1rem;
+}
+
+.region-divider {
+    border: none;
+    height: 1px;
+    background: var(--brand-primary);
+    margin: 0.5rem 0 1.5rem 0;
+    opacity: 0.2;
+}
+
+/* ================================
+   UTILITY CLASSES
+   ================================ */
+
+/* Icon States */
+.icon-success {
+    color: var(--success);
+    margin-right: 8px;
+}
+
+.icon-error {
+    color: var(--error);
+    margin-right: 8px;
+}
+
+/* Loading States */
+.loading-center {
+    text-align: center;
+    padding: 50px;
+}
+
+/* Content sections spacing */
+.container h1,
+.container h3 {
+    margin-bottom: 1rem;
+}
+
+.container h4 {
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+.container p,
+.container ul {
+    margin-bottom: 1rem;
+}

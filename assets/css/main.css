@@ -1,0 +1,64 @@
+/* ================================
+   MAIN STYLES - IMPORT ALL CSS FILES
+   ================================ */
+
+/* Core CSS Files - Load in order */
+@import url('variables.css');
+@import url('base.css');
+@import url('components.css');
+
+/* Layout & Structure */
+@import url('layout.css');
+@import url('sections.css');
+
+/* Feature-specific CSS */
+@import url('tours.css');
+@import url('sidebar-tours.css');
+
+/* Page-specific CSS */
+@import url('pages.css');
+
+/* Utilities & Responsive */
+@import url('utilities.css');
+@import url('responsive.css');
+
+/* 
+=======================================
+   CSS ARCHITECTURE OVERVIEW
+=======================================
+
+📁 CSS File Structure:
+├── variables.css     - CSS custom properties & design tokens
+├── base.css         - Reset, typography, accessibility  
+├── components.css   - Buttons, glass effects, utilities
+├── layout.css       - Header, footer, navigation, sidebar
+├── sections.css     - Hero, content areas, contact
+├── tours.css        - Tour-specific layouts and cards
+├── sidebar-tours.css - Sidebar tour components
+├── pages.css        - Page-specific styles (about, services)
+├── utilities.css    - Dividers, icons, helper classes
+└── responsive.css   - Mobile and tablet overrides
+
+🎯 Benefits:
+✅ Modular - Easy to maintain individual features
+✅ Performance - Only load what you need per page
+✅ Scalable - Easy to add new sections
+✅ Debug-friendly - Easy to find specific styles
+✅ Team-friendly - Multiple developers, no conflicts
+✅ Cacheable - Individual files cached separately
+
+🚀 Usage:
+Option 1: Import this main file
+<link rel="stylesheet" href="assets/css/main.css">
+
+Option 2: Import individual files as needed
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/base.css">
+... (see import-guide.html for full list)
+
+💡 Performance Tips:
+- Load critical CSS (variables, base, components) first
+- Load page-specific CSS conditionally 
+- Load responsive.css last for proper cascading
+- Consider combining files for production builds
+*/

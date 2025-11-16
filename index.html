@@ -5,7 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VN to You Tour - Vietnam Travel</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script>
+        // Mobile Menu Functions - Define early
+        console.log('Mobile menu functions loading...');
+        
+        function openMobileMenu() {
+            console.log('Opening mobile menu');
+            const menu = document.querySelector('.mobile-nav-menu');
+            const overlay = document.querySelector('.mobile-overlay');
+            
+            if (menu && overlay) {
+                menu.classList.add('active');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeMobileMenu() {
+            console.log('Closing mobile menu');
+            const menu = document.querySelector('.mobile-nav-menu');
+            const overlay = document.querySelector('.mobile-overlay');
+            
+            if (menu && overlay) {
+                menu.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        function toggleMobileMenu() {
+            console.log('Toggle mobile menu called');
+            const menu = document.querySelector('.mobile-nav-menu');
+            
+            if (menu && menu.classList.contains('active')) {
+                closeMobileMenu();
+            } else {
+                openMobileMenu();
+            }
+        }
+        
+        console.log('Mobile menu functions defined successfully');
+    </script>
 </head>
 <body>
     <header>

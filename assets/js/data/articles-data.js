@@ -9,11 +9,11 @@ const articlesData = [
         author: 'VN to You Tour Team',
         category: 'Company News',
         excerpt: 'At Vn To You Tour, we don\'t just plan trips; we live them. We\'re excited to share insights from our recent company outing in November 2024, a truly remarkable journey to the spectacular Cao Bang Province, culminating in a visit to the iconic Ban Gioc Waterfall.',
-        image: 'https://main.vn-to-you-tour.pages.dev/assets/images/articles/bangioc/z6644507486039_dd6a4ec286ce44964d50b64cd9a9944b.jpg',
+        image: 'https://vn-to-you-tour.vercel.app/assets/images/articles/bangioc/z6644507486039_dd6a4ec286ce44964d50b64cd9a9944b.jpg',
         content: [
             {
                 type: 'image',
-                src: 'https://main.vn-to-you-tour.pages.dev/assets/images/articles/bangioc/z6644507486039_dd6a4ec286ce44964d50b64cd9a9944b.jpg',
+                src: 'https://vn-to-you-tour.vercel.app/assets/images/articles/bangioc/z6644507486039_dd6a4ec286ce44964d50b64cd9a9944b.jpg',
                 alt: 'Vn To You Tour Team at Ban Gioc Waterfall - Team Building Experience'
             },
             {
@@ -30,7 +30,7 @@ const articlesData = [
             },
             {
                 type: 'image',
-                src: 'https://main.vn-to-you-tour.pages.dev/assets/images/articles/bangioc/z6644508212358_2cf928a58e6d37551a640a5156a70920.jpg',
+                src: 'https://vn-to-you-tour.vercel.app/assets/images/articles/bangioc/z6644508212358_2cf928a58e6d37551a640a5156a70920.jpg',
                 alt: 'Cao Bang Province Exploration - VN to You Tour Team Journey'
             },
             {
@@ -43,7 +43,7 @@ const articlesData = [
             },
             {
                 type: 'image',
-                src: 'https://main.vn-to-you-tour.pages.dev/assets/images/articles/bangioc/z6644508802262_f928a460e566c9d83ce369f122b651d5.jpg',
+                src: 'https://vn-to-you-tour.vercel.app/assets/images/articles/bangioc/z6644508802262_f928a460e566c9d83ce369f122b651d5.jpg',
                 alt: 'Ban Gioc Waterfall Natural Beauty - Team Expedition'
             },
             {
@@ -56,7 +56,7 @@ const articlesData = [
             },
             {
                 type: 'image',
-                src: 'https://main.vn-to-you-tour.pages.dev/assets/images/articles/bangioc/z6644509810275_612703877be69d6e367e9710acaafe1f-1.jpg',
+                src: 'https://vn-to-you-tour.vercel.app/assets/images/articles/bangioc/z6644509810275_612703877be69d6e367e9710acaafe1f-1.jpg',
                 alt: 'VN to You Tour Team Building at Cao Bang - Professional Development'
             },
             {
@@ -80,7 +80,7 @@ const articlesData = [
             },
             {
                 type: 'image',
-                src: 'https://main.vn-to-you-tour.pages.dev/assets/images/optimized/articles/article-northern-vietnam%201.jpg',
+                src: 'https://vn-to-you-tour.vercel.app/assets/images/optimized/articles/article-northern-vietnam%201.jpg',
                 alt: 'Northern Vietnam Landscape'
             },
             {
@@ -176,11 +176,11 @@ const articlesData = [
         author: 'VN to You Tour Team',
         category: 'Company News',
         excerpt: 'We are thrilled to announce that Vn To You Tour had the distinct honor of participating in a significant event organized by the Thai Travel Agents Association (TTAA) on January 15, 2025.',
-        image: 'https://main.vn-to-you-tour.pages.dev/assets/images/optimized/articles/ttaa-event-4.jpg',
+        image: 'https://vn-to-you-tour.vercel.app/assets/images/optimized/articles/ttaa-event-4.jpg',
         content: [
             {
                 type: 'image',
-                src: 'https://main.vn-to-you-tour.pages.dev/assets/images/optimized/articles/ttaa-event-4.jpg',
+                src: 'https://vn-to-you-tour.vercel.app/assets/images/optimized/articles/ttaa-event-4.jpg',
                 alt: 'Vn To You Tour at TTAA Event'
             },
             {
@@ -215,7 +215,7 @@ const articlesData = [
             },
             {
                 type: 'image',
-                src: 'https://main.vn-to-you-tour.pages.dev/assets/images/optimized/articles/ttaa-event-2.jpg',
+                src: 'https://vn-to-you-tour.vercel.app/assets/images/optimized/articles/ttaa-event-2.jpg',
                 alt: 'TTAA Event Activities'
             },
             {
@@ -237,7 +237,7 @@ const articlesData = [
             },
             {
                 type: 'image',
-                src: 'https://main.vn-to-you-tour.pages.dev/assets/images/optimized/articles/ttaa-event-3.jpg',
+                src: 'https://vn-to-you-tour.vercel.app/assets/images/optimized/articles/ttaa-event-3.jpg',
                 alt: 'Networking at TTAA Event'
             },
             {

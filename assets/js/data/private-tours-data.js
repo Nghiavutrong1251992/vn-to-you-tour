@@ -8,7 +8,7 @@ const privateToursData = [
         excerpt: 'Comprehensive 4-day Central Vietnam tour staying 3 nights in Da Nang, visiting Hue Imperial City, Hoi An Ancient Town, and Ba Na Hills with Golden Hand Bridge.',
         description: 'Experience the best of Central Vietnam with this 4-day comprehensive tour featuring 3 nights accommodation in Da Nang, visits to UNESCO World Heritage sites in Hue and Hoi An, plus the spectacular Ba Na Hills with Golden Hand Bridge.',
         image: {
-            url: 'https://52f76a9022bb336e9432fc6604d2df7e.r2.cloudflarestorage.com/vntoyou-database/tours/vnc404.jpg',
+            url: 'https://pub-1a7ccc534e4045ffbc5393ba23ff9588.r2.dev/tours/vnc404.jpg',
             alt: 'VNC404 Da Nang Hue Hoi An Tour'
         },
         duration: {
@@ -173,7 +173,7 @@ const privateToursData = [
         excerpt: 'Experience Central Vietnam with 3 days exploring Hoi An Ancient Town, full day at Ba Na Hills with Golden Hand Bridge, and Da Nang city highlights.',
         description: 'Discover the perfect blend of culture and adventure with this 3-day tour featuring Hoi An Ancient Town, a full day exploring Ba Na Hills including Golden Hand Bridge and French Village, plus Da Nang city attractions.',
         image: {
-            url: 'https://52f76a9022bb336e9432fc6604d2df7e.r2.cloudflarestorage.com/vntoyou-database/tours/vnc302.jpg',
+            url: 'https://pub-1a7ccc534e4045ffbc5393ba23ff9588.r2.dev/tours/vnc302.jpg',
             alt: 'VNC302 Da Nang Hoi An Ba Na Hills Tour'
         },
         duration: {
@@ -308,7 +308,7 @@ const privateToursData = [
         excerpt: 'Experience the stunning mountain landscapes of Sapa with our 3-day, 2-night tour featuring Fansipan peak, Cat Cat Village, and signature Salmon Hotpot dinner.',
         description: 'VNN301 Ha Noi - Sa Pa 3D2N (Sapa 2 nights) - Discover the breathtaking beauty of Northern Vietnam with 2 nights in Sapa, featuring visits to Cat Cat Village, Fansipan peak, and authentic mountain experiences.',
         image: {
-            url: 'https://52f76a9022bb336e9432fc6604d2df7e.r2.cloudflarestorage.com/vntoyou-database/tours/vnn301.jpg',
+            url: 'https://pub-1a7ccc534e4045ffbc5393ba23ff9588.r2.dev/tours/vnn301.jpg',
             alt: 'VNN301 Ha Noi - Sa Pa 3D2N'
         },
         duration: {
@@ -421,7 +421,7 @@ const privateToursData = [
         excerpt: 'Experience the best of Northern Vietnam with this 3-day tour combining Ha Long Bay cruise, Ninh Binh "Ha Long Bay on land", and Hanoi highlights.',
         description: 'VNN302 Ha Noi - Ha Long Bay - Ninh Binh (Ha Long Bay on land) - A perfect 3-day journey featuring 1 night in Hanoi, 1 night in Halong Bay with fresh seafood dining, and exploring the stunning limestone landscapes of both Ha Long Bay and Ninh Binh.',
         image: {
-            url: 'https://52f76a9022bb336e9432fc6604d2df7e.r2.cloudflarestorage.com/vntoyou-database/tours/vnn302.jpg',
+            url: 'https://pub-1a7ccc534e4045ffbc5393ba23ff9588.r2.dev/tours/vnn302.jpg',
             alt: 'VNN302 Ha Noi - Ha Long Bay - Ninh Binh'
         },
         duration: {
@@ -541,7 +541,7 @@ const privateToursData = [
         excerpt: 'Extended 4-day tour combining the mountain beauty of Sapa with comprehensive Hanoi city exploration, featuring 2 nights in Sapa and 1 night in Hanoi.',
         description: 'VNN401 Sa Pa - Ha Noi city tour - Experience the best of Northern Vietnam with 2 nights in Sapa and 1 night in Hanoi. Enjoy signature Sapa experiences including Fansipan peak, Cat Cat Village, and authentic mountain cuisine, followed by comprehensive Hanoi city highlights.',
         image: {
-            url: 'https://52f76a9022bb336e9432fc6604d2df7e.r2.cloudflarestorage.com/vntoyou-database/tours/vnn401.jpg',
+            url: 'https://pub-1a7ccc534e4045ffbc5393ba23ff9588.r2.dev/tours/vnn401.jpg',
             alt: 'VNN401 Sa Pa - Ha Noi city tour'
         },
         duration: {
@@ -675,7 +675,7 @@ const privateToursData = [
         excerpt: 'Complete Northern Vietnam experience combining Sapa mountain beauty, Hanoi city highlights, and Ninh Binh "Halong Bay on land" in a comprehensive 4-day tour.',
         description: 'VNN402 Sapa - Hanoi city tour - Ninh Binh (Halong Bay on land) - The ultimate Northern Vietnam adventure featuring 2 nights in Sapa, 1 night in Hanoi, plus a day trip to Ninh Binh. Experience mountain landscapes, cultural sites, and limestone karst beauty.',
         image: {
-            url: 'https://52f76a9022bb336e9432fc6604d2df7e.r2.cloudflarestorage.com/vntoyou-database/tours/vnn402.jpg',
+            url: 'https://pub-1a7ccc534e4045ffbc5393ba23ff9588.r2.dev/tours/vnn402.jpg',
             alt: 'VNN402 Sapa - Hanoi - Ninh Binh Tour'
         },
         duration: {
@@ -811,7 +811,7 @@ const privateToursData = [
         excerpt: 'Ultimate Northern Vietnam grand tour covering all major highlights: Sapa mountains, Hanoi city, Ha Long Bay cruise, and Ninh Binh limestone landscapes in 4 amazing days.',
         description: 'VNN404 Sapa - Hanoi - Ha Long Bay - Ninh Binh (Ha Long on land) - The most comprehensive Northern Vietnam experience featuring 1 night each in Sapa, Hanoi, and Ha Long Bay. Discover mountain peaks, cultural heritage, and both Ha Long Bay and its "on land" counterpart in Ninh Binh.',
         image: {
-            url: 'https://52f76a9022bb336e9432fc6604d2df7e.r2.cloudflarestorage.com/vntoyou-database/tours/vnn404.jpg',
+            url: 'https://pub-1a7ccc534e4045ffbc5393ba23ff9588.r2.dev/tours/vnn404.jpg',
             alt: 'VNN404 Sapa - Hanoi - Ha Long Bay - Ninh Binh Tour'
         },
         duration: {
@@ -952,7 +952,7 @@ const privateToursData = [
         excerpt: 'Premium Northern Vietnam tour combining the mountain beauty of Sapa with the marine wonders of Ha Long Bay, featuring 2 nights in Sapa and 1 night in Ha Long Bay.',
         description: 'VNN407 Ha Noi - Sapa - Ha Long Bay - Experience the perfect combination of mountains and sea with 2 nights in Sapa and 1 night in Ha Long Bay. Enjoy signature Sapa dining experiences and fresh Ha Long Bay seafood on traditional wooden vessels.',
         image: {
-            url: 'https://52f76a9022bb336e9432fc6604d2df7e.r2.cloudflarestorage.com/vntoyou-database/tours/vnn407.jpg',
+            url: 'https://pub-1a7ccc534e4045ffbc5393ba23ff9588.r2.dev/tours/vnn407.jpg',
             alt: 'VNN407 Ha Noi - Sapa - Ha Long Bay Tour'
         },
         duration: {
@@ -1086,7 +1086,7 @@ const privateToursData = [
         excerpt: 'Experience 4 days exploring Da Nang, Ba Na Hills, Hoi An, and Hue with overnight stay at Ba Na Hills featuring fresh seafood hotpot and luxury accommodations.',
         description: 'Discover the heart of Central Vietnam with this comprehensive 4-day tour featuring overnight accommodation at Ba Na Hills, Golden Hand Bridge, historic Hoi An ancient town, and the imperial city of Hue.',
         image: {
-            url: 'https://52f76a9022bb336e9432fc6604d2df7e.r2.cloudflarestorage.com/vntoyou-database/tours/vnc401.jpg',
+            url: 'https://pub-1a7ccc534e4045ffbc5393ba23ff9588.r2.dev/tours/vnc401.jpg',
             alt: 'VNC401 Da Nang Ba Na Hills Hoi An Hue Tour'
         },
         duration: {
@@ -1252,7 +1252,7 @@ const privateToursData = [
         excerpt: 'Experience the best of Central Vietnam with overnight stay at Ba Na Hills, featuring Golden Hand Bridge, Hoi An Ancient Town, and luxury accommodations.',
         description: 'Discover the magical blend of French colonial architecture and Vietnamese culture with this exclusive 3-day tour featuring overnight accommodation at the stunning Ba Na Hills, exploration of historic Hoi An, and the best of Da Nang.',
         image: {
-            url: 'https://52f76a9022bb336e9432fc6604d2df7e.r2.cloudflarestorage.com/vntoyou-database/tours/vnc301.jpg',
+            url: 'https://pub-1a7ccc534e4045ffbc5393ba23ff9588.r2.dev/tours/vnc301.jpg',
             alt: 'VNC301 Danang Hoian Ba Na Hills Tour'
         },
         duration: {
@@ -1392,7 +1392,7 @@ const privateToursData = [
         excerpt: 'Explore the cultural triangle of Central Vietnam with Da Nang, Hoi An Ancient Town, Ba Na Hills, and the Imperial City of Hue in this 4-day adventure.',
         description: 'Discover the best of Central Vietnam with visits to three UNESCO World Heritage sites, the famous Golden Hand Bridge at Ba Na Hills, and authentic cultural experiences across Da Nang, Hoi An, and Hue.',
         image: {
-            url: 'https://52f76a9022bb336e9432fc6604d2df7e.r2.cloudflarestorage.com/vntoyou-database/tours/vnc402.jpg',
+            url: 'https://pub-1a7ccc534e4045ffbc5393ba23ff9588.r2.dev/tours/vnc402.jpg',
             alt: 'VNC402 Da Nang Hoi An Hue Tour - Golden Hand Bridge and Ancient Architecture'
         },
         duration: {

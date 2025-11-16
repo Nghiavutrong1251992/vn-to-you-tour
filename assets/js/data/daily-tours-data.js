@@ -8,7 +8,7 @@ const dailyToursData = [
         excerpt: 'Experience the stunning limestone karsts of Ha Long Bay on a full-day cruise with cave exploration and traditional fishing village visits.',
         description: 'Experience the breathtaking beauty of Halong Bay, a UNESCO World Heritage site, on this full-day cruise adventure.',
         image: {
-            url: 'https://52f76a9022bb336e9432fc6604d2df7e.r2.cloudflarestorage.com/vntoyou-database/tours/halong-bay-day-trip.jpg',
+            url: 'https://pub-1a7ccc534e4045ffbc5393ba23ff9588.r2.dev/tours/halong-bay-day-trip.jpg',
             alt: 'Ha Long Bay limestone karsts and traditional junk boats'
         },
         duration: {

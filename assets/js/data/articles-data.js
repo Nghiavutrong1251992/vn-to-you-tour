@@ -16,7 +16,7 @@ const articlesData = [
             },
             {
                 type: 'image',
-                src: 'https://52f76a9022bb336e9432fc6604d2df7e.r2.cloudflarestorage.com/vntoyou-database/articles/article-northern-vietnam%201.jpg',
+                src: 'https://pub-1a7ccc534e4045ffbc5393ba23ff9588.r2.dev/articles/article-northern-vietnam%201.jpg',
                 alt: 'Northern Vietnam Landscape'
             },
             {
@@ -112,11 +112,11 @@ const articlesData = [
         author: 'VN to You Tour Team',
         category: 'Company News',
         excerpt: 'We are thrilled to announce that Vn To You Tour had the distinct honor of participating in a significant event organized by the Thai Travel Agents Association (TTAA) on January 15, 2025.',
-        image: 'https://52f76a9022bb336e9432fc6604d2df7e.r2.cloudflarestorage.com/vntoyou-database/articles/ttaa-event-4.jpg',
+        image: 'https://pub-1a7ccc534e4045ffbc5393ba23ff9588.r2.dev/articles/ttaa-event-4.jpg',
         content: [
             {
                 type: 'image',
-                src: 'https://52f76a9022bb336e9432fc6604d2df7e.r2.cloudflarestorage.com/vntoyou-database/articles/ttaa-event-4.jpg',
+                src: 'https://pub-1a7ccc534e4045ffbc5393ba23ff9588.r2.dev/articles/ttaa-event-4.jpg',
                 alt: 'Vn To You Tour at TTAA Event'
             },
             {
@@ -151,7 +151,7 @@ const articlesData = [
             },
             {
                 type: 'image',
-                src: 'https://52f76a9022bb336e9432fc6604d2df7e.r2.cloudflarestorage.com/vntoyou-database/articles/ttaa-event-2.jpg',
+                src: 'https://pub-1a7ccc534e4045ffbc5393ba23ff9588.r2.dev/articles/ttaa-event-2.jpg',
                 alt: 'TTAA Event Activities'
             },
             {
@@ -173,7 +173,7 @@ const articlesData = [
             },
             {
                 type: 'image',
-                src: 'https://52f76a9022bb336e9432fc6604d2df7e.r2.cloudflarestorage.com/vntoyou-database/articles/ttaa-event-3.jpg',
+                src: 'https://pub-1a7ccc534e4045ffbc5393ba23ff9588.r2.dev/articles/ttaa-event-3.jpg',
                 alt: 'Networking at TTAA Event'
             },
             {

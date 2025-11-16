@@ -9,12 +9,12 @@ const articlesData = [
         author: 'VN to You Tour Team',
         category: 'Company News',
         excerpt: 'At Vn To You Tour, we don\'t just plan trips; we live them. We\'re excited to share insights from our recent company outing in November 2024, a truly remarkable journey to the spectacular Cao Bang Province, culminating in a visit to the iconic Ban Gioc Waterfall.',
-        image: 'https://main.vn-to-you-tour.pages.dev/assets/images/articles/cao-bang-expedition-1.jpg',
+        image: 'https://main.vn-to-you-tour.pages.dev/assets/images/articles/bangioc/z6644507486039_dd6a4ec286ce44964d50b64cd9a9944b.jpg',
         content: [
             {
                 type: 'image',
-                src: 'https://main.vn-to-you-tour.pages.dev/assets/images/articles/cao-bang-expedition-1.jpg',
-                alt: 'Vn To You Tour Team at Ban Gioc Waterfall'
+                src: 'https://main.vn-to-you-tour.pages.dev/assets/images/articles/bangioc/z6644507486039_dd6a4ec286ce44964d50b64cd9a9944b.jpg',
+                alt: 'Vn To You Tour Team at Ban Gioc Waterfall - Team Building Experience'
             },
             {
                 type: 'paragraph',
@@ -29,6 +29,11 @@ const articlesData = [
                 text: 'This expedition was an essential part of our commitment to continuous learning and team building. Our dedicated staff ventured into the heart of Northern Vietnam, experiencing firsthand the very landscapes and cultures that we passionately introduce to our clients. From navigating the scenic routes to exploring local hidden gems, every moment of the trip was an invaluable learning opportunity.'
             },
             {
+                type: 'image',
+                src: 'https://main.vn-to-you-tour.pages.dev/assets/images/articles/bangioc/z6644508212358_2cf928a58e6d37551a640a5156a70920.jpg',
+                alt: 'Cao Bang Province Exploration - VN to You Tour Team Journey'
+            },
+            {
                 type: 'heading',
                 text: 'The Majesty of Ban Gioc Waterfall'
             },
@@ -37,12 +42,22 @@ const articlesData = [
                 text: 'The sheer scale and beauty of Ban Gioc Waterfall provided a powerful reminder of Vietnam\'s untouched natural wonders. Witnessing this majestic landmark together not only fostered a deeper appreciation for our country\'s beauty but also strengthened our collective understanding of what makes a travel experience truly unforgettable.'
             },
             {
+                type: 'image',
+                src: 'https://main.vn-to-you-tour.pages.dev/assets/images/articles/bangioc/z6644508802262_f928a460e566c9d83ce369f122b651d5.jpg',
+                alt: 'Ban Gioc Waterfall Natural Beauty - Team Expedition'
+            },
+            {
                 type: 'heading',
                 text: 'Strengthening Our Team, Enhancing Your Experience'
             },
             {
                 type: 'paragraph',
                 text: 'This memorable trip to Cao Bang and Ban Gioc Waterfall wasn\'t just about discovery; it was about strengthening our team\'s cohesion and reinforcing our shared vision. An engaged and inspired team is the cornerstone of the exceptional service and meticulously planned tours that Vn To You Tour is known for.'
+            },
+            {
+                type: 'image',
+                src: 'https://main.vn-to-you-tour.pages.dev/assets/images/articles/bangioc/z6644509810275_612703877be69d6e367e9710acaafe1f-1.jpg',
+                alt: 'VN to You Tour Team Building at Cao Bang - Professional Development'
             },
             {
                 type: 'paragraph',

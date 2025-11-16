@@ -1,0 +1,6 @@
+name = "vn-to-you-tour"
+compatibility_date = "2025-11-16"
+pages_build_output_dir = "./"
+
+[env.production]
+compatibility_date = "2025-11-16"

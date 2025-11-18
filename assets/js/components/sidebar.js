@@ -16,8 +16,8 @@ function createSidebarHTML(basePath = '../') {
         </div>
 
         <div class="section-border">
-            <h3>Popular Tours</h3>
-            <ul id="sidebar-popular-tours">
+            <h3><i class="fas fa-star"></i> Popular Private Tours</h3>
+            <ul id="sidebar-popular-tours" style="list-style: none; padding: 0;">
                 <!-- Popular tours will be populated by JavaScript -->
             </ul>
         </div>
@@ -129,8 +129,31 @@ function populateSidebar(basePath = '../') {
             popularTours.forEach(tour => {
                 // Private tours use detail page with ID parameter
                 const relativeUrl = actualBasePath + `pages/private-tour-detail.html?id=${tour.id}`;
-                html += `<li><a href="${relativeUrl}">${tour.title}</a></li>`;
+                const imageUrl = tour.image ? tour.image.url : '../assets/images/tours/default-tour.jpg';
+                
+                html += `
+                    <li class="sidebar-tour-item" style="display: block; margin-bottom: 20px; padding: 15px; background: #f9f9f9; border: 1px solid #e0e0e0; border-radius: 8px;">
+                        <a href="${relativeUrl}" class="sidebar-tour-link" style="display: block; text-decoration: none; color: inherit;">
+                            <div style="margin-bottom: 10px;">
+                                <img src="${encodeURI(imageUrl)}" alt="${tour.image ? tour.image.alt : tour.title}" loading="lazy" style="width: 100%; height: auto; aspect-ratio: 4/3; object-fit: cover; border-radius: 4px;">
+                            </div>
+                            <div class="sidebar-tour-info">
+                                <h4 class="sidebar-tour-title" style="margin: 0 0 5px 0; font-size: 14px; line-height: 1.3; color: #333;">${tour.title}</h4>
+                                <p class="sidebar-tour-meta" style="margin: 0 0 5px 0; font-size: 12px; color: #666;">${tour.duration.display} | ${tour.price.display}</p>
+                                <p style="margin: 0; font-size: 11px; color: #888; text-transform: capitalize;"><i class="fas fa-map-marker-alt"></i> ${tour.region} Vietnam</p>
+                            </div>
+                        </a>
+                    </li>
+                `;
             });
+            
+            // Add "View All Private Tours" button
+            html += `
+                <div style="text-align: center; margin-top: 15px;">
+                    <a href="${actualBasePath}pages/private-tours.html" class="btn btn-small">View All Private Tours</a>
+                </div>
+            `;
+            
             popularToursContainer.innerHTML = html;
         } else {
             // Fallback when no tours are available

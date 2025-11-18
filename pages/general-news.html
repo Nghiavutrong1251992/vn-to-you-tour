@@ -6,6 +6,7 @@
     <title>General News & Updates - VN to You Tour</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/main.css">
+    <script src="../assets/js/data/articles-data.js"></script>
 </head>
 <body>
     <header>
@@ -77,17 +78,14 @@
             document.getElementById('footer-placeholder').innerHTML = data;
         });
 
-        // Load articles data
-        fetch('../assets/js/data/articles-data.js')
-        .then(response => response.text())
-        .then(data => {
-            // Execute the script to load articlesData
-            eval(data);
-            renderGeneralArticles();
-        })
-        .catch(error => {
-            console.error('Error loading articles data:', error);
-            showNoArticlesMessage();
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof articlesData !== 'undefined') {
+                renderGeneralArticles();
+            } else {
+                console.error('articlesData not available');
+                showNoArticlesMessage();
+            }
         });
 
         function renderGeneralArticles() {

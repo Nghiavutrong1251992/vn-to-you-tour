@@ -7,6 +7,47 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* MICE Gallery Responsive Styles */
+        @media (max-width: 768px) {
+            .mice-gallery {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+            }
+            
+            .gallery-item img {
+                height: 200px !important;
+            }
+            
+            .overlay {
+                transform: translateY(0) !important;
+                background: rgba(0, 149, 217, 0.9) !important;
+                position: static !important;
+                padding: 1rem !important;
+                color: #ffffff !important;
+            }
+            
+            .overlay h4, .overlay p {
+                color: #ffffff !important;
+                text-shadow: 0 1px 3px rgba(0,0,0,0.8) !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .gallery-item img {
+                height: 180px !important;
+            }
+            
+            .overlay h4 {
+                font-size: 1rem !important;
+            }
+            
+            .overlay p {
+                font-size: 0.85rem !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -116,6 +157,64 @@
         
         <hr class="section-divider">
         
+        <!-- MICE Gallery Section -->
+        <div style="margin: 2.5rem 0;">
+            <h3 style="color: #0095d9; text-align: center; margin-bottom: 1rem; font-size: 1.6rem; font-weight: 600;">Our MICE Experience Portfolio</h3>
+            <p style="text-align: center; color: #666; margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.6;">Showcasing our successful corporate events, business meetings, and memorable experiences we've delivered for our clients.</p>
+            
+            <!-- Image Gallery Grid -->
+            <div class="mice-gallery" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+                
+                <!-- Image 1 -->
+                <div class="gallery-item" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.1)'">
+                    <img src="../Mice/z5125346059091_0941848b2b73ea62e7ff11b046f2d8b4.jpg" alt="Corporate Meeting & Team Building" style="width: 100%; height: 250px; object-fit: cover;">
+                    <div class="overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0, 149, 217, 0.9)); color: #ffffff; padding: 1.5rem 1rem 1rem; transform: translateY(100%); transition: transform 0.3s ease;">
+                        <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-weight: 600; color: #ffffff; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Corporate Meeting & Team Building</h4>
+                        <p style="margin: 0; font-size: 0.9rem; line-height: 1.4; color: #ffffff; text-shadow: 0 1px 3px rgba(0,0,0,0.4);">Professional corporate meetings combined with team building activities to strengthen workplace relationships and boost productivity.</p>
+                    </div>
+                </div>
+
+                <!-- Image 2 -->
+                <div class="gallery-item" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.1)'">
+                    <img src="../Mice/384200195_6534931899951367_77124540416935717_n.jpg" alt="Business Conference & Site Exploration" style="width: 100%; height: 250px; object-fit: cover;">
+                    <div class="overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0, 149, 217, 0.9)); color: #ffffff; padding: 1.5rem 1rem 1rem; transform: translateY(100%); transition: transform 0.3s ease;">
+                        <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-weight: 600; color: #ffffff; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Business Conference & Site Exploration</h4>
+                        <p style="margin: 0; font-size: 0.9rem; line-height: 1.4; color: #ffffff; text-shadow: 0 1px 3px rgba(0,0,0,0.4);">Large-scale business conferences with integrated site visits and cultural exploration to enhance the corporate experience.</p>
+                    </div>
+                </div>
+
+                <!-- Image 3 -->
+                <div class="gallery-item" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.1)'">
+                    <img src="../Mice/z6446454280411_d40f3e8d470ffd6161498aa94cace883.jpg" alt="Corporate Celebration & Gala Events" style="width: 100%; height: 250px; object-fit: cover;">
+                    <div class="overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0, 149, 217, 0.9)); color: #ffffff; padding: 1.5rem 1rem 1rem; transform: translateY(100%); transition: transform 0.3s ease;">
+                        <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-weight: 600; color: #ffffff; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Corporate Celebration & Gala Events</h4>
+                        <p style="margin: 0; font-size: 0.9rem; line-height: 1.4; color: #ffffff; text-shadow: 0 1px 3px rgba(0,0,0,0.4);">Elegant corporate celebrations and gala events featuring fine dining, entertainment, and networking opportunities in prestigious venues.</p>
+                    </div>
+                </div>
+
+                <!-- Image 4 -->
+                <div class="gallery-item" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.1)'">
+                    <img src="../Mice/z5748475276517_de75cc5db1a03a1f6a4556c01d8cdba8.jpg" alt="Incentive Travel & Discovery Tours" style="width: 100%; height: 250px; object-fit: cover;">
+                    <div class="overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0, 149, 217, 0.9)); color: #ffffff; padding: 1.5rem 1rem 1rem; transform: translateY(100%); transition: transform 0.3s ease;">
+                        <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-weight: 600; color: #ffffff; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Incentive Travel & Discovery Tours</h4>
+                        <p style="margin: 0; font-size: 0.9rem; line-height: 1.4; color: #ffffff; text-shadow: 0 1px 3px rgba(0,0,0,0.4);">Rewarding high-performing employees with incentive travel programs featuring unique cultural discoveries and memorable experiences.</p>
+                    </div>
+                </div>
+
+                <!-- Image 5 -->
+                <div class="gallery-item" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.1)'">
+                    <img src="../Mice/z6862714160975_e86bc4a4ea6da7084955def6e5adcb7b.jpg" alt="Executive Retreats & Strategic Planning" style="width: 100%; height: 250px; object-fit: cover;">
+                    <div class="overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0, 149, 217, 0.9)); color: #ffffff; padding: 1.5rem 1rem 1rem; transform: translateY(100%); transition: transform 0.3s ease;">
+                        <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-weight: 600; color: #ffffff; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Executive Retreats & Strategic Planning</h4>
+                        <p style="margin: 0; font-size: 0.9rem; line-height: 1.4; color: #ffffff; text-shadow: 0 1px 3px rgba(0,0,0,0.4);">Exclusive executive retreats combining strategic business planning with luxury accommodations and cultural immersion experiences.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <hr class="section-divider">
+        
         <h3>What We Offer</h3>
         <ul>
             <li>Venue selection and booking</li>
@@ -186,6 +285,32 @@
                 nextYearElement.textContent = nextYear;
             }
         }
+
+        // Gallery hover effects
+        function initializeGallery() {
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            galleryItems.forEach(item => {
+                const overlay = item.querySelector('.overlay');
+                
+                item.addEventListener('mouseenter', function() {
+                    if (overlay) {
+                        overlay.style.transform = 'translateY(0)';
+                    }
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    if (overlay) {
+                        overlay.style.transform = 'translateY(100%)';
+                    }
+                });
+            });
+        }
+
+        // Initialize gallery after DOM loads
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeGallery();
+        });
     </script>
 </body>
 </html>

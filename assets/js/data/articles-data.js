@@ -63,7 +63,11 @@ const articlesData = [
                 type: 'paragraph',
                 text: 'We believe that by personally experiencing the magic of these destinations, we are better equipped to craft unparalleled journeys for you. Our firsthand knowledge of the routes, local culture, and hidden gems ensures that every tour we design is not just a trip, but a transformative experience that creates lasting memories.'
             }
-        ]
+        ],
+        tags: ['Team Building', 'Cao Bang', 'Ban Gioc Waterfall', 'Company Culture', 'Professional Development'],
+        readTime: '5 min read',
+        featured: true,
+        isCompanyNews: true
     },
     {
         id: 'northern-vietnam',
@@ -251,7 +255,8 @@ const articlesData = [
         ],
         tags: ['TTAA', 'Partnership', 'International', 'Thailand', 'Business Development'],
         readTime: '4 min read',
-        featured: true
+        featured: true,
+        isCompanyNews: true
     },
     {
         id: 'vietnam-visa-free-countries-2025',

@@ -121,7 +121,7 @@ const articlesData = [
         author: 'VN to You Tour Team',
         category: 'Destination Guides',
         excerpt: 'Discover the vibrant floating markets, traditional villages, and rich agricultural life of the Mekong Delta, where rivers are highways and boats are homes.',
-        image: 'https://vn-to-you-tour.vercel.app/assets/images/tours/mekong-delta-2-days.jpg',
+        image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=400&fit=crop',
         content: [
             {
                 type: 'paragraph',

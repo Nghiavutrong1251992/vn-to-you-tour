@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Điều Kiện Đặt Tour - VN to You Tour</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+    <header>
+        <div id="header-placeholder"></div>
+    </header>
+
+    <script src="../assets/js/header.js"></script>
+    <script src="../assets/js/mobile-menu.js"></script>
+    <script>
+        fetch('../includes/header.html')
+        .then(response => response.text())
+        .then(data => {
+            data = data.replace('href="/', 'href="../');
+            data = data.replace('href="/pages/', 'href="');
+            data = data.replace('src="/assets/', 'src="../assets/');
+            document.getElementById('header-placeholder').innerHTML = data;
+            // Dispatch event to signal header is loaded
+            window.dispatchEvent(new Event('headerLoaded'));
+        });
+    </script>
+
+    <!-- Hero Section - Full Width Edge to Edge -->
+    <section style="width: 100%; padding: 0; margin-bottom: var(--spacing-lg);">
+        <div style="background: linear-gradient(135deg, #0D47A1 0%, #0095d9 25%, #42A5F5 50%, #81C784 75%, #E3F2FD 100%); width: 100%; min-height: 200px; max-height: 280px; box-shadow: 0 20px 40px rgba(0, 149, 217, 0.3), 0 8px 25px rgba(13, 71, 161, 0.2); position: relative; overflow: hidden; display: flex; align-items: center;">
+            
+            <!-- Content Container aligned with main content -->
+            <div style="max-width: 1200px; width: 100%; margin: 0 auto; padding: 1.8rem var(--spacing-2xl); display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
+                
+                <!-- Main Title -->
+                <h1 style="font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin: 0 0 1rem 0; text-shadow: 0 4px 12px rgba(13, 71, 161, 0.4); line-height: 1.2; color: #ffffff; letter-spacing: -0.02em; background: linear-gradient(45deg, #ffffff, #E3F2FD); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Điều Kiện Đặt Tour</h1>
+                
+                <!-- Description -->
+                <p style="font-size: clamp(1rem, 2.5vw, 1.15rem); margin: 0; text-shadow: 0 2px 6px rgba(13, 71, 161, 0.3); line-height: 1.5; max-width: 100%; color: rgba(255, 255, 255, 0.98); font-weight: 400;">Quy định và điều kiện đặt tour của VN to You Tour để đảm bảo trải nghiệm du lịch tốt nhất cho quý khách.</p>
+                
+            </div>
+        </div>
+    </section>
+
+    <div class="content-wrapper">
+        <div class="main-content full-width">
+            
+            <div class="content-container">
+                
+                <h2>1. Điều Kiện Đặt Tour</h2>
+                
+                <h3>1.1. Đặt Tour và Thanh Toán</h3>
+                <ul>
+                    <li><strong>Đặt cọc:</strong> Quý khách cần đặt cọc tối thiểu 30% tổng giá tour để xác nhận đặt chỗ</li>
+                    <li><strong>Thanh toán đầy đủ:</strong> Hoàn tất thanh toán trước 7 ngày khởi hành đối với tour trong nước, 15 ngày đối với tour quốc tế</li>
+                    <li><strong>Phương thức thanh toán:</strong> Chuyển khoản ngân hàng, tiền mặt tại văn phòng hoặc thanh toán online</li>
+                </ul>
+
+                <h3>1.2. Thông Tin Cá Nhân</h3>
+                <ul>
+                    <li>Cung cấp đầy đủ thông tin cá nhân chính xác (họ tên, số điện thoại, email, CCCD/CMND)</li>
+                    <li>Đối với tour quốc tế: cung cấp thông tin hộ chiếu còn hạn tối thiểu 6 tháng</li>
+                    <li>Thông báo các yêu cầu đặc biệt về ăn uống, sức khỏe hoặc tôn giáo</li>
+                </ul>
+
+                <hr class="section-divider">
+
+                <h2>2. Chính Sách Hủy Tour</h2>
+                
+                <h3>2.1. Hủy Tour Do Khách Hàng</h3>
+                <ul>
+                    <li><strong>Trước 15 ngày:</strong> Hoàn lại 90% số tiền đã thanh toán</li>
+                    <li><strong>Từ 7-14 ngày:</strong> Hoàn lại 70% số tiền đã thanh toán</li>
+                    <li><strong>Từ 3-6 ngày:</strong> Hoàn lại 50% số tiền đã thanh toán</li>
+                    <li><strong>Dưới 3 ngày:</strong> Không hoàn lại tiền</li>
+                </ul>
+
+                <h3>2.2. Hủy Tour Do Công Ty</h3>
+                <ul>
+                    <li>Hoàn lại 100% số tiền đã thanh toán</li>
+                    <li>Hỗ trợ sắp xếp tour thay thế cùng chất lượng</li>
+                    <li>Bồi thường theo quy định pháp luật nếu có thiệt hại</li>
+                </ul>
+
+                <hr class="section-divider">
+
+                <h2>3. Trách Nhiệm Của Khách Hàng</h2>
+                
+                <ul>
+                    <li><strong>Tuân thủ lịch trình:</strong> Có mặt đúng giờ tại các điểm hẹn</li>
+                    <li><strong>Giữ gìn tài sản:</strong> Bảo quản hành lý và tài sản cá nhân</li>
+                    <li><strong>Tôn trọng văn hóa:</strong> Tuân thủ thuần phong mỹ tục địa phương</li>
+                    <li><strong>Tuân theo hướng dẫn:</strong> Nghe theo sự hướng dẫn của HDV và tuân thủ quy định an toàn</li>
+                    <li><strong>Bảo hiểm:</strong> Mua bảo hiểm du lịch (khuyến khích mạnh)</li>
+                </ul>
+
+                <hr class="section-divider">
+
+                <h2>4. Trách Nhiệm Của VN to You Tour</h2>
+                
+                <ul>
+                    <li><strong>Cung cấp dịch vụ:</strong> Đảm bảo các dịch vụ theo chương trình đã cam kết</li>
+                    <li><strong>An toàn khách hàng:</strong> Đảm bảo an toàn cho khách trong suốt hành trình</li>
+                    <li><strong>Hướng dẫn viên:</strong> Cung cấp HDV có trình độ chuyên môn và kinh nghiệm</li>
+                    <li><strong>Hỗ trợ 24/7:</strong> Hỗ trợ khách hàng trong trường hợp khẩn cấp</li>
+                    <li><strong>Chất lượng dịch vụ:</strong> Đảm bảo chất lượng khách sạn, phương tiện và ăn uống theo tiêu chuẩn đã cam kết</li>
+                </ul>
+
+                <hr class="section-divider">
+
+                <h2>5. Các Trường Hợp Đặc Biệt</h2>
+                
+                <h3>5.1. Thay Đổi Lịch Trình</h3>
+                <ul>
+                    <li>Do thời tiết xấu, thiên tai hoặc lý do an ninh</li>
+                    <li>Do sự cố kỹ thuật của phương tiện vận chuyển</li>
+                    <li>Công ty sẽ thông báo và sắp xếp phương án thay thế tốt nhất</li>
+                </ul>
+
+                <h3>5.2. Khách Hàng Đặc Biệt</h3>
+                <ul>
+                    <li><strong>Trẻ em dưới 2 tuổi:</strong> Miễn phí (không có chỗ ngồi riêng)</li>
+                    <li><strong>Trẻ em 2-12 tuổi:</strong> 75% giá tour người lớn</li>
+                    <li><strong>Người cao tuổi (trên 70):</strong> Cần có giấy chứng nhận sức khỏe</li>
+                    <li><strong>Người khuyết tật:</strong> Liên hệ trước để được tư vấn và hỗ trợ</li>
+                </ul>
+
+                <hr class="section-divider">
+
+                <h2>6. Liên Hệ và Hỗ Trợ</h2>
+                
+                <div class="contact-info" style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #0095d9;">
+                    <p><strong>Hotline:</strong> +84 901 234 567</p>
+                    <p><strong>Email:</strong> info@vntoyou.net</p>
+                    <p><strong>Địa chỉ:</strong> 123 Đường ABC, Quận 1, TP. Hồ Chí Minh</p>
+                    <p><strong>Giờ làm việc:</strong> 8:00 - 18:00 (Thứ 2 - Chủ Nhật)</p>
+                </div>
+
+                <p style="margin-top: 2rem; font-style: italic; color: #666;">
+                    Bằng việc đặt tour, quý khách đã đồng ý với các điều kiện và quy định trên. 
+                    Mọi thắc mắc xin liên hệ với chúng tôi để được giải đáp chi tiết.
+                </p>
+
+                <p><a href="../index.html" class="btn">← Về Trang Chủ</a></p>
+                
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+
+    <script>
+        fetch('../includes/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+</body>
+</html>

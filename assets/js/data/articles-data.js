@@ -252,6 +252,153 @@ const articlesData = [
         tags: ['TTAA', 'Partnership', 'International', 'Thailand', 'Business Development'],
         readTime: '4 min read',
         featured: true
+    },
+    {
+        id: 'vietnam-visa-free-countries-2025',
+        slug: 'vietnam-visa-free-countries-2025',
+        title: 'Complete Guide: Visa-Free Entry to Vietnam 2025 - Countries, Requirements & E-Visa Information',
+        date: 'November 18, 2025',
+        author: 'VN to You Tour Team',
+        category: 'Travel Information',
+        excerpt: 'Planning your trip to Vietnam? Check our comprehensive guide to visa-free entry policies for 2025, including the complete list of eligible countries, maximum stay periods, and official e-visa application process.',
+        image: 'https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=800&h=400&fit=crop',
+        content: [
+            {
+                type: 'paragraph',
+                text: 'Vietnam continues to expand its visa-free entry policies in 2025, making it easier than ever for international travelers to explore this beautiful Southeast Asian destination. Whether you\'re planning a quick business trip or an extended vacation, understanding Vietnam\'s visa requirements is essential for smooth travel planning.'
+            },
+            {
+                type: 'heading',
+                text: 'Current Visa-Free Countries (2025)'
+            },
+            {
+                type: 'paragraph',
+                text: 'Citizens from the following countries can enter Vietnam without a visa, subject to maximum stay periods and passport requirements. All travelers must have a valid passport with at least 6 months validity from entry date.'
+            },
+            {
+                type: 'heading',
+                text: 'Europe & Nordic Countries'
+            },
+            {
+                type: 'list',
+                items: [
+                    'Denmark - Maximum 45 days',
+                    'Finland - Maximum 45 days', 
+                    'France - Maximum 45 days',
+                    'Germany - Maximum 45 days',
+                    'Italy - Maximum 45 days',
+                    'Norway - Maximum 45 days',
+                    'Spain - Maximum 45 days',
+                    'Sweden - Maximum 45 days',
+                    'United Kingdom - Maximum 45 days'
+                ]
+            },
+            {
+                type: 'heading', 
+                text: 'Asia-Pacific Region'
+            },
+            {
+                type: 'list',
+                items: [
+                    'Brunei - Maximum 14 days',
+                    'Cambodia - Maximum 30 days',
+                    'Indonesia - Maximum 30 days',
+                    'Japan - Maximum 45 days',
+                    'Laos - Maximum 30 days',
+                    'Malaysia - Maximum 30 days',
+                    'Myanmar - Maximum 14 days',
+                    'Philippines - Maximum 21 days',
+                    'Singapore - Maximum 30 days',
+                    'South Korea - Maximum 45 days',
+                    'Thailand - Maximum 30 days'
+                ]
+            },
+            {
+                type: 'heading',
+                text: 'Other Regions'
+            },
+            {
+                type: 'list',
+                items: [
+                    'Belarus - Maximum 45 days',
+                    'Chile - Maximum 90 days',
+                    'Kyrgyzstan - Maximum 30 days',
+                    'Panama - Maximum 90 days',
+                    'Russia - Maximum 45 days'
+                ]
+            },
+            {
+                type: 'heading',
+                text: 'Upcoming Visa-Free Countries (Coming Soon)'
+            },
+            {
+                type: 'paragraph',
+                text: 'Vietnam is expanding visa exemptions to additional European Union countries. The following nations will soon enjoy visa-free entry:'
+            },
+            {
+                type: 'list',
+                items: [
+                    'Switzerland',
+                    'Belgium', 
+                    'Bulgaria',
+                    'Croatia',
+                    'Czech Republic',
+                    'Hungary',
+                    'Luxembourg',
+                    'The Netherlands',
+                    'Poland',
+                    'Romania',
+                    'Slovakia',
+                    'Slovenia'
+                ]
+            },
+            {
+                type: 'heading',
+                text: 'E-Visa Application for Other Countries'
+            },
+            {
+                type: 'paragraph',
+                text: 'If your country is not on the visa-free list, you can apply for an electronic visa (e-visa) through the official Vietnam Immigration Department website. The e-visa system is convenient, secure, and typically processes applications within 3 working days.'
+            },
+            {
+                type: 'paragraph',
+                text: 'Official E-Visa Application: https://evisa.gov.vn/e-visa/foreigners'
+            },
+            {
+                type: 'heading',
+                text: 'Important Requirements & Tips'
+            },
+            {
+                type: 'list',
+                items: [
+                    'Passport must be valid for at least 6 months from entry date',
+                    'Maximum stay periods cannot be extended',
+                    'Re-entry requires a 30-day gap for most countries',
+                    'Always check latest updates before travel as policies may change',
+                    'Keep proof of onward/return travel and accommodation bookings'
+                ]
+            },
+            {
+                type: 'heading',
+                text: 'Why Choose Vietnam for Your Next Trip?'
+            },
+            {
+                type: 'paragraph',
+                text: 'With its rich cultural heritage, stunning landscapes from Ha Long Bay to the Mekong Delta, delicious cuisine, and warm hospitality, Vietnam offers incredible value for travelers. The expanding visa-free policies make it more accessible than ever to experience this amazing destination.'
+            },
+            {
+                type: 'paragraph',
+                text: 'At Vn To You Tour, we specialize in creating unforgettable Vietnamese experiences for international visitors. Whether you\'re here visa-free for a short stay or planning an extended adventure, our expert team can help you make the most of your time in Vietnam.'
+            },
+            {
+                type: 'paragraph',
+                text: 'Contact us today to start planning your perfect Vietnamese adventure!'
+            }
+        ],
+        tags: ['Visa Information', 'Travel Requirements', 'Vietnam Entry', 'E-Visa', 'International Travel'],
+        readTime: '6 min read',
+        featured: true,
+        isCompanyNews: false
     }
     // When adding new articles, add them anywhere in this array - they will be automatically sorted by date
 ];

@@ -88,14 +88,48 @@
         touch-action: manipulation;
     }
     
-    /* Services */
+    /* Services - Compact Mobile Layout like Canva */
     .services-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-top: 1.5rem;
     }
     
-    .service-item {
-        padding: 15px;
+    .service-card {
+        border-radius: var(--radius-md);
+    }
+    
+    .service-image {
+        height: 120px;
+    }
+    
+    .service-content {
+        padding: 1rem;
+    }
+    
+    .service-content h3 {
+        font-size: 1rem;
+        margin: 0 0 0.5rem 0;
+        line-height: 1.3;
+    }
+    
+    .service-content p {
+        font-size: 0.8rem;
+        margin: 0 0 1rem 0;
+        line-height: 1.4;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    .service-btn {
+        font-size: 0.85rem;
+        padding: 0.5rem 1rem;
+    }
+    
+    .service-icon {
+        font-size: 2rem;
     }
     
     /* Tour Layouts */
@@ -263,6 +297,88 @@
         font-size: 11px !important;
         padding: 5px 10px !important;
         bottom: 15px !important;
+    }
+}
+
+/* ================================
+   EXTRA SMALL MOBILE - Ultra Compact like Canva
+   ================================ */
+@media (max-width: 480px) {
+    /* Ultra compact services grid */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        margin-top: 1rem;
+    }
+    
+    .service-card {
+        border-radius: 8px;
+        border-width: 1px;
+    }
+    
+    .service-image {
+        height: 100px;
+    }
+    
+    .service-content {
+        padding: 0.75rem;
+    }
+    
+    .service-content h3 {
+        font-size: 0.9rem;
+        margin: 0 0 0.25rem 0;
+        font-weight: 600;
+    }
+    
+    .service-content p {
+        font-size: 0.75rem;
+        margin: 0 0 0.75rem 0;
+        line-height: 1.3;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+    }
+    
+    .service-btn {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
+        border-radius: 6px;
+    }
+    
+    .service-icon {
+        font-size: 1.5rem;
+    }
+    
+    /* Reduce hover effects on mobile */
+    .service-card:hover {
+        transform: translateY(-2px);
+    }
+}
+
+/* ================================
+   ULTRA SMALL MOBILE - Single Column
+   ================================ */
+@media (max-width: 360px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .service-image {
+        height: 120px;
+    }
+    
+    .service-content {
+        padding: 1rem;
+    }
+    
+    .service-content h3 {
+        font-size: 1rem;
+    }
+    
+    .service-content p {
+        font-size: 0.8rem;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
     }
 }
 

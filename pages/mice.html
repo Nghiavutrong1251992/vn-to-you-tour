@@ -9,6 +9,43 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
+        /* MICE Gallery Auto Animation for Desktop */
+        @media (min-width: 769px) {
+            .gallery-item:nth-child(1) .overlay {
+                animation: slideUpAuto 8s infinite;
+                animation-delay: 0s;
+            }
+            
+            .gallery-item:nth-child(2) .overlay {
+                animation: slideUpAuto 8s infinite;
+                animation-delay: 1.5s;
+            }
+            
+            .gallery-item:nth-child(3) .overlay {
+                animation: slideUpAuto 8s infinite;
+                animation-delay: 3s;
+            }
+            
+            .gallery-item:nth-child(4) .overlay {
+                animation: slideUpAuto 8s infinite;
+                animation-delay: 4.5s;
+            }
+            
+            .gallery-item:nth-child(5) .overlay {
+                animation: slideUpAuto 8s infinite;
+                animation-delay: 6s;
+            }
+        }
+        
+        @keyframes slideUpAuto {
+            0%, 75% {
+                transform: translateY(100%);
+            }
+            15%, 60% {
+                transform: translateY(0%);
+            }
+        }
+
         /* MICE Gallery Responsive Styles */
         @media (max-width: 768px) {
             .mice-gallery {
@@ -286,24 +323,34 @@
             }
         }
 
-        // Gallery hover effects
+        // Gallery hover effects - only for mobile/tablet
         function initializeGallery() {
             const galleryItems = document.querySelectorAll('.gallery-item');
             
             galleryItems.forEach(item => {
                 const overlay = item.querySelector('.overlay');
                 
-                item.addEventListener('mouseenter', function() {
-                    if (overlay) {
-                        overlay.style.transform = 'translateY(0)';
+                // Only add hover effects on mobile/tablet (768px and below)
+                function handleHover() {
+                    if (window.innerWidth <= 768) {
+                        item.addEventListener('mouseenter', function() {
+                            if (overlay) {
+                                overlay.style.transform = 'translateY(0)';
+                            }
+                        });
+                        
+                        item.addEventListener('mouseleave', function() {
+                            if (overlay) {
+                                overlay.style.transform = 'translateY(100%)';
+                            }
+                        });
                     }
-                });
+                }
                 
-                item.addEventListener('mouseleave', function() {
-                    if (overlay) {
-                        overlay.style.transform = 'translateY(100%)';
-                    }
-                });
+                handleHover();
+                
+                // Re-evaluate on window resize
+                window.addEventListener('resize', handleHover);
             });
         }
 

@@ -95,6 +95,13 @@
                 </iframe>
             </div>
             
+            <!-- Future Vision Statement -->
+            <div style="background: rgba(0, 149, 217, 0.05); border-left: 4px solid #0095d9; padding: 1rem 1.5rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0;">
+                <p style="color: #0095d9; font-size: 1rem; font-weight: 500; margin: 0; line-height: 1.6; text-align: center; font-style: italic;">
+                    "In <span id="currentYear" style="font-weight: 700; color: #0D47A1;">2025</span> and <span id="nextYear" style="font-weight: 700; color: #0D47A1;">2026</span>, we are strategically focused on strengthening our MICE segment and diversifying our service offerings to meet evolving corporate needs."
+                </p>
+            </div>
+
             <!-- Call to Action -->
             <div style="text-align: center; margin-top: 1.5rem;">
                 <p style="color: #666; font-size: 0.95rem; margin-bottom: 1rem;">Ready to plan your next corporate event? Let's discuss your requirements.</p>
@@ -165,7 +172,24 @@
                 // Skip nav/header/dropdown menu links
                 if (link.closest('nav') || link.closest('header') || link.closest('.dropdown-menu')) return;
             });
+
+            // Auto-update years for MICE vision statement
+            updateVisionYears();
         });
+
+        // Auto-update years for MICE vision statement
+        function updateVisionYears() {
+            const currentYear = new Date().getFullYear();
+            const nextYear = currentYear + 1;
+            
+            const currentYearElement = document.getElementById('currentYear');
+            const nextYearElement = document.getElementById('nextYear');
+            
+            if (currentYearElement && nextYearElement) {
+                currentYearElement.textContent = currentYear;
+                nextYearElement.textContent = nextYear;
+            }
+        }
     </script>
 </body>
 </html>

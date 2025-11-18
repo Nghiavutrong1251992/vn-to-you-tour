@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General News & Updates - VN to You Tour</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+    <header>
+        <div id="header-placeholder"></div>
+    </header>
+
+    <script src="../assets/js/header.js"></script>
+    <script src="../assets/js/mobile-menu.js"></script>
+    <script>
+        fetch('../includes/header.html')
+        .then(response => response.text())
+        .then(data => {
+            data = data.replace('href="/', 'href="../');
+            data = data.replace('href="/pages/', 'href="');
+            data = data.replace('src="/assets/', 'src="../assets/');
+            document.getElementById('header-placeholder').innerHTML = data;
+            // Dispatch event to signal header is loaded
+            window.dispatchEvent(new Event('headerLoaded'));
+        });
+    </script>
+
+    <!-- Hero Section - Full Width Edge to Edge -->
+    <section style="width: 100%; padding: 0; margin-bottom: var(--spacing-lg);">
+        <div style="background: linear-gradient(135deg, #0D47A1 0%, #0095d9 25%, #42A5F5 50%, #81C784 75%, #E3F2FD 100%); width: 100%; min-height: 200px; max-height: 280px; box-shadow: 0 20px 40px rgba(0, 149, 217, 0.3), 0 8px 25px rgba(13, 71, 161, 0.2); position: relative; overflow: hidden; display: flex; align-items: center;">
+            
+            <!-- Content Container aligned with main content -->
+            <div style="max-width: 1200px; width: 100%; margin: 0 auto; padding: 1.8rem var(--spacing-2xl); display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
+                
+                <!-- Main Title -->
+                <h1 style="font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin: 0 0 1rem 0; text-shadow: 0 4px 12px rgba(13, 71, 161, 0.4); line-height: 1.2; color: #ffffff; letter-spacing: -0.02em; background: linear-gradient(45deg, #ffffff, #E3F2FD); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">General News & Updates</h1>
+                
+                <!-- Description -->
+                <p style="font-size: clamp(1rem, 2.5vw, 1.15rem); margin: 0; text-shadow: 0 2px 6px rgba(13, 71, 161, 0.3); line-height: 1.5; max-width: 100%; color: rgba(255, 255, 255, 0.98); font-weight: 400;">Stay updated with the latest travel news, industry insights, destination highlights, and general tourism updates from Vietnam and beyond.</p>
+                
+            </div>
+        </div>
+    </section>
+
+    <div class="content-wrapper">
+        <div class="main-content">
+            <a href="news.html" class="btn">← Back to News</a>
+            
+            <div class="content-container">
+                <hr class="section-divider">
+
+                <!-- General News Articles Container -->
+                <div id="general-articles-container" style="display: grid; gap: 2rem;">
+                    <!-- Articles will be rendered here by JavaScript -->
+                </div>
+
+                <div id="no-general-articles" style="display: none; text-align: center; padding: 3rem; color: #666;">
+                    <i class="fas fa-newspaper" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.3;"></i>
+                    <p style="font-size: 1.1rem; margin: 0;">No general news articles available at the moment.</p>
+                    <p style="font-size: 0.9rem; margin: 0.5rem 0 0 0; opacity: 0.8;">Check back soon for updates!</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+
+    <script>
+        fetch('../includes/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
+
+        // Load articles data
+        fetch('../assets/js/data/articles-data.js')
+        .then(response => response.text())
+        .then(data => {
+            // Execute the script to load articlesData
+            eval(data);
+            renderGeneralArticles();
+        })
+        .catch(error => {
+            console.error('Error loading articles data:', error);
+            showNoArticlesMessage();
+        });
+
+        function renderGeneralArticles() {
+            const container = document.getElementById('general-articles-container');
+            const noArticlesDiv = document.getElementById('no-general-articles');
+
+            // Filter for general articles (not company news)
+            const generalArticles = articlesData.filter(article => 
+                article.category !== 'company-news'
+            );
+
+            if (generalArticles.length === 0) {
+                showNoArticlesMessage();
+                return;
+            }
+
+            container.innerHTML = '';
+            
+            generalArticles.forEach(article => {
+                const articleElement = document.createElement('article');
+                articleElement.className = 'news-article';
+                articleElement.style.cssText = `
+                    background: #fff;
+                    border-radius: 12px;
+                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                    overflow: hidden;
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                `;
+
+                // Add hover effects
+                articleElement.onmouseenter = function() {
+                    this.style.transform = 'translateY(-5px)';
+                    this.style.boxShadow = '0 8px 25px rgba(0, 149, 217, 0.15)';
+                };
+                articleElement.onmouseleave = function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.1)';
+                };
+
+                const categoryColor = getCategoryColor(article.category);
+
+                articleElement.innerHTML = `
+                    <div style="position: relative;">
+                        <img src="${article.image}" alt="${article.title}" style="width: 100%; height: 200px; object-fit: cover;">
+                        <div style="position: absolute; top: 1rem; left: 1rem;">
+                            <span style="background: ${categoryColor}; color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">${getCategoryName(article.category)}</span>
+                        </div>
+                        <div style="position: absolute; top: 1rem; right: 1rem;">
+                            <span style="background: rgba(0, 0, 0, 0.7); color: white; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.75rem; backdrop-filter: blur(10px);">${article.date}</span>
+                        </div>
+                    </div>
+                    <div style="padding: 1.5rem;">
+                        <h3 style="margin: 0 0 0.8rem 0; color: #2c3e50; font-size: 1.3rem; font-weight: 600; line-height: 1.3;">
+                            <a href="${article.link || '#'}" style="text-decoration: none; color: inherit; transition: color 0.3s ease;" 
+                               onmouseover="this.style.color='#0095d9'" 
+                               onmouseout="this.style.color='inherit'">
+                                ${article.title}
+                            </a>
+                        </h3>
+                        <p style="color: #666; margin: 0 0 1rem 0; line-height: 1.6; font-size: 0.95rem;">${article.excerpt}</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #eee;">
+                            <span style="color: #999; font-size: 0.85rem;">
+                                <i class="fas fa-user" style="margin-right: 0.5rem;"></i>
+                                ${article.author || 'VN to You Tour'}
+                            </span>
+                            <a href="${article.link || '#'}" style="color: #0095d9; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: color 0.3s ease;" 
+                               onmouseover="this.style.color='#0D47A1'" 
+                               onmouseout="this.style.color='#0095d9'">
+                                Read More →
+                            </a>
+                        </div>
+                    </div>
+                `;
+
+                container.appendChild(articleElement);
+            });
+
+            container.style.display = 'grid';
+            noArticlesDiv.style.display = 'none';
+        }
+
+        function showNoArticlesMessage() {
+            document.getElementById('general-articles-container').style.display = 'none';
+            document.getElementById('no-general-articles').style.display = 'block';
+        }
+
+        function getCategoryColor(category) {
+            const colors = {
+                'travel-tips': '#28a745',
+                'destinations': '#17a2b8',
+                'culture': '#fd7e14',
+                'food': '#dc3545',
+                'events': '#6f42c1',
+                'general': '#6c757d'
+            };
+            return colors[category] || '#0095d9';
+        }
+
+        function getCategoryName(category) {
+            const names = {
+                'travel-tips': 'Travel Tips',
+                'destinations': 'Destinations', 
+                'culture': 'Culture',
+                'food': 'Food & Drink',
+                'events': 'Events',
+                'general': 'General'
+            };
+            return names[category] || 'News';
+        }
+
+        // Auto-classify and style buttons based on their text content and href
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a');
+            links.forEach(link => {
+                // Skip nav/header/dropdown menu links
+                if (link.closest('nav') || link.closest('header') || link.closest('.dropdown-menu')) return;
+            });
+        });
+    </script>
+</body>
+</html>

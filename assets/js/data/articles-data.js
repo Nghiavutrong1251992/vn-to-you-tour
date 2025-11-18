@@ -77,6 +77,7 @@ const articlesData = [
         author: 'VN to You Tour Team',
         category: 'Destination Guides',
         excerpt: 'Northern Vietnam offers a tapestry of natural wonders and cultural heritage that captivates every traveler. From the ethereal beauty of Ha Long Bay to the terraced fields of Sapa, this region is a paradise for adventurers and culture enthusiasts alike.',
+        image: 'https://vn-to-you-tour.vercel.app/assets/images/optimized/articles/article-northern-vietnam%201.jpg',
         content: [
             {
                 type: 'paragraph',
@@ -120,6 +121,7 @@ const articlesData = [
         author: 'VN to You Tour Team',
         category: 'Destination Guides',
         excerpt: 'Discover the vibrant floating markets, traditional villages, and rich agricultural life of the Mekong Delta, where rivers are highways and boats are homes.',
+        image: 'https://vn-to-you-tour.vercel.app/assets/images/tours/mekong-delta-2-days.jpg',
         content: [
             {
                 type: 'paragraph',
@@ -150,6 +152,7 @@ const articlesData = [
         author: 'VN to You Tour Team',
         category: 'Cultural Insights',
         excerpt: 'Step into the enchanting world of Hoi An Ancient Town, where lantern-lit streets tell stories of centuries past and traditional crafts continue to thrive.',
+        image: 'https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=800&h=400&fit=crop',
         content: [
             {
                 type: 'paragraph',

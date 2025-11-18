@@ -62,15 +62,15 @@
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    margin-top: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
 .service-item {
-    margin-bottom: 1.5rem;
-    padding: 20px;
-    background: #f9f9f9;
+    margin-bottom: 0;
+    padding: 0;
+    background: transparent;
 }
 
 .service-item h3 {

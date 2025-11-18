@@ -114,52 +114,193 @@
     <div class="services-section content-container" style="background: transparent; border: none; box-shadow: none;">
         <h2>Our Tours & Services</h2>
         
-        <div class="services-grid">
-            <div class="service-item service-card">
-                <div class="service-image">
-                    <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=500&h=300&fit=crop&crop=center" alt="Private Tours Vietnam" loading="lazy">
+        <!-- Services Slider Container -->
+        <div class="services-slider-container">
+            <div class="services-grid" id="servicesSlider">
+                <div class="service-item service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=500&h=300&fit=crop&crop=center" alt="Private Tours Vietnam" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Private Tours</h3>
+                        <p>Multi-day customized tours with private guides and transportation.</p>
+                        <a href="pages/private-tours.html" class="btn service-btn">View Private Tours</a>
+                    </div>
                 </div>
-                <div class="service-content">
-                    <h3>Private Tours</h3>
-                    <p>Multi-day customized tours with private guides and transportation.</p>
-                    <a href="pages/private-tours.html" class="btn service-btn">View Private Tours</a>
+                
+                <div class="service-item service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=500&h=300&fit=crop&crop=center" alt="MICE Services Vietnam" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>MICE Services</h3>
+                        <p>Corporate meetings, incentives, conferences, and events.</p>
+                        <a href="pages/mice.html" class="btn service-btn">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-item service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=500&h=300&fit=crop&crop=center" alt="Golf Tours Vietnam" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Golf Tours</h3>
+                        <p>World-class golfing experiences in Vietnam's stunning landscapes.</p>
+                        <a href="pages/golf-tour.html" class="btn service-btn">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-item service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=500&h=300&fit=crop&center" alt="News & Articles Vietnam Travel" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>News & Articles</h3>
+                        <p>Latest travel news and destination guides.</p>
+                        <a href="pages/news.html" class="btn service-btn">Read News</a>
+                    </div>
                 </div>
             </div>
             
-            <div class="service-item service-card">
-                <div class="service-image">
-                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=500&h=300&fit=crop&crop=center" alt="MICE Services Vietnam" loading="lazy">
-                </div>
-                <div class="service-content">
-                    <h3>MICE Services</h3>
-                    <p>Corporate meetings, incentives, conferences, and events.</p>
-                    <a href="pages/mice.html" class="btn service-btn">Learn More</a>
-                </div>
+            <!-- Mobile Slider Navigation -->
+            <div class="services-slider-nav" id="servicesSliderNav">
+                <button class="slider-btn prev-btn" id="servicesPrevBtn" onclick="moveServicesSlide(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slider-btn next-btn" id="servicesNextBtn" onclick="moveServicesSlide(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
             
-            <div class="service-item service-card">
-                <div class="service-image">
-                    <img src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=500&h=300&fit=crop&crop=center" alt="Golf Tours Vietnam" loading="lazy">
-                </div>
-                <div class="service-content">
-                    <h3>Golf Tours</h3>
-                    <p>World-class golfing experiences in Vietnam's stunning landscapes.</p>
-                    <a href="pages/golf-tour.html" class="btn service-btn">Learn More</a>
-                </div>
-            </div>
-            
-            <div class="service-item service-card">
-                <div class="service-image">
-                    <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=500&h=300&fit=crop&center" alt="News & Articles Vietnam Travel" loading="lazy">
-                </div>
-                <div class="service-content">
-                    <h3>News & Articles</h3>
-                    <p>Latest travel news and destination guides.</p>
-                    <a href="pages/news.html" class="btn service-btn">Read News</a>
-                </div>
+            <!-- Mobile Slider Dots -->
+            <div class="services-slider-dots" id="servicesSliderDots">
+                <span class="slider-dot active" onclick="currentServicesSlide(1)"></span>
+                <span class="slider-dot" onclick="currentServicesSlide(2)"></span>
+                <span class="slider-dot" onclick="currentServicesSlide(3)"></span>
+                <span class="slider-dot" onclick="currentServicesSlide(4)"></span>
             </div>
         </div>
     </div>
+    
+    <!-- Services Mobile Slider Script -->
+    <script>
+    (function() {
+        let currentServiceSlide = 0;
+        const totalServiceSlides = 4;
+        
+        function moveServicesSlide(direction) {
+            currentServiceSlide += direction;
+            
+            if (currentServiceSlide >= totalServiceSlides) {
+                currentServiceSlide = 0;
+            } else if (currentServiceSlide < 0) {
+                currentServiceSlide = totalServiceSlides - 1;
+            }
+            
+            updateServicesSlider();
+        }
+        
+        function currentServicesSlide(slideIndex) {
+            currentServiceSlide = slideIndex - 1;
+            updateServicesSlider();
+        }
+        
+        function updateServicesSlider() {
+            const slider = document.getElementById('servicesSlider');
+            const dots = document.querySelectorAll('#servicesSliderDots .slider-dot');
+            
+            if (window.innerWidth <= 768) {
+                // Calculate slide distance based on viewport - show 2.5 items
+                const containerWidth = window.innerWidth - 30; // minus padding
+                const itemWidth = Math.min(150, containerWidth / 2.5);
+                const slideWidth = itemWidth + 10; // item width + gap
+                const translateX = -currentServiceSlide * slideWidth;
+                slider.style.transform = `translateX(${translateX}px)`;
+                
+                // Update dots
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentServiceSlide);
+                });
+            }
+        }
+        
+        // Auto-slide for mobile
+        function autoSlideServices() {
+            if (window.innerWidth <= 768) {
+                moveServicesSlide(1);
+            }
+        }
+        
+        // Auto-slide every 5 seconds on mobile
+        let servicesAutoSlideInterval;
+        
+        function startServicesAutoSlide() {
+            if (window.innerWidth <= 768) {
+                servicesAutoSlideInterval = setInterval(autoSlideServices, 5000);
+            }
+        }
+        
+        function stopServicesAutoSlide() {
+            if (servicesAutoSlideInterval) {
+                clearInterval(servicesAutoSlideInterval);
+            }
+        }
+        
+        // Handle responsive changes
+        function handleServicesResize() {
+            if (window.innerWidth > 768) {
+                // Desktop: reset slider and hide navigation
+                document.getElementById('servicesSlider').style.transform = 'translateX(0)';
+                stopServicesAutoSlide();
+            } else {
+                // Mobile: enable slider
+                updateServicesSlider();
+                startServicesAutoSlide();
+            }
+        }
+        
+        // Initialize
+        window.addEventListener('resize', handleServicesResize);
+        window.addEventListener('load', () => {
+            handleServicesResize();
+            
+            // Pause auto-slide on hover (mobile)
+            const sliderContainer = document.querySelector('.services-slider-container');
+            if (sliderContainer) {
+                sliderContainer.addEventListener('mouseenter', stopServicesAutoSlide);
+                sliderContainer.addEventListener('mouseleave', startServicesAutoSlide);
+                
+                // Touch events for mobile
+                let startX = null;
+                sliderContainer.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                    stopServicesAutoSlide();
+                });
+                
+                sliderContainer.addEventListener('touchend', (e) => {
+                    if (startX !== null && window.innerWidth <= 768) {
+                        const endX = e.changedTouches[0].clientX;
+                        const diffX = startX - endX;
+                        
+                        if (Math.abs(diffX) > 30) { // Lower threshold for easier swipe
+                            if (diffX > 0) {
+                                moveServicesSlide(1); // Swipe left, go to next
+                            } else {
+                                moveServicesSlide(-1); // Swipe right, go to previous
+                            }
+                        }
+                    }
+                    startX = null;
+                    setTimeout(startServicesAutoSlide, 1000); // Resume auto-slide after delay
+                });
+            }
+        });
+        
+        // Make functions global
+        window.moveServicesSlide = moveServicesSlide;
+        window.currentServicesSlide = currentServicesSlide;
+    })();
+    </script>
 
     <!-- Company News Section -->
     <div class="content-container glass-card" style="margin-top: 4rem;">

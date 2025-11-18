@@ -105,6 +105,7 @@
 
 .sidebar {
     flex: 1;
+    min-width: 280px;
     padding: var(--spacing-xl);
 }
 

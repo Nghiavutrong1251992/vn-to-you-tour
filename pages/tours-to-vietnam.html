@@ -27,23 +27,150 @@
         });
     </script>
 
+    <!-- Hero Section - Full Width Edge to Edge -->
+    <section style="width: 100%; padding: 0; margin-bottom: var(--spacing-lg);">
+        <div style="background: linear-gradient(135deg, #0D47A1 0%, #0095d9 25%, #42A5F5 50%, #81C784 75%, #E3F2FD 100%); width: 100%; min-height: 200px; max-height: 280px; box-shadow: 0 20px 40px rgba(0, 149, 217, 0.3), 0 8px 25px rgba(13, 71, 161, 0.2); position: relative; overflow: hidden; display: flex; align-items: center;">
+            
+            <!-- Content Container aligned with main content -->
+            <div style="max-width: 1200px; width: 100%; margin: 0 auto; padding: 1.8rem var(--spacing-2xl); display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
+                
+                <!-- Main Title -->
+                <h1 style="font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin: 0 0 1rem 0; text-shadow: 0 4px 12px rgba(13, 71, 161, 0.4); line-height: 1.2; color: #ffffff; letter-spacing: -0.02em; background: linear-gradient(45deg, #ffffff, #E3F2FD); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Tours to Vietnam</h1>
+                
+                <!-- Description -->
+                <p style="font-size: clamp(1rem, 2.5vw, 1.15rem); margin: 0; text-shadow: 0 2px 6px rgba(13, 71, 161, 0.3); line-height: 1.5; max-width: 100%; color: rgba(255, 255, 255, 0.98); font-weight: 400;">Discover Vietnam with our exclusive tours, designed for personalized experiences. Choose from daily tours, private multi-day adventures, or specialized programs.</p>
+                
+            </div>
+        </div>
+    </section>
+
     <div class="content-wrapper">
         <div class="main-content">
             <div class="content-container">
-                <h1>Tours to Vietnam</h1>
-                <p>Discover Vietnam with our exclusive tours, designed for personalized experiences. Choose from daily tours, private multi-day adventures, or specialized programs.</p>
-                
                 <hr class="section-divider">
                 
-                <h3>Private Tours</h3>
-                <div style="position: relative; display: inline-block; width: 100%;">
-                    <img src="https://vn-to-you-tour.vercel.app/assets/images/private-tour.jpg" alt="Private Tours - Customized Vietnam Travel Experience" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px; margin: 15px 0; max-height: 350px;">
-                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
-                        <a href="private-tours.html" class="btn" style="background: rgba(255, 255, 255, 0.7); color: #0095d9; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: all 0.3s ease; backdrop-filter: blur(5px); border: 2px solid #0095d9;" onmouseover="this.style.background='rgba(255, 255, 255, 0.9)'; this.style.transform='scale(1.05)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.7)'; this.style.transform='scale(1)'">View Private Tours</a>
+                <!-- Private Tours Preview Section -->
+                <div class="private-tours-slider-container">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                        <h3>Private Tours</h3>
+                        <a href="private-tours.html" class="btn">View All Private Tours →</a>
                     </div>
+                    <p style="margin-bottom: 1.5rem;">Multi-day comprehensive tours with customized itineraries, expert local guides, and private transportation.</p>
+                    
+                    <!-- Private Tours Slider -->
+                    <div class="private-tours-slider-wrapper" style="position: relative; width: 100%; height: 400px; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 25px rgba(0, 149, 217, 0.2); margin-bottom: 1rem;">
+                        <div id="privateToursSlider" style="display: flex; height: 100%; transition: transform 0.5s ease-in-out;">
+                            <!-- Slides will be populated by JavaScript from privateToursData -->
+                        </div>
+                        
+                        <!-- Navigation dots -->
+                        <div id="privateToursDots" style="position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px;">
+                            <span style="width: 12px; height: 12px; border-radius: 50%; background: #0095d9; cursor: pointer; transition: background 0.3s;" onclick="goToPrivateSlide(0)"></span>
+                            <span style="width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.5); cursor: pointer; transition: background 0.3s;" onclick="goToPrivateSlide(1)"></span>
+                            <span style="width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.5); cursor: pointer; transition: background 0.3s;" onclick="goToPrivateSlide(2)"></span>
+                            <span style="width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.5); cursor: pointer; transition: background 0.3s;" onclick="goToPrivateSlide(3)"></span>
+                        </div>
+                    </div>
+                    
+                    <p style="margin-top: 1rem; font-style: italic; color: #666;">Features: Customized itineraries, Expert guides, Private transportation, Exclusive access</p>
                 </div>
-                <p>Multi-day comprehensive tours with customized itineraries, expert local guides, and private transportation.</p>
-                <p>Features: Customized itineraries, Expert guides, Private transportation, Exclusive access</p>
+
+                <script>
+                (function() {
+                    let currentPrivateSlide = 0;
+                    let privateSlideInterval;
+                    let totalSlides = 0;
+                    
+                    function createPrivateToursSlider() {
+                        // Get first 4 tours for slider
+                        const featuredTours = privateToursData.slice(0, 4);
+                        const slider = document.getElementById('privateToursSlider');
+                        const dotsContainer = document.getElementById('privateToursDots');
+                        
+                        let slidesHTML = '';
+                        let dotsHTML = '';
+                        
+                        featuredTours.forEach((tour, index) => {
+                            const imageUrl = tour.image ? tour.image.url : '../assets/images/tours/default-tour.jpg';
+                            const detailUrl = `private-tour-detail.html?id=${tour.id}`;
+                            
+                            slidesHTML += `
+                                <div style="min-width: 100%; height: 100%; background-image: url('${imageUrl}'); background-size: cover; background-position: center; position: relative; display: flex; align-items: end;">
+                                    <div style="background: linear-gradient(transparent, rgba(0,0,0,0.8)); width: 100%; padding: 2rem; color: white;">
+                                        <h4 style="color: white; margin: 0 0 0.5rem 0; font-size: 1.5rem;">${tour.title}</h4>
+                                        <p style="color: rgba(255,255,255,0.9); margin: 0 0 1rem 0; font-size: 0.9rem;">${tour.duration.display} | ${tour.groupSize}</p>
+                                        <p style="color: rgba(255,255,255,0.85); margin: 0 0 1rem 0; line-height: 1.4;">${tour.excerpt}</p>
+                                        <a href="${detailUrl}" class="btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.3); color: white; backdrop-filter: blur(10px);">View Details →</a>
+                                    </div>
+                                </div>
+                            `;
+                            
+                            dotsHTML += `<span style="width: 12px; height: 12px; border-radius: 50%; background: ${index === 0 ? '#0095d9' : 'rgba(255,255,255,0.5)'}; cursor: pointer; transition: background 0.3s;" onclick="goToPrivateSlide(${index})"></span>`;
+                        });
+                        
+                        slider.innerHTML = slidesHTML;
+                        dotsContainer.innerHTML = dotsHTML;
+                        totalSlides = featuredTours.length;
+                        
+                        // Start slideshow if there are multiple tours
+                        if (totalSlides > 1) {
+                            startPrivateSlideshow();
+                        }
+                    }
+                    
+                    function goToPrivateSlide(index) {
+                        currentPrivateSlide = index;
+                        const slider = document.getElementById('privateToursSlider');
+                        const translateX = -currentPrivateSlide * 100;
+                        slider.style.transform = `translateX(${translateX}%)`;
+                        
+                        // Update dots
+                        const dots = document.querySelectorAll('#privateToursDots span');
+                        dots.forEach((dot, i) => {
+                            dot.style.background = i === currentPrivateSlide ? '#0095d9' : 'rgba(255,255,255,0.5)';
+                        });
+                    }
+                    
+                    function nextPrivateSlide() {
+                        currentPrivateSlide = (currentPrivateSlide + 1) % totalSlides;
+                        goToPrivateSlide(currentPrivateSlide);
+                    }
+                    
+                    function startPrivateSlideshow() {
+                        privateSlideInterval = setInterval(nextPrivateSlide, 4000); // Change slide every 4 seconds
+                    }
+                    
+                    function stopPrivateSlideshow() {
+                        if (privateSlideInterval) {
+                            clearInterval(privateSlideInterval);
+                        }
+                    }
+                    
+                    // Make functions global for onclick handlers
+                    window.goToPrivateSlide = goToPrivateSlide;
+                    
+                    // Initialize when page loads
+                    document.addEventListener('DOMContentLoaded', function() {
+                        // Wait for data to be loaded
+                        if (typeof privateToursData !== 'undefined') {
+                            createPrivateToursSlider();
+                            
+                            const slider = document.getElementById('privateToursSlider');
+                            if (slider) {
+                                slider.addEventListener('mouseenter', stopPrivateSlideshow);
+                                slider.addEventListener('mouseleave', startPrivateSlideshow);
+                            }
+                        } else {
+                            // Retry after a short delay if data not loaded yet
+                            setTimeout(() => {
+                                if (typeof privateToursData !== 'undefined') {
+                                    createPrivateToursSlider();
+                                }
+                            }, 500);
+                        }
+                    });
+                })();
+                </script>
                 
                 <hr class="section-divider">
                 

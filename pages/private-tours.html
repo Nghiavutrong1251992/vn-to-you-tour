@@ -15,12 +15,6 @@
     <div class="content-wrapper">
         <div class="main-content">
             <div class="content-container">
-                <a href="tours-to-vietnam.html" class="btn">← Back to Tours to Vietnam</a>
-                
-                <h1>Private Tours in Vietnam</h1>
-                <p>Experience Vietnam with personalized private tours designed for your comfort and interests. Choose your preferred region to explore amazing multi-day tours.</p>
-
-                <hr class="section-divider">
 
                 <!-- Region Selector -->
                 <div id="region-selector">
@@ -53,10 +47,6 @@
 
                 <!-- Tours List for each region -->
                 <div id="tours-list" class="hidden">
-                    <a href="#" class="btn" onclick="showRegionSelector(); return false;">
-                        ← Back to Regions
-                    </a>
-                    <hr class="section-divider">
                 </div>
             </div>
         </div>
@@ -171,12 +161,8 @@
             document.getElementById('tours-list').classList.remove('hidden');
             document.getElementById('tours-list').classList.add('visible');
 
-            // Generate tours HTML with back button and divider
+            // Generate tours HTML with title
             let toursHTML = `
-                <a href="#" class="btn" onclick="showRegionSelector(); return false;">
-                    ← Back to Regions
-                </a>
-                <hr class="section-divider">
                 <h2>All Private Tours (Starting with ${regionNames[startingRegion]})</h2>
             `;
             
@@ -225,6 +211,14 @@
                 }
             });
 
+            // Add back button at the bottom
+            toursHTML += `
+                <hr class="section-divider">
+                <a href="tours-to-vietnam.html" class="btn">
+                    ← Back to Tours to Vietnam
+                </a>
+            `;
+
             document.getElementById('tours-list').innerHTML = toursHTML;
         }
 
@@ -246,12 +240,8 @@
             document.getElementById('tours-list').classList.remove('hidden');
             document.getElementById('tours-list').classList.add('visible');
 
-            // Generate tours HTML with back button and divider
+            // Generate tours HTML with title
             let toursHTML = `
-                <a href="#" class="btn" onclick="showRegionSelector(); return false;">
-                    ← Back to Regions
-                </a>
-                <hr class="section-divider">
                 <h2>All Private Tours in Vietnam</h2>
             `;
             
@@ -297,10 +287,18 @@
                 }
             });
 
+            // Add back button at the bottom
+            toursHTML += `
+                <hr class="section-divider">
+                <a href="tours-to-vietnam.html" class="btn">
+                    ← Back to Tours to Vietnam
+                </a>
+            `;
+
             document.getElementById('tours-list').innerHTML = toursHTML;
         }
 
-        // Function to handle URL anchor navigation
+    // Function to handle URL anchor navigation
         function handleAnchorNavigation() {
             const anchor = window.location.hash.substring(1); // Remove the # symbol
             if (anchor && ['north', 'central', 'south', 'multi'].includes(anchor)) {

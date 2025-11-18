@@ -27,14 +27,43 @@
         });
     </script>
 
+    <!-- Hero Section - Full Width Edge to Edge -->
+    <section style="width: 100%; padding: 0; margin-bottom: var(--spacing-lg);">
+        <div style="background: linear-gradient(135deg, #0D47A1 0%, #0095d9 25%, #42A5F5 50%, #81C784 75%, #E3F2FD 100%); width: 100%; min-height: 200px; max-height: 280px; box-shadow: 0 20px 40px rgba(0, 149, 217, 0.3), 0 8px 25px rgba(13, 71, 161, 0.2); position: relative; overflow: hidden; display: flex; align-items: center;">
+            
+            <!-- Content Container aligned with main content -->
+            <div style="max-width: 1200px; width: 100%; margin: 0 auto; padding: 1.8rem var(--spacing-2xl); display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
+                
+                <!-- Main Title -->
+                <h1 style="font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin: 0 0 1rem 0; text-shadow: 0 4px 12px rgba(13, 71, 161, 0.4); line-height: 1.2; color: #ffffff; letter-spacing: -0.02em; background: linear-gradient(45deg, #ffffff, #E3F2FD); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Latest News</h1>
+                
+                <!-- Description -->
+                <p style="font-size: clamp(1rem, 2.5vw, 1.15rem); margin: 0; text-shadow: 0 2px 6px rgba(13, 71, 161, 0.3); line-height: 1.5; max-width: 100%; color: rgba(255, 255, 255, 0.98); font-weight: 400;">Stay updated with the latest news, travel insights, and exciting updates from Vietnam's premier tour operator.</p>
+                
+            </div>
+        </div>
+    </section>
+
     <div class="content-wrapper">
         <div class="main-content">
-            <h2>Latest News</h2>
-            
-            <!-- Company News Section -->
+            <!-- Company News Preview Section -->
             <div class="news-section">
-                <h3>Company News</h3>
-                <div id="company-news-articles"></div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                    <h3>Company News</h3>
+                    <a href="company-news.html" class="btn">View All Company News →</a>
+                </div>
+                
+                <!-- Company News Slider -->
+                <div style="position: relative; width: 100%; height: 400px; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 25px rgba(0, 149, 217, 0.2); margin-bottom: 1rem;">
+                    <div id="companyNewsSlider" style="display: flex; height: 100%; transition: transform 0.5s ease-in-out;">
+                        <!-- Slides will be populated by JavaScript -->
+                    </div>
+                    
+                    <!-- Navigation dots -->
+                    <div id="sliderDots" style="position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px;">
+                        <!-- Dots will be populated by JavaScript -->
+                    </div>
+                </div>
             </div>
             
             <hr class="section-divider">
@@ -96,17 +125,94 @@
                     container.innerHTML = html;
                 }
 
+                // Company News Slider Functions
+                function createCompanyNewsSlider() {
+                    const companyArticles = articlesData.filter(article => article.category === 'Company News');
+                    const slider = document.getElementById('companyNewsSlider');
+                    const dotsContainer = document.getElementById('sliderDots');
+                    
+                    let slidesHTML = '';
+                    let dotsHTML = '';
+                    
+                    if (companyArticles.length === 0) {
+                        slidesHTML = '<div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #f8f9fa;"><p>No company news available.</p></div>';
+                    } else {
+                        const featuredArticles = companyArticles.slice(0, 5); // Show max 5 articles in slider
+                        
+                        featuredArticles.forEach((article, index) => {
+                            const articleUrl = `../templates/article-template.html?id=${article.id}`;
+                            const imageSrc = article.image ? (article.image.startsWith('assets/') ? '../' + article.image : article.image) : '../assets/images/general/default-news.jpg';
+                            const readTime = article.readTime || 'Quick read';
+                            
+                            slidesHTML += `
+                                <div style="min-width: 100%; height: 100%; background-image: url('${imageSrc}'); background-size: cover; background-position: center; position: relative; display: flex; align-items: end;">
+                                    <div style="background: linear-gradient(transparent, rgba(0,0,0,0.8)); width: 100%; padding: 2rem; color: white;">
+                                        <h4 style="color: white; margin: 0 0 0.5rem 0; font-size: 1.5rem;">${article.title}</h4>
+                                        <p style="color: rgba(255,255,255,0.9); margin: 0 0 1rem 0; font-size: 0.9rem;">${article.date} | ${readTime}</p>
+                                        <p style="color: rgba(255,255,255,0.85); margin: 0 0 1rem 0; line-height: 1.4;">${article.excerpt}</p>
+                                        <a href="${articleUrl}" class="btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.3); color: white; backdrop-filter: blur(10px);">Read More →</a>
+                                    </div>
+                                </div>
+                            `;
+                            
+                            dotsHTML += `<span style="width: 12px; height: 12px; border-radius: 50%; background: ${index === 0 ? '#0095d9' : 'rgba(255,255,255,0.5)'}; cursor: pointer; transition: background 0.3s;" onclick="goToSlide(${index})"></span>`;
+                        });
+                    }
+                    
+                    slider.innerHTML = slidesHTML;
+                    dotsContainer.innerHTML = dotsHTML;
+                    
+                    // Update global variable for navigation
+                    window.companyNewsSlideCount = Math.min(companyArticles.length, 5);
+                    
+                    // Start auto-slideshow if there are multiple articles
+                    if (companyArticles.length > 1) {
+                        startSlideshow();
+                    }
+                }
+                
+                let currentSlide = 0;
+                let slideInterval;
+                
+                function goToSlide(index) {
+                    currentSlide = index;
+                    const slider = document.getElementById('companyNewsSlider');
+                    const translateX = -currentSlide * 100;
+                    slider.style.transform = `translateX(${translateX}%)`;
+                    
+                    // Update dots
+                    const dots = document.querySelectorAll('#sliderDots span');
+                    dots.forEach((dot, i) => {
+                        dot.style.background = i === currentSlide ? '#0095d9' : 'rgba(255,255,255,0.5)';
+                    });
+                }
+                
+                function nextSlide() {
+                    const maxSlides = window.companyNewsSlideCount || 1;
+                    currentSlide = (currentSlide + 1) % maxSlides;
+                    goToSlide(currentSlide);
+                }
+                
+                function startSlideshow() {
+                    slideInterval = setInterval(nextSlide, 4000); // Change slide every 4 seconds
+                }
+                
+                function stopSlideshow() {
+                    if (slideInterval) {
+                        clearInterval(slideInterval);
+                    }
+                }
+
                 function renderNewsArticles() {
-                    // Separate articles into company news and regular news
-                    const companyNews = articlesData.filter(article => article.category === 'Company News');
                     const regularNews = articlesData.filter(article => article.category !== 'Company News');
                     
                     // Sort by date (most recent first)
-                    companyNews.sort((a, b) => new Date(b.date) - new Date(a.date));
                     regularNews.sort((a, b) => new Date(b.date) - new Date(a.date));
                     
-                    // Render each section
-                    renderArticleSection(companyNews, 'company-news-articles');
+                    // Create company news slider
+                    createCompanyNewsSlider();
+                    
+                    // Render regular news section
                     renderArticleSection(regularNews, 'regular-news-articles');
                 }
 

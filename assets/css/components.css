@@ -204,7 +204,7 @@ button.active:hover {
    ================================ */
 
 .service-card {
-    background: var(--glass-bg-light);
+    background: white;
     border-radius: var(--radius-lg);
     overflow: hidden;
     transition: all var(--transition-base);

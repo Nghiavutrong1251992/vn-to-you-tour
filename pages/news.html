@@ -87,14 +87,7 @@
                     </div>
                 </div>
             </div>
-            
-            <hr class="section-divider">
-            
-            <!-- Regular News Articles -->
-            <div class="news-section">
-                <h3>Other News</h3>
-                <div id="regular-news-articles"></div>
-            </div>
+
             <script src="../assets/js/data/articles-data.js"></script>
             <script src="../assets/js/data/daily-tours-data.js"></script>
             <script src="../assets/js/components/sidebar.js"></script>
@@ -312,9 +305,7 @@
                     createCompanyNewsSlider();
                     createGeneralNewsSlider();
                     
-                    // Render remaining regular news section (exclude those already in sliders)
-                    const remainingNews = regularNews.slice(5); // Skip first 5 used in slider
-                    renderArticleSection(remainingNews, 'regular-news-articles');
+
                 }
 
                 function filterByCategory(category) {
@@ -326,14 +317,7 @@
                     // Filter articles by category
                     const filteredArticles = articlesData.filter(article => article.category === category);
                     
-                    // Determine which section to show
-                    if (category === 'Company News') {
-                        renderArticleSection(filteredArticles, 'company-news-articles');
-                        renderArticleSection([], 'regular-news-articles');
-                    } else {
-                        renderArticleSection([], 'company-news-articles');
-                        renderArticleSection(filteredArticles, 'regular-news-articles');
-                    }
+                    // Note: Category filtering disabled - using sliders instead
                 }
 
                 document.addEventListener('DOMContentLoaded', function() {

@@ -96,54 +96,55 @@ function populateSidebar(basePath = '../') {
         }
     }
 
-    // Popular tours - curated selection of the most popular tours
+    // Popular tours - random selection of 5 private tours
     let popularTours = [];
     
-    // Define most popular tour IDs (can be customized)
-    const popularTourIds = [
-        'halong-bay-day-trip'      // Daily tour - only remaining tour
-    ];
-    
-    // Get tours from daily tours data only
+    // Get tours from private tours data only
     let allTours = [];
-    if (typeof dailyToursData !== 'undefined') {
-        allTours = [...allTours, ...dailyToursData];
-    }
-    
-    // Select tours based on popular IDs, fallback to random selection
-    popularTourIds.forEach(tourId => {
-        const tour = allTours.find(t => t.id === tourId);
-        if (tour && popularTours.length < 4) {
-            popularTours.push(tour);
+    if (typeof privateToursData !== 'undefined' && privateToursData.length > 0) {
+        allTours = [...privateToursData];
+        
+        // Shuffle array and select random 5 tours
+        // Fisher-Yates shuffle algorithm
+        for (let i = allTours.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [allTours[i], allTours[j]] = [allTours[j], allTours[i]];
         }
-    });
-    
-    // If we don't have enough popular tours, fill with others
-    if (popularTours.length < 4) {
-        const remainingTours = allTours.filter(tour => 
-            !popularTours.find(pt => pt.id === tour.id)
-        );
-        const needed = 4 - popularTours.length;
-        popularTours = [...popularTours, ...remainingTours.slice(0, needed)];
+        
+        // Take first 5 tours from shuffled array
+        popularTours = allTours.slice(0, 5);
+    } else {
+        // Debug: Log if data is not available
+        console.log('Debug: privateToursData not available or empty');
+        console.log('typeof privateToursData:', typeof privateToursData);
+        if (typeof privateToursData !== 'undefined') {
+            console.log('privateToursData length:', privateToursData.length);
+        }
     }
 
     const popularToursContainer = document.getElementById('sidebar-popular-tours');
-    if (popularToursContainer && popularTours.length > 0) {
-        let html = '';
-        popularTours.forEach(tour => {
-            let relativeUrl;
-            if (tour.url && tour.url.startsWith('/pages')) {
-                // Private tours have full path starting with /pages
-                relativeUrl = tour.url.replace('/pages', actualBasePath + 'pages');
-            } else if (tour.url && tour.region) {
-                // Daily tours need region path construction: pages/tours/daily-tours/vietnam-{region}/{filename}
-                relativeUrl = actualBasePath + `pages/tours/daily-tours/vietnam-${tour.region}/${tour.url}`;
-            } else {
-                relativeUrl = '#';
-            }
-            html += `<li><a href="${relativeUrl}">${tour.title}</a></li>`;
-        });
-        popularToursContainer.innerHTML = html;
+    if (popularToursContainer) {
+        if (popularTours.length > 0) {
+            let html = '';
+            popularTours.forEach(tour => {
+                // Private tours use detail page with ID parameter
+                const relativeUrl = actualBasePath + `pages/private-tour-detail.html?id=${tour.id}`;
+                html += `<li><a href="${relativeUrl}">${tour.title}</a></li>`;
+            });
+            popularToursContainer.innerHTML = html;
+        } else {
+            // Fallback when no tours are available
+            popularToursContainer.innerHTML = '<li style="color: #666; font-style: italic;">Tours loading...</li>';
+            
+            // Retry after a delay if privateToursData is not loaded yet
+            setTimeout(() => {
+                if (typeof privateToursData !== 'undefined' && privateToursData.length > 0) {
+                    populateSidebar(actualBasePath);
+                } else {
+                    popularToursContainer.innerHTML = '<li style="color: #666; font-style: italic;">No tours available</li>';
+                }
+            }, 1000);
+        }
     }
 }
 

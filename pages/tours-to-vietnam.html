@@ -177,7 +177,7 @@
                 <!-- Daily Tours Section Header -->
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
                     <h3>Daily Tours</h3>
-                    <a href="daily-tours.html" class="btn">Learn More →</a>
+                    <span class="btn" style="background: #e5e7eb; color: #6b7280; cursor: not-allowed; opacity: 0.7;">Coming Soon</span>
                 </div>
                 
                 <!-- Daily Tours Section -->
@@ -621,35 +621,16 @@
                 `;
             }
             
-            // Daily Tours Section
-            if (typeof dailyToursData !== 'undefined' && dailyToursData.length > 0) {
-                sidebarHTML += `
-                    <div class="sidebar-widget">
-                        <h3><i class="fas fa-calendar-day"></i> Daily Tours</h3>
-                        <ul class="sidebar-tours-list">
-                `;
-                
-                dailyToursData.slice(0, 3).forEach(tour => {
-                    sidebarHTML += `
-                        <li class="sidebar-tour-item" style="display: block; margin-bottom: 15px; padding: 12px; background: #f9f9f9; border: 1px solid #e0e0e0; border-radius: 6px;">
-                            <a href="tour-detail.html?id=${tour.id}" class="sidebar-tour-link" style="display: block; text-decoration: none; color: inherit;">
-                                <div class="sidebar-tour-info">
-                                    <h4 class="sidebar-tour-title" style="margin: 0 0 5px 0; font-size: 13px; line-height: 1.2; color: #333;">${tour.title}</h4>
-                                    <p class="sidebar-tour-meta" style="margin: 0; font-size: 11px; color: #666;">${tour.duration} | ${tour.price}</p>
-                                </div>
-                            </a>
-                        </li>
-                    `;
-                });
-                
-                sidebarHTML += `
-                        </ul>
-                        <div style="text-align: center; margin-top: 15px;">
-                            <a href="daily-tours.html" class="btn btn-small">View All Daily Tours</a>
-                        </div>
+            // Daily Tours Section - Coming Soon
+            sidebarHTML += `
+                <div class="sidebar-widget">
+                    <h3><i class="fas fa-calendar-day"></i> Daily Tours</h3>
+                    <div style="padding: 20px; background: #f9f9f9; border: 1px solid #e0e0e0; border-radius: 8px; text-align: center;">
+                        <p style="margin: 0 0 10px 0; font-size: 14px; color: #666; font-style: italic;">Coming Soon</p>
+                        <p style="margin: 0; font-size: 12px; color: #999;">We're preparing exciting daily tour options for you!</p>
                     </div>
-                `;
-            }
+                </div>
+            `;
             
             // Contact & Info Section
             sidebarHTML += `

@@ -161,6 +161,166 @@
         </div>
     </div>
 
+    <!-- Company News Section -->
+    <div class="content-container" style="margin-top: 3rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+            <h2>Company News</h2>
+            <a href="pages/company-news.html" class="btn">View All Company News →</a>
+        </div>
+        
+        <!-- Company News Slider -->
+        <div style="position: relative; width: 100%; height: 400px; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 25px rgba(0, 149, 217, 0.2); margin-bottom: 1rem;">
+            <div id="companyNewsSlider" style="display: flex; height: 100%; transition: transform 0.5s ease-in-out;">
+                <!-- Slides will be populated dynamically by JavaScript -->
+            </div>
+            
+            <!-- Navigation dots -->
+            <div id="companySliderDots" style="position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px;">
+                <!-- Dots will be populated dynamically by JavaScript -->
+            </div>
+        </div>
+        
+        <!-- Load articles data -->
+        <script src="assets/js/data/articles-data.js"></script>
+        
+        <script>
+        (function() {
+            let currentCompanySlide = 0;
+            let companySlideInterval;
+            let totalCompanySlides = 0;
+            
+            // Create company news slideshow from articles data
+            function createCompanyNewsSlider() {
+                // Filter and sort company news articles by date (newest first)
+                const companyArticles = articlesData
+                    .filter(article => article.category === 'Company News')
+                    .sort((a, b) => new Date(b.date) - new Date(a.date))
+                    .slice(0, 3); // Show max 3 most recent articles
+                
+                const slider = document.getElementById('companyNewsSlider');
+                const dotsContainer = document.getElementById('companySliderDots');
+                
+                let slidesHTML = '';
+                let dotsHTML = '';
+                
+                if (companyArticles.length === 0) {
+                    // Fallback if no company news available
+                    slidesHTML = `
+                        <div style="min-width: 100%; height: 100%; background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; position: relative; display: flex; align-items: end;">
+                            <div style="background: linear-gradient(transparent, rgba(0,0,0,0.8)); width: 100%; padding: 2rem; color: white;">
+                                <h4 style="color: white; margin: 0 0 0.5rem 0; font-size: 1.5rem;">Stay Updated with VN to You Tour</h4>
+                                <p style="color: rgba(255,255,255,0.9); margin: 0 0 1rem 0; font-size: 0.9rem;">Latest company updates coming soon</p>
+                                <p style="color: rgba(255,255,255,0.85); margin: 0 0 1rem 0; line-height: 1.4;">We're working on bringing you the latest company news, achievements, and behind-the-scenes stories.</p>
+                                <a href="pages/company-news.html" class="btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.3); color: white; backdrop-filter: blur(10px);">View Company News →</a>
+                            </div>
+                        </div>
+                    `;
+                    dotsHTML = '<span style="width: 12px; height: 12px; border-radius: 50%; background: #0095d9; cursor: pointer; transition: background 0.3s;" onclick="goToCompanySlide(0)"></span>';
+                    totalCompanySlides = 1;
+                } else {
+                    // Create slides from actual articles
+                    companyArticles.forEach((article, index) => {
+                        const articleUrl = `templates/article-template.html?id=${article.id}`;
+                        const imageSrc = article.image || 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80';
+                        const readTime = article.readTime || 'Quick read';
+                        
+                        slidesHTML += `
+                            <div style="min-width: 100%; height: 100%; background-image: url('${imageSrc}'); background-size: cover; background-position: center; position: relative; display: flex; align-items: end;">
+                                <div style="background: linear-gradient(transparent, rgba(0,0,0,0.8)); width: 100%; padding: 2rem; color: white;">
+                                    <h4 style="color: white; margin: 0 0 0.5rem 0; font-size: 1.5rem;">${article.title}</h4>
+                                    <p style="color: rgba(255,255,255,0.9); margin: 0 0 1rem 0; font-size: 0.9rem;">${article.date} | ${readTime}</p>
+                                    <p style="color: rgba(255,255,255,0.85); margin: 0 0 1rem 0; line-height: 1.4;">${article.excerpt}</p>
+                                    <a href="${articleUrl}" class="btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.3); color: white; backdrop-filter: blur(10px);">Read More →</a>
+                                </div>
+                            </div>
+                        `;
+                        
+                        dotsHTML += `<span style="width: 12px; height: 12px; border-radius: 50%; background: ${index === 0 ? '#0095d9' : 'rgba(255,255,255,0.5)'}; cursor: pointer; transition: background 0.3s;" onclick="goToCompanySlide(${index})"></span>`;
+                    });
+                    
+                    // Add "View All" slide if there are articles
+                    if (companyArticles.length > 0) {
+                        slidesHTML += `
+                            <div style="min-width: 100%; height: 100%; background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; position: relative; display: flex; align-items: end;">
+                                <div style="background: linear-gradient(transparent, rgba(0,0,0,0.8)); width: 100%; padding: 2rem; color: white;">
+                                    <h4 style="color: white; margin: 0 0 0.5rem 0; font-size: 1.5rem;">Discover More Company Updates & Achievements</h4>
+                                    <p style="color: rgba(255,255,255,0.9); margin: 0 0 1rem 0; font-size: 0.9rem;">Stay updated | Latest news</p>
+                                    <p style="color: rgba(255,255,255,0.85); margin: 0 0 1rem 0; line-height: 1.4;">Read about company updates, announcements, achievements, and behind-the-scenes stories from VN to You Tour.</p>
+                                    <a href="pages/company-news.html" class="btn" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.3); color: white; backdrop-filter: blur(10px);">View All Company News →</a>
+                                </div>
+                            </div>
+                        `;
+                        dotsHTML += `<span style="width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.5); cursor: pointer; transition: background 0.3s;" onclick="goToCompanySlide(${companyArticles.length})"></span>`;
+                    }
+                    
+                    totalCompanySlides = companyArticles.length + (companyArticles.length > 0 ? 1 : 0);
+                }
+                
+                slider.innerHTML = slidesHTML;
+                dotsContainer.innerHTML = dotsHTML;
+                
+                // Start slideshow if there are multiple slides
+                if (totalCompanySlides > 1) {
+                    startCompanySlideshow();
+                }
+            }
+            
+            function goToCompanySlide(index) {
+                currentCompanySlide = index;
+                const slider = document.getElementById('companyNewsSlider');
+                const translateX = -currentCompanySlide * 100;
+                slider.style.transform = `translateX(${translateX}%)`;
+                
+                // Update dots
+                const dots = document.querySelectorAll('#companySliderDots span');
+                dots.forEach((dot, i) => {
+                    dot.style.background = i === currentCompanySlide ? '#0095d9' : 'rgba(255,255,255,0.5)';
+                });
+            }
+            
+            function nextCompanySlide() {
+                currentCompanySlide = (currentCompanySlide + 1) % totalCompanySlides;
+                goToCompanySlide(currentCompanySlide);
+            }
+            
+            function startCompanySlideshow() {
+                companySlideInterval = setInterval(nextCompanySlide, 4000); // Change slide every 4 seconds
+            }
+            
+            function stopCompanySlideshow() {
+                if (companySlideInterval) {
+                    clearInterval(companySlideInterval);
+                }
+            }
+            
+            // Make functions global for onclick handlers
+            window.goToCompanySlide = goToCompanySlide;
+            
+            // Initialize slideshow when articles data is loaded
+            document.addEventListener('DOMContentLoaded', function() {
+                // Check if articlesData is available, if not wait a bit
+                function initializeSlider() {
+                    if (typeof articlesData !== 'undefined') {
+                        createCompanyNewsSlider();
+                        
+                        const slider = document.getElementById('companyNewsSlider');
+                        if (slider) {
+                            // Pause on hover
+                            slider.addEventListener('mouseenter', stopCompanySlideshow);
+                            slider.addEventListener('mouseleave', startCompanySlideshow);
+                        }
+                    } else {
+                        // Retry after a short delay
+                        setTimeout(initializeSlider, 100);
+                    }
+                }
+                
+                initializeSlider();
+            });
+        })();
+        </script>
+    </div>
+
     <footer>
         <div id="footer-placeholder"></div>
     </footer>

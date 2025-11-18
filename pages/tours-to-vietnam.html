@@ -174,11 +174,52 @@
                 
                 <hr class="section-divider">
                 
-                <h3>Daily Tours</h3>
-                <p>Short visits with immersive experiences in key destinations. Explore Vietnam's highlights in a day with flexible options.</p>
-                <a href="daily-tours.html" class="btn">View Daily Tours</a>
+                <!-- Daily Tours Section Header -->
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                    <h3>Daily Tours</h3>
+                    <a href="daily-tours.html" class="btn">Learn More →</a>
+                </div>
+                
+                <!-- Daily Tours Section -->
+                <div class="daily-tours-section" style="position: relative; margin: 2rem 0; border-radius: 16px; overflow: hidden; background: linear-gradient(135deg, #1e3c72 0%, #2a5298 25%, #0095d9 50%, #42a5f5 75%, #64b5f6 100%); box-shadow: 0 20px 40px rgba(0, 149, 217, 0.3), 0 8px 25px rgba(30, 60, 114, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <!-- Background Pattern -->
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 20px 20px, rgba(255,255,255,0.1) 1px, transparent 1px), radial-gradient(circle at 40px 40px, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 40px 40px; opacity: 0.3;"></div>
+                    
+                    <!-- Content Container -->
+                    <div class="daily-tours-content-container" style="position: relative; z-index: 2; padding: 2.5rem; color: white; display: flex; align-items: center; gap: 2rem;">
+                        <!-- Left Content -->
+                        <div class="daily-tours-text-content" style="flex: 1;">
+                            
+                            <p style="font-size: clamp(1rem, 2.5vw, 1.1rem); line-height: 1.6; margin: 0 0 1.5rem 0; color: rgba(255, 255, 255, 0.95); text-shadow: 0 2px 6px rgba(30, 60, 114, 0.3);">Short visits with immersive experiences in key destinations. Explore Vietnam's highlights in a day with flexible options.</p>
+                            
+                            <!-- Features List -->
+                            <ul class="daily-tours-features" style="list-style: none; padding: 0; margin: 0;">
+                                <li style="display: flex; align-items: center; margin-bottom: 0.8rem; color: rgba(255, 255, 255, 0.9); font-size: clamp(0.9rem, 2vw, 1rem);">
+                                    <span style="width: 8px; height: 8px; background: #fff; border-radius: 50%; margin-right: 12px; box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); flex-shrink: 0;"></span>
+                                    <span>Half-day and full-day options</span>
+                                </li>
+                                <li style="display: flex; align-items: center; margin-bottom: 0.8rem; color: rgba(255, 255, 255, 0.9); font-size: clamp(0.9rem, 2vw, 1rem);">
+                                    <span style="width: 8px; height: 8px; background: #fff; border-radius: 50%; margin-right: 12px; box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); flex-shrink: 0;"></span>
+                                    <span>Cultural and nature experiences</span>
+                                </li>
+                                <li style="display: flex; align-items: center; margin-bottom: 0.8rem; color: rgba(255, 255, 255, 0.9); font-size: clamp(0.9rem, 2vw, 1rem);">
+                                    <span style="width: 8px; height: 8px; background: #fff; border-radius: 50%; margin-right: 12px; box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); flex-shrink: 0;"></span>
+                                    <span>Local guide and transportation included</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+
+                    </div>
+                </div>
                 
                 <hr class="section-divider">
+                
+                <!-- MICE Section Header -->
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                    <h3>MICE</h3>
+                    <a href="mice.html" class="btn">Learn More →</a>
+                </div>
                 
                 <!-- MICE Section with Animation and Background -->
                 <div class="mice-section" style="position: relative; margin: 2rem 0; border-radius: 16px; overflow: hidden; background: linear-gradient(135deg, #1e3c72 0%, #2a5298 25%, #0095d9 50%, #42a5f5 75%, #64b5f6 100%); box-shadow: 0 20px 40px rgba(0, 149, 217, 0.3), 0 8px 25px rgba(30, 60, 114, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
@@ -213,12 +254,6 @@
                                     <span style="animation: textGlow 6s infinite; animation-delay: 4s;">Team building & networking events</span>
                                 </li>
                             </ul>
-                            
-                            <a href="mice.html" class="btn" style="background: rgba(255, 255, 255, 0.2); border: 2px solid rgba(255, 255, 255, 0.3); color: white; padding: 12px 24px; font-weight: 600; backdrop-filter: blur(10px); transition: all 0.3s ease; text-decoration: none; display: inline-block;" 
-                               onmouseover="this.style.background='rgba(255,255,255,0.3)'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 25px rgba(255,255,255,0.2)'"
-                               onmouseout="this.style.background='rgba(255,255,255,0.2)'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                                Learn More →
-                            </a>
                         </div>
                         
                         <!-- Right Image/Visual -->
@@ -370,6 +405,53 @@
                         box-shadow: 0 25px 50px rgba(0, 149, 217, 0.4), 0 12px 35px rgba(30, 60, 114, 0.3);
                     }
 
+                    .daily-tours-section:hover {
+                        transform: translateY(-5px);
+                        box-shadow: 0 25px 50px rgba(0, 149, 217, 0.4), 0 12px 35px rgba(30, 60, 114, 0.3);
+                    }
+
+                    .golf-tours-section:hover {
+                        transform: translateY(-5px);
+                        box-shadow: 0 25px 50px rgba(0, 149, 217, 0.4), 0 12px 35px rgba(30, 60, 114, 0.3);
+                    }
+
+                    /* Daily Tours & Golf Tours Responsive Styles */
+                    @media (max-width: 768px) {
+                        .daily-tours-content-container,
+                        .golf-tours-content-container {
+                            flex-direction: column !important;
+                            text-align: center !important;
+                            padding: 2rem 1.5rem !important;
+                            gap: 2rem !important;
+                        }
+                        
+                        .daily-tours-text-content,
+                        .golf-tours-text-content {
+                            flex: none !important;
+                            width: 100% !important;
+                        }
+                        
+                        .daily-tours-features li,
+                        .golf-tours-features li {
+                            justify-content: center !important;
+                            margin-bottom: 1rem !important;
+                        }
+                    }
+
+                    @media (max-width: 480px) {
+                        .daily-tours-content-container,
+                        .golf-tours-content-container {
+                            padding: 1.5rem 1rem !important;
+                        }
+                        
+
+                        
+                        .daily-tours-features,
+                        .golf-tours-features {
+                            margin-bottom: 1.5rem !important;
+                        }
+                    }
+
                     /* MICE Responsive Styles */
                     @media (max-width: 768px) {
                         .mice-content-container {
@@ -416,9 +498,44 @@
                 
                 <hr class="section-divider">
                 
-                <h3>Golf Tour</h3>
-                <p>World-class golfing in Vietnam's stunning landscapes. Championship courses combined with cultural excursions.</p>
-                <a href="golf-tour.html" class="btn">Learn More</a>
+                <!-- Golf Tours Section Header -->
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                    <h3>Golf Tours</h3>
+                    <a href="golf-tour.html" class="btn">Learn More →</a>
+                </div>
+                
+                <!-- Golf Tours Section -->
+                <div class="golf-tours-section" style="position: relative; margin: 2rem 0; border-radius: 16px; overflow: hidden; background: linear-gradient(135deg, #1e3c72 0%, #2a5298 25%, #0095d9 50%, #42a5f5 75%, #64b5f6 100%); box-shadow: 0 20px 40px rgba(0, 149, 217, 0.3), 0 8px 25px rgba(30, 60, 114, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <!-- Background Pattern -->
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 20px 20px, rgba(255,255,255,0.1) 1px, transparent 1px), radial-gradient(circle at 40px 40px, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 40px 40px; opacity: 0.3;"></div>
+                    
+                    <!-- Content Container -->
+                    <div class="golf-tours-content-container" style="position: relative; z-index: 2; padding: 2.5rem; color: white; display: flex; align-items: center; gap: 2rem;">
+                        <!-- Left Content -->
+                        <div class="golf-tours-text-content" style="flex: 1;">
+                            
+                            <p style="font-size: clamp(1rem, 2.5vw, 1.1rem); line-height: 1.6; margin: 0 0 1.5rem 0; color: rgba(255, 255, 255, 0.95); text-shadow: 0 2px 6px rgba(30, 60, 114, 0.3);">World-class golfing in Vietnam's stunning landscapes. Championship courses combined with cultural excursions.</p>
+                            
+                            <!-- Features List -->
+                            <ul class="golf-tours-features" style="list-style: none; padding: 0; margin: 0;">
+                                <li style="display: flex; align-items: center; margin-bottom: 0.8rem; color: rgba(255, 255, 255, 0.9); font-size: clamp(0.9rem, 2vw, 1rem);">
+                                    <span style="width: 8px; height: 8px; background: #fff; border-radius: 50%; margin-right: 12px; box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); flex-shrink: 0;"></span>
+                                    <span>Championship golf courses</span>
+                                </li>
+                                <li style="display: flex; align-items: center; margin-bottom: 0.8rem; color: rgba(255, 255, 255, 0.9); font-size: clamp(0.9rem, 2vw, 1rem);">
+                                    <span style="width: 8px; height: 8px; background: #fff; border-radius: 50%; margin-right: 12px; box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); flex-shrink: 0;"></span>
+                                    <span>Luxury resort accommodations</span>
+                                </li>
+                                <li style="display: flex; align-items: center; margin-bottom: 0.8rem; color: rgba(255, 255, 255, 0.9); font-size: clamp(0.9rem, 2vw, 1rem);">
+                                    <span style="width: 8px; height: 8px; background: #fff; border-radius: 50%; margin-right: 12px; box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); flex-shrink: 0;"></span>
+                                    <span>Cultural sightseeing & culinary experiences</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+
+                    </div>
+                </div>
             </div>
         </div>
 

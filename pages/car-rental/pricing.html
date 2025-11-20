@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Pricing - VN to You Tour</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+</head>
+<body>
+    <header>
+        <div id="header-placeholder"></div>
+    </header>
+
+    <script src="../../assets/js/header.js"></script>
+    <script src="../../assets/js/mobile-menu.js"></script>
+    <script>
+        fetch('../../includes/header.html')
+        .then(response => response.text())
+        .then(data => {
+            data = data.replace('href="/', 'href="../../');
+            data = data.replace('href="/pages/', 'href="../');
+            data = data.replace('src="/assets/', 'src="../../assets/');
+            document.getElementById('header-placeholder').innerHTML = data;
+            window.dispatchEvent(new Event('headerLoaded'));
+        });
+    </script>
+
+    <!-- Hero Section -->
+    <section style="width: 100%; padding: 0; margin-bottom: var(--spacing-lg);">
+        <div style="background: linear-gradient(135deg, #0D47A1 0%, #0095d9 25%, #42A5F5 50%, #81C784 75%, #E3F2FD 100%); width: 100%; min-height: 200px; max-height: 280px; box-shadow: 0 20px 40px rgba(0, 149, 217, 0.3), 0 8px 25px rgba(13, 71, 161, 0.2); position: relative; overflow: hidden; display: flex; align-items: center;">
+            <div style="max-width: 1200px; width: 100%; margin: 0 auto; padding: 1.8rem var(--spacing-2xl); display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
+                <h1 style="font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin: 0 0 1rem 0; text-shadow: 0 4px 12px rgba(13, 71, 161, 0.4); line-height: 1.2; color: #ffffff; letter-spacing: -0.02em; background: linear-gradient(45deg, #ffffff, #E3F2FD); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Car Rental Pricing</h1>
+                <p style="font-size: clamp(1rem, 2.5vw, 1.15rem); margin: 0; text-shadow: 0 2px 6px rgba(13, 71, 161, 0.3); line-height: 1.5; max-width: 100%; color: rgba(255, 255, 255, 0.98); font-weight: 400;">Reference pricing for popular tour packages with vehicle rental services</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="content-wrapper">
+        <div class="main-content full-width">
+            
+            <!-- Pricing Information -->
+            <div class="services-section">
+                <h2>Tour Package Pricing with Vehicle Rental</h2>
+                <p style="text-align: center; margin-bottom: 2rem; color: #666;">Below are reference prices for popular tour packages (3-5 days) including professional driver and vehicle rental services. Prices may vary based on season and specific requirements.</p>
+                
+                <!-- Pricing Table -->
+                <div style="overflow-x: auto; margin: 2rem 0;">
+                    <table style="width: 100%; border-collapse: collapse; background-color: #f6f8f8; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);">
+                        <thead>
+                            <tr style="background-color: #2c3e50; color: white;">
+                                <th style="padding: 1rem; text-align: left; font-weight: 600;">Tour Package</th>
+                                <th style="padding: 1rem; text-align: center; font-weight: 600;">7-Seat</th>
+                                <th style="padding: 1rem; text-align: center; font-weight: 600;">16-Seat</th>
+                                <th style="padding: 1rem; text-align: center; font-weight: 600;">35-Seat</th>
+                                <th style="padding: 1rem; text-align: center; font-weight: 600;">45-Seat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">VNN301: 3D2N Airport - Sapa - City - Airport</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$365</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$403</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$500</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$576</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">VNN302: 3D2N Airport - Ha Long - Ninh Binh</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$342</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$342</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$475</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$528</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">VNN303: 3D2N Airport - Ha Long - City - Airport</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$269</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$307</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$384</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$423</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">VNN303: 3D2N Airport - Ha Long</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$269</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$307</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$384</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$423</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">VNN304: 3D2N Airport - Tam Chuc - Ha Long</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$307</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$346</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$442</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$500</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">VNN401: 4D3N Airport - Sapa - City - Airport</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$384</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$461</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$615</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$692</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">VNN402: 4D3N Airport - Sapa - Ninh Binh - City - Airport</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$423</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$500</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$653</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$730</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">VNN403: 4D3N Airport - Sapa - Tam Chuc - City - Airport</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$423</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$461</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$615</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$653</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">VNN407: 4D3N Airport - Sapa - Ha Long - City - Airport</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$461</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$538</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$692</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$769</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">VNN501: 5D4N Airport - Sapa - Ha Long - Ninh Binh - City - Airport</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$615</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$653</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$807</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$884</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">VNN502: 5D4N Airport - Sapa - Mu Cang Chai - City - Airport</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$461</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$538</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$692</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$769</td>
+                            </tr>
+
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">4D3N Da Nang - Hoi An (Without Hue)</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$242</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$269</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$307</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$346</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">4D3N Da Nang - Hoi An - Hue (With Hue)</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$280</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$269</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$346</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$384</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">5D4N Da Nang - Hoi An (Without Hue)</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$280</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$269</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$346</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$384</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">5D4N Da Nang - Hoi An - Hue (With Hue)</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$319</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$326</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$384</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$423</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">VNS401: 4D3N Ho Chi Minh - Mekong - Dalat</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$442</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$461</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$634</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$692</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">VNS402: Nha Trang - Dalat</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$461</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$461</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$519</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$615</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">VNS302: Nha Trang 2 Nights</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$307</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$307</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$346</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$384</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">VNS303: Phu Quoc 2 Nights</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$200</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$200</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$276</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$365</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">VNS501: Nha Trang - Dalat</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$538</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$538</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$596</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$692</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">5D4N Ho Chi Minh - Mui Ne - Nha Trang</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$538</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$538</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$711</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$750</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">5D4N Ho Chi Minh - Dalat - Nha Trang</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$576</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$576</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$750</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$788</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">Nha Trang - Dalat - Mui Ne - Ho Chi Minh</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$538</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$615</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$846</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$884</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">Ho Chi Minh - Vung Tau (4D3N)</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$307</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$346</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$500</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$538</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">Ho Chi Minh - Vung Tau - Cu Chi (4D3N)</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$357</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$357</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$519</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$569</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">Nha Trang - Dalat - Ho Chi Minh</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$596</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$596</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$769</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$807</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">VNS503: Ho Chi Minh - Mui Ne - Dalat - Cu Chi</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$576</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$576</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$750</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$807</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">Nha Trang 4D3N (3 Nights)</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$269</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$269</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$423</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$461</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">Ho Chi Minh - Mui Ne 3D2N</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$346</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$384</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$480</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$519</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">4D3N Phu Quoc</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$307</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$326</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$461</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$500</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">4D3N Mui Ne - Ho Chi Minh</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$346</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$384</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$538</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$576</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">4D3N Hanoi - Tam Dao - Grand World</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$346</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$346</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$423</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$76</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">3D2N Hanoi - Tam Dao - Grand World - Quang Phu Cau</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$326</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$346</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$423</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$76</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">3D2N Hanoi - Tam Dao - Tay Thien - Grand World</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$288</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$307</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$384</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$76</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">4D3N Hanoi - Tam Dao - Ninh Binh - Grand World</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$384</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$423</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$557</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$76</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">4D3N Hanoi - Tam Dao - Tay Thien - Tam Chuc</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$346</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$384</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$461</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$76</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">4D3N Hanoi - Tam Dao - Ha Long</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$346</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$384</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$538</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$76</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">4D3N Sapa - Tam Dao</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$538</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$538</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$653</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$76</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: 500;">5D4N Hanoi - Sapa - Tam Dao</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$461</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$500</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$653</td>
+                                <td style="padding: 1rem; text-align: center; font-weight: 600; color: var(--primary-color);">$76</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Pricing Notes -->
+                <div style="background-color: #f6f8f8; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Pricing Information</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 0.8rem;">✓ <strong>Includes:</strong> Professional driver, fuel, tolls, and parking fees</li>
+                        <li style="margin-bottom: 0.8rem;">✓ <strong>Duration:</strong> 3-5 days tour packages available</li>
+                        <li style="margin-bottom: 0.8rem;">✓ <strong>Currency:</strong> All prices in USD</li>
+                        <li style="margin-bottom: 0.8rem;">✓ <strong>Capacity:</strong> Vehicle selection based on group size</li>
+                        <li style="margin-bottom: 0.8rem;">✓ <strong>Booking:</strong> Advance booking recommended</li>
+                    </ul>
+                </div>
+
+                <!-- Vehicle Information -->
+                <div class="services-section">
+                    <h3>Choose Your Vehicle:</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        <div style="background-color: #f6f8f8; padding: 1.5rem; border-radius: 8px; text-align: center;">
+                            <img src="../../assets/images/car-rental/7-seat.jpg" alt="7-Seat Vehicle" style="width: 100%; height: 120px; object-fit: cover; border-radius: 6px; margin-bottom: 1rem;">
+                            <h4>7-Seat Vehicle</h4>
+                            <p>Perfect for families & small groups</p>
+                            <a href="7-seat.html" class="btn btn--primary btn--sm">View Details</a>
+                        </div>
+                        <div style="background-color: #f6f8f8; padding: 1.5rem; border-radius: 8px; text-align: center;">
+                            <img src="../../assets/images/car-rental/16-seat.jpg" alt="16-Seat Minibus" style="width: 100%; height: 120px; object-fit: cover; border-radius: 6px; margin-bottom: 1rem;">
+                            <h4>16-Seat Minibus</h4>
+                            <p>Ideal for medium-sized groups</p>
+                            <a href="16-seat.html" class="btn btn--primary btn--sm">View Details</a>
+                        </div>
+                        <div style="background-color: #f6f8f8; padding: 1.5rem; border-radius: 8px; text-align: center;">
+                            <img src="../../assets/images/car-rental/35-seat.jpg" alt="35-Seat Coach" style="width: 100%; height: 120px; object-fit: cover; border-radius: 6px; margin-bottom: 1rem;">
+                            <h4>35-Seat Coach</h4>
+                            <p>Great for large tour groups</p>
+                            <a href="35-seat.html" class="btn btn--primary btn--sm">View Details</a>
+                        </div>
+                        <div style="background-color: #f6f8f8; padding: 1.5rem; border-radius: 8px; text-align: center;">
+                            <img src="../../assets/images/car-rental/45-seat.jpg" alt="45-Seat Luxury Coach" style="width: 100%; height: 120px; object-fit: cover; border-radius: 6px; margin-bottom: 1rem;">
+                            <h4>45-Seat Luxury</h4>
+                            <p>Premium comfort for large groups</p>
+                            <a href="45-seat.html" class="btn btn--primary btn--sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div style="background-color: #f6f8f8; padding: 2rem; text-align: center; border-radius: 8px; margin: 2rem 0;">
+                <h3>Get Custom Quote</h3>
+                <p>Need pricing for different routes or custom tour packages? Contact us for personalized quotes.</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; max-width: 500px; margin: 2rem auto 0;">
+                    <a href="mailto:sales@vntoyoutour.com?subject=Custom Car Rental Quote Request" class="btn btn--primary">Request Quote</a>
+                    <a href="tel:+84904596505" class="btn btn--secondary">Call Now</a>
+                </div>
+            </div>
+
+            <!-- Back Navigation -->
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="index.html" class="btn">← Back to Car Rental</a>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+
+    <script>
+        fetch('../../includes/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+
+    <style>
+        @media (max-width: 768px) {
+            table {
+                font-size: 0.9rem;
+            }
+            
+            th, td {
+                padding: 0.5rem !important;
+            }
+            
+            .services-section div[style*="grid-template-columns"] {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) !important;
+            }
+        }
+    </style>
+</body>
+</html>

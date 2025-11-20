@@ -32,6 +32,21 @@ function initializeHeaderNavigation() {
                     link.classList.add('active');
                 }
             }
+            // Car Rental pages (also active for sub-car-rental pages)
+            else if (linkHref.includes('car-rental')) {
+                const carRentalPages = [
+                    'car-rental/index.html',
+                    'car-rental/7-seat.html',
+                    'car-rental/16-seat.html',
+                    'car-rental/35-seat.html',
+                    'car-rental/45-seat.html'
+                ];
+                
+                const isCarRentalPage = carRentalPages.some(page => currentPath.includes(page));
+                if (isCarRentalPage) {
+                    link.classList.add('active');
+                }
+            }
             // News page
             else if (currentPath.includes('news.html') && linkHref.includes('news.html')) {
                 link.classList.add('active');

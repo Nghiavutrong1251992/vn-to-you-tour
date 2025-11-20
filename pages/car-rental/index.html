@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Services - VN to You Tour</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+</head>
+<body>
+    <header>
+        <div id="header-placeholder"></div>
+    </header>
+
+    <script src="../../assets/js/header.js"></script>
+    <script src="../../assets/js/mobile-menu.js"></script>
+    <script>
+        fetch('../../includes/header.html')
+        .then(response => response.text())
+        .then(data => {
+            data = data.replace('href="/', 'href="../../');
+            data = data.replace('href="/pages/', 'href="../');
+            data = data.replace('src="/assets/', 'src="../../assets/');
+            document.getElementById('header-placeholder').innerHTML = data;
+            // Dispatch event to signal header is loaded
+            window.dispatchEvent(new Event('headerLoaded'));
+        });
+    </script>
+
+    <!-- Hero Section - Full Width Edge to Edge -->
+    <section style="width: 100%; padding: 0; margin-bottom: var(--spacing-lg);">
+        <div style="background: linear-gradient(135deg, #0D47A1 0%, #0095d9 25%, #42A5F5 50%, #81C784 75%, #E3F2FD 100%); width: 100%; min-height: 200px; max-height: 280px; box-shadow: 0 20px 40px rgba(0, 149, 217, 0.3), 0 8px 25px rgba(13, 71, 161, 0.2); position: relative; overflow: hidden; display: flex; align-items: center;">
+            
+            <!-- Content Container aligned with main content -->
+            <div style="max-width: 1200px; width: 100%; margin: 0 auto; padding: 1.8rem var(--spacing-2xl); display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
+                
+                <!-- Main Title -->
+                <h1 style="font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin: 0 0 1rem 0; text-shadow: 0 4px 12px rgba(13, 71, 161, 0.4); line-height: 1.2; color: #ffffff; letter-spacing: -0.02em; background: linear-gradient(45deg, #ffffff, #E3F2FD); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Car Rental Services</h1>
+                
+                <!-- Description -->
+                <p style="font-size: clamp(1rem, 2.5vw, 1.15rem); margin: 0; text-shadow: 0 2px 6px rgba(13, 71, 161, 0.3); line-height: 1.5; max-width: 100%; color: rgba(255, 255, 255, 0.98); font-weight: 400;">Professional minibus and coach hire services across Vietnam with experienced drivers and competitive pricing.</p>
+                
+            </div>
+        </div>
+    </section>
+
+    <div class="content-wrapper">
+        <div class="main-content full-width">
+            
+            <div class="about-intro">
+                <img src="https://vn-to-you-tour.vercel.app/assets/images/general/about.png" alt="VN TO YOU Car Rental" class="about-image" loading="lazy">
+                <h2>The Leading Minibus and Coach Hire Company in VIET NAM</h2>
+                <p><strong>OUR main goal:</strong> To streamline the group transport services industry</p>
+                
+                <p>Founded by a group of experienced transport individuals, we at VN TO YOU created a service that improved upon the legacy group transport services industry, from where our founders originated from. With a collective experience of 20 years, we at VN TO YOU believe that we can offer a quality of service & efficiency that is unmatched.</p>
+                
+                <p>The volume of journeys provided on a monthly basis enables us to provide more competitive pricing for bespoke group transport requests!</p>
+                
+                <p>Our aim is to provide safe, clean & cost-efficient group transport services and with our team's experience & knowledge of this industry, you can rest assured that VN TO YOU will provide you with whatever you are looking for!</p>
+                
+                <p><strong>We provide high-quality, efficient & affordable transport services, for groups of any size, anywhere.</strong></p>
+            </div>
+
+            <div class="services-section">
+                <h2>Why Choose VN TO YOU Car Rental:</h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+                    <div class="service-item">
+                        <h3>Experienced Professional Drivers</h3>
+                        <p>Licensed professionals with extensive experience and excellent knowledge of Vietnam's roads.</p>
+                    </div>
+
+                    <div class="service-item">
+                        <h3>Safety First</h3>
+                        <p>Regular maintenance, safety inspections, comprehensive insurance coverage and emergency support.</p>
+                    </div>
+
+                    <div class="service-item">
+                        <h3>Competitive Pricing</h3>
+                        <p>High volume operations allow us to offer competitive rates for all group transport needs.</p>
+                    </div>
+
+                    <div class="service-item">
+                        <h3>Flexible Service Options</h3>
+                        <p>Hourly rentals, daily hire, or extended multi-day services customized to your requirements.</p>
+                    </div>
+
+                    <div class="service-item">
+                        <h3>Clean & Well-Maintained Fleet</h3>
+                        <p>Meticulously cleaned and maintained vehicles for comfortable travel experience.</p>
+                    </div>
+
+                    <div class="service-item">
+                        <h3>24/7 Support</h3>
+                        <p>Round-the-clock customer support and emergency assistance for worry-free journeys.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-section">
+                <h2>Our Vehicle Fleet:</h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+                    <div class="service-item" style="text-align: center; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.5rem; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                        <img src="../../assets/images/car-rental/7-seat.jpg" alt="7-Seat Vehicle" style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px; margin-bottom: 1rem;">
+                        <h3><a href="7-seat.html" style="text-decoration: none; color: var(--primary-color);">7-Seat Vehicles</a></h3>
+                        <p>Perfect for small families or business groups. Comfortable seating with air conditioning and professional drivers. Ideal for city tours and short-distance travel.</p>
+                        <a href="7-seat.html" class="btn btn--primary btn--sm" style="margin-top: 1rem;">View Details</a>
+                    </div>
+
+                    <div class="service-item" style="text-align: center; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.5rem; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                        <img src="../../assets/images/car-rental/16-seat.jpg" alt="16-Seat Minibus" style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px; margin-bottom: 1rem;">
+                        <h3><a href="16-seat.html" style="text-decoration: none; color: var(--primary-color);">16-Seat Minibus</a></h3>
+                        <p>Great for medium-sized groups, family gatherings, or corporate outings. Spacious interior with luggage compartment and modern amenities for comfortable journeys.</p>
+                        <a href="16-seat.html" class="btn btn--primary btn--sm" style="margin-top: 1rem;">View Details</a>
+                    </div>
+
+                    <div class="service-item" style="text-align: center; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.5rem; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                        <img src="../../assets/images/car-rental/35-seat.jpg" alt="35-Seat Coach" style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px; margin-bottom: 1rem;">
+                        <h3><a href="35-seat.html" style="text-decoration: none; color: var(--primary-color);">35-Seat Coach</a></h3>
+                        <p>Ideal for corporate events, conferences, or large tour groups. Premium comfort with reclining seats, entertainment systems, and professional service.</p>
+                        <a href="35-seat.html" class="btn btn--primary btn--sm" style="margin-top: 1rem;">View Details</a>
+                    </div>
+
+                    <div class="service-item" style="text-align: center; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.5rem; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                        <img src="../../assets/images/car-rental/45-seat.jpg" alt="45-Seat Luxury Coach" style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px; margin-bottom: 1rem;">
+                        <h3><a href="45-seat.html" style="text-decoration: none; color: var(--primary-color);">45-Seat Luxury Coach</a></h3>
+                        <p>Our flagship vehicles for the ultimate group transport experience. Premium features including luxury seating, climate control, entertainment systems, and superior comfort for long-distance travel.</p>
+                        <a href="45-seat.html" class="btn btn--primary btn--sm" style="margin-top: 1rem;">View Details</a>
+                    </div>
+                </div>
+
+                <style>
+                .service-item:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+                }
+                </style>
+            </div>
+
+            <div class="mission-section">
+                <h2>Our Commitment:</h2>
+                <p>With 20 years of collective experience in the transport industry, VN TO YOU is committed to revolutionizing group transport services in Vietnam. We combine traditional hospitality with modern efficiency to deliver exceptional value and service quality that exceeds expectations.</p>
+                
+                <p>From airport transfers and city tours to multi-day excursions and corporate events, our comprehensive fleet and professional team ensure that every journey with VN TO YOU is safe, comfortable, and memorable.</p>
+            </div>
+
+            <div class="contact-info-section">
+                <h2>Contact Information</h2>
+                <div class="company-details">
+                    <h3>VIET NAM TO YOU TOURISM COMPANY LIMITED</h3>
+                    
+                    <div class="contact-grid">
+                        <div class="contact-item">
+                            <strong>Address:</strong>
+                            <p>No. 5TT1 Alley 537 Bat Khoi Str, Long Bien Dist, Hanoi, Vietnam</p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <strong>Phone Numbers:</strong>
+                            <p>(+84) 24 38729346 – (+84) 24 38729347</p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <strong>Hotlines:</strong>
+                            <p>+84 904 596 505 MS. NGAN</p>
+                            <p>+84 977 632 673 MR. THONG</p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <strong>License Number:</strong>
+                            <p>01-410/2017/TCDL – GP LHQT</p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <strong>Email:</strong>
+                            <p><a href="mailto:sales@vntoyoutour.com">SALES@VNTOYOUTOUR.COM</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+
+    <script>
+        fetch('../../includes/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
+        
+        // Auto-update current year
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentYear = new Date().getFullYear();
+            const yearElement = document.getElementById('current-year');
+            if (yearElement) {
+                yearElement.textContent = currentYear;
+            }
+        });
+    </script>
+</body>
+</html>
+
+<!-- Last updated: 2025-11-20 -->

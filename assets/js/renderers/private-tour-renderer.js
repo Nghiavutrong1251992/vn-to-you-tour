@@ -241,6 +241,19 @@ function renderPrivateTourById(tourId) {
                 default:
                     regionBackLink = '<a href="private-tours.html" class="btn">← Back to Private Tours</a>';
             }
+            
+            // Add Q&A link section before back navigation
+            const qaSection = document.createElement('div');
+            qaSection.style.cssText = 'margin-top: 2rem; padding: 1.5rem; border-top: 1px solid #e0e0e0; text-align: center; background-color: #f8f9fa;';
+            qaSection.innerHTML = `
+                <p style="margin-bottom: 1rem; font-size: 1.1em;"><strong>Have questions about this tour?</strong></p>
+                <p style="margin-bottom: 1rem; color: #666;">Check our FAQ for booking conditions, payment methods, and tour policies.</p>
+                <p style="margin-bottom: 0;">
+                    <a href="booking-conditions.html" class="btn" style="background-color: #28a745; color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px; display: inline-block;">📋 View FAQ & Booking Conditions</a>
+                </p>
+            `;
+            container.appendChild(qaSection);
+            
             backNavContainer.innerHTML = regionBackLink;
         }
         

@@ -2,6 +2,170 @@
 // Articles are automatically sorted by date in sidebar.js
 const articlesData = [
     {
+        id: 'hotel-selection-guide-2025',
+        slug: 'hotel-selection-guide-2025',
+        title: 'Hotel Selection Guide: Your Comfort is Our Priority',
+        date: 'November 22, 2025',
+        author: 'VN to You Tour Team',
+        category: 'General News',
+        excerpt: 'At VN To You Tour, we understand that choosing the right accommodation can make or break your Vietnam travel experience. Learn about our hotel selection criteria and curated accommodation partners.',
+        image: 'https://vn-to-you-tour.vercel.app/assets/images/tours/vnc404.jpg',
+        content: [
+            {
+                type: 'paragraph',
+                text: 'At VN To You Tour, we understand that choosing the right accommodation can make or break your Vietnam travel experience. That\'s why we\'ve carefully curated a selection of hotels that balance comfort, location, and value to ensure your stay exceeds expectations.'
+            },
+            {
+                type: 'heading',
+                text: 'Two Main Accommodation Categories'
+            },
+            {
+                type: 'paragraph',
+                text: 'We offer two main types of accommodation to suit different travel preferences and budgets:'
+            },
+            {
+                type: 'paragraph',
+                text: '• Budget Hotels: Clean, comfortable, and well-located properties that provide excellent value for money'
+            },
+            {
+                type: 'paragraph',
+                text: '• Comfortable Hotels: Premium accommodations with enhanced amenities and services for a more luxurious experience'
+            },
+            {
+                type: 'paragraph',
+                text: 'Interested in upgrading your hotel experience? Simply ask your travel expert for more details about our premium options.'
+            },
+            {
+                type: 'heading',
+                text: 'Important Notes About Vietnamese Hotel Standards'
+            },
+            {
+                type: 'paragraph',
+                text: 'While we work exclusively with quality properties, it\'s worth noting that local hotel standards in Vietnam might differ slightly from international standards. However, all our selected hotels meet our strict criteria for cleanliness, service, and guest satisfaction. We typically arrange hotel stays in the city center or main town of each destination to ensure convenient access to attractions, restaurants, and local experiences.'
+            },
+            {
+                type: 'heading',
+                text: 'Room Configuration Options'
+            },
+            {
+                type: 'paragraph',
+                text: 'Standard Room Types:'
+            },
+            {
+                type: 'paragraph',
+                text: '• Twin Rooms (2 beds): Our typical arrangement with two guests sharing one room'
+            },
+            {
+                type: 'paragraph',
+                text: '• Single Rooms: Available with an additional single supplement fee for solo travelers'
+            },
+            {
+                type: 'paragraph',
+                text: '• Triple Rooms: For groups of three, we can arrange triple rooms or add an extra bed to existing room configurations'
+            },
+            {
+                type: 'heading',
+                text: 'Our Hotel Selection Criteria'
+            },
+            {
+                type: 'paragraph',
+                text: 'When choosing accommodations for our guests, we evaluate each property based on four essential criteria:'
+            },
+            {
+                type: 'paragraph',
+                text: '✅ New and Good Facilities: Modern amenities and well-maintained infrastructure'
+            },
+            {
+                type: 'paragraph',
+                text: '✅ Friendly and Enthusiastic Staff: Professional service with genuine Vietnamese hospitality'
+            },
+            {
+                type: 'paragraph',
+                text: '✅ Convenient Location: Strategic positioning for easy access to attractions and transportation'
+            },
+            {
+                type: 'paragraph',
+                text: '✅ Competitive Pricing: Excellent value proposition without compromising quality'
+            },
+            {
+                type: 'heading',
+                text: 'Pre-Selected Hotel Partners'
+            },
+            {
+                type: 'paragraph',
+                text: 'Below is our carefully curated list of hotel partners, chosen for their exceptional standards in location, cleanliness, breakfast quality, interior design, and competitive pricing:'
+            },
+            {
+                type: 'paragraph',
+                text: 'Sa Pa: Highland Resort Hotel 4★ / Charm Sapa Hotel 4★'
+            },
+            {
+                type: 'paragraph',
+                text: 'Ha Noi: Super Hotel Candle 4★ / Thang Long Opera Hanoi 4★ / Nesta Hanoi 4★ or similar'
+            },
+            {
+                type: 'paragraph',
+                text: 'Da Nang: Luxtery Da Nang 4★ / Nhu Minh Da Nang 4★ / Cicilia Da Nang 4★ or similar'
+            },
+            {
+                type: 'paragraph',
+                text: 'Hoi An: Historic Hoian 4★ / La Charm Hoi An Hotel & Spa 4★ or similar'
+            },
+            {
+                type: 'heading',
+                text: 'Our Booking Process'
+            },
+            {
+                type: 'paragraph',
+                text: 'Step 1: When you provide your departure date, we prioritize selecting hotels from our pre-approved list'
+            },
+            {
+                type: 'paragraph',
+                text: 'Step 2: If your preferred dates are fully booked, we identify alternative accommodations with similar standards and advantages'
+            },
+            {
+                type: 'paragraph',
+                text: 'Step 3: We present the alternative options and wait for your approval before proceeding with any bookings'
+            },
+            {
+                type: 'paragraph',
+                text: 'This systematic approach ensures you receive the best possible accommodation while maintaining transparency throughout the booking process.'
+            },
+            {
+                type: 'heading',
+                text: 'Why Choose Our Hotel Partners?'
+            },
+            {
+                type: 'paragraph',
+                text: 'Our partnership with these carefully selected properties means you benefit from:'
+            },
+            {
+                type: 'paragraph',
+                text: '• Guaranteed room availability during peak seasons'
+            },
+            {
+                type: 'paragraph',
+                text: '• Competitive group rates passed on to our guests'
+            },
+            {
+                type: 'paragraph',
+                text: '• Quality assurance backed by our local expertise'
+            },
+            {
+                type: 'paragraph',
+                text: '• 24/7 support for any accommodation-related issues during your stay'
+            },
+            {
+                type: 'paragraph',
+                text: 'Ready to experience Vietnam with confidence? Contact our travel experts today to discuss your accommodation preferences and let us create the perfect hotel itinerary for your journey.'
+            }
+        ],
+        tags: ['Hotel Selection', 'Accommodation', 'Travel Tips', 'Vietnam Hotels', 'Travel Planning'],
+        readTime: '4 min read',
+        featured: true,
+        isCompanyNews: false
+    },
+    {
         id: 'cao-bang-expedition-2024',
         slug: 'cao-bang-expedition-2024',
         title: 'Behind the Scenes: Vn To You Tour\'s Inspiring Team Expedition to Cao Bang and Ban Gioc Waterfall in November 2024',

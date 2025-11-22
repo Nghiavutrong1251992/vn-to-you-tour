@@ -62,6 +62,12 @@ function generateTourHTML(tour) {
     // Add back link based on region
     const backLink = tour.region ? `index.html` : '../../../tours-to-vietnam.html';
     html += `
+            <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e0e0e0;">
+                <p style="margin-bottom: 1rem;"><strong>Have questions about this tour?</strong></p>
+                <p style="margin-bottom: 1.5rem;">
+                    <a href="../booking-conditions.html" class="btn" style="background-color: #28a745; color: white; margin-right: 1rem;">📋 View FAQ & Booking Conditions</a>
+                </p>
+            </div>
             <p><a href="${backLink}" class="btn">← Back to Daily Tours Vietnam ${tour.region ? tour.region.charAt(0).toUpperCase() + tour.region.slice(1) : ''}</a></p>
         </article>
     `;

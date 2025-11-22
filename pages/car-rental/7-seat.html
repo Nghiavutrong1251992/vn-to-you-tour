@@ -37,11 +37,10 @@
         </div>
     </section>
 
-    <div class="content-wrapper">
-        <div class="main-content full-width">
+    <div class="content-container" style="background: transparent; border: none; box-shadow: none;">
             
             <!-- Vehicle Image and Overview -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem; align-items: center;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;">
                 <div>
                     <img src="../../assets/images/car-rental/7-seat.jpg" alt="7-Seat Vehicle" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
                 </div>
@@ -49,17 +48,31 @@
                     <h2>Comfortable & Reliable 7-Seat Vehicles</h2>
                     <p>Our 7-seat vehicles are perfect for small groups, families, or business travelers who value comfort and flexibility. These vehicles offer the ideal balance of space, comfort, and maneuverability for both city exploration and longer journeys.</p>
                     
-                    <div style="background-color: #f6f8f8; padding: 1.5rem; border-radius: 8px; margin-top: 1rem;">
-                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Quick Facts</h3>
-                        <ul style="list-style: none; padding: 0; margin: 0;">
-                            <li style="margin-bottom: 0.5rem;">✓ <strong>Capacity:</strong> Up to 7 passengers</li>
-                            <li style="margin-bottom: 0.5rem;">✓ <strong>Luggage:</strong> Spacious boot for 4-5 large suitcases</li>
-                            <li style="margin-bottom: 0.5rem;">✓ <strong>Features:</strong> Air conditioning, comfortable seating</li>
-                            <li style="margin-bottom: 0.5rem;">✓ <strong>Driver:</strong> Professional English-speaking driver</li>
-                        </ul>
+                    <div style="padding: 1.5rem; margin-top: 1rem;">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Vehicle Specifications</h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div>
+                                <ul style="list-style: none; padding: 0; margin: 0;">
+                                    <li style="margin-bottom: 0.5rem;"><strong>Passengers:</strong> 7 seats</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>Luggage:</strong> 4-5 large cases</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>Climate:</strong> Full A/C system</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>Safety:</strong> Full insurance</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul style="list-style: none; padding: 0; margin: 0;">
+                                    <li style="margin-bottom: 0.5rem;"><strong>Driver:</strong> English speaking</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>Fuel:</strong> Included in price</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>Support:</strong> 24/7 assistance</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>Type:</strong> SUV/MPV models</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <hr class="region-divider">
 
             <!-- Vehicle Features -->
             <div class="services-section">
@@ -102,7 +115,7 @@
                     <div class="service-item">
                         <h3>Ideal For</h3>
                         <ul>
-                            <li>Family vacations (4-6 people)</li>
+                            <li>Family vacations (2-3 people)</li>
                             <li>Business meetings & transfers</li>
                             <li>Airport transfers</li>
                             <li>City tours & sightseeing</li>
@@ -110,36 +123,26 @@
                         </ul>
                     </div>
                 </div>
+                
+                <p style="margin-top: 1.5rem; font-size: 0.9rem; color: #666; font-style: italic;">* Vehicle features and amenities may vary depending on the specific vehicle assigned.</p>
             </div>
+
+            <hr class="region-divider">
 
             <!-- Pricing & Booking -->
             <div class="services-section">
                 <h2>Rental Options & Pricing:</h2>
                 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
-                    <div style="background-color: #f6f8f8; padding: 1.5rem; border-radius: 8px; text-align: center;">
-                        <h3>Hourly Rental</h3>
-                        <p style="font-size: 1.5rem; font-weight: bold; color: var(--primary-color);">From $15/hour</p>
-                        <p>Minimum 4 hours<br>Perfect for city tours</p>
+                <div style="text-align: center; padding: 2rem; border: 2px dashed #ddd; border-radius: 8px;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Detailed Pricing Information</h3>
+                    <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">For comprehensive pricing details including tour packages, hourly rates, and seasonal pricing, please visit our complete pricing reference.</p>
+                    
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <a href="../car-rental/pricing.html" class="btn btn--primary">View Complete Pricing Table</a>
+                        <a href="mailto:sales@vntoyoutour.com?subject=7-Seat Vehicle Rental Inquiry" class="btn btn--secondary">Request Custom Quote</a>
                     </div>
-
-                    <div style="background-color: #f6f8f8; padding: 1.5rem; border-radius: 8px; text-align: center;">
-                        <h3>Daily Rental</h3>
-                        <p style="font-size: 1.5rem; font-weight: bold; color: var(--primary-color);">From $80/day</p>
-                        <p>8-10 hours coverage<br>Includes driver & fuel</p>
-                    </div>
-
-                    <div style="background-color: #f6f8f8; padding: 1.5rem; border-radius: 8px; text-align: center;">
-                        <h3>Multi-Day Tours</h3>
-                        <p style="font-size: 1.5rem; font-weight: bold; color: var(--primary-color);">From $70/day</p>
-                        <p>3+ days discount<br>All-inclusive packages</p>
-                    </div>
-
-                    <div style="background-color: #f6f8f8; padding: 1.5rem; border-radius: 8px; text-align: center;">
-                        <h3>Airport Transfer</h3>
-                        <p style="font-size: 1.5rem; font-weight: bold; color: var(--primary-color);">From $25</p>
-                        <p>One-way transfer<br>Meet & greet service</p>
-                    </div>
+                    
+                    <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;"><strong>Quick Contact:</strong> +84 904 596 505 (Ms. Ngan) | +84 977 632 673 (Mr. Thong)</p>
                 </div>
 
                 <div style="text-align: center; margin-top: 2rem;">
@@ -148,26 +151,28 @@
                 </div>
             </div>
 
+            <hr class="region-divider">
+
             <!-- Other Vehicles -->
             <div class="services-section">
                 <h2>Other Vehicle Options:</h2>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
-                    <div style="background-color: #f6f8f8; padding: 1.5rem; border-radius: 8px; text-align: center;">
+                    <div style="padding: 1.5rem; text-align: center;">
                         <img src="../../assets/images/car-rental/16-seat.jpg" alt="16-Seat Minibus" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px; margin-bottom: 1rem;">
                         <h3>16-Seat Minibus</h3>
                         <p>Perfect for medium groups</p>
                         <a href="16-seat.html" class="btn btn--primary btn--sm">View Details</a>
                     </div>
-                    <div style="background-color: #f6f8f8; padding: 1.5rem; border-radius: 8px; text-align: center;">
+                    <div style="padding: 1.5rem; text-align: center;">
                         <img src="../../assets/images/car-rental/35-seat.jpg" alt="35-Seat Coach" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px; margin-bottom: 1rem;">
                         <h3>35-Seat Coach</h3>
                         <p>Ideal for large groups</p>
                         <a href="35-seat.html" class="btn btn--primary btn--sm">View Details</a>
                     </div>
                     <div style="background-color: #f6f8f8; padding: 1.5rem; border-radius: 8px; text-align: center;">
-                        <img src="../../assets/images/car-rental/45-seat.jpg" alt="45-Seat Luxury Coach" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px; margin-bottom: 1rem;">
-                        <h3>45-Seat Luxury</h3>
-                        <p>Ultimate luxury experience</p>
+                        <img src="../../assets/images/car-rental/45-seat.jpg" alt="45-Seat Large Coach" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px; margin-bottom: 1rem;">
+                        <h3>45-Seat Large Coach</h3>
+                        <p>Best for large groups</p>
                         <a href="45-seat.html" class="btn btn--primary btn--sm">View Details</a>
                     </div>
                 </div>
@@ -178,7 +183,6 @@
                 <a href="index.html" class="btn">← Back to Car Rental</a>
             </div>
 
-        </div>
     </div>
 
     <footer>
@@ -198,6 +202,32 @@
             div[style*="grid-template-columns: 1fr 1fr"] {
                 grid-template-columns: 1fr !important;
             }
+        }
+        
+        /* Remove background from services sections */
+        .services-section {
+            background: transparent !important;
+            border: none !important;
+            border-radius: 0 !important;
+            padding: 0 !important;
+            margin-top: 0 !important;
+        }
+        
+        /* Remove background from service items */
+        .service-item {
+            background: transparent !important;
+            padding: 0 !important;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+        }
+        
+        /* Align service item content to left */
+        .service-item ul {
+            text-align: left !important;
+        }
+        
+        .service-item li {
+            text-align: left !important;
         }
     </style>
 </body>

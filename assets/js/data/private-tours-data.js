@@ -1555,6 +1555,150 @@ const privateToursData = [
         ],
         bestTime: 'Year-round destination with pleasant weather. Dry season (February-August) is optimal.',
         difficulty: 'Easy to Moderate - Suitable for all ages with some walking involved'
+    },
+    {
+        id: 'vns303',
+        title: 'VNS303 Phu Quoc Island',
+        region: 'south',
+        category: 'island',
+        excerpt: 'Discover the paradise of Phu Quoc Island with 2 nights stay, featuring fresh seafood, Grand World entertainment complex, Hon Thom Island cable car, and Aquatopia Water Park.',
+        description: 'Experience the tropical paradise of Phu Quoc Island with this 3-day tour featuring 2 nights accommodation, delicious fresh seafood meals, traditional Vietnamese cuisine, visits to Grand World entertainment complex, Hon Thom Island cable car adventure, and relaxation at Aquatopia Water Park.',
+        image: {
+            url: 'https://vn-to-you-tour.vercel.app/assets/images/tours/vns303.jpg',
+            alt: 'VNS303 Phu Quoc Island Tour'
+        },
+        duration: {
+            display: '3 Days / 2 Nights',
+            days: 3,
+            nights: 2
+        },
+        price: {
+            display: 'Please contact us',
+            amount: 0,
+            currency: 'USD'
+        },
+        groupSize: 'Private tour for 2-10 people',
+        highlights: [
+            'A delicious fresh seafood meal in Phu Quoc',
+            'One experience of traditional Vietnamese cuisine',
+            '2 nights stay on the North Island of Phu Quoc',
+            'Grand World Phuquoc - The Sleepless City',
+            'Grand World Nightly Light Show',
+            'Hon Thom Island cable car adventure',
+            'Aquatopia Water Park with buffet included',
+            'Sunset Town and Kiss Bridge visit',
+            'Photo stop at Dinh Cau Temple',
+            'Ho Quoc Temple visit',
+            'Multiple hotel options from 3* to 5*'
+        ],
+        itinerary: [
+            {
+                day: 1,
+                title: 'Airport Pickup - Grand World Phuquoc - Light Show',
+                meals: 'Lunch, Dinner',
+                activities: [
+                    'Pick up at airport (or hotel)',
+                    'Transfer to Grand World Phuquoc (The Sleepless City)',
+                    'Photo stop at Dinh Cau Temple',
+                    'Free time at Grand World Phuquoc',
+                    'Grand World Nightly Light Show',
+                    'Dinner at local restaurant',
+                    '<span style="color: red; font-weight: bold;">Optional Activities at Grand World Phu Quoc:</span>',
+                    '<span style="color: red;">• Phu Quoc Teddy Bear Museum Admission: $8 USD/pax</span>',
+                    '<span style="color: red;">• Venice River Boat Gondola: $8 USD/pax</span>',
+                    '<span style="color: red;">• The Quintessence of Vietnam Show Ticket: $12 USD/pax</span>'
+                ],
+                accommodation: 'Phu Quoc Hotel'
+            },
+            {
+                day: 2,
+                title: 'Hon Thom Island - Aquatopia Water Park - Sunset Town',
+                meals: 'Breakfast, Lunch, Dinner',
+                activities: [
+                    'Breakfast at hotel',
+                    'Full day visit to Hon Thom Island',
+                    'Aquatopia Water Park experience (include cable car, buffet)',
+                    'Visit Sunset Town',
+                    'Photo session at Kiss Bridge',
+                    'Dinner at local restaurant',
+                    '<span style="color: red; font-weight: bold;">Optional Shows at Sunset Town:</span>',
+                    '<span style="color: red;">• Symphony of the Sea Show (7:45 PM – 8:10 PM): $12 USD/pax</span>',
+                    '<span style="color: red;">• Kiss of the Sea main show with fireworks (9:00 PM – 9:30 PM): $45 USD for two people or $35 USD for one person (Note: Not performed on Tuesdays)</span>'
+                ],
+                accommodation: 'Phu Quoc Hotel'
+            },
+            {
+                day: 3,
+                title: 'Ho Quoc Temple - Shopping - Departure',
+                meals: 'Breakfast',
+                activities: [
+                    'Breakfast at hotel',
+                    'Visit Ho Quoc Temple',
+                    'Shopping time for souvenirs',
+                    'End of tour - Transfer to airport or hotel'
+                ],
+                accommodation: 'End of tour'
+            }
+        ],
+        accommodation: {
+            options: [
+                {
+                    category: '3* Hotel',
+                    hotels: ['Standard 3-star accommodations']
+                },
+                {
+                    category: '4* Hotel',
+                    hotels: ['VinHolidays Fiesta Phuquoc 4* or similar', 'Wyndham Garden Hotel Phuquoc 4*']
+                },
+                {
+                    category: '5* Hotel',
+                    hotels: ['Luxury 5-star accommodations available']
+                }
+            ]
+        },
+        meals: {
+            total: 'Lunch = 2, Dinner = 2',
+            specialties: [
+                'Delicious fresh seafood meal in Phu Quoc',
+                'Traditional Vietnamese cuisine experience'
+            ]
+        },
+        included: [
+            'Accommodation twin share room',
+            'Meals: (B) Breakfast, (L) Lunch, (D) Dinner as specified',
+            'Transportation with air-conditioning',
+            'English/Chinese/Thai speaking guide',
+            'Entrance fees to attractions',
+            'Drinking water during tours'
+        ],
+        excluded: [
+            'Visa stamping fee in Vietnam',
+            'Personal travel insurance',
+            'Any flights to and from Vietnam',
+            'All personal expenses',
+            'All gratuities and tips to driver and tour guide',
+            'Early check in & late check out at hotels',
+            'Bank fees',
+            'Surcharge on Christmas or New Year time',
+            'Tips: Guide 2 USD/day, Driver 1 USD/day (Group <10 pax: Guide 4 USD/day, Driver 2 USD/day)'
+        ],
+        termsAndConditions: [
+            'Rates not applicable during peak periods: New Year (28 Dec - 2 Jan), Vietnamese New Year (25 Jan - 2 Feb), holidays (5-7 Apr, 30 Apr - 2 May, 1-3 Sept, 23-25 Dec)',
+            'No refund for tickets if tour does not visit attractions except in cases of storms or floods',
+            'In cases of force majeure that cannot be resolved, company has right not to refund',
+            'Cancellations 7 days before departure (or when company has deposited for hotel, car, etc.) will not be refunded',
+            'Company not responsible for expenses due to force majeure events such as flight cancellations/delays, natural disasters, riots, political events, and lost items beyond company control',
+            'Travel program may be changed as appropriate without prior notice, considering customer interests as priority'
+        ],
+        bestTime: 'Year-round tropical destination. Dry season (November-March) offers the best weather conditions.',
+        difficulty: 'Easy - Suitable for all ages and fitness levels',
+        tags: ['south-vietnam', 'phu-quoc', 'island-tour', 'grand-world', 'hon-thom', 'aquatopia', 'sunset-town'],
+        featured: true,
+        status: 'active',
+        lastUpdated: '2025-11-22',
+        seoTitle: 'VNS303 Phu Quoc Island 3D2N Private Tour | VN To You',
+        seoDescription: 'Discover Phu Quoc paradise with our 3D2N island tour featuring Grand World entertainment complex, Hon Thom Island cable car, Aquatopia Water Park, and fresh seafood experiences.',
+        seoKeywords: 'Phu Quoc tour, Grand World Phuquoc, Hon Thom Island, Aquatopia Water Park, Sunset Town, Kiss Bridge, Phu Quoc island tour, Vietnam island vacation'
     }
 ];
 

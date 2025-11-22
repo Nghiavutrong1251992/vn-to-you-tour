@@ -36,11 +36,10 @@
         </div>
     </section>
 
-    <div class="content-wrapper">
-        <div class="main-content full-width">
+    <div class="content-container" style="background: transparent; border: none; box-shadow: none;">
             
             <!-- Vehicle Image and Overview -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem; align-items: center;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;">
                 <div>
                     <img src="../../assets/images/car-rental/35-seat.jpg" alt="35-Seat Coach" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
                 </div>
@@ -48,17 +47,31 @@
                     <h2>Premium 35-Seat Coach</h2>
                     <p>Experience superior comfort and luxury with our premium 35-seat coaches. Perfect for large corporate events, conferences, extended tours, and group travel across Vietnam. These coaches combine comfort, safety, and professional service for an exceptional journey.</p>
                     
-                    <div style="background-color: #f6f8f8; padding: 1.5rem; border-radius: 8px; margin-top: 1rem;">
-                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Coach Specifications</h3>
-                        <ul style="list-style: none; padding: 0; margin: 0;">
-                            <li style="margin-bottom: 0.5rem;">✓ <strong>Capacity:</strong> Up to 35 passengers</li>
-                            <li style="margin-bottom: 0.5rem;">✓ <strong>Luggage:</strong> Extensive storage compartment</li>
-                            <li style="margin-bottom: 0.5rem;">✓ <strong>Comfort:</strong> Luxury reclining seats</li>
-                            <li style="margin-bottom: 0.5rem;">✓ <strong>Entertainment:</strong> Audio/video system</li>
-                        </ul>
+                    <div style="padding: 1.5rem; margin-top: 1rem;">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Premium Coach Specifications</h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div>
+                                <ul style="list-style: none; padding: 0; margin: 0;">
+                                    <li style="margin-bottom: 0.5rem;"><strong>Passengers:</strong> 35 luxury seats</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>Luggage:</strong> Large compartments</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>Entertainment:</strong> A/V system</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>Class:</strong> Premium coach</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul style="list-style: none; padding: 0; margin: 0;">
+                                    <li style="margin-bottom: 0.5rem;"><strong>Driver:</strong> Expert operator</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>Power:</strong> USB charging</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>Climate:</strong> Dual-zone A/C</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>Safety:</strong> Advanced systems</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <hr class="region-divider">
 
             <!-- Vehicle Features -->
             <div class="services-section">
@@ -113,74 +126,30 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-
-            <!-- Ideal Applications -->
-            <div style="background-color: #f6f8f8; padding: 2rem; border-radius: 12px; margin: 2rem 0;">
-                <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 2rem;">Perfect For Large Group Events</h2>
                 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
-                    <div style="text-align: center; padding: 1rem;">
-                        <div style="width: 60px; height: 60px; background-color: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-size: 1.5rem;">🏢</div>
-                        <h4>Corporate Events</h4>
-                        <p>Company retreats, conferences, team building events</p>
-                    </div>
-
-                    <div style="text-align: center; padding: 1rem;">
-                        <div style="width: 60px; height: 60px; background-color: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-size: 1.5rem;">🎓</div>
-                        <h4>Educational Tours</h4>
-                        <p>School trips, university excursions, educational visits</p>
-                    </div>
-
-                    <div style="text-align: center; padding: 1rem;">
-                        <div style="width: 60px; height: 60px; background-color: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-size: 1.5rem;">🎉</div>
-                        <h4>Special Events</h4>
-                        <p>Weddings, celebrations, religious gatherings</p>
-                    </div>
-
-                    <div style="text-align: center; padding: 1rem;">
-                        <div style="width: 60px; height: 60px; background-color: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-size: 1.5rem;">🗺️</div>
-                        <h4>Multi-Day Tours</h4>
-                        <p>Extended tours, cultural visits, adventure trips</p>
-                    </div>
-                </div>
+                <p style="margin-top: 1.5rem; font-size: 0.9rem; color: #666; font-style: italic;">* Vehicle features and amenities may vary depending on the specific vehicle assigned.</p>
             </div>
+
+            <hr class="region-divider">
 
             <!-- Pricing & Booking -->
             <div class="services-section">
                 <h2>Rental Options & Pricing:</h2>
                 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
-                    <div style="background-color: #f6f8f8; padding: 1.5rem; border-radius: 8px; text-align: center;">
-                        <h3>Daily Rental</h3>
-                        <p style="font-size: 1.5rem; font-weight: bold; color: var(--primary-color);">$280/day</p>
-                        <p>8-10 hours coverage<br>Professional driver included</p>
+                <div style="text-align: center; padding: 2rem; border: 2px dashed #ddd; border-radius: 8px;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Detailed Pricing Information</h3>
+                    <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">For comprehensive pricing details including tour packages, hourly rates, and seasonal pricing, please visit our complete pricing reference.</p>
+                    
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <a href="../car-rental/pricing.html" class="btn btn--primary">View Complete Pricing Table</a>
+                        <a href="mailto:sales@vntoyoutour.com?subject=35-Seat Coach Rental Inquiry" class="btn btn--secondary">Request Custom Quote</a>
                     </div>
-
-                    <div style="background-color: #f6f8f8; padding: 1.5rem; border-radius: 8px; text-align: center;">
-                        <h3>Multi-Day Package</h3>
-                        <p style="font-size: 1.5rem; font-weight: bold; color: var(--primary-color);">$240/day</p>
-                        <p>3+ days (15% discount)<br>All expenses covered</p>
-                    </div>
-
-                    <div style="background-color: #f6f8f8; padding: 1.5rem; border-radius: 8px; text-align: center;">
-                        <h3>Corporate Package</h3>
-                        <p style="font-size: 1.5rem; font-weight: bold; color: var(--primary-color);">Custom Quote</p>
-                        <p>Flexible scheduling<br>Volume discounts available</p>
-                    </div>
-
-                    <div style="background-color: #f6f8f8; padding: 1.5rem; border-radius: 8px; text-align: center;">
-                        <h3>Airport Transfer</h3>
-                        <p style="font-size: 1.5rem; font-weight: bold; color: var(--primary-color);">From $75</p>
-                        <p>One-way transfer<br>Meet & greet service</p>
-                    </div>
-                </div>
-
-                <div style="text-align: center; margin-top: 2rem;">
-                    <a href="mailto:sales@vntoyoutour.com?subject=35-Seat Coach Rental Inquiry" class="btn btn--primary btn--lg">Book Now</a>
-                    <p style="margin-top: 1rem; color: #666;">Contact us for custom quotes and group discounts</p>
+                    
+                    <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;"><strong>Quick Contact:</strong> +84 904 596 505 (Ms. Ngan) | +84 977 632 673 (Mr. Thong)</p>
                 </div>
             </div>
+
+            <hr class="region-divider">
 
             <!-- Other Vehicles -->
             <div class="services-section">
@@ -199,7 +168,7 @@
                         <a href="16-seat.html" class="btn btn--primary btn--sm">View Details</a>
                     </div>
                     <div style="background-color: #f6f8f8; padding: 1.5rem; border-radius: 8px; text-align: center;">
-                        <img src="../../assets/images/car-rental/45-seat.jpg" alt="45-Seat Luxury Coach" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px; margin-bottom: 1rem;">
+                        <img src="../../assets/images/car-rental/45-seat.jpg" alt="45-Seat Large Coach" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px; margin-bottom: 1rem;">
                         <h3>45-Seat Luxury</h3>
                         <p>Ultimate luxury experience</p>
                         <a href="45-seat.html" class="btn btn--primary btn--sm">View Details</a>
@@ -212,7 +181,6 @@
                 <a href="index.html" class="btn">← Back to Car Rental Options</a>
             </div>
 
-        </div>
     </div>
 
     <footer>
@@ -232,6 +200,32 @@
             div[style*="grid-template-columns: 1fr 1fr"] {
                 grid-template-columns: 1fr !important;
             }
+        }
+        
+        /* Remove background from services sections */
+        .services-section {
+            background: transparent !important;
+            border: none !important;
+            border-radius: 0 !important;
+            padding: 0 !important;
+            margin-top: 0 !important;
+        }
+        
+        /* Remove background from service items */
+        .service-item {
+            background: transparent !important;
+            padding: 0 !important;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+        }
+        
+        /* Align service item content to left */
+        .service-item ul {
+            text-align: left !important;
+        }
+        
+        .service-item li {
+            text-align: left !important;
         }
     </style>
 </body>

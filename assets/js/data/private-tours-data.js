@@ -1699,6 +1699,471 @@ const privateToursData = [
         seoTitle: 'VNS303 Phu Quoc Island 3D2N Private Tour | VN To You',
         seoDescription: 'Discover Phu Quoc paradise with our 3D2N island tour featuring Grand World entertainment complex, Hon Thom Island cable car, Aquatopia Water Park, and fresh seafood experiences.',
         seoKeywords: 'Phu Quoc tour, Grand World Phuquoc, Hon Thom Island, Aquatopia Water Park, Sunset Town, Kiss Bridge, Phu Quoc island tour, Vietnam island vacation'
+    },
+    {
+        id: 'vns303b',
+        title: 'VNS303B Phu Quoc Island (VinWonders & Hon Thom Islet)',
+        region: 'south',
+        category: 'premium',
+        excerpt: 'Experience Phu Quoc\'s two biggest attractions - VinWonders theme park and Hon Thom Islet (Sun World Nature Park) with 2 nights accommodation, featuring fresh seafood and premium entertainment.',
+        description: 'VNS303B Phu Quoc Island tour includes the two biggest attractions: VinWonders and Hon Thom Islet (Sun World Nature Park). Enjoy 2 nights on the North Island with delicious fresh seafood meals, traditional Vietnamese cuisine, and world-class entertainment facilities.',
+        image: {
+            url: 'https://vn-to-you-tour.vercel.app/assets/images/tours/vns303B.jpg',
+            alt: 'VNS303B Phu Quoc Island VinWonders Tour'
+        },
+        duration: {
+            display: '3 Days / 2 Nights',
+            days: 3,
+            nights: 2
+        },
+        price: {
+            display: 'Please contact us',
+            amount: 0,
+            currency: 'USD'
+        },
+        groupSize: 'Private tour for 2-10 people',
+        highlights: [
+            'Two biggest attractions: VinWonders and Hon Thom Islet (Sun World Nature Park)',
+            'A delicious fresh seafood meal in Phu Quoc',
+            'One experience of traditional Vietnamese cuisine',
+            '2 nights stay on the North Island of Phu Quoc',
+            'VinWonders Phuquoc full day experience',
+            'Hon Thom Island cable car adventure with Aquatopia Water Park',
+            'Sunset Town and Kiss Bridge visit',
+            'Grand World Phuquoc entertainment complex',
+            'Dong Duong night market exploration',
+            'Aquarium Phuquoc and Once Show Phuquoc',
+            'Multiple hotel options from 3* to 5*'
+        ],
+        itinerary: [
+            {
+                day: 1,
+                title: 'Airport Pickup - Hon Thom Island - Grand World',
+                meals: 'Lunch, Dinner',
+                activities: [
+                    'Pick up at airport (or hotel)',
+                    'Transfer to visit Hon Thom Island',
+                    'Aquatopia Water Park experience (include cable car, buffet)',
+                    'Visit Sunset Town',
+                    'Photo session at Kiss Bridge',
+                    'Transfer to Grand World Phuquoc (The Sleepless City)',
+                    'Explore Dong Duong night market',
+                    'Dinner at local restaurant',
+                    '<span style="color: red; font-weight: bold;">Optional Shows at Sunset Town:</span>',
+                    '<span style="color: red;">• Symphony of the Sea Show (7:45 PM – 8:10 PM): $12 USD/pax</span>',
+                    '<span style="color: red;">• Kiss of the Sea main show with fireworks (9:00 PM – 9:30 PM): $45 USD for two people or $35 USD for one person (Note: Not performed on Tuesdays)</span>'
+                ],
+                accommodation: 'Phu Quoc Hotel'
+            },
+            {
+                day: 2,
+                title: 'VinWonders Phuquoc - Aquarium - Once Show',
+                meals: 'Breakfast, Lunch, Dinner',
+                activities: [
+                    'Breakfast at hotel',
+                    'Full day visit to VinWonders Phuquoc',
+                    'Explore Aquarium Phuquoc',
+                    'Experience Once Show Phuquoc',
+                    'Dinner at local restaurant',
+                    '<span style="color: red; font-weight: bold;">Optional Activities at Grand World Phu Quoc:</span>',
+                    '<span style="color: red;">• Phu Quoc Teddy Bear Museum Admission: $8 USD/pax</span>',
+                    '<span style="color: red;">• Venice River Boat Gondola: $8 USD/pax</span>',
+                    '<span style="color: red;">• The Quintessence of Vietnam Show Ticket: $12 USD/pax</span>'
+                ],
+                accommodation: 'Phu Quoc Hotel'
+            },
+            {
+                day: 3,
+                title: 'Grand World Free Time - Shopping - Departure',
+                meals: 'Breakfast',
+                activities: [
+                    'Breakfast at hotel',
+                    'Free time at Grand World Phuquoc',
+                    'Shopping for souvenirs',
+                    'End of tour - Transfer to airport or hotel'
+                ],
+                accommodation: 'End of tour'
+            }
+        ],
+        accommodation: {
+            options: [
+                {
+                    category: '3* Hotel',
+                    hotels: ['Standard 3-star accommodations']
+                },
+                {
+                    category: '4* Hotel',
+                    hotels: ['VinHolidays Fiesta Phuquoc 4* or similar', 'Wyndham Garden Hotel Phuquoc 4*']
+                },
+                {
+                    category: '5* Hotel',
+                    hotels: ['Luxury 5-star accommodations available']
+                }
+            ]
+        },
+        meals: {
+            total: 'Lunch = 2, Dinner = 2',
+            specialties: [
+                'Delicious fresh seafood meal in Phu Quoc',
+                'Traditional Vietnamese cuisine experience'
+            ]
+        },
+        included: [
+            'Accommodation twin share room',
+            'Meals: (B) Breakfast, (L) Lunch, (D) Dinner as specified',
+            'Transportation with air-conditioning',
+            'English/Chinese/Thai speaking guide',
+            'Entrance fees to attractions',
+            'Drinking water during tours'
+        ],
+        excluded: [
+            'Visa stamping fee in Vietnam',
+            'Personal travel insurance',
+            'Any flights to and from Vietnam',
+            'All personal expenses',
+            'All gratuities and tips to driver and tour guide',
+            'Early check in & late check out at hotels',
+            'Bank fees',
+            'Surcharge on Christmas or New Year time',
+            'Tips: Guide 2 USD/day, Driver 1 USD/day (Group <10 pax: Guide 4 USD/day, Driver 2 USD/day)'
+        ],
+        termsAndConditions: [
+            'Rates not applicable during peak periods: New Year (28 Dec - 2 Jan), Vietnamese New Year (25 Jan - 2 Feb), holidays (5-7 Apr, 30 Apr - 2 May, 1-3 Sept, 23-25 Dec)',
+            'No refund for tickets if tour does not visit attractions except in cases of storms or floods',
+            'In cases of force majeure that cannot be resolved, company has right not to refund',
+            'Cancellations 7 days before departure (or when company has deposited for hotel, car, etc.) will not be refunded',
+            'Company not responsible for expenses due to force majeure events such as flight cancellations/delays, natural disasters, riots, political events, and lost items beyond company control',
+            'Travel program may be changed as appropriate without prior notice, considering customer interests as priority'
+        ],
+        bestTime: 'Year-round tropical destination. Dry season (November-March) offers the best weather conditions.',
+        difficulty: 'Easy - Suitable for all ages and fitness levels',
+        tags: ['south-vietnam', 'phu-quoc', 'island-tour', 'vinwonders', 'hon-thom', 'premium-attractions', 'aquarium', 'theme-park'],
+        featured: true,
+        status: 'active',
+        lastUpdated: '2025-11-22',
+        seoTitle: 'VNS303B Phu Quoc Island Premium Tour with VinWonders | VN To You',
+        seoDescription: 'Experience Phu Quoc\'s premier attractions with VinWonders theme park and Hon Thom Islet. Includes Aquarium Phuquoc, Once Show, and premium entertainment in this 3D2N island adventure.',
+        seoKeywords: 'VinWonders Phuquoc, Hon Thom Islet, Sun World Nature Park, Aquarium Phuquoc, Once Show, Premium Phu Quoc tour, VinWonders theme park, Phu Quoc attractions'
+    },
+    {
+        id: 'vns401',
+        title: 'VNS401 HCM City - Muine - Dalat 4D3N',
+        region: 'south',
+        category: 'multi-city',
+        excerpt: 'Comprehensive 4-day Southern Vietnam tour exploring Ho Chi Minh City, Muine\'s stunning sand dunes, and the charming hill station of Dalat with its cool climate and unique attractions.',
+        description: 'VNS401 HCM City - Muine - Dalat 4D3N offers a perfect combination of Vietnam\'s bustling metropolis, coastal desert landscapes, and cool mountain retreat. Experience the White and Red Sand Dunes of Muine, the romantic city of Dalat with its French colonial architecture, and vibrant Ho Chi Minh City.',
+        image: {
+            url: 'https://vn-to-you-tour.vercel.app/assets/images/tours/vns401.jpg',
+            alt: 'VNS401 HCM City Muine Dalat Tour'
+        },
+        duration: {
+            display: '4 Days / 3 Nights',
+            days: 4,
+            nights: 3
+        },
+        price: {
+            display: 'Please contact us',
+            amount: 0,
+            currency: 'USD'
+        },
+        groupSize: 'Private tour - all group sizes (detailed pricing available)',
+        highlights: [
+            'Explore Muine\'s iconic White and Red Sand Dunes with Jeep adventure',
+            'Experience the magical Fairy Stream in Muine',
+            'Discover Dalat\'s cool climate and French colonial charm',
+            'Visit the famous Crazy House architectural wonder',
+            'Explore unique Clay Tunnels in Dalat',
+            'Tour Ho Chi Minh City\'s historical landmarks',
+            'Experience Dalat night market and local culture',
+            'Visit Linh Phuoc Temple and Fresh Garden',
+            'Walk along Nguyen Hue Walking Street in HCM City'
+        ],
+        itinerary: [
+            {
+                day: 1,
+                title: 'HCM City to Muine - Sand Dunes Adventure',
+                meals: 'Lunch, Dinner',
+                activities: [
+                    'Pick up at airport or hotel in HCM City',
+                    'Transfer to Muine (approximately 4.5 hours drive)',
+                    'Visit White Sand Dunes (include Jeep adventure)',
+                    'Explore Red Sand Dunes for sunset viewing',
+                    'Walk through the mystical Fairy Stream',
+                    'Check-in hotel and dinner'
+                ],
+                accommodation: 'Muine Hotel (4* options: Muong Thanh Muine 4* or similar)'
+            },
+            {
+                day: 2,
+                title: 'Muine to Dalat - Mountain City Discovery',
+                meals: 'Breakfast, Lunch, Dinner',
+                activities: [
+                    'Breakfast at hotel',
+                    'Transfer from Muine to Dalat (approximately 3.5 hours)',
+                    'Visit Fresh Garden with variety of flowers and vegetables',
+                    'Explore Linh Phuoc Temple (Dragon Temple)',
+                    'Photo stop at Lam Vien Square',
+                    'Romantic walk around Xuan Huong Lake',
+                    'Experience Dalat night market',
+                    'Dinner and overnight in Dalat'
+                ],
+                accommodation: 'Dalat Hotel (4* options: TTC Dalat Hotel 4*/King Dalat Hotel 4*/SANDALS CAMELLIA HOTEL/Saigon Dalat Hotel 4* or similar)'
+            },
+            {
+                day: 3,
+                title: 'Dalat Sightseeing - Return to HCM City',
+                meals: 'Breakfast, Lunch, Dinner',
+                activities: [
+                    'Breakfast at hotel',
+                    'Visit the famous Crazy House (Hang Nga Guesthouse)',
+                    'Explore unique Clay Tunnels',
+                    'Transfer back to Ho Chi Minh City (approximately 6 hours)',
+                    'Evening stroll along Nguyen Hue Walking Street',
+                    'Dinner and overnight in HCM City'
+                ],
+                accommodation: 'HCM City Hotel (4* options: Cicilia Saigon Hotel 4*/Athena Saigon Hotel 4*/Ramana Saigon Hotel 4* or similar)'
+            },
+            {
+                day: 4,
+                title: 'HCM City Tour - Departure',
+                meals: 'Breakfast, Lunch',
+                activities: [
+                    'Breakfast at hotel',
+                    'Ho Chi Minh City tour',
+                    'Visit Independence Palace (Reunification Palace)',
+                    'Explore Saigon Central Post Office',
+                    'Shopping at Ben Thanh Market',
+                    'Transfer to airport for departure'
+                ],
+                accommodation: 'End of tour'
+            }
+        ],
+        accommodation: {
+            options: [
+                {
+                    category: '3* Hotel',
+                    hotels: ['Standard 3-star accommodations (Not available for this tour)']
+                },
+                {
+                    category: '4* Hotel HCM City',
+                    hotels: ['Cicilia Saigon Hotel 4*', 'Athena Saigon Hotel 4*', 'Ramana Saigon Hotel 4*', 'or similar']
+                },
+                {
+                    category: '4* Hotel Muine',
+                    hotels: ['Muong Thanh Muine 4*', 'or similar']
+                },
+                {
+                    category: '4* Hotel Dalat',
+                    hotels: ['TTC Dalat Hotel 4*', 'King Dalat Hotel 4*', 'SANDALS CAMELLIA HOTEL', 'Saigon Dalat Hotel 4*', 'or similar']
+                },
+                {
+                    category: '5* Hotel',
+                    hotels: ['Luxury 5-star options available upon request']
+                }
+            ]
+        },
+        meals: {
+            total: 'Lunch = 4, Dinner = 3',
+            specialties: [
+                'Local Muine seafood specialties',
+                'Dalat mountain cuisine and fresh vegetables',
+                'Traditional Vietnamese dishes in HCM City'
+            ]
+        },
+        included: [
+            'Accommodation twin share room',
+            'Meals: (B) Breakfast, (L) Lunch, (D) Dinner as specified',
+            'Transportation with air-conditioning',
+            'English/Chinese/Thai speaking guide',
+            'Entrance fees to all attractions',
+            'Drinking water during tours'
+        ],
+        excluded: [
+            'Visa stamping fee in Vietnam',
+            'Personal travel insurance',
+            'Any flights to and from Vietnam',
+            'All personal expenses',
+            'All gratuities and tips to driver and tour guide',
+            'Early check in & late check out at hotels',
+            'Bank fees',
+            'Surcharge on Christmas or New Year time',
+            'Tips: Guide 2 USD/day, Driver 1 USD/day (Group <10 pax: Guide 4 USD/day, Driver 2 USD/day)'
+        ],
+        termsAndConditions: [
+            'Rates not applicable during peak periods: New Year (28 Dec - 2 Jan), Vietnamese New Year (25 Jan - 2 Feb), holidays (5-7 Apr, 30 Apr - 2 May, 1-3 Sept, 23-25 Dec)',
+            'No refund for tickets if tour does not visit attractions except in cases of storms or floods',
+            'In cases of force majeure that cannot be resolved, company has right not to refund',
+            'Cancellations 7 days before departure (or when company has deposited for hotel, car, etc.) will not be refunded',
+            'Company not responsible for expenses due to force majeure events such as flight cancellations/delays, natural disasters, riots, political events, and lost items beyond company control',
+            'Travel program may be changed as appropriate without prior notice, considering customer interests as priority'
+        ],
+        bestTime: 'Year-round destination. Dry season (November-March) is optimal for comfortable weather in all three locations.',
+        difficulty: 'Easy to Moderate - Suitable for most fitness levels with some walking involved',
+        tags: ['south-vietnam', 'multi-city', 'hcm-city', 'muine', 'dalat', 'sand-dunes', 'mountain-retreat', 'cultural-tour'],
+        featured: true,
+        status: 'active',
+        lastUpdated: '2025-11-22',
+        seoTitle: 'VNS401 HCM City Muine Dalat 4D3N Tour | VN To You',
+        seoDescription: 'Explore Southern Vietnam\'s diverse landscapes with our 4D3N tour covering bustling HCM City, stunning Muine sand dunes, and charming Dalat mountain retreat with detailed pricing options.',
+        seoKeywords: 'HCM City Muine Dalat tour, White Red Sand Dunes Muine, Crazy House Dalat, Southern Vietnam multi-city tour, Vietnam 4 days tour, Dalat mountain tour'
+    },
+    {
+        id: 'vns403',
+        title: 'VNS403 Phuquoc 4D3N',
+        region: 'south',
+        category: 'comprehensive',
+        excerpt: 'Complete 4-day Phu Quoc island experience featuring Grand World entertainment complex, VinWonders theme park, Hon Thom Island cable car, and all major attractions with 3 nights accommodation.',
+        description: 'VNS403 Phuquoc 4D3N offers the most comprehensive Phu Quoc island experience combining entertainment, adventure, and relaxation. Enjoy 3 nights on the North Island with visits to Grand World, VinWonders, Hon Thom Island, fresh seafood dining, and traditional Vietnamese cuisine.',
+        image: {
+            url: 'https://vn-to-you-tour.vercel.app/assets/images/tours/vns403.jpg',
+            alt: 'VNS403 Phuquoc 4D3N Comprehensive Tour'
+        },
+        duration: {
+            display: '4 Days / 3 Nights',
+            days: 4,
+            nights: 3
+        },
+        price: {
+            display: 'Please contact us',
+            amount: 0,
+            currency: 'USD'
+        },
+        groupSize: 'Private tour for 2-10 people',
+        highlights: [
+            'A delicious fresh seafood meal in Phu Quoc',
+            'One experience of traditional Vietnamese cuisine',
+            '3 nights stay on the North Island of Phu Quoc',
+            'Grand World Phuquoc - The Sleepless City with nightly light show',
+            'Full day at VinWonders Phuquoc theme park',
+            'Aquarium Phuquoc and Once Show experience',
+            'Hon Thom Island cable car adventure with Aquatopia Water Park',
+            'Sunset Town and Kiss Bridge romantic visit',
+            'Photo stop at iconic Dinh Cau Temple',
+            'Multiple hotel options from 3* to 5*',
+            'Comprehensive coverage of all major Phu Quoc attractions'
+        ],
+        itinerary: [
+            {
+                day: 1,
+                title: 'Airport Pickup - Grand World Phuquoc - Light Show',
+                meals: 'Lunch, Dinner',
+                activities: [
+                    'Pick up at airport (or hotel)',
+                    'Transfer to Grand World Phuquoc (The Sleepless City)',
+                    'Photo stop at iconic Dinh Cau Temple',
+                    'Free time exploration at Grand World Phuquoc',
+                    'Grand World Nightly Light Show experience',
+                    'Dinner featuring fresh seafood specialties',
+                    '<span style="color: red; font-weight: bold;">Optional Activities at Grand World Phu Quoc:</span>',
+                    '<span style="color: red;">• Phu Quoc Teddy Bear Museum Admission: $8 USD/pax</span>',
+                    '<span style="color: red;">• Venice River Boat Gondola: $8 USD/pax</span>',
+                    '<span style="color: red;">• The Quintessence of Vietnam Show Ticket: $12 USD/pax</span>'
+                ],
+                accommodation: 'Phu Quoc Hotel'
+            },
+            {
+                day: 2,
+                title: 'VinWonders Phuquoc - Aquarium - Once Show',
+                meals: 'Breakfast, Lunch, Dinner',
+                activities: [
+                    'Breakfast at hotel',
+                    'Full day visit to VinWonders Phuquoc theme park',
+                    'Explore Aquarium Phuquoc with marine life exhibits',
+                    'Experience spectacular Once Show Phuquoc',
+                    'Dinner with traditional Vietnamese cuisine'
+                ],
+                accommodation: 'Phu Quoc Hotel'
+            },
+            {
+                day: 3,
+                title: 'Hon Thom Island - Aquatopia Water Park - Sunset Town',
+                meals: 'Breakfast, Lunch, Dinner',
+                activities: [
+                    'Breakfast at hotel',
+                    'Full day visit to Hon Thom Island',
+                    'Aquatopia Water Park experience (include cable car, buffet)',
+                    'Visit romantic Sunset Town',
+                    'Photo session at famous Kiss Bridge',
+                    'Dinner on Phu Quoc island',
+                    '<span style="color: red; font-weight: bold;">Optional Shows at Sunset Town:</span>',
+                    '<span style="color: red;">• Symphony of the Sea Show (7:45 PM – 8:10 PM): $12 USD/pax</span>',
+                    '<span style="color: red;">• Kiss of the Sea main show with fireworks (9:00 PM – 9:30 PM): $45 USD for two people or $35 USD for one person (Note: Not performed on Tuesdays)</span>'
+                ],
+                accommodation: 'Phu Quoc Hotel'
+            },
+            {
+                day: 4,
+                title: 'Shopping - Departure',
+                meals: 'Breakfast',
+                activities: [
+                    'Breakfast at hotel',
+                    'Free time for shopping and souvenir hunting',
+                    'Last-minute exploration of local markets',
+                    'End of tour - Transfer to airport or hotel'
+                ],
+                accommodation: 'End of tour'
+            }
+        ],
+        accommodation: {
+            options: [
+                {
+                    category: '3* Hotel',
+                    hotels: ['Standard 3-star accommodations available']
+                },
+                {
+                    category: '4* Hotel',
+                    hotels: ['VinHolidays Fiesta Phuquoc 4* or similar', 'Wyndham Garden Hotel Phuquoc 4*']
+                },
+                {
+                    category: '5* Hotel',
+                    hotels: ['Luxury 5-star accommodations available']
+                }
+            ]
+        },
+        meals: {
+            total: 'Lunch = 3, Dinner = 3',
+            specialties: [
+                'Delicious fresh seafood meal in Phu Quoc',
+                'Traditional Vietnamese cuisine experience',
+                'Island specialties and local delicacies'
+            ]
+        },
+        included: [
+            'Accommodation twin share room',
+            'Meals: (B) Breakfast, (L) Lunch, (D) Dinner as specified',
+            'Transportation with air-conditioning',
+            'English/Chinese/Thai speaking guide',
+            'Entrance fees to all attractions',
+            'Drinking water during tours'
+        ],
+        excluded: [
+            'Visa stamping fee in Vietnam',
+            'Personal travel insurance',
+            'Any flights to and from Vietnam',
+            'All personal expenses',
+            'All gratuities and tips to driver and tour guide',
+            'Early check in & late check out at hotels',
+            'Bank fees',
+            'Surcharge on Christmas or New Year time',
+            'Tips: Guide 2 USD/day, Driver 1 USD/day (Group <10 pax: Guide 4 USD/day, Driver 2 USD/day)'
+        ],
+        termsAndConditions: [
+            'Rates not applicable during peak periods: New Year (28 Dec - 2 Jan), Vietnamese New Year (25 Jan - 2 Feb), holidays (5-7 Apr, 30 Apr - 2 May, 1-3 Sept, 23-25 Dec)',
+            'No refund for tickets if tour does not visit attractions except in cases of storms or floods',
+            'In cases of force majeure that cannot be resolved, company has right not to refund',
+            'Cancellations 7 days before departure (or when company has deposited for hotel, car, etc.) will not be refunded',
+            'Company not responsible for expenses due to force majeure events such as flight cancellations/delays, natural disasters, riots, political events, and lost items beyond company control',
+            'Travel program may be changed as appropriate without prior notice, considering customer interests as priority'
+        ],
+        bestTime: 'Year-round tropical destination. Dry season (November-March) offers the best weather conditions.',
+        difficulty: 'Easy - Suitable for all ages and fitness levels',
+        tags: ['south-vietnam', 'phu-quoc', 'island-tour', 'comprehensive', 'grand-world', 'vinwonders', 'hon-thom', 'aquatopia', 'sunset-town'],
+        featured: true,
+        status: 'active',
+        lastUpdated: '2025-11-22',
+        seoTitle: 'VNS403 Phuquoc 4D3N Comprehensive Island Tour | VN To You',
+        seoDescription: 'Ultimate 4D3N Phu Quoc island experience with Grand World, VinWonders, Hon Thom Island, Aquatopia Water Park, and all major attractions. Complete island adventure with fresh seafood and entertainment.',
+        seoKeywords: 'Phuquoc 4D3N tour, VinWonders Phuquoc, Grand World Phuquoc, Hon Thom Island, Aquatopia Water Park, Phu Quoc comprehensive tour, Vietnam island vacation, Sunset Town Kiss Bridge'
     }
 ];
 

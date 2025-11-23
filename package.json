@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "@vercel/speed-insights": "^1.2.0"
+  },
+  "name": "basic-1.2",
+  "version": "1.0.0",
+  "description": "Trang web công ty du lịch VN to You Tour với hosting trên Vercel và quản lý ảnh tối ưu.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nghiavutrong1251992/vn-to-you-tour.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nghiavutrong1251992/vn-to-you-tour/issues"
+  },
+  "homepage": "https://github.com/Nghiavutrong1251992/vn-to-you-tour#readme"
+}

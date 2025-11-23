@@ -2,6 +2,74 @@
 // Articles are automatically sorted by date in sidebar.js
 const articlesData = [
     {
+        id: 'halal-tourism-dialogue-hanoi-2025',
+        slug: 'halal-tourism-dialogue-hanoi-2025',
+        title: 'Vn To You Engages in Halal Tourism Dialogue in Hanoi',
+        date: 'June 1, 2025',
+        author: 'VN to You Tour Team',
+        category: 'Company News',
+        excerpt: 'Vn To You proudly participated in a significant seminar on Halal tourism held recently in Hanoi. The event provided a valuable platform for industry stakeholders to delve into the immense potential, existing challenges, and burgeoning opportunities within the Halal travel market.',
+        image: 'https://vn-to-you-tour.vercel.app/assets/images/articles/halal-tourism-seminar/halal-seminar-main.jpg',
+        content: [
+            {
+                type: 'image',
+                src: 'https://vn-to-you-tour.vercel.app/assets/images/articles/halal-tourism-seminar/halal-seminar-main.jpg',
+                alt: 'Vn To You Team at Halal Tourism Seminar in Hanoi'
+            },
+            {
+                type: 'paragraph',
+                text: 'Hanoi, June 1, 2025 – Vn To You proudly participated in a significant seminar on Halal tourism held recently in Hanoi. The event provided a valuable platform for industry stakeholders to delve into the immense potential, existing challenges, and burgeoning opportunities within the Halal travel market.'
+            },
+            {
+                type: 'heading',
+                text: 'Active Industry Engagement'
+            },
+            {
+                type: 'image',
+                src: 'https://vn-to-you-tour.vercel.app/assets/images/articles/halal-tourism-seminar/halal-seminar-discussion.jpg',
+                alt: 'Seminar Discussion on Halal Tourism Opportunities'
+            },
+            {
+                type: 'paragraph',
+                text: 'Our team actively engaged in discussions, sharing insights on best practices for serving Halal-conscious travelers and gaining a deeper understanding of this rapidly expanding segment. This participation underscores Vn To You\'s commitment to continuous learning and staying abreast of evolving global tourism trends.'
+            },
+            {
+                type: 'heading',
+                text: 'Knowledge Exchange and Presentations'
+            },
+            {
+                type: 'image',
+                src: 'https://vn-to-you-tour.vercel.app/assets/images/articles/halal-tourism-seminar/halal-seminar-presentation.jpg',
+                alt: 'Halal Tourism Industry Presentations and Insights'
+            },
+            {
+                type: 'paragraph',
+                text: 'The seminar featured comprehensive presentations on market trends, consumer behavior, and destination development strategies specifically tailored for Halal tourism. These sessions provided invaluable insights into the evolving needs and preferences of Muslim travelers worldwide.'
+            },
+            {
+                type: 'heading',
+                text: 'Commitment to Excellence'
+            },
+            {
+                type: 'image',
+                src: 'https://vn-to-you-tour.vercel.app/assets/images/articles/halal-tourism-seminar/halal-seminar-team.jpg',
+                alt: 'Vn To You Team Members at Halal Tourism Seminar'
+            },
+            {
+                type: 'paragraph',
+                text: 'By actively exchanging knowledge and updating our expertise, we aim to enhance our services and ensure we provide the best possible experiences for all our customers, including those seeking Halal-friendly travel options.'
+            },
+            {
+                type: 'paragraph',
+                text: 'This seminar represents our ongoing dedication to understanding diverse traveler needs and adapting our services to serve the global Muslim travel community effectively. As the Halal tourism market continues to grow worldwide, Vn To You remains committed to developing specialized offerings that cater to these specific requirements.'
+            }
+        ],
+        tags: ['Halal Tourism', 'Industry Engagement', 'Company News', 'Travel Market', 'Professional Development'],
+        readTime: '4 min read',
+        featured: false,
+        isCompanyNews: true
+    },
+    {
         id: 'hotel-selection-guide-2025',
         slug: 'hotel-selection-guide-2025',
         title: 'Hotel Selection Guide: Your Comfort is Our Priority',

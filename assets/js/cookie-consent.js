@@ -1,36 +1,47 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // 0. Inject HTML if not present
-    if (!document.getElementById('cookieBanner')) {
-        const banner = document.createElement('div');
-        banner.id = 'cookieBanner';
-        banner.className = 'cookie-banner';
-        banner.innerHTML = `
-            <div class="cookie-content">
-                <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
-            </div>
-            <button id="acceptCookie" class="cookie-btn">Accept</button>
-        `;
-        document.body.appendChild(banner);
+(function() {
+    function initCookieConsent() {
+        // 0. Inject HTML if not present
+        if (!document.getElementById('cookieBanner')) {
+            const banner = document.createElement('div');
+            banner.id = 'cookieBanner';
+            banner.className = 'cookie-banner';
+            banner.innerHTML = `
+                <div class="cookie-content">
+                    <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+                </div>
+                <button id="acceptCookie" class="cookie-btn">Accept</button>
+            `;
+            document.body.appendChild(banner);
+        }
+
+        const cookieBanner = document.getElementById('cookieBanner');
+        const acceptBtn = document.getElementById('acceptCookie');
+
+        // 1. Check if user has already accepted
+        if (!getCookie('user_consent')) {
+            // Show banner with a slight delay for animation effect
+            setTimeout(() => {
+                cookieBanner.classList.add('show');
+            }, 1000);
+        }
+
+        // 2. Handle Accept Button Click
+        if (acceptBtn) {
+            acceptBtn.addEventListener('click', function() {
+                setCookie('user_consent', 'accepted', 365); // Save for 365 days
+                cookieBanner.classList.remove('show');
+            });
+        }
     }
 
-    const cookieBanner = document.getElementById('cookieBanner');
-    const acceptBtn = document.getElementById('acceptCookie');
-
-    // 1. Check if user has already accepted
-    if (!getCookie('user_consent')) {
-        // Show banner with a slight delay for animation effect
-        setTimeout(() => {
-            cookieBanner.classList.add('show');
-        }, 1000);
+    // Run immediately if DOM is ready, otherwise wait
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCookieConsent);
+    } else {
+        initCookieConsent();
     }
 
-    // 2. Handle Accept Button Click
-    if (acceptBtn) {
-        acceptBtn.addEventListener('click', function() {
-            setCookie('user_consent', 'accepted', 365); // Save for 365 days
-            cookieBanner.classList.remove('show');
-        });
-    }
+    // --- Helper Functions ---
 
     // --- Helper Functions ---
 
@@ -58,4 +69,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         return "";
     }
-});
+})();

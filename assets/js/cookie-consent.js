@@ -9,15 +9,19 @@
                 <div class="cookie-content">
                     <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
                 </div>
-                <button id="acceptCookie" class="cookie-btn">Accept</button>
+                <div class="cookie-actions">
+                    <button id="declineCookie" class="cookie-btn decline">Decline</button>
+                    <button id="acceptCookie" class="cookie-btn">Accept</button>
+                </div>
             `;
             document.body.appendChild(banner);
         }
 
         const cookieBanner = document.getElementById('cookieBanner');
         const acceptBtn = document.getElementById('acceptCookie');
+        const declineBtn = document.getElementById('declineCookie');
 
-        // 1. Check if user has already accepted
+        // 1. Check if user has already accepted or declined
         if (!getCookie('user_consent')) {
             // Show banner with a slight delay for animation effect
             setTimeout(() => {
@@ -32,6 +36,14 @@
                 cookieBanner.classList.remove('show');
             });
         }
+
+        // 3. Handle Decline Button Click
+        if (declineBtn) {
+            declineBtn.addEventListener('click', function() {
+                setCookie('user_consent', 'declined', 365); // Save preference
+                cookieBanner.classList.remove('show');
+            });
+        }
     }
 
     // Run immediately if DOM is ready, otherwise wait
@@ -40,8 +52,6 @@
     } else {
         initCookieConsent();
     }
-
-    // --- Helper Functions ---
 
     // --- Helper Functions ---
 

@@ -163,15 +163,6 @@
                     <i class="fas fa-chevron-right"></i>
                 </button>
             </div>
-            
-            <!-- Mobile Slider Dots -->
-            <div class="services-slider-dots" id="servicesSliderDots">
-                <span class="slider-dot active" onclick="currentServicesSlide(1)"></span>
-                <span class="slider-dot" onclick="currentServicesSlide(2)"></span>
-                <span class="slider-dot" onclick="currentServicesSlide(3)"></span>
-                <span class="slider-dot" onclick="currentServicesSlide(4)"></span>
-                <span class="slider-dot" onclick="currentServicesSlide(5)"></span>
-            </div>
         </div>
     </div>
     
@@ -193,14 +184,8 @@
             updateServicesSlider();
         }
         
-        function currentServicesSlide(slideIndex) {
-            currentServiceSlide = slideIndex - 1;
-            updateServicesSlider();
-        }
-        
         function updateServicesSlider() {
             const slider = document.getElementById('servicesSlider');
-            const dots = document.querySelectorAll('#servicesSliderDots .slider-dot');
             
             if (window.innerWidth <= 768) {
                 // Calculate slide distance based on viewport - show 2.5 items
@@ -210,27 +195,22 @@
                 const translateX = -currentServiceSlide * slideWidth;
                 slider.style.transform = `translateX(${translateX}px)`;
                 
-                // Update dots
-                dots.forEach((dot, index) => {
-                    dot.classList.toggle('active', index === currentServiceSlide);
-                });
+                // Dots removed - no longer needed
             }
         }
         
-        // Auto-slide for mobile
+        // Auto-slide for mobile - DISABLED for better UX
         function autoSlideServices() {
-            if (window.innerWidth <= 768) {
-                moveServicesSlide(1);
-            }
+            // Auto-slide disabled to prevent interrupting user interaction
+            return;
         }
         
-        // Auto-slide every 5 seconds on mobile
+        // Auto-slide every 5 seconds on mobile - DISABLED
         let servicesAutoSlideInterval;
         
         function startServicesAutoSlide() {
-            if (window.innerWidth <= 768) {
-                servicesAutoSlideInterval = setInterval(autoSlideServices, 5000);
-            }
+            // Auto-slide disabled for better user experience
+            return;
         }
         
         function stopServicesAutoSlide() {
@@ -246,9 +226,9 @@
                 document.getElementById('servicesSlider').style.transform = 'translateX(0)';
                 stopServicesAutoSlide();
             } else {
-                // Mobile: enable slider
+                // Mobile: enable slider but NO auto-slide
                 updateServicesSlider();
-                startServicesAutoSlide();
+                // Auto-slide removed for better UX
             }
         }
         
@@ -257,17 +237,15 @@
         window.addEventListener('load', () => {
             handleServicesResize();
             
-            // Pause auto-slide on hover (mobile)
+            // Touch events for mobile (no auto-slide interruption)
             const sliderContainer = document.querySelector('.services-slider-container');
             if (sliderContainer) {
-                sliderContainer.addEventListener('mouseenter', stopServicesAutoSlide);
-                sliderContainer.addEventListener('mouseleave', startServicesAutoSlide);
+                // Remove mouse hover events since auto-slide is disabled
                 
-                // Touch events for mobile
+                // Touch events for mobile swipe
                 let startX = null;
                 sliderContainer.addEventListener('touchstart', (e) => {
                     startX = e.touches[0].clientX;
-                    stopServicesAutoSlide();
                 });
                 
                 sliderContainer.addEventListener('touchend', (e) => {
@@ -275,7 +253,7 @@
                         const endX = e.changedTouches[0].clientX;
                         const diffX = startX - endX;
                         
-                        if (Math.abs(diffX) > 30) { // Lower threshold for easier swipe
+                        if (Math.abs(diffX) > 30) { // Threshold for swipe detection
                             if (diffX > 0) {
                                 moveServicesSlide(1); // Swipe left, go to next
                             } else {
@@ -284,14 +262,14 @@
                         }
                     }
                     startX = null;
-                    setTimeout(startServicesAutoSlide, 1000); // Resume auto-slide after delay
+                    // No auto-slide resume needed since it's disabled
                 });
             }
         });
         
         // Make functions global
         window.moveServicesSlide = moveServicesSlide;
-        window.currentServicesSlide = currentServicesSlide;
+        // currentServicesSlide function removed since dots are removed
     })();
     </script>
 

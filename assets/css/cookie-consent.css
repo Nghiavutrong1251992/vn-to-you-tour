@@ -43,11 +43,11 @@
 
 .cookie-btn {
     background: rgba(255, 255, 255, 0.9);
-    color: #333;
+    color: #0095d9; /* Logo Blue */
     border: none;
     padding: 10px 25px;
     border-radius: 30px;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
     white-space: nowrap;
@@ -61,16 +61,16 @@
 }
 
 .cookie-btn.decline {
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    color: #fff;
-    box-shadow: none;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
     margin-right: 10px;
+    font-weight: 600;
+    border: none;
 }
 
 .cookie-btn.decline:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: #fff;
+    background: #fff;
+    color: #000;
     transform: translateY(-2px);
 }
 

@@ -1,0 +1,225 @@
+/* ================================
+   HOME EFFECTS CSS - CINEMATIC WIPE
+   ================================ */
+
+/* Base slide styling */
+.slide {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Primary diagonal wipe effect */
+.slide::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    background: linear-gradient(45deg, 
+        rgba(0, 149, 217, 0.95) 0%,     /* Company primary blue */
+        rgba(30, 64, 175, 0.85) 25%,    /* Blue 800 */
+        rgba(37, 99, 235, 0.7) 40%,     /* Blue 600 */
+        rgba(59, 130, 246, 0.5) 55%,    /* Blue 500 */
+        rgba(96, 165, 250, 0.3) 70%,    /* Blue 400 */
+        rgba(147, 197, 253, 0.15) 85%,  /* Blue 300 */
+        transparent 100%
+    );
+    z-index: 1;
+    opacity: 0;
+    transform: translateX(-100%) translateY(-100%) rotate(45deg) scale(2);
+    transition: all 0.1s ease;
+}
+
+/* Secondary geometric overlay */
+.slide::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(135deg, transparent 45%, rgba(0, 149, 217, 0.4) 50%, transparent 55%),
+        linear-gradient(-45deg, transparent 45%, rgba(37, 99, 235, 0.3) 50%, transparent 55%);
+    z-index: 1;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.1s ease;
+}
+
+/* Active animations */
+.slide.active::before {
+    animation: cinematicWipe 2s ease-out 0.1s forwards;
+}
+
+.slide.active::after {
+    animation: geometricReveal 1.5s ease-out 0.8s forwards;
+}
+
+/* Cinematic wipe animation */
+@keyframes cinematicWipe {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%) rotate(45deg);
+    }
+    30% {
+        opacity: 0.9;
+        transform: translateX(-20%) rotate(45deg);
+    }
+    60% {
+        opacity: 0.8;
+        transform: translateX(20%) rotate(45deg);
+    }
+    100% {
+        opacity: 0.3;
+        transform: translateX(100%) rotate(45deg);
+    }
+}
+
+/* Geometric reveal animation */
+@keyframes geometricReveal {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    50% {
+        opacity: 0.6;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 0.3;
+        transform: scale(1.3);
+    }
+}
+
+/* Enhanced cinematic caption */
+.slide-caption {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    right: 2rem;
+    z-index: 2;
+    background: rgba(0, 149, 217, 0.75);
+    backdrop-filter: blur(20px);
+    padding: 1.5rem;
+    border-radius: 0px 15px 15px 0px;
+    border-left: 4px solid rgba(255, 255, 255, 0.8);
+    transform: translateX(-100%) skewX(-5deg);
+    opacity: 0;
+    transition: all 0.1s ease;
+    box-shadow: 
+        0 25px 50px rgba(0, 149, 217, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.slide.active .slide-caption {
+    animation: captionSlideIn 1s ease-out 1.2s forwards;
+}
+
+.slide-caption h2 {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.2;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    transform: translateX(-50px);
+    opacity: 0;
+    letter-spacing: -0.02em;
+}
+
+.slide.active .slide-caption h2 {
+    animation: titleReveal 0.8s ease-out 1.8s forwards;
+}
+
+.slide-caption p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin: 0;
+    transform: translateX(-30px);
+    opacity: 0;
+    font-weight: 400;
+}
+
+.slide.active .slide-caption p {
+    animation: subtitleReveal 0.6s ease-out 2.2s forwards;
+}
+
+/* Caption slide in animation */
+@keyframes captionSlideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Title reveal with cinematic effect */
+@keyframes titleReveal {
+    0% {
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Subtitle reveal */
+@keyframes subtitleReveal {
+    0% {
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 0.9;
+    }
+}
+
+/* Image cinematic effect */
+.slide img {
+    transition: transform 0.6s ease, filter 0.6s ease;
+    filter: contrast(1.1) saturate(1.05);
+}
+
+.slide.active img {
+    transform: scale(1.08);
+    filter: contrast(1.2) saturate(1.15) brightness(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .slide-caption {
+        bottom: 1rem;
+        left: 1rem;
+        right: 1rem;
+        padding: 1rem;
+        border-radius: 0px 10px 10px 0px;
+        border-left: 3px solid rgba(255, 255, 255, 0.8);
+    }
+    
+    .slide-caption h2 {
+        font-size: 1.1rem;
+    }
+    
+    .slide-caption p {
+        font-size: 0.8rem;
+        line-height: 1.6;
+    }
+}
+
+/* Add subtle film grain effect */
+.slide.active {
+    position: relative;
+}
+
+.slide.active:before {
+    animation: cinematicWipe 2.8s cubic-bezier(0.23, 1, 0.32, 1) 0.2s forwards;
+}

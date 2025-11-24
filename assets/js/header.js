@@ -110,3 +110,33 @@ document.addEventListener('DOMContentLoaded', function() {
 window.addEventListener('headerLoaded', function() {
     setTimeout(initializeHeaderBackground, 100);
 });
+
+// Cookie Consent Loader
+function loadCookieConsent() {
+    // Determine relative path to assets based on current location
+    let assetsPath = 'assets/';
+    const path = window.location.pathname;
+    
+    if (path.includes('/pages/car-rental/')) {
+        assetsPath = '../../assets/';
+    } else if (path.includes('/pages/')) {
+        assetsPath = '../assets/';
+    }
+
+    // Inject CSS
+    if (!document.querySelector('link[href*="cookie-consent.css"]')) {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = assetsPath + 'css/cookie-consent.css';
+        document.head.appendChild(link);
+    }
+
+    // Inject JS
+    if (!document.querySelector('script[src*="cookie-consent.js"]')) {
+        const script = document.createElement('script');
+        script.src = assetsPath + 'js/cookie-consent.js';
+        document.body.appendChild(script);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', loadCookieConsent);

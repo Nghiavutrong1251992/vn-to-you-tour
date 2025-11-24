@@ -42,6 +42,12 @@ document.addEventListener('DOMContentLoaded', function() {
     initMobileMenu();
 });
 
+// Listen for custom headerLoaded event (dispatched when header is dynamically loaded)
+window.addEventListener('headerLoaded', function() {
+    console.log('Header loaded event received, initializing mobile menu...');
+    initMobileMenu();
+});
+
 // Also try to initialize after a delay
 setTimeout(function() {
     console.log('Backup initialization...');

@@ -64,6 +64,14 @@ header {
 /* Mobile Menu Styles */
 .mobile-menu-toggle {
     display: none;
+    background: var(--brand-primary);
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    touch-action: manipulation; /* Prevent double-tap zoom and other gestures */
 }
 
 .mobile-overlay {
@@ -75,6 +83,7 @@ header {
     height: 100vh;
     background: rgba(0, 0, 0, 0.3);
     z-index: 1050;
+    touch-action: none; /* Disable all touch gestures on overlay */
 }
 
 .mobile-overlay.active {
@@ -93,6 +102,8 @@ header {
     transition: right 0.3s ease;
     padding: 1rem;
     overflow-y: auto;
+    overflow-x: hidden; /* Prevent any horizontal scroll within menu */
+    touch-action: pan-y; /* Only allow vertical scrolling */
 }
 
 .mobile-nav-menu.active {

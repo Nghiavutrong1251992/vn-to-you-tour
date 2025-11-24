@@ -75,9 +75,21 @@ function initMobileMenu() {
         return;
     }
     
-    // Overlay click
+    // Toggle button click only - simple and clean
+    if (toggle) {
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Mobile menu toggle clicked');
+            toggleMobileMenu();
+        });
+    }
+    
+    // Overlay click to close
     if (overlay) {
         overlay.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
             console.log('Overlay clicked');
             closeMobileMenu();
         });
@@ -87,6 +99,7 @@ function initMobileMenu() {
     if (closeBtn) {
         closeBtn.addEventListener('click', function(e) {
             e.preventDefault();
+            e.stopPropagation();
             console.log('Close button clicked');
             closeMobileMenu();
         });
@@ -94,11 +107,22 @@ function initMobileMenu() {
     
     // Nav links click
     navLinks.forEach(function(link) {
-        link.addEventListener('click', function() {
+        link.addEventListener('click', function(e) {
             console.log('Nav link clicked');
             closeMobileMenu();
         });
     });
+    
+    // Prevent any touch events on the toggle button from causing issues
+    if (toggle) {
+        toggle.addEventListener('touchstart', function(e) {
+            e.stopPropagation();
+        });
+        
+        toggle.addEventListener('touchend', function(e) {
+            e.stopPropagation();
+        });
+    }
     
     console.log('Mobile menu initialized successfully');
 }

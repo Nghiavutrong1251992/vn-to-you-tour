@@ -227,118 +227,12 @@
 }
 
 /* ================================
-   SERVICES MOBILE SLIDER
+   SERVICES CONTAINER
    ================================ */
 
 .services-slider-container {
     position: relative;
     width: 100%;
-}
-
-.services-slider-nav,
-.services-slider-dots {
-    display: none;
-}
-
-/* Mobile styles */
-@media (max-width: 768px) {
-    .services-slider-container {
-        overflow: hidden;
-        position: relative;
-    }
-    
-    .services-grid {
-        display: flex !important;
-        gap: 10px;
-        width: max-content;
-        transition: transform 0.3s ease-in-out;
-        padding: 0 15px;
-    }
-    
-    .services-grid .service-item {
-        min-width: calc((100vw - 60px) / 2.5);
-        max-width: 150px;
-        flex-shrink: 0;
-    }
-    
-    .services-grid .service-item .service-content {
-        padding: 12px;
-    }
-    
-    .services-grid .service-item .service-content h3 {
-        font-size: 14px;
-        margin-bottom: 8px;
-    }
-    
-    .services-grid .service-item .service-content p {
-        font-size: 12px;
-        line-height: 1.3;
-        margin-bottom: 10px;
-    }
-    
-    .services-grid .service-item .service-btn {
-        padding: 6px 10px;
-        font-size: 11px;
-    }
-    
-    .services-slider-nav {
-        display: flex;
-        justify-content: space-between;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        right: 0;
-        transform: translateY(-50%);
-        padding: 0 10px;
-        pointer-events: none;
-    }
-    
-    .slider-btn {
-        background: rgba(0, 149, 217, 0.8);
-        border: none;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        color: white;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.3s ease;
-        pointer-events: all;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    }
-    
-    .slider-btn:hover {
-        background: rgba(0, 149, 217, 1);
-        transform: scale(1.1);
-    }
-    
-    .slider-btn:active {
-        transform: scale(0.95);
-    }
-    
-    .services-slider-dots {
-        display: flex;
-        justify-content: center;
-        gap: 8px;
-        margin-top: 20px;
-    }
-    
-    .slider-dot {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background: rgba(0, 149, 217, 0.3);
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-    
-    .slider-dot.active,
-    .slider-dot:hover {
-        background: rgba(0, 149, 217, 0.8);
-        transform: scale(1.2);
-    }
 }
 
 /* ================================

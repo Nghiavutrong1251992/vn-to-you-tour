@@ -2,6 +2,136 @@
 // Articles are automatically sorted by date in sidebar.js
 const articlesData = [
     {
+        id: 'vietjet-sgn-manila-route-2025',
+        slug: 'vietjet-sgn-manila-route-2025',
+        title: 'Great News for Travelers: Vietjet Increases Ho Chi Minh City ↔ Manila Flight Frequency',
+        date: 'December 19, 2025',
+        author: 'VN to You Tour Team',
+        category: 'General News',
+        excerpt: 'Vietjet has just announced an increase in flight frequency on the Ho Chi Minh City ↔ Manila route, starting December 19, 2025. With daily flights, traveling between Vietnam and the Philippines becomes more convenient than ever.',
+        image: 'https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?w=800&h=400&fit=crop',
+        content: [
+            {
+                type: 'image',
+                src: 'https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?w=1200&h=600&fit=crop',
+                alt: 'Vietjet Airplane Flying in the Sky'
+            },
+            {
+                type: 'paragraph',
+                text: '✈️ Great news for travelers! Vietjet has just announced an increase in flight frequency on the Ho Chi Minh City ↔ Manila route, starting December 19, 2025. 🌟'
+            },
+            {
+                type: 'paragraph',
+                text: 'This expansion demonstrates Vietjet\'s commitment to strengthening connectivity between Vietnam and the Philippines, making it easier than ever for business travelers and tourists to explore both vibrant destinations.'
+            },
+            {
+                type: 'heading',
+                text: 'Flight Schedule Details'
+            },
+            {
+                type: 'image',
+                src: 'https://images.unsplash.com/photo-1556388158-158ea5ccacbd?w=1200&h=600&fit=crop',
+                alt: 'Modern Airport Terminal - Ho Chi Minh City to Manila Route'
+            },
+            {
+                type: 'paragraph',
+                text: '🛫 **HCM City → Manila**: Depart at 23:05 from Tan Son Nhat Airport (SGN), arrive at Manila\'s Ninoy Aquino Airport (MNL) at 02:50+1 (local time).'
+            },
+            {
+                type: 'paragraph',
+                text: '🛬 **Manila → HCM City**: Depart at 03:45 from Ninoy Aquino (MNL), arrive back at SGN at 05:30.'
+            },
+            {
+                type: 'paragraph',
+                text: 'The convenient night flight from Ho Chi Minh City allows you to maximize your daytime in both cities, arriving refreshed and ready to explore Manila in the early morning.'
+            },
+            {
+                type: 'heading',
+                text: 'More Convenient Than Ever'
+            },
+            {
+                type: 'image',
+                src: 'https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=1200&h=600&fit=crop',
+                alt: 'Beautiful Manila Cityscape and Landmarks'
+            },
+            {
+                type: 'paragraph',
+                text: 'With daily flights, traveling between Vietnam and the Philippines becomes more convenient than ever. If you\'ve been dreaming of a city escape, beach holiday, or cultural trip — now\'s the perfect time!'
+            },
+            {
+                type: 'paragraph',
+                text: 'Manila offers a perfect blend of modern urban excitement and rich Filipino culture. From historic Intramuros to the vibrant nightlife of Makati, stunning sunsets at Manila Bay, and world-class shopping destinations, there\'s something for every traveler.'
+            },
+            {
+                type: 'heading',
+                text: 'Why Choose This Route?'
+            },
+            {
+                type: 'paragraph',
+                text: '✅ **Daily Departures**: Flexibility to plan your trip on any day of the week'
+            },
+            {
+                type: 'paragraph',
+                text: '✅ **Competitive Fares**: Affordable ticket prices from a trusted low-cost carrier'
+            },
+            {
+                type: 'paragraph',
+                text: '✅ **Short Flight Time**: Just under 3 hours of flight time'
+            },
+            {
+                type: 'paragraph',
+                text: '✅ **Strategic Timing**: Overnight flight maximizes your travel time'
+            },
+            {
+                type: 'heading',
+                text: 'Plan Your Trip Today'
+            },
+            {
+                type: 'image',
+                src: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200&h=600&fit=crop',
+                alt: 'Tan Son Nhat International Airport'
+            },
+            {
+                type: 'paragraph',
+                text: 'Whether you\'re exploring the vibrant streets of Manila, discovering pristine beaches in nearby provinces, or using Manila as a gateway to explore the beautiful Philippine islands, VN To You Tour is here to help you create unforgettable memories.'
+            },
+            {
+                type: 'paragraph',
+                text: 'We can help you plan comprehensive tours that combine the best of Vietnam and the Philippines, arrange airport transfers, book accommodations, and create customized itineraries that suit your interests and budget.'
+            },
+            {
+                type: 'heading',
+                text: 'Contact Us for More Information'
+            },
+            {
+                type: 'paragraph',
+                text: '📞 **Need more info about Vietnam tours or multi-destination packages? Contact us today:**'
+            },
+            {
+                type: 'list',
+                items: [
+                    'Line: vntoyou / vntoyou1',
+                    'WhatsApp: +84904596505',
+                    'Email: vntoyou@hotmail.com',
+                    'Website: www.vntoyou.net // www.vntoyoutour.com',
+                    'Direct Line Contact: https://line.me/ti/p/gKtTT93G2S'
+                ]
+            },
+            {
+                type: 'paragraph',
+                text: 'Our experienced travel consultants are ready to assist you with flight bookings, tour packages, and personalized travel advice to ensure you have the best possible experience on your Southeast Asian adventure!'
+            },
+            {
+                type: 'paragraph',
+                text: '#Vietjet #SGNtoMNL #ManilaFlights #VietnamPhilippines #TravelVietnam #VnToYouTour #DailyFlights #ExploreAsia #SoutheastAsia #TravelDeals'
+            }
+        ],
+        tags: ['Vietjet', 'Manila', 'Flight Routes', 'Travel News', 'Philippines', 'Vietnam', 'Daily Flights', 'Southeast Asia'],
+        readTime: '4 min read',
+        featured: true,
+        isCompanyNews: false
+    },
+    {
         id: 'halal-tourism-dialogue-hanoi-2025',
         slug: 'halal-tourism-dialogue-hanoi-2025',
         title: 'Vn To You Engages in Halal Tourism Dialogue in Hanoi',
@@ -77,8 +207,13 @@ const articlesData = [
         author: 'VN to You Tour Team',
         category: 'General News',
         excerpt: 'At VN To You Tour, we understand that choosing the right accommodation can make or break your Vietnam travel experience. Learn about our hotel selection criteria and curated accommodation partners.',
-        image: 'https://vn-to-you-tour.vercel.app/assets/images/tours/vnc404.jpg',
+        image: 'https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=800&h=400&fit=crop',
         content: [
+            {
+                type: 'image',
+                src: 'https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=1200&h=600&fit=crop',
+                alt: 'Luxury Hotel Room in Vietnam'
+            },
             {
                 type: 'paragraph',
                 text: 'At VN To You Tour, we understand that choosing the right accommodation can make or break your Vietnam travel experience. That\'s why we\'ve carefully curated a selection of hotels that balance comfort, location, and value to ensure your stay exceeds expectations.'
@@ -134,6 +269,11 @@ const articlesData = [
             {
                 type: 'heading',
                 text: 'Our Hotel Selection Criteria'
+            },
+            {
+                type: 'image',
+                src: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1200&h=600&fit=crop',
+                alt: 'Premium Hotel Room with Modern Amenities'
             },
             {
                 type: 'paragraph',
@@ -309,32 +449,52 @@ const articlesData = [
         author: 'VN to You Tour Team',
         category: 'Destination Guides',
         excerpt: 'Northern Vietnam offers a tapestry of natural wonders and cultural heritage that captivates every traveler. From the ethereal beauty of Ha Long Bay to the terraced fields of Sapa, this region is a paradise for adventurers and culture enthusiasts alike.',
-        image: 'https://vn-to-you-tour.vercel.app/assets/images/optimized/articles/article-northern-vietnam%201.jpg',
+        image: 'https://images.unsplash.com/photo-1528127269322-539801943592?w=800&h=400&fit=crop',
         content: [
+            {
+                type: 'image',
+                src: 'https://images.unsplash.com/photo-1528127269322-539801943592?w=1200&h=600&fit=crop',
+                alt: 'Ha Long Bay - Northern Vietnam Landscape'
+            },
             {
                 type: 'paragraph',
                 text: 'Northern Vietnam offers a tapestry of natural wonders and cultural heritage that captivates every traveler. From the ethereal beauty of Ha Long Bay to the terraced fields of Sapa, this region is a paradise for adventurers and culture enthusiasts alike.'
             },
             {
-                type: 'image',
-                src: 'https://vn-to-you-tour.vercel.app/assets/images/optimized/articles/article-northern-vietnam%201.jpg',
-                alt: 'Northern Vietnam Landscape'
+                type: 'heading',
+                text: 'Ha Long Bay - UNESCO World Heritage Site'
             },
             {
-                type: 'paragraph', 
+                type: 'paragraph',
                 text: 'Ha Long Bay, a UNESCO World Heritage Site, features thousands of limestone karsts rising from the emerald waters. A cruise through these islands reveals hidden lagoons and floating villages, where fishermen have lived for generations. For those seeking tranquility, a visit to Bai Tu Long Bay provides a less crowded alternative with equally stunning scenery.'
+            },
+            {
+                type: 'heading',
+                text: 'Sapa - The Terraced Paradise'
             },
             {
                 type: 'paragraph',
                 text: 'Venture inland to Sapa, where the Muong Hoa Valley showcases the ingenuity of ethnic minorities. The Hmong and Dao people maintain ancient traditions, from indigo-dyeing techniques to intricate silver jewelry. Trekking through rice terraces at sunrise offers breathtaking views and a chance to connect with local communities.'
             },
             {
+                type: 'heading',
+                text: 'Hanoi - The Vibrant Capital'
+            },
+            {
                 type: 'paragraph',
                 text: 'Hanoi, the vibrant capital, blends French colonial architecture with traditional temples. The Old Quarter\'s narrow streets buzz with life, while Ho Chi Minh Mausoleum stands as a solemn reminder of Vietnam\'s history.'
             },
             {
+                type: 'heading',
+                text: 'Culinary Delights of the North'
+            },
+            {
                 type: 'paragraph',
                 text: 'Northern Vietnam\'s cuisine is equally diverse. Pho, the national dish, originated here, and specialties like bun cha and cha ca showcase fresh ingredients and bold flavors. Don\'t miss trying local wines made from mountain fruits.'
+            },
+            {
+                type: 'heading',
+                text: 'Sustainable Tourism'
             },
             {
                 type: 'paragraph',
@@ -356,16 +516,38 @@ const articlesData = [
         image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=400&fit=crop',
         content: [
             {
+                type: 'image',
+                src: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=600&fit=crop',
+                alt: 'Mekong Delta River Life and Boats'
+            },
+            {
                 type: 'paragraph',
                 text: 'The Mekong Delta, known as Vietnam\'s "rice bowl," is a vast network of rivers, swamps, and islands that forms the agricultural heartland of the country. This fascinating region offers visitors a glimpse into a way of life that has remained largely unchanged for centuries.'
+            },
+            {
+                type: 'heading',
+                text: 'Floating Markets - A Unique Experience'
+            },
+            {
+                type: 'image',
+                src: 'https://images.unsplash.com/photo-1559628376-f3fe5f782a2e?w=1200&h=600&fit=crop',
+                alt: 'Cai Rang Floating Market - Mekong Delta'
             },
             {
                 type: 'paragraph',
                 text: 'Wake up early to visit the famous floating markets of Cai Rang and Phong Dien, where vendors sell fresh fruits, vegetables, and local delicacies from their boats. The colorful spectacle of hundreds of boats gathered on the water creates an unforgettable scene.'
             },
             {
+                type: 'heading',
+                text: 'Traditional Villages & Local Crafts'
+            },
+            {
                 type: 'paragraph',
                 text: 'Explore traditional villages where families have been making rice paper, coconut candy, and other local products for generations. Learn about the intricate process of rice cultivation and witness the ingenuity of delta farmers who have adapted their lives to the rhythms of the river.'
+            },
+            {
+                type: 'heading',
+                text: 'Culinary Paradise'
             },
             {
                 type: 'paragraph',
@@ -523,7 +705,7 @@ const articlesData = [
                 type: 'list',
                 items: [
                     'Denmark - Maximum 45 days',
-                    'Finland - Maximum 45 days', 
+                    'Finland - Maximum 45 days',
                     'France - Maximum 45 days',
                     'Germany - Maximum 45 days',
                     'Italy - Maximum 45 days',
@@ -534,7 +716,7 @@ const articlesData = [
                 ]
             },
             {
-                type: 'heading', 
+                type: 'heading',
                 text: 'Asia-Pacific Region'
             },
             {
@@ -579,7 +761,7 @@ const articlesData = [
                 type: 'list',
                 items: [
                     'Switzerland',
-                    'Belgium', 
+                    'Belgium',
                     'Bulgaria',
                     'Croatia',
                     'Czech Republic',

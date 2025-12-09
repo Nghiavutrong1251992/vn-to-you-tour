@@ -4,17 +4,61 @@
 function findArticleById(articleId) {
     // Search in articles data
     let article = null;
-    
+
     if (typeof articlesData !== 'undefined') {
         article = articlesData.find(a => a.id === articleId || a.slug === articleId);
     }
-    
+
     return article;
+}
+
+// Helper function to convert URLs to clickable links and style hashtags
+function processTextContent(text) {
+    if (!text) return '';
+
+    // First, handle **bold** markdown
+    text = text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+
+    // Use placeholders to avoid conflicts between regex replacements
+    const placeholders = [];
+    let index = 0;
+
+    // Process URLs (http/https)
+    text = text.replace(/(https?:\/\/[^\s<>"]+)/g, (match) => {
+        const placeholder = `___URL_PLACEHOLDER_${index}___`;
+        placeholders.push({
+            placeholder: placeholder,
+            replacement: `<a href="${match}" target="_blank" rel="noopener noreferrer" style="color: #0095d9; text-decoration: underline;">${match}</a>`
+        });
+        index++;
+        return placeholder;
+    });
+
+    // Process email addresses
+    text = text.replace(/\b([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})\b/g, (match) => {
+        const placeholder = `___EMAIL_PLACEHOLDER_${index}___`;
+        placeholders.push({
+            placeholder: placeholder,
+            replacement: `<a href="mailto:${match}" style="color: #0095d9; text-decoration: underline;">${match}</a>`
+        });
+        index++;
+        return placeholder;
+    });
+
+    // Style hashtags
+    text = text.replace(/#(\w+)/g, '<span style="color: #0095d9; font-weight: 500;">#$1</span>');
+
+    // Replace all placeholders back with their actual HTML
+    placeholders.forEach(item => {
+        text = text.replace(item.placeholder, item.replacement);
+    });
+
+    return text;
 }
 
 function generateArticleHTML(article) {
     if (!article) return '<p>Article not found.</p>';
-    
+
     let html = `
         <article>
             <h1 class="article-title">${article.title}</h1>
@@ -24,13 +68,13 @@ function generateArticleHTML(article) {
             
             <div class="article-content">
     `;
-    
+
     // Render content blocks
     if (article.content && article.content.length > 0) {
         article.content.forEach(block => {
             switch (block.type) {
                 case 'paragraph':
-                    html += `<p>${block.text}</p>`;
+                    html += `<p>${processTextContent(block.text)}</p>`;
                     break;
                 case 'image':
                     // Adjust path for template folder
@@ -46,7 +90,7 @@ function generateArticleHTML(article) {
                 case 'list':
                     html += '<ul>';
                     block.items.forEach(item => {
-                        html += `<li>${item}</li>`;
+                        html += `<li>${processTextContent(item)}</li>`;
                     });
                     html += '</ul>';
                     break;
@@ -58,7 +102,7 @@ function generateArticleHTML(article) {
         // Fallback to excerpt if no detailed content
         html += `<p>${article.excerpt}</p>`;
     }
-    
+
     html += `
             </div>
             
@@ -67,7 +111,7 @@ function generateArticleHTML(article) {
             </div>
         </article>
     `;
-    
+
     return html;
 }
 
@@ -75,33 +119,33 @@ function renderArticlePage() {
     // Get article ID from URL parameters
     const urlParams = new URLSearchParams(window.location.search);
     const articleId = urlParams.get('id');
-    
+
     if (!articleId) {
         // Try to get article ID from path (fallback for existing URLs)
         const path = window.location.pathname;
         const pathParts = path.split('/');
         const folderName = pathParts[pathParts.length - 2]; // Get folder name
-        
+
         if (folderName && folderName !== 'articles') {
             renderArticleById(folderName);
             return;
         }
-        
+
         document.getElementById('article-content').innerHTML = '<p>Article not found.</p>';
         return;
     }
-    
+
     renderArticleById(articleId);
 }
 
 function renderArticleById(articleId) {
     const article = findArticleById(articleId);
     const html = generateArticleHTML(article);
-    
+
     const container = document.getElementById('article-content');
     if (container) {
         container.innerHTML = html;
-        
+
         // Update page title
         if (article) {
             document.title = `${article.title} - VN to You Tour`;
@@ -110,7 +154,7 @@ function renderArticleById(articleId) {
 }
 
 // Auto render when DOM is ready
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Only render if we have article-content container
     if (document.getElementById('article-content')) {
         renderArticlePage();

@@ -3,7 +3,7 @@
 
 <!-- Homepage -->
 <url>
-    <loc>https://vn-to-you-tour.vercel.app/</loc>
+    <loc>https://vntoyoutour.com/</loc>
     <lastmod>2025-12-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -11,35 +11,35 @@
 
 <!-- Main Service Pages -->
 <url>
-    <loc>https://vn-to-you-tour.vercel.app/pages/tours-to-vietnam.html</loc>
+    <loc>https://vntoyoutour.com/pages/tours-to-vietnam.html</loc>
     <lastmod>2025-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
 </url>
 
 <url>
-    <loc>https://vn-to-you-tour.vercel.app/pages/private-tours.html</loc>
+    <loc>https://vntoyoutour.com/pages/private-tours.html</loc>
     <lastmod>2025-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
 </url>
 
 <url>
-    <loc>https://vn-to-you-tour.vercel.app/pages/daily-tours.html</loc>
+    <loc>https://vntoyoutour.com/pages/daily-tours.html</loc>
     <lastmod>2025-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
 </url>
 
 <url>
-    <loc>https://vn-to-you-tour.vercel.app/pages/golf-tour.html</loc>
+    <loc>https://vntoyoutour.com/pages/golf-tour.html</loc>
     <lastmod>2025-12-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
 </url>
 
 <url>
-    <loc>https://vn-to-you-tour.vercel.app/pages/mice.html</loc>
+    <loc>https://vntoyoutour.com/pages/mice.html</loc>
     <lastmod>2025-12-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -47,42 +47,42 @@
 
 <!-- Car Rental Pages -->
 <url>
-    <loc>https://vn-to-you-tour.vercel.app/pages/car-rental/index.html</loc>
+    <loc>https://vntoyoutour.com/pages/car-rental/index.html</loc>
     <lastmod>2025-12-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
 </url>
 
 <url>
-    <loc>https://vn-to-you-tour.vercel.app/pages/car-rental/7-seat.html</loc>
+    <loc>https://vntoyoutour.com/pages/car-rental/7-seat.html</loc>
     <lastmod>2025-12-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
-    <loc>https://vn-to-you-tour.vercel.app/pages/car-rental/16-seat.html</loc>
+    <loc>https://vntoyoutour.com/pages/car-rental/16-seat.html</loc>
     <lastmod>2025-12-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
-    <loc>https://vn-to-you-tour.vercel.app/pages/car-rental/35-seat.html</loc>
+    <loc>https://vntoyoutour.com/pages/car-rental/35-seat.html</loc>
     <lastmod>2025-12-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
-    <loc>https://vn-to-you-tour.vercel.app/pages/car-rental/45-seat.html</loc>
+    <loc>https://vntoyoutour.com/pages/car-rental/45-seat.html</loc>
     <lastmod>2025-12-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
-    <loc>https://vn-to-you-tour.vercel.app/pages/car-rental/pricing.html</loc>
+    <loc>https://vntoyoutour.com/pages/car-rental/pricing.html</loc>
     <lastmod>2025-12-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -90,21 +90,21 @@
 
 <!-- News Pages -->
 <url>
-    <loc>https://vn-to-you-tour.vercel.app/pages/news.html</loc>
+    <loc>https://vntoyoutour.com/pages/news.html</loc>
     <lastmod>2025-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
 </url>
 
 <url>
-    <loc>https://vn-to-you-tour.vercel.app/pages/company-news.html</loc>
+    <loc>https://vntoyoutour.com/pages/company-news.html</loc>
     <lastmod>2025-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
 </url>
 
 <url>
-    <loc>https://vn-to-you-tour.vercel.app/pages/general-news.html</loc>
+    <loc>https://vntoyoutour.com/pages/general-news.html</loc>
     <lastmod>2025-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -112,14 +112,14 @@
 
 <!-- Company Pages -->
 <url>
-    <loc>https://vn-to-you-tour.vercel.app/pages/about-us.html</loc>
+    <loc>https://vntoyoutour.com/pages/about-us.html</loc>
     <lastmod>2025-12-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
-    <loc>https://vn-to-you-tour.vercel.app/pages/booking-conditions.html</loc>
+    <loc>https://vntoyoutour.com/pages/booking-conditions.html</loc>
     <lastmod>2025-12-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
@@ -127,21 +127,21 @@
 
 <!-- Dynamic Tour Detail Pages (examples) -->
 <url>
-    <loc>https://vn-to-you-tour.vercel.app/pages/private-tour-detail.html?id=vnc401</loc>
+    <loc>https://vntoyoutour.com/pages/private-tour-detail.html?id=vnc401</loc>
     <lastmod>2025-12-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
 </url>
 
 <url>
-    <loc>https://vn-to-you-tour.vercel.app/pages/private-tour-detail.html?id=vnn301</loc>
+    <loc>https://vntoyoutour.com/pages/private-tour-detail.html?id=vnn301</loc>
     <lastmod>2025-12-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
 </url>
 
 <url>
-    <loc>https://vn-to-you-tour.vercel.app/pages/private-tour-detail.html?id=vnn302</loc>
+    <loc>https://vntoyoutour.com/pages/private-tour-detail.html?id=vnn302</loc>
     <lastmod>2025-12-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -149,7 +149,7 @@
 
 <!-- Templates (for dynamic content) -->
 <url>
-    <loc>https://vn-to-you-tour.vercel.app/templates/article-template.html</loc>
+    <loc>https://vntoyoutour.com/templates/article-template.html</loc>
     <lastmod>2025-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>

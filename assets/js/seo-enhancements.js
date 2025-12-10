@@ -47,7 +47,7 @@
                 "provider": {
                     "@type": "TravelAgency",
                     "name": "VN to You Tour",
-                    "url": "https://vn-to-you-tour.vercel.app"
+                    "url": "https://vntoyoutour.com"
                 },
                 "touristType": tourData.groupSize || "Private Group",
                 "itinerary": {
@@ -177,7 +177,7 @@
         if (path.includes('/pages/')) {
             const pageName = path.split('/').pop().replace('.html', '').replace('-', ' ');
             const breadcrumbs = [
-                { name: 'Home', url: 'https://vn-to-you-tour.vercel.app/' },
+                { name: 'Home', url: 'https://vntoyoutour.com/' },
                 { name: pageName.charAt(0).toUpperCase() + pageName.slice(1), url: window.location.href }
             ];
             VNToYouSEO.addBreadcrumbStructuredData(breadcrumbs);

@@ -14,7 +14,6 @@ Disallow: /.git/
 Disallow: /node_modules/
 
 # Sitemap location
-Sitemap: https://vn-to-you-tour.vercel.app/sitemap.xml
 Sitemap: https://vntoyoutour.com/sitemap.xml
 
 # Crawl-delay (optional, for respectful crawling)

@@ -132,6 +132,239 @@ const articlesData = [
         isCompanyNews: false
     },
     {
+        id: 'northern-vietnam-golf-courses-2025',
+        slug: 'northern-vietnam-golf-courses-2025',
+        title: 'Top Tier Golf Courses and Major Brands in Northern Vietnam',
+        date: 'December 10, 2025',
+        author: 'VN to You Tour Team',
+        category: 'General News',
+        excerpt: 'Northern Vietnam has rapidly become a premier destination for golf enthusiasts, featuring world-class golf resorts with international-standard designs, stunning natural scenery, and professional service quality.',
+        image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&h=400&fit=crop',
+        content: [
+            {
+                type: 'image',
+                src: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=1200&h=600&fit=crop',
+                alt: 'Beautiful Golf Course in Northern Vietnam'
+            },
+            {
+                type: 'paragraph',
+                text: 'Northern Vietnam, with its diverse landscape of mountains, valleys, and coastal areas, has rapidly become a premier destination for golf enthusiasts. The region is home to world-class golf resorts that not only offer challenging and beautifully designed courses but also integrate seamlessly with stunning natural scenery.'
+            },
+            {
+                type: 'paragraph',
+                text: 'If you are planning a golf tour, this list highlights the most reputable, largest, and highly-rated golf courses in Northern Vietnam, renowned for their international-standard design, expansive scale, and professional service quality.'
+            },
+            {
+                type: 'heading',
+                text: 'Prominent Golf Courses and Resorts'
+            },
+            {
+                type: 'paragraph',
+                text: '**1. BRG King\'s Island Golf Resort (Dong Mo Course)**'
+            },
+            {
+                type: 'paragraph',
+                text: '**Location:** Son Tay, Hanoi'
+            },
+            {
+                type: 'paragraph',
+                text: '**Holes:** 36 holes (Divided into Lakeside and Mountainview/Kings Course)'
+            },
+            {
+                type: 'paragraph',
+                text: '**Key Highlight:** One of Vietnam\'s largest golf resorts, uniquely situated on Dong Mo Lake. Features a majestic landscape, with designs contributed by Robert McFarland and Robert Trent Jones II.'
+            },
+            {
+                type: 'paragraph',
+                text: '**2. Van Tri Golf Club**'
+            },
+            {
+                type: 'paragraph',
+                text: '**Location:** Dong Anh, Hanoi'
+            },
+            {
+                type: 'paragraph',
+                text: '**Holes:** 18 holes'
+            },
+            {
+                type: 'paragraph',
+                text: '**Key Highlight:** The first private, members-only golf club in Northern Vietnam. It is highly regarded for its immaculate turf quality, premium services, and exclusive atmosphere, designed by Peter Rooney.'
+            },
+            {
+                type: 'paragraph',
+                text: '**3. BRG Legend Hill Golf Resort (Soc Son Course)**'
+            },
+            {
+                type: 'paragraph',
+                text: '**Location:** Soc Son, Hanoi'
+            },
+            {
+                type: 'paragraph',
+                text: '**Holes:** 18 holes'
+            },
+            {
+                type: 'paragraph',
+                text: '**Key Highlight:** Designed by Nicklaus Design, this course is famous for its unique "twin-greens" concept (two greens per hole), offering diverse play options. It is set against beautiful hillside scenery.'
+            },
+            {
+                type: 'paragraph',
+                text: '**4. Long Bien Golf Club**'
+            },
+            {
+                type: 'paragraph',
+                text: '**Location:** Long Bien, Hanoi'
+            },
+            {
+                type: 'paragraph',
+                text: '**Holes:** 27 holes'
+            },
+            {
+                type: 'paragraph',
+                text: '**Key Highlight:** A conveniently located 27-hole international standard course near Hanoi\'s city center. It features a complete floodlight system for night play and was designed by Nelson & Haworth.'
+            },
+            {
+                type: 'paragraph',
+                text: '**5. Chi Linh Star Golf & Country Club**'
+            },
+            {
+                type: 'paragraph',
+                text: '**Location:** Chi Linh, Hai Duong'
+            },
+            {
+                type: 'paragraph',
+                text: '**Holes:** 36 holes'
+            },
+            {
+                type: 'paragraph',
+                text: '**Key Highlight:** Often called "Vietnam\'s most challenging golf course," it is nestled in a stunning valley surrounded by lakes and rolling hills. The club regularly hosts major professional tournaments.'
+            },
+            {
+                type: 'paragraph',
+                text: '**6. FLC Ha Long Bay Golf Club & Resort**'
+            },
+            {
+                type: 'paragraph',
+                text: '**Location:** Ha Long, Quang Ninh'
+            },
+            {
+                type: 'paragraph',
+                text: '**Holes:** 18 holes'
+            },
+            {
+                type: 'paragraph',
+                text: '**Key Highlight:** Offers a "million-dollar view," as it is perched atop a hill overlooking the entirety of Ha Long Bay—a UNESCO World Natural Heritage site.'
+            },
+            {
+                type: 'paragraph',
+                text: '**7. Royal Golf Club**'
+            },
+            {
+                type: 'paragraph',
+                text: '**Location:** Tam Diep, Ninh Binh'
+            },
+            {
+                type: 'paragraph',
+                text: '**Holes:** 54 holes (Consisting of the King, Queen, and Prince courses)'
+            },
+            {
+                type: 'paragraph',
+                text: '**Key Highlight:** One of the largest golf resorts in Vietnam (670 hectares). It boasts a dramatic natural setting with limestone mountains and Yen Thang Lake.'
+            },
+            {
+                type: 'paragraph',
+                text: '**8. Sky Lake Golf Club & Resort**'
+            },
+            {
+                type: 'paragraph',
+                text: '**Location:** Chuong My, Hanoi'
+            },
+            {
+                type: 'paragraph',
+                text: '**Holes:** 36 holes (Divided into the Sky and Lake courses)'
+            },
+            {
+                type: 'paragraph',
+                text: '**Key Highlight:** Designed by Robert J. Hudson. The Sky Course is particularly known for its challenging layout across rugged, mountainous terrain.'
+            },
+            {
+                type: 'paragraph',
+                text: '**9. Phoenix Golf Resort**'
+            },
+            {
+                type: 'paragraph',
+                text: '**Location:** Luong Son, Hoa Binh'
+            },
+            {
+                type: 'paragraph',
+                text: '**Holes:** 54 holes (The Phoenix, Dragon, and Champion courses)'
+            },
+            {
+                type: 'paragraph',
+                text: '**Key Highlight:** Massive in scale and sometimes called "Ha Long Bay on Land" due to its dramatic and unique karst topography, designed by Golfplan.'
+            },
+            {
+                type: 'paragraph',
+                text: '**10. Trang An Golf & Country Club**'
+            },
+            {
+                type: 'paragraph',
+                text: '**Location:** Nho Quan, Ninh Binh'
+            },
+            {
+                type: 'paragraph',
+                text: '**Holes:** 36 holes'
+            },
+            {
+                type: 'paragraph',
+                text: '**Key Highlight:** Located near the famous Trang An ecological tourism complex. The course design harmonizes seamlessly with the surrounding beautiful limestone mountain landscape.'
+            },
+            {
+                type: 'heading',
+                text: 'Other Notable Courses in the Region'
+            },
+            {
+                type: 'list',
+                items: [
+                    'Dai Lai Star Golf & Country Club (Vinh Phuc) - Features an impressive landscape adjacent to Dai Lai Lake.',
+                    'Tam Dao Golf & Resort (Vinh Phuc) - Set amidst the cool, natural scenery of the Tam Dao mountain range.',
+                    'Vinpearl Golf Hai Phong (Hai Phong) - A high-end, 36-hole course located right in the dynamic Port City.',
+                    'Thanh Lanh Valley Golf & Resort (Vinh Phuc) - A newer destination that has quickly gained praise for its scenic beauty and course quality.'
+                ]
+            },
+            {
+                type: 'heading',
+                text: 'Plan Your Golf Tour with VN to You Tour'
+            },
+            {
+                type: 'paragraph',
+                text: 'Whether you\'re a seasoned golfer or just beginning your golf journey, Northern Vietnam offers exceptional courses that combine challenging play with breathtaking natural beauty. At VN to You Tour, we specialize in creating customized golf tour packages that include:'
+            },
+            {
+                type: 'list',
+                items: [
+                    'Tee time bookings at premium golf courses',
+                    'Private transportation to and from golf courses',
+                    'Accommodation at nearby luxury hotels and resorts',
+                    'Dining recommendations and reservations',
+                    'Sightseeing tours of local attractions',
+                    'Multi-course golf packages with special rates'
+                ]
+            },
+            {
+                type: 'paragraph',
+                text: 'Contact us today to design your perfect Northern Vietnam golf adventure!'
+            },
+            {
+                type: 'paragraph',
+                text: '#GolfVietnam #NorthernVietnamGolf #GolfTourism #VietnamGolfCourses #VnToYouTour #LuxuryGolf #GolfTravel #HanoiGolf #HaLongGolf #GolfResorts'
+            }
+        ],
+        tags: ['Golf', 'Golf Tourism', 'Northern Vietnam', 'Luxury Travel', 'Golf Courses', 'Sports Tourism', 'Hanoi', 'Ha Long Bay'],
+        readTime: '7 min read',
+        featured: true,
+        isCompanyNews: false
+    },
+    {
         id: 'halal-tourism-dialogue-hanoi-2025',
         slug: 'halal-tourism-dialogue-hanoi-2025',
         title: 'Vn To You Engages in Halal Tourism Dialogue in Hanoi',

@@ -12,6 +12,39 @@ const travelGuidesData = [
         readTime: '8 min'
     },
     {
+        id: 'sapa-photography-guide',
+        title: 'Sapa Photography Guide: Best Times & Locations',
+        description: 'Master photography in Sapa with our complete guide to rice terraces, ethnic villages, and golden hour locations.',
+        image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=300&fit=crop&center',
+        url: 'destinations/northern-vietnam/sapa-photography-guide.html',
+        category: 'Northern Vietnam',
+        featured: false,
+        publishDate: '2025-12-11',
+        readTime: '10 min'
+    },
+    {
+        id: 'fansipan-cable-car-vs-trekking',
+        title: 'Fansipan Cable Car vs Trekking: Which to Choose?',
+        description: 'Compare the new cable car experience with traditional trekking to Vietnam\'s highest peak. Pros, cons, and best options.',
+        image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=500&h=300&fit=crop&center',
+        url: 'destinations/northern-vietnam/fansipan-cable-car-vs-trekking.html',
+        category: 'Northern Vietnam',
+        featured: false,
+        publishDate: '2025-12-11',
+        readTime: '8 min'
+    },
+    {
+        id: 'sapa-ethnic-villages-guide',
+        title: 'Ethnic Villages Near Sapa: Ta Van, Ta Phin, Lao Chai Guide',
+        description: 'Explore authentic ethnic villages around Sapa. Discover H\'Mong, Dao, and Giay cultures, traditional crafts, and sustainable tourism experiences.',
+        image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=500&h=300&fit=crop&center',
+        url: 'destinations/northern-vietnam/sapa-ethnic-villages-guide.html',
+        category: 'Northern Vietnam',
+        featured: false,
+        publishDate: '2025-12-11',
+        readTime: '9 min'
+    },
+    {
         id: 'hanoi-attractions',
         title: 'Hanoi City Guide',
         description: 'Explore Vietnam\'s capital with our comprehensive guide to temples, markets, and cuisine.',

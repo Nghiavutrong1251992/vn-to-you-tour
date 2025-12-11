@@ -592,16 +592,14 @@
         function nextSlide() {
             const slides = document.querySelectorAll('.slide');
             
-            // Fade out current slide
+            // Hide current slide
             slides[slideIndex].classList.remove('active');
             
             // Move to next slide
             slideIndex = (slideIndex + 1) % slides.length;
             
-            // Small delay to ensure smooth transition
-            setTimeout(() => {
-                slides[slideIndex].classList.add('active');
-            }, 100);
+            // Show next slide immediately
+            slides[slideIndex].classList.add('active');
         }
         
         // Start auto-advance when page loads

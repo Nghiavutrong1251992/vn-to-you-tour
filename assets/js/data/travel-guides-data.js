@@ -67,6 +67,17 @@ const travelGuidesData = [
         readTime: '10 min'
     },
     {
+        id: 'sapa-accommodation-guide',
+        title: 'Sapa Accommodation: Homestays vs Hotels Guide',
+        description: 'Complete Sapa accommodation guide comparing homestays, boutique hotels, and luxury resorts with pricing and location recommendations.',
+        image: 'https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=500&h=300&fit=crop&center',
+        url: 'destinations/northern-vietnam/sapa-accommodation-guide.html',
+        category: 'Northern Vietnam',
+        featured: false,
+        publishDate: '2025-12-11',
+        readTime: '12 min'
+    },
+    {
         id: 'sapa-ethnic-villages-guide',
         title: 'Ethnic Villages Near Sapa: Ta Van, Ta Phin, Lao Chai Guide',
         description: 'Explore authentic ethnic villages around Sapa. Discover H\'Mong, Dao, and Giay cultures, traditional crafts, and sustainable tourism experiences.',

@@ -2,6 +2,22 @@
    SIDEBAR TOURS - CLEAN STYLE
    ================================ */
 
+/* Sidebar container fixed width */
+.sidebar {
+    flex: 0 0 300px !important;
+    min-width: 280px !important;
+    max-width: 320px !important;
+    width: 300px !important;
+    padding: var(--spacing-lg) !important;
+    box-sizing: border-box !important;
+}
+
+/* Main content should take remaining space */
+.content-wrapper .main-content {
+    flex: 1;
+    min-width: 0;
+}
+
 /* Sidebar Tours List */
 .sidebar-tours-list {
     list-style: none;
@@ -10,17 +26,17 @@
 }
 
 /* Override inline styles for clean sidebar tour layout */
-.sidebar-tours-list .sidebar-tour-item {
-    display: block;
-    margin-bottom: 1rem;
-    padding: 0;
-    padding-bottom: 1rem;
-    background: none;
-    border: none;
-    border-bottom: 1px solid var(--border-divider);
-    border-radius: 0;
+.sidebar-tours-list .sidebar-tour-item,
+#sidebar-popular-tours .sidebar-tour-item {
+    display: block !important;
+    margin-bottom: 0.8rem !important;
+    padding: 0.8rem !important;
+    background: #f8f9fa !important;
+    border: 1px solid #e9ecef !important;
+    border-radius: 6px !important;
     list-style: none;
     transition: opacity var(--transition-base);
+    box-sizing: border-box;
 }
 
 .sidebar-tours-list .sidebar-tour-item:last-child {
@@ -42,46 +58,52 @@
 }
 
 /* Override div containing image */
-.sidebar-tours-list .sidebar-tour-item > a > div:first-child {
-    margin-bottom: 0.5rem;
+.sidebar-tours-list .sidebar-tour-item > a > div:first-child,
+#sidebar-popular-tours .sidebar-tour-item > a > div:first-child {
+    margin-bottom: 0.5rem !important;
 }
 
-.sidebar-tours-list .sidebar-tour-item img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 4/3;
-    object-fit: cover;
-    border-radius: var(--radius-sm);
+.sidebar-tours-list .sidebar-tour-item img,
+#sidebar-popular-tours .sidebar-tour-item img {
+    width: 100% !important;
+    height: 100px !important;
+    object-fit: cover !important;
+    border-radius: 4px !important;
+    margin-bottom: 0.5rem !important;
 }
 
-.sidebar-tours-list .sidebar-tour-info {
+.sidebar-tours-list .sidebar-tour-info,
+#sidebar-popular-tours .sidebar-tour-info {
     display: block;
 }
 
-.sidebar-tours-list .sidebar-tour-title {
-    margin: 0;
-    font-size: var(--font-size-sm);
-    font-weight: 500;
-    line-height: 1.3;
-    color: var(--text-primary);
+.sidebar-tours-list .sidebar-tour-title,
+#sidebar-popular-tours .sidebar-tour-title {
+    margin: 0 !important;
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+    line-height: 1.3 !important;
+    color: #333 !important;
+}
+
+.sidebar-tours-list .sidebar-tour-meta,
+#sidebar-popular-tours .sidebar-tour-meta {
+    margin: 0.3rem 0 !important;
+    font-size: 0.8rem !important;
+    color: #666 !important;
+}
+
+.sidebar-tours-list .sidebar-tour-item p,
+#sidebar-popular-tours .sidebar-tour-item p {
+    margin: 0.2rem 0 !important;
+    font-size: 0.75rem !important;
+    color: #888 !important;
+    line-height: 1.3 !important;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
-}
-
-.sidebar-tours-list .sidebar-tour-meta {
-    margin: 0;
-    font-size: var(--font-size-xs);
-    color: var(--text-secondary);
-}
-
-.sidebar-tours-list .sidebar-tour-item p:last-child {
-    margin: 0;
-    font-size: var(--font-size-xs);
-    color: var(--text-tertiary);
-    text-transform: capitalize;
 }
 
 /* ================================

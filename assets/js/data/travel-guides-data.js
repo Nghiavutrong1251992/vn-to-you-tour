@@ -34,17 +34,6 @@ const travelGuidesData = [
         readTime: '7 min'
     },
     {
-        id: 'hoi-an-ancient-town',
-        title: 'Hoi An Ancient Town',
-        description: 'Explore the UNESCO World Heritage ancient town with lanterns, tailors, and delicious street food.',
-        image: 'https://images.unsplash.com/photo-1559592413-7cec4d0d2638?w=500&h=300&fit=crop&center',
-        url: 'destinations/central-vietnam/hoi-an-guide.html',
-        category: 'Central Vietnam',
-        featured: true,
-        publishDate: '2025-12-08',
-        readTime: '9 min'
-    },
-    {
         id: 'hue-imperial-city',
         title: 'Hue Imperial City',
         description: 'Discover the former imperial capital with royal tombs, pagodas, and traditional architecture.',
@@ -100,6 +89,17 @@ const travelGuidesData = [
         readTime: '10 min'
     },
     {
+        id: 'hoi-an-ancient-town',
+        title: 'Hoi An Ancient Town Guide',
+        description: 'Explore the UNESCO World Heritage ancient town with lanterns, tailors, and delicious street food.',
+        image: 'https://images.unsplash.com/photo-1552599786-2a7925e0e071?w=500&h=300&fit=crop&center',
+        url: 'destinations/central-vietnam/hoi-an-ancient-town-guide.html',
+        category: 'Central Vietnam',
+        featured: true,
+        publishDate: '2025-12-08',
+        readTime: '10 min'
+    },
+    {
         id: 'vietnam-food-guide',
         title: 'Vietnamese Cuisine Guide',
         description: 'Complete guide to Vietnamese food, from street food to fine dining experiences.',
@@ -109,6 +109,28 @@ const travelGuidesData = [
         featured: true,
         publishDate: '2025-12-02',
         readTime: '15 min'
+    },
+    {
+        id: 'hanoi-old-quarter',
+        title: 'Hanoi Old Quarter: Complete Walking Guide with Map',
+        description: 'Explore Hanoi\'s historic Old Quarter with our detailed walking guide covering 36 streets, hidden temples, and local street food spots.',
+        image: 'https://images.unsplash.com/photo-1509614836558-9ca6f5e65bf9?w=500&h=300&fit=crop&center',
+        url: 'destinations/northern-vietnam/hanoi-old-quarter-guide.html',
+        category: 'Northern Vietnam',
+        featured: true,
+        publishDate: '2025-12-11',
+        readTime: '12 min'
+    },
+    {
+        id: 'best-pho-hanoi',
+        title: 'Best Pho in Hanoi: 15 Local Spots Tourists Miss',
+        description: 'Discover authentic Hanoi pho at local favorites rarely found in guidebooks. From family-run shops to hidden alleyway gems.',
+        image: 'https://images.unsplash.com/photo-1591814468924-caf88d1232e1?w=500&h=300&fit=crop&center',
+        url: 'destinations/northern-vietnam/best-pho-hanoi-guide.html',
+        category: 'Northern Vietnam',
+        featured: true,
+        publishDate: '2025-12-11',
+        readTime: '10 min'
     }
 ];
 

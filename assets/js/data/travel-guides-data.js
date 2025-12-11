@@ -56,6 +56,17 @@ const travelGuidesData = [
         readTime: '11 min'
     },
     {
+        id: 'sapa-markets-guide',
+        title: 'Sapa Markets: Bac Ha, Can Cau Weekend Market Guide',
+        description: 'Complete guide to Sapa\'s vibrant markets including Bac Ha Sunday market, Can Cau weekend market, and local trading traditions.',
+        image: 'https://images.unsplash.com/photo-1578574577315-3fbeb0cecdc2?w=500&h=300&fit=crop&center',
+        url: 'destinations/northern-vietnam/sapa-markets-guide.html',
+        category: 'Northern Vietnam',
+        featured: false,
+        publishDate: '2025-12-11',
+        readTime: '10 min'
+    },
+    {
         id: 'sapa-ethnic-villages-guide',
         title: 'Ethnic Villages Near Sapa: Ta Van, Ta Phin, Lao Chai Guide',
         description: 'Explore authentic ethnic villages around Sapa. Discover H\'Mong, Dao, and Giay cultures, traditional crafts, and sustainable tourism experiences.',

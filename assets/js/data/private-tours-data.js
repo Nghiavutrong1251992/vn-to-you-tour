@@ -2668,6 +2668,746 @@ const privateToursData = [
         seoTitle: 'VNG501 Hanoi Sapa Da Nang 5D4N Grand Tour | VN To You',
         seoDescription: 'Experience Vietnam\'s two most popular destinations in one tour. 5-day journey from Sapa\'s mountains to Da Nang\'s coast, featuring Fansipan, Salmon Hotpot, Ba Na Hills, Golden Hand Bridge, and Hoi An Ancient Town.',
         seoKeywords: 'Vietnam Grand Tour, Hanoi Sapa Danang tour, Fansipan peak, Ba Na Hills, Golden Hand Bridge, Hoi An ancient town, salmon hotpot Sapa, comprehensive Vietnam tour, multi-region Vietnam'
+    },
+    {
+        id: 'vng502',
+        title: 'VNG502 Hanoi – Sapa – Halong Bay Cruise',
+        region: 'multi',
+        category: 'grand-tour',
+        excerpt: 'Experience the perfect combination of Sapa\'s mountain beauty and Halong Bay\'s coastal magnificence in this 5-day grand tour featuring overnight cruise, Fansipan peak, and cultural heritage sites.',
+        description: 'VNG502 Hanoi – Sapa – Halong Bay Cruise offers an unforgettable journey through Northern Vietnam\'s most iconic destinations. Experience Sapa\'s cool mountain climate with signature Salmon Hotpot dinner, conquer Fansipan peak, explore Hanoi\'s cultural sites, and cruise through the magnificent Halong Bay on a luxury 5-star ship. This comprehensive tour includes 2 nights in Sapa, 2 nights in Hanoi, and 1 night aboard a premium Halong Bay cruise.',
+        image: {
+            url: 'https://vn-to-you-tour.vercel.app/assets/images/tours/vng502.jpg',
+            alt: 'VNG502 Hanoi Sapa Halong Bay Cruise Grand Tour'
+        },
+        duration: {
+            display: '5 Days / 4 Nights',
+            days: 5,
+            nights: 4
+        },
+        price: {
+            display: 'Please contact us for pricing',
+            amount: 0,
+            currency: 'USD'
+        },
+        groupSize: 'Private tour for 2-10 people',
+        highlights: [
+            'Enjoy a fine-dining dinner on board luxury Halong Bay cruise',
+            'Signature Sapa Dinner: Salmon Hotpot and Sashimi paired with Dalat Wine in Sapa\'s cool, misty air',
+            'Fansipan Buffet offers a wide array of dishes, highlighting the diverse cuisine of Sapa',
+            'Visit Cat Cat Village and explore Sapa\'s ethnic culture',
+            'Conquer Fansipan peak with cable car and Muong Hoa Train',
+            'Explore Halong Bay caves: Bo Nau (Pelican Cave) and Sung Sot (Surprising Cave)',
+            'Swimming and relaxing at Titov Island',
+            'Hanoi cultural tour including Tran Quoc Pagoda, West Lake, and Old Quarter',
+            'Cooking class and Tai Chi session on cruise',
+            'Shopping at Sapa night market',
+            'Luxury 5-star Halong Bay cruise experience',
+            '2 nights Sapa, 2 nights Hanoi, 1 night Halong Bay cruise'
+        ],
+        itinerary: [
+            {
+                day: 1,
+                title: 'Arrival - Transfer to Sapa - Cat Cat Village',
+                meals: 'Lunch, Dinner',
+                activities: [
+                    'Pick up at airport (or hotel)',
+                    'Transfer to Sapa',
+                    'Visit Cat Cat Village',
+                    'Shopping at night market Sapa',
+                    'Overnight in Sapa'
+                ],
+                accommodation: 'Sapa Hotel (4* options available)'
+            },
+            {
+                day: 2,
+                title: 'Fansipan Peak Adventure',
+                meals: 'Breakfast, Lunch, Dinner',
+                activities: [
+                    'Breakfast at hotel',
+                    'Visit Fansipan (include Muong Hoa Train, Buffet Fansipan, Cable Car ticket)',
+                    'Visit Moana Cafe (cafe fee not included)',
+                    '<span style="color: red; font-weight: bold;">Optional Funicular Train Fansipan:</span>',
+                    '<span style="color: red;">• $7 USD/pax up, $5 USD/pax down (Ideal for elderly guests who wish to skip the 600-step climb to the peak)</span>',
+                    'Signature dinner: Salmon hotpot + Dalat wine',
+                    'Overnight in Sapa'
+                ],
+                accommodation: 'Sapa Hotel (4* options available)'
+            },
+            {
+                day: 3,
+                title: 'Sapa to Hanoi - City Tour',
+                meals: 'Breakfast, Lunch, Dinner',
+                activities: [
+                    'Breakfast at hotel',
+                    'Transfer back to Hanoi',
+                    'City tour Hanoi',
+                    'Visit Tran Quoc Pagoda',
+                    'West Lake sightseeing',
+                    'Hanoi Old Quarter exploration',
+                    'Cafe Railway (cafe fee not included)',
+                    'Overnight in Hanoi'
+                ],
+                accommodation: 'Hanoi Hotel (4* options available)'
+            },
+            {
+                day: 4,
+                title: 'Hanoi to Halong Bay - Luxury Cruise Experience',
+                meals: 'Breakfast, Lunch, Dinner',
+                activities: [
+                    'Breakfast at hotel',
+                    'Transfer to Halong Bay',
+                    'Check-in to luxury cruise',
+                    'Cruise through magnificent limestone karsts',
+                    'Visit "Bo Nau" cave (Pelican Cave)',
+                    'Explore "Sung Sot" Cave (Surprising Cave)',
+                    'Enjoy swimming and relaxing on the beach',
+                    'Climb to the top of Titov Island for panoramic views',
+                    'Cooking class on board',
+                    'Fine-dining dinner on cruise',
+                    'Overnight on luxury cruise'
+                ],
+                accommodation: 'Halong Bay 5* Cruise (Amanda/Rosy/Rita/Aqua of The Seas)',
+                notes: 'Our overnight cruise programs in Ha Long Bay operate on two routes: Ha Long Bay and Lan Ha Bay. The itinerary may vary depending on each cruise provider.'
+            },
+            {
+                day: 5,
+                title: 'Halong Bay Morning - Departure',
+                meals: 'Breakfast, Lunch',
+                activities: [
+                    'Early morning Tai Chi class on deck',
+                    'Breakfast on cruise',
+                    'Visit "Luon" cave by kayak or bamboo boat',
+                    'Check-out from cruise',
+                    'Transfer to airport',
+                    'End of tour'
+                ],
+                accommodation: 'End of tour'
+            }
+        ],
+        accommodations: {
+            sapa: {
+                '4star': [
+                    'Sapa Highland Resort & Spa 4*',
+                    'Charm Sapa Hotel 4*',
+                    'Hotel De Sapa 4*',
+                    'Or similar'
+                ]
+            },
+            hanoi: {
+                '4star': [
+                    'Thang Long Opera Hotel 4*',
+                    'Muong Thanh Central Hotel 4*',
+                    'Super Candle Hanoi Hotel 4*',
+                    'Lacasa Hanoi Hotel 4*',
+                    'Or similar'
+                ]
+            },
+            halongBay: {
+                '5star': [
+                    'Amanda Cruise 5*',
+                    'Rosy Cruises 5*',
+                    'Rita Cruises 5*',
+                    'Aqua of The Seas 5*',
+                    'Or similar'
+                ]
+            }
+        },
+        meals: {
+            total: 'Lunch = 5, Dinner = 4',
+            specialties: [
+                'Signature Sapa Dinner: Salmon Hotpot and Sashimi with Dalat Wine',
+                'Fansipan Buffet with diverse Sapa cuisine',
+                'Fine-dining dinner on board luxury cruise',
+                'Fresh seafood on Halong Bay cruise'
+            ]
+        },
+        included: [
+            'Accommodation twin share room (2 nights Sapa, 2 nights Hanoi, 1 night Halong Bay cruise)',
+            'Meals: (B) Breakfast, (L) Lunch, (D) Dinner as specified',
+            'Transportation with air-conditioning',
+            'English / Chinese / Thai speaking guide',
+            'Entrance fees to all attractions',
+            'Drinking water during tours'
+        ],
+        excluded: [
+            'Visa stamping fee in Vietnam',
+            'Personal travel insurance',
+            'Any flights to and from Vietnam',
+            'All personal expenses',
+            'All gratuities and tips to driver and tour guide',
+            'Early check in & late check out at hotels',
+            'Bank fees',
+            'Surcharge on Christmas or New Year time',
+            'Tips: Guide $2 USD/day, Driver $1 USD/day (Group <10 pax: Guide $4 USD/day, Driver $2 USD/day)'
+        ],
+        termsAndConditions: [
+            'Rates are not applicable during: New Year 28 Dec - 2 Jan 2026 | Vietnamese New Year 15 - 20 Feb 2026 | 27 Apr 2026 | 30 Apr - 2 May 2026 | 1 - 3 Sept 2026 | 23 - 25 DEC 2026',
+            'Tickets no refund in case of the tour does not visit various tourist attractions except in the event of a storm or flood',
+            'When there is a force majeure that cannot be solved, the company has the right not to refund in all cases',
+            'Cancellations 07 days before departure (or in the case of the company Deposit for hotel, car, etc.) will not return the money',
+            'The company has the right not to be responsible for any expenses in the event of force majeure such as cancellation or delay of airlines / natural disasters / riots / political events and lost items at places where beyond the control of the company',
+            'The travel program may be changed as appropriate without prior notice. The company will take into account the interests of customers as a priority'
+        ],
+        bestTime: 'Best time: March-May and September-November for ideal weather in both Sapa and Halong Bay. Avoid rainy season (June-August) in the north.',
+        difficulty: 'Moderate - Suitable for most fitness levels with some walking and stair climbing at attractions',
+        tags: ['vietnam-grand-tour', 'multi-region', 'sapa', 'hanoi', 'halong-bay', 'fansipan', 'cruise', 'luxury-cruise', 'comprehensive', 'cultural-heritage', 'northern-vietnam'],
+        featured: true,
+        status: 'active',
+        lastUpdated: '2025-12-11',
+        seoTitle: 'VNG502 Hanoi Sapa Halong Bay Cruise 5D4N Grand Tour | VN To You',
+        seoDescription: 'Experience Northern Vietnam\'s best destinations in 5 days. Explore Sapa mountains with Fansipan peak, enjoy signature Salmon Hotpot, discover Hanoi culture, and cruise through magnificent Halong Bay on a luxury 5-star ship.',
+        seoKeywords: 'Vietnam Grand Tour, Hanoi Sapa Halong Bay tour, Fansipan peak, luxury Halong Bay cruise, Sapa salmon hotpot, Northern Vietnam tour, comprehensive Vietnam travel, 5-star cruise Halong'
+    },
+    {
+        id: 'vng701',
+        title: 'VNG701 Hanoi – Sapa – Halong Bay – Da Nang',
+        region: 'multi',
+        category: 'grand-tour',
+        excerpt: 'Featuring the two most popular and exciting travel destinations in Vietnam today - Experience the ultimate 7-day journey from Sapa\'s mountains through Halong Bay to Da Nang\'s coastal beauty.',
+        description: 'VNG701 Hanoi – Sapa – Halong Bay – Da Nang showcases Vietnam\'s most iconic destinations in one comprehensive tour. Journey from the misty mountains of Sapa with signature Salmon Hotpot, explore the legendary Halong Bay, and discover Da Nang\'s coastal attractions including Ba Na Hills and Hoi An. This grand tour combines natural wonders, cultural heritage, and culinary excellence across four magnificent destinations.',
+        image: {
+            url: 'https://vn-to-you-tour.vercel.app/assets/images/tours/vng701.jpg',
+            alt: 'VNG701 Hanoi Sapa Halong Bay Da Nang Grand Tour'
+        },
+        duration: {
+            display: '7 Days / 6 Nights',
+            days: 7,
+            nights: 6
+        },
+        price: {
+            display: 'Please contact us for pricing',
+            amount: 0,
+            currency: 'USD'
+        },
+        groupSize: 'Private tour for 2-10 people',
+        highlights: [
+            'Signature Sapa Dinner: Salmon Hotpot and Sashimi paired with Dalat Wine in Sapa\'s cool, misty air',
+            'Fansipan Buffet offers a wide array of dishes, highlighting the diverse cuisine of Sapa',
+            'A seafood hotpot featuring fresh Da Nang seafood and half a lobster for each guest',
+            'Buffet at Ba Na Hills with stunning mountain views',
+            'Visit Cat Cat Village and Sapa night market',
+            'Conquer Fansipan peak with cable car and Muong Hoa Train',
+            'Explore Mega Grand World Hanoi entertainment complex',
+            'Boat trip through Halong Bay with Thien Cung Cave exploration',
+            'Visit Hoi An Ancient Town with traditional basket boat experience',
+            'Ba Na Hills full day: French Village, Moon Castle, Fantasy Park, Golden Hand Bridge',
+            'Le Jardin D\'Amour Flower Garden in Ba Na Hills',
+            'Multiple hotel tiers: 3*, 4*, and 5* options in all locations',
+            '2 nights Sapa, 2 nights Hanoi, 1 night Halong Bay, 2 nights Da Nang'
+        ],
+        itinerary: [
+            {
+                day: 1,
+                title: 'Arrival - Transfer to Sapa - Cat Cat Village',
+                meals: 'Lunch, Dinner',
+                activities: [
+                    'Pick up at airport (or hotel)',
+                    'Transfer to Sapa',
+                    'Visit Cat Cat Village',
+                    'Signature dinner: Salmon hotpot + Dalat wine',
+                    'Shopping at night market Sapa',
+                    'Overnight in Sapa'
+                ],
+                accommodation: 'Sapa Hotel (3*/4*/5* options available)'
+            },
+            {
+                day: 2,
+                title: 'Fansipan Peak Adventure',
+                meals: 'Breakfast, Lunch, Dinner',
+                activities: [
+                    'Breakfast at hotel',
+                    'Visit Fansipan (include Muong Hoa Train, Buffet Fansipan, Cable Car ticket)',
+                    'Visit Moana Cafe (cafe fee not included)',
+                    '<span style="color: red; font-weight: bold;">Optional Funicular Train Fansipan:</span>',
+                    '<span style="color: red;">• $7 USD/pax up, $5 USD/pax down (Ideal for elderly guests who wish to skip the 600-step climb to the peak)</span>',
+                    'Overnight in Sapa'
+                ],
+                accommodation: 'Sapa Hotel (3*/4*/5* options available)'
+            },
+            {
+                day: 3,
+                title: 'Sapa to Hanoi - Mega Grand World - Halong Bay',
+                meals: 'Breakfast, Lunch, Dinner',
+                activities: [
+                    'Breakfast at hotel',
+                    'Transfer to Hanoi',
+                    'Visit Tran Quoc Pagoda',
+                    'Visit Mega Grand World Hanoi',
+                    'Transfer to Halong Bay',
+                    'Dinner at Halong Bay',
+                    'Overnight in Halong Bay'
+                ],
+                accommodation: 'Halong Bay Hotel'
+            },
+            {
+                day: 4,
+                title: 'Halong Bay Cruise - Return to Hanoi',
+                meals: 'Breakfast, Lunch, Dinner',
+                activities: [
+                    'Breakfast at hotel',
+                    'Boat trip through Halong Bay',
+                    'Visit Thien Cung Cave (Heavenly Palace Cave)',
+                    'Photo stop at Chicken Fighting Rock',
+                    'Lunch on boat with fresh seafood',
+                    'Return to Hanoi',
+                    'Overnight in Hanoi'
+                ],
+                accommodation: 'Hanoi Hotel (3*/4*/5* options available)'
+            },
+            {
+                day: 5,
+                title: 'Flight to Da Nang - Hoi An Ancient Town',
+                meals: 'Breakfast, Lunch, Dinner',
+                activities: [
+                    'Breakfast at hotel',
+                    'Flight to Da Nang (airfare not included)',
+                    'Transfer to Hoi An',
+                    'Explore Hoi An Ancient Town',
+                    'Traditional basket boat experience',
+                    'Return to Da Nang',
+                    'Overnight in Da Nang'
+                ],
+                accommodation: 'Da Nang Hotel (3*/4*/5* options available)'
+            },
+            {
+                day: 6,
+                title: 'Full Day Ba Na Hills Adventure',
+                meals: 'Breakfast, Lunch, Dinner',
+                activities: [
+                    'Breakfast at hotel',
+                    'Transfer to Ba Na Hills via cable car',
+                    'Visit French Village',
+                    'Moon Castle exploration',
+                    'Fantasy Park experience',
+                    'Visit Golden Hand Bridge',
+                    'Le Jardin D\'Amour Flower Garden',
+                    'Buffet lunch at Ba Na Hills',
+                    'Return to Da Nang',
+                    'Overnight in Da Nang'
+                ],
+                accommodation: 'Da Nang Hotel (3*/4*/5* options available)',
+                notes: 'Ba Na Hills ticket not include Wax Museum fee ($4 USD/pax), Alpine Coaster ($4 USD/pax), Wine Cellar ($4 USD/pax)'
+            },
+            {
+                day: 7,
+                title: 'Da Nang City Tour - Departure',
+                meals: 'Breakfast, Lunch',
+                activities: [
+                    'Breakfast at hotel',
+                    'Last-minute shopping at Han Market',
+                    'Transfer to airport',
+                    'End of tour'
+                ],
+                accommodation: 'End of tour'
+            }
+        ],
+        accommodations: {
+            sapa: {
+                '3star': [
+                    'Azure Sapa 3*',
+                    'Sapa Relax Hotel 3*',
+                    'Or similar'
+                ],
+                '4star': [
+                    'Sapa Highland Resort & Spa 4*',
+                    'Charm Sapa Hotel 4*',
+                    'Hotel De Sapa 4*',
+                    'Or similar'
+                ],
+                '5star': [
+                    'Available upon request'
+                ]
+            },
+            hanoi: {
+                '3star': [
+                    'CWD Hanoi Hotel 3*',
+                    'Quang Ba Trade Union Hotel 3*',
+                    'Or similar'
+                ],
+                '4star': [
+                    'Thang Long Opera Hotel 4*',
+                    'Muong Thanh Central Hotel 4*',
+                    'Super Candle Hanoi Hotel 4*',
+                    'Lacasa Hanoi Hotel 4*',
+                    'Or similar'
+                ],
+                '5star': [
+                    'Available upon request'
+                ]
+            },
+            danang: {
+                '3star': [
+                    'Sepon Blue Hotel 3*',
+                    'Pandora Danang Hotel',
+                    'Or similar'
+                ],
+                '4star': [
+                    'Luxtery Da Nang 4*',
+                    'Nhu Minh Danang 4*',
+                    'Or similar'
+                ],
+                '5star': [
+                    'Golden Bay Danang Hotel 5*',
+                    'Muong Thanh Luxury Danang 5*',
+                    'Or similar'
+                ]
+            }
+        },
+        meals: {
+            total: 'Lunch = 7, Dinner = 6',
+            specialties: [
+                'Signature Sapa Dinner: Salmon Hotpot and Sashimi with Dalat Wine',
+                'Fansipan Buffet with diverse Sapa cuisine',
+                'Seafood hotpot with fresh Da Nang seafood and half lobster per guest',
+                'Ba Na Hills Buffet with international cuisine',
+                'Fresh seafood lunch on Halong Bay boat'
+            ]
+        },
+        included: [
+            'Accommodation twin share room (2 nights Sapa, 2 nights Hanoi, 1 night Halong Bay, 2 nights Da Nang)',
+            'Meals: (B) Breakfast, (L) Lunch, (D) Dinner as specified',
+            'Transportation with air-conditioning',
+            'English / Chinese / Thai speaking guide',
+            'Entrance fees to all attractions',
+            'Drinking water during tours'
+        ],
+        excluded: [
+            'Visa stamping fee in Vietnam',
+            'Personal travel insurance',
+            'Any flights to and from Vietnam (including Hanoi to Da Nang flight)',
+            'All personal expenses',
+            'All gratuities and tips to driver and tour guide',
+            'Early check in & late check out at hotels',
+            'Bank fees',
+            'Surcharge on Christmas or New Year time',
+            'Tips: Guide $2 USD/day, Driver $1 USD/day (Group <10 pax: Guide $4 USD/day, Driver $2 USD/day)'
+        ],
+        termsAndConditions: [
+            'Rates are not applicable during: New Year 28 Dec - 2 Jan 2026 | Vietnamese New Year 15 - 20 Feb 2026 | 27 Apr 2026 | 30 Apr - 2 May 2026 | 1 - 3 Sept 2026 | 23 - 25 DEC 2026',
+            'Tickets no refund in case of the tour does not visit various tourist attractions except in the event of a storm or flood',
+            'When there is a force majeure that cannot be solved, the company has the right not to refund in all cases',
+            'Cancellations 07 days before departure (or in the case of the company Deposit for hotel, car, etc.) will not return the money',
+            'The company has the right not to be responsible for any expenses in the event of force majeure such as cancellation or delay of airlines / natural disasters / riots / political events and lost items at places where beyond the control of the company',
+            'The travel program may be changed as appropriate without prior notice. The company will take into account the interests of customers as a priority'
+        ],
+        bestTime: 'Best time: March-May and September-November for ideal weather across all destinations. Avoid peak summer months for a more comfortable experience.',
+        difficulty: 'Moderate - Suitable for most fitness levels with some walking and stair climbing at attractions',
+        tags: ['vietnam-grand-tour', 'multi-region', 'sapa', 'hanoi', 'halong-bay', 'danang', 'hoian', 'fansipan', 'ba-na-hills', 'comprehensive', 'cultural-heritage', 'northern-central-vietnam'],
+        featured: true,
+        status: 'active',
+        lastUpdated: '2025-12-11',
+        seoTitle: 'VNG701 Hanoi Sapa Halong Bay Da Nang 7D6N Grand Tour | VN To You',
+        seoDescription: 'Ultimate 7-day Vietnam Grand Tour covering four iconic destinations. Experience Sapa mountains, Halong Bay cruise, Da Nang coast with Ba Na Hills, and Hoi An Ancient Town. Includes signature Salmon Hotpot and seafood feast.',
+        seoKeywords: 'Vietnam Grand Tour, Hanoi Sapa Halong Danang tour, 7 days Vietnam, Fansipan peak, Ba Na Hills, Golden Hand Bridge, Hoi An ancient town, Halong Bay, comprehensive Vietnam tour, multi-destination Vietnam'
+    },
+    {
+        id: 'vng1001',
+        title: 'VNG1001 Complete Vietnam Grand Tour: Hanoi – Sapa – Halong Bay – Da Nang – HCM – Muine',
+        region: 'multi',
+        category: 'grand-tour',
+        excerpt: 'The most comprehensive Vietnam experience - 10 unforgettable days exploring from Northern mountains to Southern beaches, featuring all Vietnam\'s iconic destinations in one ultimate journey.',
+        description: 'VNG1001 Complete Vietnam Grand Tour is our most extensive journey through Vietnam, covering the entire country from North to South. Experience Sapa\'s misty mountains, Halong Bay\'s emerald waters, Da Nang and Hoi An\'s cultural treasures, Ho Chi Minh City\'s vibrant energy, and Muine\'s stunning sand dunes. This 10-day adventure includes signature dining experiences: Salmon Hotpot in Sapa, seafood feast in Da Nang with half lobster per guest, dinner cruise on Saigon River, and BBQ in Dalat\'s romantic mountain atmosphere.',
+        image: {
+            url: 'https://vn-to-you-tour.vercel.app/assets/images/tours/vng1001.jpg',
+            alt: 'VNG1001 Complete Vietnam Grand Tour - Hanoi Sapa Halong Da Nang HCM Muine'
+        },
+        duration: {
+            display: '10 Days / 9 Nights',
+            days: 10,
+            nights: 9
+        },
+        price: {
+            display: 'Please contact us for pricing',
+            amount: 0,
+            currency: 'USD'
+        },
+        groupSize: 'Private tour for 2-10 people',
+        highlights: [
+            'Signature Sapa Dinner: Salmon Hotpot and Sashimi paired with Dalat Wine in Sapa\'s cool, misty air',
+            'Fansipan Buffet offers a wide array of dishes, highlighting the diverse cuisine of Sapa',
+            'A seafood hotpot featuring fresh Da Nang seafood and half a lobster for each guest',
+            'Enjoy a dinner cruise and admire the Saigon River by night',
+            'A BBQ dinner in Dalat, enjoyed in the cool and romantic mountain atmosphere',
+            'Buffet at Ba Na Hills with stunning views',
+            'Complete Vietnam journey: North to South in 10 days',
+            'Visit Cat Cat Village and Sapa night market',
+            'Conquer Fansipan peak with cable car and Muong Hoa Train',
+            'Halong Bay boat trip with Thien Cung Cave exploration',
+            'Hoi An Ancient Town with traditional basket boat on Cam Thanh River',
+            'Ba Na Hills: French Village, Moon Castle, Fantasy Park, Golden Hand Bridge, Flower Garden',
+            'Muine White Sand Dunes adventure by Jeep',
+            'Cu Chi Tunnels historical experience',
+            'Saigon River dinner cruise',
+            '2 nights Sapa, 2 nights Hanoi, 2 nights Da Nang, 1 night Hoi An, 3 nights HCM City'
+        ],
+        itinerary: [
+            {
+                day: 1,
+                title: 'Arrival - Transfer to Sapa - Cat Cat Village',
+                meals: 'Lunch, Dinner',
+                activities: [
+                    'Pick up at airport (or hotel)',
+                    'Transfer to Sapa',
+                    'Visit Cat Cat Village',
+                    'Signature dinner: Salmon hotpot + Dalat wine',
+                    'Shopping at night market Sapa',
+                    'Overnight in Sapa'
+                ],
+                accommodation: 'Sapa Hotel (3*/4*/5* options available)'
+            },
+            {
+                day: 2,
+                title: 'Fansipan Peak Adventure',
+                meals: 'Breakfast, Lunch, Dinner',
+                activities: [
+                    'Breakfast at hotel',
+                    'Visit Fansipan (include Muong Hoa Train, Buffet Fansipan, Cable Car ticket)',
+                    'Visit Moana Cafe (cafe fee not included)',
+                    '<span style="color: red; font-weight: bold;">Optional Funicular Train Fansipan:</span>',
+                    '<span style="color: red;">• $7 USD/pax up, $5 USD/pax down (Ideal for elderly guests who wish to skip the 600-step climb to the peak)</span>',
+                    'Overnight in Sapa'
+                ],
+                accommodation: 'Sapa Hotel (3*/4*/5* options available)'
+            },
+            {
+                day: 3,
+                title: 'Sapa to Hanoi - City Tour',
+                meals: 'Breakfast, Lunch, Dinner',
+                activities: [
+                    'Breakfast at hotel',
+                    'Transfer back to Hanoi',
+                    'Hanoi city tour',
+                    'Visit Tran Quoc Pagoda',
+                    'Hanoi Old Quarter exploration',
+                    'Cafe Railway Hanoi (cafe fee not included)',
+                    'Overnight in Hanoi'
+                ],
+                accommodation: 'Hanoi Hotel (3*/4*/5* options available)'
+            },
+            {
+                day: 4,
+                title: 'Halong Bay Day Trip - Return to Hanoi',
+                meals: 'Breakfast, Lunch, Dinner',
+                activities: [
+                    'Breakfast at hotel',
+                    'Transfer to Halong Bay',
+                    'Boat trip through Halong Bay',
+                    'Visit Thien Cung Cave (Heavenly Palace Cave)',
+                    'Photo stop at Chicken Fighting Rock',
+                    'Lunch on boat with fresh seafood',
+                    'Return to Hanoi',
+                    'Overnight in Hanoi'
+                ],
+                accommodation: 'Hanoi Hotel (3*/4*/5* options available)'
+            },
+            {
+                day: 5,
+                title: 'Flight to Da Nang - Hoi An Ancient Town',
+                meals: 'Breakfast, Lunch, Dinner',
+                activities: [
+                    'Breakfast at hotel',
+                    'Flight to Da Nang (airfare not included)',
+                    'Transfer to Hoi An',
+                    'Explore Hoi An Ancient Town',
+                    'Traditional basket boat on Cam Thanh River',
+                    'Overnight in Da Nang'
+                ],
+                accommodation: 'Da Nang Hotel (3*/4*/5* options available)'
+            },
+            {
+                day: 6,
+                title: 'Full Day Ba Na Hills Adventure',
+                meals: 'Breakfast, Lunch, Dinner',
+                activities: [
+                    'Breakfast at hotel',
+                    'Transfer to Ba Na Hills via cable car',
+                    'Visit French Village',
+                    'Moon Castle exploration',
+                    'Fantasy Park experience',
+                    'Visit Golden Hand Bridge',
+                    'Le Jardin D\'Amour Flower Garden',
+                    'Buffet lunch at Ba Na Hills',
+                    'Return to Da Nang',
+                    'Overnight in Da Nang'
+                ],
+                accommodation: 'Da Nang Hotel (3*/4*/5* options available)',
+                notes: 'Ba Na Hills ticket not include Wax Museum fee ($4 USD/pax), Alpine Coaster ($4 USD/pax), Wine Cellar ($4 USD/pax)'
+            },
+            {
+                day: 7,
+                title: 'Da Nang - Flight to Ho Chi Minh City',
+                meals: 'Breakfast, Lunch, Dinner',
+                activities: [
+                    'Breakfast at hotel',
+                    'Visit Linh Ung Pagoda',
+                    'Shopping at Han Market',
+                    'Flight to Ho Chi Minh City (airfare not included)',
+                    'Transfer to hotel',
+                    'Overnight in Ho Chi Minh City'
+                ],
+                accommodation: 'HCM City Hotel (3*/4*/5* options available)'
+            },
+            {
+                day: 8,
+                title: 'Muine Day Trip - White Sand Dunes',
+                meals: 'Breakfast, Lunch, Dinner',
+                activities: [
+                    'Breakfast at hotel',
+                    'Transfer to Muine',
+                    'Visit White Sand Dunes by Jeep adventure',
+                    'Explore mystical Fairy Stream',
+                    'Visit local Fishing Village',
+                    'Return to Ho Chi Minh City',
+                    'Overnight in Ho Chi Minh City'
+                ],
+                accommodation: 'HCM City Hotel (3*/4*/5* options available)'
+            },
+            {
+                day: 9,
+                title: 'Cu Chi Tunnels - Saigon River Cruise',
+                meals: 'Breakfast, Lunch, Dinner',
+                activities: [
+                    'Breakfast at hotel',
+                    'Half-day tour to Cu Chi Tunnels',
+                    'Experience underground tunnel network',
+                    'Learn about Vietnam War history',
+                    'Return to city',
+                    'Evening dinner cruise on Saigon River',
+                    'Admire Ho Chi Minh City skyline by night',
+                    'Overnight in Ho Chi Minh City'
+                ],
+                accommodation: 'HCM City Hotel (3*/4*/5* options available)'
+            },
+            {
+                day: 10,
+                title: 'Ho Chi Minh City Tour - Departure',
+                meals: 'Breakfast, Lunch',
+                activities: [
+                    'Breakfast at hotel',
+                    'Visit Independence Palace (Reunification Palace)',
+                    'Explore unique Cafe Apartment',
+                    'Walk along Nguyen Hue Walking Street',
+                    'Last-minute shopping',
+                    'Transfer to airport',
+                    'End of tour'
+                ],
+                accommodation: 'End of tour'
+            }
+        ],
+        accommodations: {
+            sapa: {
+                '3star': [
+                    'Azure Sapa 3*',
+                    'Sapa Relax Hotel 3*',
+                    'Or similar'
+                ],
+                '4star': [
+                    'Sapa Highland Resort & Spa 4*',
+                    'Charm Sapa Hotel 4*',
+                    'Hotel De Sapa 4*',
+                    'Or similar'
+                ],
+                '5star': [
+                    'Available upon request'
+                ]
+            },
+            hanoi: {
+                '3star': [
+                    'CWD Hanoi Hotel 3*',
+                    'Quang Ba Trade Union Hotel 3*',
+                    'Or similar'
+                ],
+                '4star': [
+                    'Thang Long Opera Hotel 4*',
+                    'Muong Thanh Central Hotel 4*',
+                    'Super Candle Hanoi Hotel 4*',
+                    'Lacasa Hanoi Hotel 4*',
+                    'Or similar'
+                ],
+                '5star': [
+                    'Available upon request'
+                ]
+            },
+            danang: {
+                '3star': [
+                    'Sepon Blue Hotel 3*',
+                    'Pandora Danang Hotel',
+                    'Or similar'
+                ],
+                '4star': [
+                    'Luxtery Da Nang 4*',
+                    'Nhu Minh Danang 4*',
+                    'Or similar'
+                ],
+                '5star': [
+                    'Golden Bay Danang Hotel 5*',
+                    'Muong Thanh Luxury Danang 5*',
+                    'Or similar'
+                ]
+            },
+            hcmCity: {
+                '3star': [
+                    'Standard 3-star accommodations available'
+                ],
+                '4star': [
+                    'Cicilia Saigon Hotel 4*',
+                    'Athena Saigon Hotel 4*',
+                    'Ramana Saigon Hotel 4*',
+                    'Or similar'
+                ],
+                '5star': [
+                    'Available upon request'
+                ]
+            }
+        },
+        meals: {
+            total: 'Lunch = 10, Dinner = 9',
+            specialties: [
+                'Signature Sapa Dinner: Salmon Hotpot and Sashimi with Dalat Wine',
+                'Fansipan Buffet with diverse Sapa cuisine',
+                'Seafood hotpot with fresh Da Nang seafood and half lobster per guest',
+                'Dinner cruise on Saigon River with city views',
+                'BBQ dinner in Dalat with romantic mountain atmosphere',
+                'Ba Na Hills Buffet with international cuisine',
+                'Fresh seafood lunch on Halong Bay boat'
+            ]
+        },
+        included: [
+            'Accommodation twin share room (2 nights Sapa, 2 nights Hanoi, 2 nights Da Nang, 1 night Hoi An, 3 nights HCM City)',
+            'Meals: (B) Breakfast, (L) Lunch, (D) Dinner as specified',
+            'Transportation with air-conditioning',
+            'English / Chinese / Thai speaking guide',
+            'Entrance fees to all attractions',
+            'Drinking water during tours'
+        ],
+        excluded: [
+            'Visa stamping fee in Vietnam',
+            'Personal travel insurance',
+            'Any flights to and from Vietnam (including domestic flights: Hanoi-Da Nang, Da Nang-HCM)',
+            'All personal expenses',
+            'All gratuities and tips to driver and tour guide',
+            'Early check in & late check out at hotels',
+            'Bank fees',
+            'Surcharge on Christmas or New Year time',
+            'Tips: Guide $2 USD/day, Driver $1 USD/day (Group <10 pax: Guide $4 USD/day, Driver $2 USD/day)'
+        ],
+        termsAndConditions: [
+            'Rates are not applicable during: New Year 28 Dec - 2 Jan 2026 | Vietnamese New Year 15 - 20 Feb 2026 | 27 Apr 2026 | 30 Apr - 2 May 2026 | 1 - 3 Sept 2026 | 23 - 25 DEC 2026',
+            'Tickets no refund in case of the tour does not visit various tourist attractions except in the event of a storm or flood',
+            'When there is a force majeure that cannot be solved, the company has the right not to refund in all cases',
+            'Cancellations 07 days before departure (or in the case of the company Deposit for hotel, car, etc.) will not return the money',
+            'The company has the right not to be responsible for any expenses in the event of force majeure such as cancellation or delay of airlines / natural disasters / riots / political events and lost items at places where beyond the control of the company',
+            'The travel program may be changed as appropriate without prior notice. The company will take into account the interests of customers as a priority'
+        ],
+        bestTime: 'Best time: March-May and September-November for ideal weather across all regions from North to South. This comprehensive tour showcases Vietnam in its full glory.',
+        difficulty: 'Moderate - Suitable for most fitness levels with some walking and stair climbing. A good fitness level is recommended for this extensive tour.',
+        tags: ['vietnam-grand-tour', 'complete-vietnam', 'multi-region', 'sapa', 'hanoi', 'halong-bay', 'danang', 'hoian', 'hcm-city', 'muine', 'fansipan', 'ba-na-hills', 'cu-chi-tunnels', 'comprehensive', 'ultimate-tour', 'north-to-south'],
+        featured: true,
+        status: 'active',
+        lastUpdated: '2025-12-11',
+        seoTitle: 'VNG1001 Complete Vietnam Grand Tour 10D9N - Hanoi Sapa Halong Da Nang HCM Muine | VN To You',
+        seoDescription: 'The ultimate 10-day Vietnam Grand Tour from North to South. Experience Sapa mountains, Halong Bay, Da Nang coast, Hoi An heritage, HCM City energy, and Muine sand dunes. Includes Salmon Hotpot, seafood feast, Saigon River cruise, and complete Vietnam discovery.',
+        seoKeywords: 'Complete Vietnam tour, 10 days Vietnam, Vietnam Grand Tour, North to South Vietnam, Sapa Halong Danang HCM, Fansipan peak, Ba Na Hills, Cu Chi Tunnels, Muine sand dunes, comprehensive Vietnam travel, ultimate Vietnam tour, multi-destination Vietnam'
     }
 ];
-

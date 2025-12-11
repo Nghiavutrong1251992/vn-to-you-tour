@@ -289,3 +289,67 @@ button.active:hover {
         transform: scale(1.1);
     }
 }
+
+/* ================================
+   TRAVEL GUIDE COMPONENTS
+   ================================ */
+
+/* Travel Guide Cards Enhancement */
+.service-card .service-image {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Category Badge */
+.service-card .service-image .category-badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(0, 149, 217, 0.9);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 2;
+}
+
+/* Travel Guide Meta Info */
+.travel-guide-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0 0.5rem 0;
+    font-size: 0.85rem;
+    color: #666;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border-light);
+}
+
+/* Refresh Button Enhancement */
+#refreshTravelGuides {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+#refreshTravelGuides:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 149, 217, 0.3);
+}
+
+#refreshTravelGuides:active {
+    transform: translateY(0);
+}
+
+/* Loading State */
+.travel-guide-loading {
+    animation: fadeInOut 2s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}

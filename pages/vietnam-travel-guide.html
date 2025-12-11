@@ -101,34 +101,9 @@
         <div class="main-content">
             <div class="content-container">
             
-            <!-- Filter Navigation -->
-            <div style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
-                <button onclick="filterGuides('all')" class="filter-btn active" data-filter="all" style="padding: 0.5rem 1rem; background: var(--brand-primary); color: white; text-decoration: none; border-radius: 5px; font-size: 0.9rem; border: none; cursor: pointer; transition: all 0.3s ease;">All Destinations</button>
-                <button onclick="filterGuides('Northern Vietnam')" class="filter-btn" data-filter="Northern Vietnam" style="padding: 0.5rem 1rem; background: var(--secondary-color); color: white; text-decoration: none; border-radius: 5px; font-size: 0.9rem; border: none; cursor: pointer; transition: all 0.3s ease;">Northern Vietnam</button>
-                <button onclick="filterGuides('Central Vietnam')" class="filter-btn" data-filter="Central Vietnam" style="padding: 0.5rem 1rem; background: var(--secondary-color); color: white; text-decoration: none; border-radius: 5px; font-size: 0.9rem; border: none; cursor: pointer; transition: all 0.3s ease;">Central Vietnam</button>
-                <button onclick="filterGuides('Southern Vietnam')" class="filter-btn" data-filter="Southern Vietnam" style="padding: 0.5rem 1rem; background: var(--secondary-color); color: white; text-decoration: none; border-radius: 5px; font-size: 0.9rem; border: none; cursor: pointer; transition: all 0.3s ease;">Southern Vietnam</button>
-                <button onclick="filterGuides('Food & Culture')" class="filter-btn" data-filter="Food & Culture" style="padding: 0.5rem 1rem; background: var(--secondary-color); color: white; text-decoration: none; border-radius: 5px; font-size: 0.9rem; border: none; cursor: pointer; transition: all 0.3s ease;">Food & Culture</button>
-            </div>
 
-            <!-- Statistics Section -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
-                <div style="background: linear-gradient(135deg, #0095d9, #42A5F5); color: white; padding: 1.5rem; border-radius: 8px; text-align: center;">
-                    <h3 style="margin: 0 0 0.5rem 0; font-size: 2rem;" id="totalGuides">10</h3>
-                    <p style="margin: 0; opacity: 0.9;">Travel Guides</p>
-                </div>
-                <div style="background: linear-gradient(135deg, #81C784, #66BB6A); color: white; padding: 1.5rem; border-radius: 8px; text-align: center;">
-                    <h3 style="margin: 0 0 0.5rem 0; font-size: 2rem;">3</h3>
-                    <p style="margin: 0; opacity: 0.9;">Regions Covered</p>
-                </div>
-                <div style="background: linear-gradient(135deg, #FFB74D, #FF9800); color: white; padding: 1.5rem; border-radius: 8px; text-align: center;">
-                    <h3 style="margin: 0 0 0.5rem 0; font-size: 2rem;">50+</h3>
-                    <p style="margin: 0; opacity: 0.9;">Destinations</p>
-                </div>
-                <div style="background: linear-gradient(135deg, #E57373, #F44336); color: white; padding: 1.5rem; border-radius: 8px; text-align: center;">
-                    <h3 style="margin: 0 0 0.5rem 0; font-size: 2rem;" id="filteredCount">10</h3>
-                    <p style="margin: 0; opacity: 0.9;">Currently Shown</p>
-                </div>
-            </div>
+
+
 
             <!-- Travel Guide Articles Grid -->
             <div id="travelGuidesGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
@@ -235,44 +210,12 @@
             // Insert into container
             container.innerHTML = guidesHTML;
 
-            // Update statistics
-            updateStatistics();
+
         }
 
-        function filterGuides(category) {
-            const cards = document.querySelectorAll('.travel-guide-card');
-            const buttons = document.querySelectorAll('.filter-btn');
-            
-            // Update button states
-            buttons.forEach(btn => {
-                if (btn.getAttribute('data-filter') === category) {
-                    btn.classList.add('active');
-                    btn.style.background = 'var(--brand-primary)';
-                } else {
-                    btn.classList.remove('active');
-                    btn.style.background = 'var(--secondary-color)';
-                }
-            });
 
-            // Filter cards
-            let visibleCount = 0;
-            cards.forEach(card => {
-                if (category === 'all' || card.getAttribute('data-category') === category) {
-                    card.style.display = 'block';
-                    visibleCount++;
-                } else {
-                    card.style.display = 'none';
-                }
-            });
 
-            // Update filtered count
-            document.getElementById('filteredCount').textContent = visibleCount;
-        }
 
-        function updateStatistics() {
-            document.getElementById('totalGuides').textContent = travelGuidesData.length;
-            document.getElementById('filteredCount').textContent = travelGuidesData.length;
-        }
     </script>
 
     <!-- Enhanced Analytics Tracking -->

@@ -1340,7 +1340,7 @@ const privateToursData = [
                         nights: 1
                     },
                     {
-                        category: '4-Star', 
+                        category: '4-Star',
                         hotels: ['Luxtery Da Nang 4*', 'Nhu Minh Danang 4*', 'or similar'],
                         nights: 1
                     },
@@ -2164,6 +2164,510 @@ const privateToursData = [
         seoTitle: 'VNS403 Phuquoc 4D3N Comprehensive Island Tour | VN To You',
         seoDescription: 'Ultimate 4D3N Phu Quoc island experience with Grand World, VinWonders, Hon Thom Island, Aquatopia Water Park, and all major attractions. Complete island adventure with fresh seafood and entertainment.',
         seoKeywords: 'Phuquoc 4D3N tour, VinWonders Phuquoc, Grand World Phuquoc, Hon Thom Island, Aquatopia Water Park, Phu Quoc comprehensive tour, Vietnam island vacation, Sunset Town Kiss Bridge'
+    },
+    {
+        id: 'vngt001',
+        title: 'Vietnam Grand Tour - Complete Vietnam Discovery',
+        region: 'multi',
+        category: 'comprehensive',
+        excerpt: 'The ultimate Vietnam experience covering all three regions - from the bustling streets of Ho Chi Minh City to the majestic Halong Bay, discovering the full beauty and culture of Vietnam in one comprehensive journey.',
+        description: 'Vietnam Grand Tour offers the most complete Vietnam experience, combining the best of all three regions. Start from dynamic Southern Vietnam with Ho Chi Minh City and Mekong Delta, journey through the historic Central region with Hoi An and Hue, and conclude with the spectacular Northern Vietnam featuring Hanoi and Halong Bay. This comprehensive tour showcases Vietnam\'s diverse landscapes, rich history, and vibrant culture.',
+        image: {
+            url: 'https://vn-to-you-tour.vercel.app/assets/images/tours/vietnam-grand-tour.jpg',
+            alt: 'Vietnam Grand Tour - Complete Vietnam Discovery'
+        },
+        duration: {
+            display: '12 Days / 11 Nights',
+            days: 12,
+            nights: 11
+        },
+        price: {
+            display: 'Please contact for detailed pricing',
+            amount: 0,
+            currency: 'USD'
+        },
+        groupSize: 'Private tour for 2-12 people',
+        highlights: [
+            'Complete Vietnam experience covering all three regions',
+            'Ho Chi Minh City cultural and historical exploration',
+            'Authentic Mekong Delta floating market experience',
+            'Hoi An Ancient Town UNESCO World Heritage site',
+            'Imperial Hue with Forbidden Purple City',
+            'Hanoi Old Quarter and cultural immersion',
+            'Spectacular Halong Bay overnight cruise experience',
+            'Traditional water puppet show in Hanoi',
+            'Vietnamese cooking classes and street food tours',
+            'Professional English-speaking guide throughout',
+            'Carefully selected 4-5 star accommodations',
+            'All domestic flights included'
+        ],
+        itinerary: [
+            {
+                day: 1,
+                title: 'Arrival Ho Chi Minh City',
+                meals: 'Dinner',
+                activities: [
+                    'Airport pickup and transfer to hotel',
+                    'Check-in and rest',
+                    'Welcome dinner at local restaurant',
+                    'Evening briefing about the tour'
+                ],
+                accommodation: 'Ho Chi Minh City Hotel (4-5*)'
+            },
+            {
+                day: 2,
+                title: 'Ho Chi Minh City Full Day Tour',
+                meals: 'Breakfast, Lunch, Dinner',
+                activities: [
+                    'Visit Reunification Palace',
+                    'War Remnants Museum exploration',
+                    'Notre Dame Cathedral and Central Post Office',
+                    'Ben Thanh Market shopping experience',
+                    'Cu Chi Tunnels half-day tour',
+                    'Traditional Vietnamese dinner with cultural show'
+                ],
+                accommodation: 'Ho Chi Minh City Hotel (4-5*)'
+            },
+            {
+                day: 3,
+                title: 'Mekong Delta Adventure',
+                meals: 'Breakfast, Lunch, Dinner',
+                activities: [
+                    'Early departure to Mekong Delta',
+                    'Boat cruise through narrow canals',
+                    'Visit floating market',
+                    'Traditional handicraft workshops',
+                    'Local family lunch in orchard garden',
+                    'Return to Ho Chi Minh City'
+                ],
+                accommodation: 'Ho Chi Minh City Hotel (4-5*)'
+            },
+            {
+                day: 4,
+                title: 'Flight to Da Nang - Hoi An Ancient Town',
+                meals: 'Breakfast, Lunch, Dinner',
+                activities: [
+                    'Morning flight to Da Nang',
+                    'Transfer to Hoi An Ancient Town',
+                    'Check-in at resort',
+                    'Afternoon exploring Hoi An Old Quarter',
+                    'Japanese Covered Bridge visit',
+                    'Traditional lantern-lit dinner'
+                ],
+                accommodation: 'Hoi An Resort (4-5*)'
+            },
+            {
+                day: 5,
+                title: 'Hoi An Countryside & Cooking Class',
+                meals: 'Breakfast, Lunch, Dinner',
+                activities: [
+                    'Bicycle tour through rice paddies',
+                    'Visit local farming villages',
+                    'Traditional basket boat experience',
+                    'Vietnamese cooking class with market tour',
+                    'Enjoy your self-prepared lunch',
+                    'Afternoon at leisure or beach time'
+                ],
+                accommodation: 'Hoi An Resort (4-5*)'
+            },
+            {
+                day: 6,
+                title: 'Hoi An to Hue - Imperial City',
+                meals: 'Breakfast, Lunch, Dinner',
+                activities: [
+                    'Scenic drive via Hai Van Pass',
+                    'Photo stops at Lang Co Beach',
+                    'Check-in Hue hotel',
+                    'Afternoon visit to Imperial Citadel',
+                    'Forbidden Purple City exploration',
+                    'Royal tomb visit (Khai Dinh or Tu Duc)'
+                ],
+                accommodation: 'Hue Hotel (4-5*)'
+            },
+            {
+                day: 7,
+                title: 'Hue Cultural Immersion - Flight to Hanoi',
+                meals: 'Breakfast, Lunch, Dinner',
+                activities: [
+                    'Morning boat trip on Perfume River',
+                    'Thien Mu Pagoda visit',
+                    'Local market exploration',
+                    'Flight to Hanoi',
+                    'Transfer to hotel and check-in',
+                    'Welcome dinner in Hanoi'
+                ],
+                accommodation: 'Hanoi Hotel (4-5*)'
+            },
+            {
+                day: 8,
+                title: 'Hanoi City Discovery',
+                meals: 'Breakfast, Lunch, Dinner',
+                activities: [
+                    'Ho Chi Minh Mausoleum (exterior)',
+                    'One Pillar Pagoda visit',
+                    'Temple of Literature exploration',
+                    'Hanoi Old Quarter walking tour',
+                    'Traditional Vietnamese lunch',
+                    'Water Puppet Show in the evening',
+                    'Street food tour by night'
+                ],
+                accommodation: 'Hanoi Hotel (4-5*)'
+            },
+            {
+                day: 9,
+                title: 'Hanoi to Halong Bay Cruise',
+                meals: 'Breakfast, Lunch, Dinner',
+                activities: [
+                    'Transfer to Halong Bay (3.5 hours)',
+                    'Board luxury cruise ship',
+                    'Cruise through limestone karsts',
+                    'Cave exploration (Sung Sot or Thien Cung)',
+                    'Kayaking or bamboo boat experience',
+                    'Sunset cocktail on deck',
+                    'Fresh seafood dinner on board'
+                ],
+                accommodation: 'Halong Bay Cruise (4-5* ship)'
+            },
+            {
+                day: 10,
+                title: 'Halong Bay Exploration - Return Hanoi',
+                meals: 'Breakfast, Lunch',
+                activities: [
+                    'Early morning Tai Chi session on deck',
+                    'Visit floating fishing village',
+                    'Pearl farming demonstration',
+                    'Final cruise through the bay',
+                    'Disembark and return to Hanoi',
+                    'Free time for shopping at Dong Xuan Market'
+                ],
+                accommodation: 'Hanoi Hotel (4-5*)'
+            },
+            {
+                day: 11,
+                title: 'Hanoi Cultural Experience',
+                meals: 'Breakfast, Lunch, Dinner',
+                activities: [
+                    'Visit Museum of Ethnology',
+                    'Ngoc Son Temple on Hoan Kiem Lake',
+                    'Cyclo tour through Old Quarter',
+                    'Traditional handicraft shopping',
+                    'Farewell dinner with traditional music',
+                    'Last night in Vietnam preparations'
+                ],
+                accommodation: 'Hanoi Hotel (4-5*)'
+            },
+            {
+                day: 12,
+                title: 'Departure',
+                meals: 'Breakfast',
+                activities: [
+                    'Breakfast at hotel',
+                    'Free time until airport transfer',
+                    'Shopping for last-minute souvenirs',
+                    'Transfer to Noi Bai Airport',
+                    'End of Vietnam Grand Tour'
+                ],
+                accommodation: 'End of tour'
+            }
+        ],
+        accommodation: {
+            hoChiMinhCity: {
+                options: [
+                    'Liberty Central Saigon Citypoint (4*)',
+                    'Park Hyatt Saigon (5*)',
+                    'Hotel des Arts Saigon (5*)'
+                ]
+            },
+            hoiAn: {
+                options: [
+                    'Hoi An Eco Lodge & Spa (4*)',
+                    'Anantara Hoi An Resort (5*)',
+                    'Four Seasons Resort The Nam Hai (5*)'
+                ]
+            },
+            hue: {
+                options: [
+                    'Moonlight Hotel Hue (4*)',
+                    'Pilgrimage Village Boutique Resort (5*)',
+                    'Azerai La Residence Hue (5*)'
+                ]
+            },
+            hanoi: {
+                options: [
+                    'Hanoi Pearl Hotel (4*)',
+                    'Sofitel Legend Metropole Hanoi (5*)',
+                    'JW Marriott Hotel Hanoi (5*)'
+                ]
+            },
+            halongBay: {
+                options: [
+                    'Paradise Luxury Cruise (4*)',
+                    'Heritage Binh Chuan Cruise (5*)',
+                    'Stellar of the Seas Cruise (5*)'
+                ]
+            }
+        },
+        meals: {
+            total: 'B=11, L=10, D=10',
+            specialties: [
+                'Welcome dinner with cultural show',
+                'Mekong Delta local family lunch',
+                'Vietnamese cooking class meal',
+                'Royal cuisine in Hue',
+                'Halong Bay fresh seafood',
+                'Hanoi street food experience',
+                'Farewell dinner with traditional music'
+            ]
+        },
+        included: [
+            'Accommodation in 4-5* hotels and luxury cruise',
+            'All meals as specified in itinerary',
+            'Professional English-speaking guide throughout',
+            'All transportation including domestic flights',
+            'Entrance fees to all attractions',
+            'Boat trips and cruise experiences',
+            'Cooking class and cultural activities',
+            'Airport transfers',
+            'Drinking water during tours'
+        ],
+        excluded: [
+            'International flights to/from Vietnam',
+            'Vietnam visa fees',
+            'Personal travel insurance',
+            'Personal expenses and shopping',
+            'Tips for guides and drivers',
+            'Additional meals not specified',
+            'Alcoholic beverages',
+            'Spa treatments and optional activities',
+            'Single room supplement'
+        ],
+        termsAndConditions: [
+            'Minimum 2 passengers required for private tour',
+            'Peak season surcharges apply during Tet holidays and Christmas/New Year',
+            'Domestic flight schedules subject to change',
+            'Weather conditions may affect Halong Bay cruise activities',
+            'Hotels subject to availability, similar standard alternatives may be used',
+            'Cancellation policy: 30% charge for 7-14 days notice, 50% for 3-6 days, 100% for less than 3 days',
+            'Force majeure events may require itinerary adjustments'
+        ],
+        bestTime: 'Best time: March-May and September-November for ideal weather across all regions. Avoid rainy season (June-August) in the north.',
+        difficulty: 'Easy to Moderate - Suitable for most fitness levels with moderate walking involved',
+        tags: ['grand-tour', 'all-regions', 'comprehensive', 'cultural', 'heritage', 'halong-bay', 'mekong-delta', 'hoi-an', 'hue', 'hanoi', 'ho-chi-minh-city'],
+        featured: true,
+        status: 'active',
+        lastUpdated: '2025-12-11',
+        seoTitle: 'Vietnam Grand Tour 12D11N - Complete Vietnam Discovery | VN To You',
+        seoDescription: 'Ultimate 12-day Vietnam Grand Tour covering all three regions from Ho Chi Minh City to Halong Bay. Experience Mekong Delta, Hoi An, Hue Imperial City, Hanoi culture, and luxury Halong cruise in one complete journey.',
+        seoKeywords: 'Vietnam Grand Tour, complete Vietnam tour, 12 days Vietnam, Halong Bay cruise, Mekong Delta tour, Hoi An Hue Hanoi, Vietnam cultural tour, comprehensive Vietnam travel, luxury Vietnam tour'
+    },
+    {
+        id: 'vng501',
+        title: 'VNG501 Hanoi – Sapa – Da Nang: Vietnam Grand Tour',
+        region: 'multi',
+        category: 'grand-tour',
+        excerpt: 'Featuring the two most popular and exciting travel destinations in Vietnam today - Experience Sapa\'s mountain beauty and Da Nang\'s coastal charm in one comprehensive 5-day tour.',
+        description: 'VNG501 Hanoi – Sapa – Da Nang combines the stunning mountain landscapes of Sapa with the beautiful coastal attractions of Da Nang. This comprehensive tour features signature dining experiences including Salmon Hotpot in Sapa, fresh seafood in Da Nang, and visits to iconic attractions like Fansipan, Ba Na Hills, and Hoi An Ancient Town.',
+        image: {
+            url: 'https://vn-to-you-tour.vercel.app/assets/images/tours/vng501.jpg',
+            alt: 'VNG501 Hanoi Sapa Da Nang Vietnam Grand Tour'
+        },
+        duration: {
+            display: '5 Days / 4 Nights',
+            days: 5,
+            nights: 4
+        },
+        price: {
+            display: 'Please contact us for pricing',
+            amount: 0,
+            currency: 'USD'
+        },
+        groupSize: 'Private tour for 2-10 people',
+        highlights: [
+            'Signature Sapa Dinner: Enjoy Salmon Hotpot and Sashimi paired with Dalat Wine, Vietnam\'s famous vintage, amidst Sapa\'s cool, misty air',
+            'Fansipan Buffet offers a wide array of dishes, highlighting the diverse cuisine of Sapa',
+            'A seafood hotpot featuring fresh Da Nang seafood and half a lobster for each guest',
+            'Buffet Ba Na Hills with Golden Hand Bridge visit',
+            'Visit Cat Cat Village and explore Sapa\'s ethnic culture',
+            'Explore Hoi An Ancient Town, Japanese Covered Bridge, and traditional houses',
+            'Shopping at Sapa night market',
+            'Multiple hotel options from 3* to 5* in Sapa, Hanoi, and Da Nang'
+        ],
+        itinerary: [
+            {
+                day: 1,
+                title: 'Arrival - Transfer to Sapa - Cat Cat Village',
+                meals: 'Lunch, Dinner',
+                activities: [
+                    'Pick up at airport (or hotel)',
+                    'Transfer to Sa Pa',
+                    'Visit Cat Cat Village',
+                    'Dinner (Salmon hotpot + Dalat wine)',
+                    'Shopping at night market Sapa'
+                ],
+                accommodation: 'Sapa Hotel (3*/4*/5* options available)'
+            },
+            {
+                day: 2,
+                title: 'Fansipan Peak Adventure',
+                meals: 'Breakfast, Lunch, Dinner',
+                activities: [
+                    'Breakfast at hotel',
+                    'Visit Fansipan (include Muong Hoa Train, Buffet Fansipan, Cable Car ticket)',
+                    'Visit Moana Cafe (cafe fee not included)',
+                    'Back to Hanoi'
+                ],
+                accommodation: 'Hanoi Hotel (3*/4*/5* options available)',
+                notes: 'Optional Funicular Train Fansipan: $7 USD/pax up, $5 USD/pax down (Ideal for elderly guests who wish to skip the 600-step climb to the peak)'
+            },
+            {
+                day: 3,
+                title: 'Hanoi to Da Nang - City Tour',
+                meals: 'Breakfast, Lunch, Dinner',
+                activities: [
+                    'Breakfast at hotel',
+                    'Back to Hanoi',
+                    'Tran Quoc Pagoda',
+                    'Hanoi Old Quarter',
+                    'Sword Lake Hanoi',
+                    'Shopping',
+                    'Railway cafe Hanoi (cafe fee not included)',
+                    'Flight to Da Nang (airfare not included)'
+                ],
+                accommodation: 'Da Nang Hotel (3*/4*/5* options available)'
+            },
+            {
+                day: 4,
+                title: 'Full Day Ba Na Hills Adventure',
+                meals: 'Breakfast, Lunch, Dinner',
+                activities: [
+                    'Breakfast at hotel',
+                    'Full day visit to Ba Na Hills',
+                    'Transfer to Ba Na Hills via cable car',
+                    'Visit French Village',
+                    'Moon Castle exploration',
+                    'Fantasy Park experience',
+                    'Visit Golden Hand Bridge',
+                    'Le Jardin D\'Amour Flower Garden',
+                    'Buffet lunch at Ba Na Hills',
+                    'Return to Da Nang'
+                ],
+                accommodation: 'Da Nang Hotel (3*/4*/5* options available)',
+                notes: 'Optional activities: Wax Museum ($4 USD/pax), Alpine Coaster ($4 USD/pax), Wine Cellar ($4 USD/pax)'
+            },
+            {
+                day: 5,
+                title: 'Hoi An Ancient Town - Departure',
+                meals: 'Breakfast, Lunch',
+                activities: [
+                    'Breakfast at hotel',
+                    'Transfer to Hoian',
+                    'Visit Hoian Ancient Town',
+                    'Japanese Covered Bridge',
+                    'Tan Ky Old House',
+                    'Assembly Hall (Hoi Quan Phuoc Kien)',
+                    'Back to Danang',
+                    'End of tour - Transfer to airport'
+                ],
+                accommodation: 'End of tour'
+            }
+        ],
+        accommodations: {
+            sapa: {
+                '3star': [
+                    'Azure Sapa 3*',
+                    'Sapa Relax Hotel 3*',
+                    'Or similar'
+                ],
+                '4star': [
+                    'Sapa Highland Resort & Spa 4*',
+                    'Charm Sapa Hotel 4*',
+                    'Hotel De Sapa 4*',
+                    'Or similar'
+                ],
+                '5star': [
+                    'Available upon request'
+                ]
+            },
+            hanoi: {
+                '3star': [
+                    'CWD Hanoi Hotel 3*',
+                    'Quang Ba Trade Union Hotel 3*',
+                    'Or similar'
+                ],
+                '4star': [
+                    'Thang Long Opera Hotel 4*',
+                    'Muong Thanh Central Hotel 4*',
+                    'Super Candle Hanoi Hotel 4*',
+                    'Lacasa Hanoi Hotel 4*',
+                    'Or similar'
+                ],
+                '5star': [
+                    'Available upon request'
+                ]
+            },
+            danang: {
+                '3star': [
+                    'Sepon Blue Hotel 3*',
+                    'Pandora Danang Hotel',
+                    'Or similar'
+                ],
+                '4star': [
+                    'Luxtery Da Nang 4*',
+                    'Nhu Minh Danang 4*',
+                    'Or similar'
+                ],
+                '5star': [
+                    'Golden Bay Danang Hotel 5*',
+                    'Muong Thanh Luxury Danang 5*',
+                    'Or similar'
+                ]
+            }
+        },
+        meals: {
+            total: 'Lunch = 5, Dinner = 4',
+            specialties: [
+                'Signature Sapa Dinner: Salmon Hotpot and Sashimi with Dalat Wine',
+                'Fansipan Buffet with diverse Sapa cuisine',
+                'Seafood hotpot with fresh Da Nang seafood and half lobster per guest',
+                'Ba Na Hills Buffet'
+            ]
+        },
+        included: [
+            'Accommodation twin share room (1 night Sapa, 1 night Hanoi, 2 nights Da Nang)',
+            'Meals: (B) Breakfast, (L) Lunch, (D) Dinner as specified',
+            'Transportation with air-conditioning',
+            'English / Chinese / Thai speaking guide',
+            'Entrance fees to all attractions',
+            'Drinking water during tours'
+        ],
+        excluded: [
+            'Visa stamping fee in Vietnam',
+            'Personal travel insurance',
+            'Any flights to and from Vietnam (including Hanoi to Da Nang flight)',
+            'All personal expenses',
+            'All gratuities and tips to driver and tour guide',
+            'Early check in & late check out at hotels',
+            'Bank fees',
+            'Surcharge on Christmas or New Year time',
+            'Tips: Guide $2 USD/day, Driver $1 USD/day (Group <10 pax: Guide $4 USD/day, Driver $2 USD/day)'
+        ],
+        termsAndConditions: [
+            'Rates are not applicable during: New Year 28 Dec - 2 Jan 2026 | Vietnamese New Year 15 - 20 Feb 2026 | 27 Apr 2026 | 30 Apr - 2 May 2026 | 1 - 3 Sept 2026 | 23 - 25 DEC 2026',
+            'Tickets no refund in case of the tour does not visit various tourist attractions except in the event of a storm or flood',
+            'When there is a force majeure that cannot be solved, the company has the right not to refund in all cases',
+            'Cancellations 07 days before departure (or in the case of the company Deposit for hotel, car, etc.) will not return the money',
+            'The company has the right not to be responsible for any expenses in the event of force majeure such as cancellation or delay of airlines / natural disasters / riots / political events and lost items at places where beyond the control of the company',
+            'The travel program may be changed as appropriate without prior notice. The company will take into account the interests of customers as a priority'
+        ],
+        bestTime: 'Best time: March-May and September-November for ideal weather in both Sapa and Da Nang. Avoid peak summer (June-August) for cooler experience.',
+        difficulty: 'Moderate - Suitable for most fitness levels with some walking and stair climbing at attractions',
+        tags: ['vietnam-grand-tour', 'multi-region', 'sapa', 'hanoi', 'danang', 'hoian', 'fansipan', 'ba-na-hills', 'comprehensive', 'cultural-heritage'],
+        featured: true,
+        status: 'active',
+        lastUpdated: '2025-12-11',
+        seoTitle: 'VNG501 Hanoi Sapa Da Nang 5D4N Grand Tour | VN To You',
+        seoDescription: 'Experience Vietnam\'s two most popular destinations in one tour. 5-day journey from Sapa\'s mountains to Da Nang\'s coast, featuring Fansipan, Salmon Hotpot, Ba Na Hills, Golden Hand Bridge, and Hoi An Ancient Town.',
+        seoKeywords: 'Vietnam Grand Tour, Hanoi Sapa Danang tour, Fansipan peak, Ba Na Hills, Golden Hand Bridge, Hoi An ancient town, salmon hotpot Sapa, comprehensive Vietnam tour, multi-region Vietnam'
     }
 ];
 

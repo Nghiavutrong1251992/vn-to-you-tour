@@ -131,6 +131,72 @@ const travelGuidesData = [
         featured: true,
         publishDate: '2025-12-11',
         readTime: '10 min'
+    },
+    {
+        id: 'hoan-kiem-lake',
+        title: 'Hoan Kiem Lake Guide',
+        description: 'The heart of Hanoi - legend, history, and best photo spots at Vietnam\'s most iconic lake.',
+        image: 'https://images.unsplash.com/photo-1509614838453-f5f03e2a2e63?w=500&h=300&fit=crop&center',
+        url: 'destinations/northern-vietnam/hoan-kiem-lake-guide.html',
+        category: 'Northern Vietnam',
+        featured: true,
+        publishDate: '2025-12-11',
+        readTime: '7 min'
+    },
+    {
+        id: 'temple-of-literature',
+        title: 'Temple of Literature Guide',
+        description: 'Vietnam\'s first national university and symbol of education - complete guide to this UNESCO heritage site.',
+        image: 'https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=500&h=300&fit=crop&center',
+        url: 'destinations/northern-vietnam/temple-of-literature-guide.html',
+        category: 'Northern Vietnam',
+        featured: true,
+        publishDate: '2025-12-11',
+        readTime: '9 min'
+    },
+    {
+        id: 'hanoi-french-quarter',
+        title: 'Hanoi French Quarter Guide',
+        description: 'Colonial architecture walking tour with historical landmarks and French-era buildings.',
+        image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&h=300&fit=crop&center',
+        url: 'destinations/northern-vietnam/hanoi-french-quarter-guide.html',
+        category: 'Northern Vietnam',
+        featured: true,
+        publishDate: '2025-12-11',
+        readTime: '11 min'
+    },
+    {
+        id: 'hanoi-night-market',
+        title: 'Hanoi Weekend Night Market Guide',
+        description: 'Experience Hanoi\'s vibrant weekend night market with street food, shopping, and local atmosphere.',
+        image: 'https://images.unsplash.com/photo-1578574577315-3fbeb0cecdc2?w=500&h=300&fit=crop&center',
+        url: 'destinations/northern-vietnam/hanoi-night-market-guide.html',
+        category: 'Northern Vietnam',
+        featured: false,
+        publishDate: '2025-12-11',
+        readTime: '6 min'
+    },
+    {
+        id: 'hanoi-street-food-tour',
+        title: 'Hanoi Street Food Tour Guide',
+        description: 'Ultimate guide to Hanoi street food - from famous pho to hidden local delicacies and best food streets.',
+        image: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?w=500&h=300&fit=crop&center',
+        url: 'destinations/northern-vietnam/hanoi-street-food-tour-guide.html',
+        category: 'Northern Vietnam',
+        featured: false,
+        publishDate: '2025-12-11',
+        readTime: '13 min'
+    },
+    {
+        id: 'hanoi-transportation',
+        title: 'Hanoi Transportation Guide',
+        description: 'Complete guide to getting around Hanoi - taxis, buses, motorbikes, and transportation tips for travelers.',
+        image: 'https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=500&h=300&fit=crop&center',
+        url: 'destinations/northern-vietnam/hanoi-transportation-guide.html',
+        category: 'Northern Vietnam',
+        featured: false,
+        publishDate: '2025-12-11',
+        readTime: '8 min'
     }
 ];
 

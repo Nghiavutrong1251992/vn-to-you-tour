@@ -48,10 +48,10 @@
 **Sapa Extended (8 bài):**
 - "Sapa Trekking Routes: Complete Guide All Difficulty Levels" ✅
 - "Sapa Rice Terraces Photography: Best Times & Locations"✅
-- "Ethnic Villages Near Sapa: Ta Van, Ta Phin, Lao Chai Guide"
-- "Mount Fansipan Cable Car vs Trekking: Which to Choose"
-- "Sapa Weather by Month: Best Time to Visit Guide"
-- "Sapa Food Guide: Traditional H'Mong & Local Specialties"
+- "Ethnic Villages Near Sapa: Ta Van, Ta Phin, Lao Chai Guide"✅
+- "Mount Fansipan Cable Car vs Trekking: Which to Choose" ✅
+- "Sapa Weather by Month: Best Time to Visit Guide"✅
+- "Sapa Food Guide: Traditional H'Mong & Local Specialties" ok 
 - "Sapa Markets: Bac Ha, Can Cau Weekend Market Guide"
 - "Sapa Accommodation: Homestays vs Hotels Guide"
 

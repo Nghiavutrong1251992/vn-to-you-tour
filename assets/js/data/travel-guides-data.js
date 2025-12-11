@@ -45,6 +45,17 @@ const travelGuidesData = [
         readTime: '9 min'
     },
     {
+        id: 'sapa-food-guide',
+        title: 'Sapa Food Guide: Traditional H\'Mong & Local Specialties',
+        description: 'Discover authentic Sapa cuisine with traditional H\'Mong dishes, local specialties, and the best places to eat in the mountains.',
+        image: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?w=500&h=300&fit=crop&center',
+        url: 'destinations/northern-vietnam/sapa-food-guide.html',
+        category: 'Northern Vietnam',
+        featured: false,
+        publishDate: '2025-12-11',
+        readTime: '11 min'
+    },
+    {
         id: 'sapa-ethnic-villages-guide',
         title: 'Ethnic Villages Near Sapa: Ta Van, Ta Phin, Lao Chai Guide',
         description: 'Explore authentic ethnic villages around Sapa. Discover H\'Mong, Dao, and Giay cultures, traditional crafts, and sustainable tourism experiences.',

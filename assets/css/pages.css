@@ -3,6 +3,196 @@
    ================================ */
 
 /* ================================
+   VIETNAM TRAVEL GUIDE PAGE
+   ================================ */
+
+.quick-nav .nav-card {
+    display: block;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 149, 217, 0.1);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    color: var(--text-primary);
+}
+
+.quick-nav .nav-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 149, 217, 0.2);
+    border-color: var(--brand-primary);
+}
+
+.quick-nav .nav-card h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--brand-primary);
+    font-size: 1.2rem;
+}
+
+.quick-nav .nav-card p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.region-section {
+    margin-bottom: 4rem;
+}
+
+.region-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.region-header h2 {
+    color: var(--brand-primary);
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.region-intro {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.destination-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 149, 217, 0.15);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.destination-content {
+    padding: 1.5rem;
+}
+
+.destination-content h3 {
+    color: var(--brand-primary);
+    font-size: 1.4rem;
+    margin: 0 0 1rem 0;
+    font-weight: 600;
+}
+
+.highlights, .travel-tips {
+    margin-bottom: 1.5rem;
+}
+
+.highlights h4, .travel-tips h4 {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    margin: 0 0 0.5rem 0;
+    font-weight: 600;
+}
+
+.highlights ul, .travel-tips ul {
+    margin: 0;
+    padding-left: 1rem;
+}
+
+.highlights li, .travel-tips li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.highlights li strong {
+    color: var(--brand-primary);
+    font-weight: 600;
+}
+
+.travel-tips-section {
+    margin-top: 4rem;
+}
+
+.travel-tips-section h2 {
+    text-align: center;
+    color: var(--brand-primary);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.tip-category {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--brand-primary);
+}
+
+.tip-category h3 {
+    color: var(--brand-primary);
+    font-size: 1.2rem;
+    margin: 0 0 1rem 0;
+    font-weight: 600;
+}
+
+.tip-category ul {
+    margin: 0;
+    padding-left: 1rem;
+}
+
+.tip-category li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.tip-category li strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .destinations-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .tips-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .region-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .region-intro {
+        font-size: 1.1rem;
+    }
+    
+    .destination-content {
+        padding: 1rem;
+    }
+}
+
+/* ================================
    ABOUT US PAGE
    ================================ */
 

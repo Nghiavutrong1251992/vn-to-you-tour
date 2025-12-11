@@ -47,6 +47,7 @@
     <link rel="stylesheet" href="../assets/css/components.css">
     <link rel="stylesheet" href="../assets/css/layout.css">
     <link rel="stylesheet" href="../assets/css/sections.css">
+    <link rel="stylesheet" href="../assets/css/sidebar-tours.css">
     <link rel="stylesheet" href="../assets/css/pages.css">
     <link rel="stylesheet" href="../assets/css/utilities.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
@@ -97,7 +98,8 @@
     </section>
 
     <div class="content-wrapper">
-        <div class="content-container">
+        <div class="main-content">
+            <div class="content-container">
             
             <!-- Quick Navigation -->
             <div style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
@@ -123,6 +125,10 @@
                     <h3>Sapa - Mountain Paradise</h3>
                     <p><strong>Must-Experience:</strong> Rice Terraces (stunning May-October), Mount Fansipan (Vietnam's highest peak 3,143m, cable car access), Cat Cat Village (traditional H'Mong village), Ta Van & Ta Phin villages for homestays, Muong Hoa Valley with ancient rock carvings.</p>
                     <p><strong>Travel Tips:</strong> September-November golden rice season, bring warm clothes (temperatures to 5°C), ethnic homestays for authentic experience, book Muong Hoa train for mountain views.</p>
+                    
+                    <p style="margin-top: 1rem; padding: 0.75rem; background: rgba(0, 149, 217, 0.1); border-left: 4px solid var(--brand-primary); border-radius: 4px;">
+                        <strong>🏔️ Complete Guide:</strong> <a href="destinations/northern-vietnam/sapa-attractions-guide.html" style="color: var(--brand-primary); text-decoration: none; font-weight: 600;">Read our detailed Sapa Attractions Guide →</a>
+                    </p>
                 </div>
 
                 <div class="article-content">
@@ -246,7 +252,14 @@
                 <a href="private-tours.html" class="btn" style="background: white; color: var(--brand-primary); border: none;">View Our Tours</a>
             </div>
             
+            </div>
         </div>
+
+        <aside class="sidebar">
+            <div id="tour-overview-sidebar">
+                <!-- Tour overview sidebar will be populated by JavaScript -->
+            </div>
+        </aside>
     </div>
 
     <footer>
@@ -258,6 +271,22 @@
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+
+    <!-- Load sidebar -->
+    <script src="../assets/js/data/articles-data.js"></script>
+    <script src="../assets/js/data/daily-tours-data.js"></script>
+    <script src="../assets/js/data/private-tours-data.js"></script>
+    <script src="../assets/js/components/sidebar.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize sidebar using the existing sidebar component
+            const sidebarContainer = document.getElementById('tour-overview-sidebar');
+            if (sidebarContainer) {
+                sidebarContainer.innerHTML = createSidebarHTML('../');
+                populateSidebar('../');
+            }
         });
     </script>
 

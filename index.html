@@ -137,9 +137,12 @@
     </script>
 
     <!-- Hero Slideshow -->
+    <!-- Để thay đổi ảnh slide: chỉ cần thay đổi src của img trong slide tương ứng -->
+    <!-- Slide 1: slide-1, Slide 2: slide-2, Slide 3: slide-3 -->
     <div class="hero-slideshow">
         <div class="slide-container">
-            <div class="slide active">
+            <!-- Slide 1: The Huc Bridge -->
+            <div class="hero-slide slide-1 active">
                 <img src="assets/images/vntoyou-slide-home/vntoyou%20slide%201%20-%20The%20Huc%20Bridge.jpg" 
                      onerror="this.src='https://via.placeholder.com/1200x600/2563eb/ffffff?text=The+Huc+Bridge+Loading...'" 
                      alt="The Huc Bridge">
@@ -148,7 +151,9 @@
                     <p>Iconic red bridge connecting to Ngoc Son Temple in Hanoi's Hoan Kiem Lake</p>
                 </div>
             </div>
-            <div class="slide">
+            
+            <!-- Slide 2: Muong Hoa Train -->
+            <div class="hero-slide slide-2">
                 <img src="assets/images/vntoyou-slide-home/vntoyou%20slide%202%20-%20Muong%20Hoa%20Train%20to%20Fansipan%20Cable%20Car%20Station.jpg" 
                      alt="Muong Hoa Train to Fansipan Cable Car Station"
                      loading="lazy">
@@ -157,7 +162,9 @@
                     <p>Scenic mountain railway journey to Vietnam's highest peak cable car station</p>
                 </div>
             </div>
-            <div class="slide">
+            
+            <!-- Slide 3: Cat Cat Village -->
+            <div class="hero-slide slide-3">
                 <img src="assets/images/vntoyou-slide-home/vntoyou%20slide%203%20-%20Cat%20Cat%20Village.jpg" 
                      alt="Cat Cat Village"
                      loading="lazy">
@@ -590,23 +597,47 @@
         let slideIndex = 0;
         
         function nextSlide() {
-            const slides = document.querySelectorAll('.slide');
+            const slides = document.querySelectorAll('.hero-slide');
+            
+            console.log(`Current hero slide: ${slideIndex}, Total hero slides: ${slides.length}`);
             
             // Hide current slide
-            slides[slideIndex].classList.remove('active');
+            if (slides[slideIndex]) {
+                slides[slideIndex].classList.remove('active');
+            }
             
             // Move to next slide
             slideIndex = (slideIndex + 1) % slides.length;
             
+            console.log(`Next hero slide: ${slideIndex}`);
+            
             // Show next slide immediately
-            slides[slideIndex].classList.add('active');
+            if (slides[slideIndex]) {
+                slides[slideIndex].classList.add('active');
+            }
         }
         
         // Start auto-advance when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            const slides = document.querySelectorAll('.slide');
-            slides[0].classList.add('active'); // Show first slide
-            setInterval(nextSlide, 4000); // Change slide every 4 seconds (optimized timing)
+            const slides = document.querySelectorAll('.hero-slide');
+            
+            console.log(`Found ${slides.length} hero slides`);
+            
+            // Ensure all slides are hidden first
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active');
+                console.log(`Hero slide ${index} classes:`, slide.classList.toString());
+            });
+            
+            // Show first slide
+            if (slides.length > 0) {
+                slides[0].classList.add('active');
+                slideIndex = 0;
+                console.log('First hero slide activated');
+            }
+            
+            // Start slideshow
+            setInterval(nextSlide, 4000); // Change slide every 4 seconds
             
             // Auto-update current year
             const currentYear = new Date().getFullYear();

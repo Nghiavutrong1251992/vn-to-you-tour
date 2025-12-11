@@ -548,3 +548,104 @@
 .mice-contact-text {
     color: var(--text-quaternary);
 }
+
+/* ================================
+   ARTICLE TEMPLATE STYLES
+   ================================ */
+
+.article-title {
+    color: var(--brand-primary);
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: var(--spacing-lg);
+    text-align: left;
+}
+
+.article-meta {
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid rgba(0, 149, 217, 0.2);
+}
+
+.article-meta p {
+    color: var(--text-tertiary);
+    font-size: 0.9rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+.article-content {
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+.article-content p {
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-primary);
+}
+
+.article-content h3 {
+    color: var(--brand-primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: var(--spacing-xl) 0 var(--spacing-lg) 0;
+}
+
+.article-content ul {
+    margin-bottom: var(--spacing-lg);
+    padding-left: var(--spacing-xl);
+}
+
+.article-content li {
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+}
+
+.article-image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    margin: var(--spacing-xl) 0;
+    transition: transform 0.3s ease;
+}
+
+.article-image:hover {
+    transform: scale(1.02);
+}
+
+.article-content a {
+    color: var(--brand-primary);
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.article-content a:hover {
+    color: var(--brand-secondary);
+}
+
+/* Loading state */
+.loading-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+/* Responsive article */
+@media (max-width: 768px) {
+    .article-title {
+        font-size: 1.8rem;
+    }
+    
+    .article-content {
+        font-size: 1rem;
+    }
+    
+    .article-content h3 {
+        font-size: 1.3rem;
+    }
+}

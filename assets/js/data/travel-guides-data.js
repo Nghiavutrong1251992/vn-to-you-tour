@@ -34,6 +34,17 @@ const travelGuidesData = [
         readTime: '8 min'
     },
     {
+        id: 'sapa-weather-guide',
+        title: 'Sapa Weather by Month: Best Time to Visit Guide',
+        description: 'Complete Sapa weather guide with monthly breakdown, best visiting times, and seasonal activities for optimal travel planning.',
+        image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=300&fit=crop&center',
+        url: 'destinations/northern-vietnam/sapa-weather-guide.html',
+        category: 'Northern Vietnam',
+        featured: false,
+        publishDate: '2025-12-11',
+        readTime: '9 min'
+    },
+    {
         id: 'sapa-ethnic-villages-guide',
         title: 'Ethnic Villages Near Sapa: Ta Van, Ta Phin, Lao Chai Guide',
         description: 'Explore authentic ethnic villages around Sapa. Discover H\'Mong, Dao, and Giay cultures, traditional crafts, and sustainable tourism experiences.',

@@ -40,7 +40,7 @@
         .then(response => response.text())
         .then(data => {
             data = data.replace('href="/', 'href="../../../');
-            data = data.replace('href="/pages/', 'href="');
+            data = data.replace('href="/pages/', 'href="../../');
             data = data.replace('src="/assets/', 'src="../assets/');
             document.getElementById('header-placeholder').innerHTML = data;
             window.dispatchEvent(new Event('headerLoaded'));

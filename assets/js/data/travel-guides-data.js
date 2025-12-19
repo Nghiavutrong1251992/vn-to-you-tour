@@ -1,4 +1,5 @@
 // Travel Guides Data for VN to You Tour
+// Last updated: December 19, 2025
 const travelGuidesData = [
     {
         id: 'sapa-attractions',

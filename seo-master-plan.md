@@ -51,9 +51,9 @@
 - "Ethnic Villages Near Sapa: Ta Van, Ta Phin, Lao Chai Guide"✅
 - "Mount Fansipan Cable Car vs Trekking: Which to Choose" ✅
 - "Sapa Weather by Month: Best Time to Visit Guide"✅
-- "Sapa Food Guide: Traditional H'Mong & Local Specialties" ok 
-- "Sapa Markets: Bac Ha, Can Cau Weekend Market Guide"
-- "Sapa Accommodation: Homestays vs Hotels Guide"
+- "Sapa Food Guide: Traditional H'Mong & Local Specialties" ✅
+- "Sapa Markets: Bac Ha, Can Cau Weekend Market Guide"✅
+- "Sapa Accommodation: Homestays vs Hotels Guide"✅
 
 **Halong Bay Series (9 bài):**
 - "Halong Bay Cruise Comparison: 2D1N vs 3D2N vs Day Tours" ✅

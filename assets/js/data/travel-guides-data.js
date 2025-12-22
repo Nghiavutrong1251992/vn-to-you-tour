@@ -5,7 +5,7 @@ const travelGuidesData = [
         id: 'sapa-attractions',
         title: 'Top Sapa Attractions',
         description: 'Discover Mount Fansipan, rice terraces, and ethnic villages in Vietnam\'s mountain paradise.',
-        image: 'assets/images/articles/sapa/2-1635758961-1635761176-1635843575.jpg',
+        image: '/assets/images/articles/sapa/2-1635758961-1635761176-1635843575.jpg',
         url: 'destinations/northern-vietnam/sapa-attractions-guide.html',
         category: 'Northern Vietnam',
         featured: true,

@@ -192,7 +192,7 @@ const travelGuidesData = [
         id: 'halong-bay-budget',
         title: 'Halong Bay Budget Guide: How to Visit for Under $100',
         description: 'Experience Halong Bay on a budget with our money-saving guide. Tips for affordable cruises, transportation, and accommodation under $100.',
-        image: 'https://images.unsplash.com/photo-1578574577315-3fbeb0cecdc2?w=500&h=300&fit=crop&center',
+        image: '/assets/images/articles/halong-bay/halong-bay-budget-guide.jpg',
         url: 'destinations/northern-vietnam/halong-bay-budget-guide.html',
         category: 'Northern Vietnam',
         featured: false,

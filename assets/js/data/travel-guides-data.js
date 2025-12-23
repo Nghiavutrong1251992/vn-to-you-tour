@@ -181,7 +181,7 @@ const travelGuidesData = [
         id: 'halong-bay-weather',
         title: 'Halong Bay Weather & Seasons: Month by Month Guide',
         description: 'Plan your perfect Halong Bay trip with our detailed weather guide covering best visiting times, seasonal variations, and what to pack.',
-        image: 'https://images.unsplash.com/photo-1509614838453-f5f03e2a2e63?w=500&h=300&fit=crop&center',
+        image: 'assets/images/articles/halong-bay/halong-bay-weather-seasons.jpg',
         url: 'destinations/northern-vietnam/halong-bay-weather-guide.html',
         category: 'Northern Vietnam',
         featured: false,

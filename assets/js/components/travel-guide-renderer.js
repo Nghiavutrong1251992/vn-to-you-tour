@@ -1,19 +1,9 @@
 // Travel Guide Component for Homepage
 function createTravelGuideCard(guide, baseUrl = '') {
-    // Determine image path based on baseUrl
-    let imagePath = guide.image;
-    if (guide.image.startsWith('assets/')) {
-        // If baseUrl is 'pages/', we're on index.html, use image as is
-        // If baseUrl is empty/different, we're on a page in subdirectory, add '../'
-        if (baseUrl !== 'pages/') {
-            imagePath = '../' + guide.image;
-        }
-    }
-    
     return `
         <div class="service-card" style="height: auto;">
             <div class="service-image" style="height: 200px;">
-                <img src="${imagePath}" alt="${guide.title}" loading="lazy">
+                <img src="${guide.image}" alt="${guide.title}" loading="lazy">
                 <div style="position: absolute; top: 8px; right: 8px; background: rgba(0, 149, 217, 0.9); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 600;">
                     ${guide.category}
                 </div>

@@ -170,7 +170,7 @@ const travelGuidesData = [
         id: 'halong-bay-photography',
         title: 'Halong Bay Photography: Golden Hour & Best Viewpoints',
         description: 'Master Halong Bay photography with our guide to golden hour timing, best viewpoints, and tips for capturing stunning karst landscapes.',
-        image: 'https://images.unsplash.com/photo-1552599786-2a7925e0e071?w=500&h=300&fit=crop&center',
+        image: '/assets/images/articles/halong-bay/halong-bay-photography-golden-hour.jpg',
         url: 'destinations/northern-vietnam/halong-bay-photography-guide.html',
         category: 'Northern Vietnam',
         featured: false,
